@@ -1,0 +1,40 @@
+name: Tests
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+
+jobs:
+  unit:
+    name: 单元测试（引擎 / 自动出题 / 词典）
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: 分析引擎
+        run: node test/engine_test.js
+      - name: 自动出题引擎
+        run: node test/generator_test.js
+      - name: 离线词典
+        run: node test/dict_test.js
+
+  e2e:
+    name: 浏览器端 E2E
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: 运行无头 Chrome E2E
+        run: |
+          CHROME=$(command -v google-chrome || command -v chrome || command -v chromium || command -v chromium-browser)
+          if [ -z "$CHROME" ]; then echo "::error::找不到 Chrome 可执行文件"; exit 1; fi
+          DOM=$("$CHROME" --headless --disable-gpu --no-sandbox \
+            --virtual-time-budget=8000 --dump-dom "file://$GITHUB_WORKSPACE/test/e2e-auto.html" 2>/dev/null)
+          RESULT=$(echo "$DOM" | grep -o '<div id="e2e-result">[^<]*' || true)
+          if [ -z "$RESULT" ]; then echo "::error::E2E 未产生结果"; exit 1; fi
+          echo "$RESULT" | sed 's/<div id="e2e-result">//' | tr '|' '\n' | sed 's/^ *//'
+          if echo "$RESULT" | grep -q '\[FAIL\]'; then echo "::error::E2E 存在失败断言"; exit 1; fi
+          echo "E2E 全部通过"
