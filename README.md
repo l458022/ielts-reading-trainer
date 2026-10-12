@@ -38,6 +38,10 @@
 |---|---|
 | ![交卷报告](test/shot-report.png) | ![点词查词](test/shot-dict.png) |
 
+| 社区题库（GitHub 仓库即数据库，无需服务器） | 线上演示站（GitHub Pages） |
+|---|---|
+| ![社区题库](test/shot-community.png) | ![线上演示](test/shot-live.png) |
+
 ## 使用
 
 直接用浏览器打开仓库根目录的 `index.html` 即可（无需服务器、无网络请求，数据存在本机浏览器）。

@@ -40,6 +40,10 @@ requests** and no server.
 |---|---|
 | ![Report](test/shot-report.png) | ![Look-up](test/shot-dict.png) |
 
+| Community bank (GitHub repo as database, no server) | Live demo (GitHub Pages) |
+|---|---|
+| ![Community bank](test/shot-community.png) | ![Live demo](test/shot-live.png) |
+
 ## Usage
 
 Just open `index.html` in a browser — no build, no server, no network. All data stays in
