@@ -977,25 +977,158 @@
     toast("题库包已导出（" + contributed.length + " 套），可提交给项目仓库");
   }
 
+  /* ---------- 社区题库（GitHub 仓库即共享数据库） ----------
+   * 设计原则：本应用默认完全离线，只有用户主动打开「社区题库」时才联网，
+   * 且只拉取索引与用户点选的那一个包，不全量下载。
+   * 数据源为本项目 GitHub 仓库的 packs/ 目录；贡献走 PR（贡献声明见
+   * CONTRIBUTING.md），因此不需要自建服务器。 */
+  var COMMUNITY = {
+    repo: "l458022/ielts-reading-trainer",
+    branch: "main",
+    manifestPath: "packs/manifest.json"
+  };
+
+  function communityManifestUrls() {
+    var raw = "https://raw.githubusercontent.com/" + COMMUNITY.repo + "/" + COMMUNITY.branch + "/";
+    var cdn = "https://cdn.jsdelivr.net/gh/" + COMMUNITY.repo + "@" + COMMUNITY.branch + "/";
+    return [raw + COMMUNITY.manifestPath, cdn + COMMUNITY.manifestPath];
+  }
+  function communityPackUrls(file) {
+    var raw = "https://raw.githubusercontent.com/" + COMMUNITY.repo + "/" + COMMUNITY.branch + "/packs/";
+    var cdn = "https://cdn.jsdelivr.net/gh/" + COMMUNITY.repo + "@" + COMMUNITY.branch + "/packs/";
+    var f = encodeURIComponent(file);
+    return [raw + f, cdn + f];
+  }
+
+  function fetchJson(url, cb, errCb) {
+    var xhr = new XMLHttpRequest();
+    xhr.open("GET", url, true);
+    xhr.timeout = 15000;
+    xhr.onload = function () {
+      if (xhr.status >= 200 && xhr.status < 300) {
+        try { cb(JSON.parse(xhr.responseText)); }
+        catch (e) { errCb("返回内容不是合法 JSON"); }
+      } else { errCb("HTTP " + xhr.status); }
+    };
+    xhr.onerror = function () { errCb("网络不可达"); };
+    xhr.ontimeout = function () { errCb("请求超时"); };
+    xhr.send();
+  }
+  // 多源依次重试：raw 优先，CDN 兜底（国内访问 CDN 更快）
+  function fetchJsonWithFallback(urls, cb, errCb) {
+    var i = 0;
+    (function attempt() {
+      if (i >= urls.length) { errCb("所有源均不可用（可稍后重试或检查网络）"); return; }
+      var url = urls[i++];
+      fetchJson(url, cb, function (err) {
+        console.warn("[community] 源失败：" + url + " → " + err);
+        attempt();
+      });
+    })();
+  }
+
+  function openCommunity() {
+    el("importMask").className = "modal-mask";
+    el("communityMask").className = "modal-mask show";
+    loadCommunityPacks();
+  }
+
+  function loadCommunityPacks() {
+    var box = el("cmtyList"), status = el("cmtyStatus");
+    if (!box || !status) return;
+    status.textContent = "正在获取题库索引…";
+    box.innerHTML = '<div class="cmty-loading">⏳ 正在连接社区题库索引…</div>';
+    fetchJsonWithFallback(communityManifestUrls(), function (manifest) {
+      renderCommunityList(manifest, box);
+      var packs = (manifest && manifest.packs) || [];
+      if (!packs.length) { status.textContent = "题库索引为空"; return; }
+      // 取最新一个包的日期作为「索引更新于」的近似（manifest 本身不含生成时间，以保持确定性）
+      var newest = packs.reduce(function (a, b) {
+        return String(a.updatedAt || "") > String(b.updatedAt || "") ? a : b;
+      }, packs[0]);
+      var when = newest.updatedAt ? new Date(newest.updatedAt).toLocaleDateString("zh-CN") : "未知";
+      status.textContent = "共 " + packs.length + " 个题库包 · 最近更新 " + when;
+    }, function (err) {
+      box.innerHTML = "";
+      status.textContent = "获取失败：" + err;
+    });
+  }
+
+  function renderCommunityList(manifest, box) {
+    if (!box) return;
+    var packs = (manifest && manifest.packs) || [];
+    if (!packs.length) {
+      box.innerHTML = '<div class="cmty-empty">题库还没有内容。成为第一个贡献者：导入文章 → 用途选「贡献到公共题库」→ 导出发 PR。</div>';
+      return;
+    }
+    box.innerHTML = packs.map(function (p, i) {
+      var kb = p.bytes ? (p.bytes / 1024).toFixed(1) + " KB" : "";
+      var meta = [];
+      meta.push((p.questions || 0) + " 题");
+      if (p.difficulty) meta.push("难度 " + p.difficulty);
+      if (p.minutes) meta.push("约 " + p.minutes + " 分钟");
+      if (p.tags && p.tags.length) meta.push(p.tags.map(function (t) { return esc(t); }).join(" / "));
+      if (kb) meta.push(kb);
+      return '<div class="cmty-row">' +
+        '<div class="cmty-info">' +
+        '<div class="cmty-title">' + esc(p.titleCn || p.title || p.id) +
+        (p.title && p.titleCn ? ' <span class="cmty-en">' + esc(p.title) + "</span>" : "") + "</div>" +
+        '<div class="cmty-meta">' + meta.map(function (m) { return "<span>" + m + "</span>"; }).join("") + "</div>" +
+        '<div class="cmty-src">贡献者 ' + esc(p.contributor || "anonymous") + " · 授权 " + esc(p.license || "未标注") + "</div>" +
+        "</div>" +
+        '<button class="btn" data-cmty="' + i + '">下载并导入</button>' +
+        "</div>";
+    }).join("");
+    Array.prototype.forEach.call(box.querySelectorAll("[data-cmty]"), function (btn) {
+      btn.addEventListener("click", function () {
+        downloadCommunityPack(packs[Number(btn.getAttribute("data-cmty"))], btn);
+      });
+    });
+  }
+
+  function downloadCommunityPack(item, btn) {
+    if (!item || !item.file) return;
+    var label = "下载并导入";
+    if (btn) { btn.disabled = true; btn.textContent = "下载中…"; }
+    fetchJsonWithFallback(communityPackUrls(item.file), function (pack) {
+      var added;
+      try { added = importPackObject(pack); }
+      catch (e) {
+        toast("题库包无效：" + e.message);
+        if (btn) { btn.disabled = false; btn.textContent = label; }
+        return;
+      }
+      el("communityMask").className = "modal-mask";
+      renderHome();
+      toast("已导入「" + (item.titleCn || item.title || "") + "」：" + added + " 套试卷");
+    }, function (err) {
+      toast("下载失败：" + err);
+      if (btn) { btn.disabled = false; btn.textContent = label; }
+    });
+  }
+
+  function importPackObject(pack) {
+    if (!pack || pack.format !== "ielts-reading-pack" || !Array.isArray(pack.exams)) {
+      throw new Error("不是有效的题库包");
+    }
+    var list = readLS(LS.custom, []);
+    var added = 0;
+    pack.exams.forEach(function (e) {
+      if (!e || !e.sections || !e.id) return;
+      var copy = JSON.parse(JSON.stringify(e));
+      copy.id = "pack-" + Date.now() + "-" + Math.floor(Math.random() * 10000);
+      list.push(copy);
+      added++;
+    });
+    writeLS(LS.custom, list);
+    return added;
+  }
+
   function importPack(file) {
     var reader = new FileReader();
     reader.onload = function () {
       try {
-        var pack = JSON.parse(reader.result);
-        if (!pack || pack.format !== "ielts-reading-pack" || !Array.isArray(pack.exams)) {
-          toast("不是有效的题库包文件");
-          return;
-        }
-        var list = readLS(LS.custom, []);
-        var added = 0;
-        pack.exams.forEach(function (e) {
-          if (!e || !e.sections || !e.id) return;
-          var copy = JSON.parse(JSON.stringify(e));
-          copy.id = "pack-" + Date.now() + "-" + Math.floor(Math.random() * 10000);
-          list.push(copy);
-          added++;
-        });
-        writeLS(LS.custom, list);
+        var added = importPackObject(JSON.parse(reader.result));
         el("importMask").className = "modal-mask";
         renderHome();
         toast("已导入题库包：" + added + " 套试卷");
@@ -1120,6 +1253,14 @@
     el("importMask").addEventListener("click", function (e) {
       if (e.target === this) this.className = "modal-mask";
     });
+    // 社区题库
+    el("btnCommunity").addEventListener("click", openCommunity);
+    el("impCommunity").addEventListener("click", openCommunity);
+    el("cmtyRefresh").addEventListener("click", loadCommunityPacks);
+    el("cmtyClose").addEventListener("click", function () { el("communityMask").className = "modal-mask"; });
+    el("communityMask").addEventListener("click", function (e) {
+      if (e.target === this) this.className = "modal-mask";
+    });
     bindVocabTips();
     bindMobileTabs();
     renderHome();
@@ -1130,7 +1271,10 @@
   window.RLApp = {
     state: state, startExam: startExam, submitExam: submitExam, renderExam: renderExam,
     renderHome: renderHome, renderReport: renderReport, renderHistory: renderHistory,
-    doImport: doImport, openImport: openImport, show: show
+    doImport: doImport, openImport: openImport, show: show,
+    openCommunity: openCommunity, loadCommunityPacks: loadCommunityPacks,
+    renderCommunityList: renderCommunityList, importPackObject: importPackObject,
+    communityManifestUrls: communityManifestUrls, communityPackUrls: communityPackUrls
   };
 
   if (document.readyState === "loading") {

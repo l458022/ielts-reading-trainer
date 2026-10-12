@@ -42,8 +42,12 @@ Anyone can turn an English article they have the right to share into practice qu
 5. Click 「Export pack」 to get `reading-pack-YYYY-MM-DD.json`
 6. Submit it via a PR into the `packs/` directory, or send it to a maintainer
 
-Maintainers verify the declarations before merging so everyone can use it via
-「Import pack」.
+Maintainers verify the declarations before merging. **After merging, CI automatically rebuilds
+the `packs/manifest.json` index**, so everyone can see your pack under 「🌐 Community bank」
+in the app and import it in one click — no server deployment required.
+
+> Want to see it in action? Open the app home page → 「🌐 Community bank」. It already ships
+> with this project's two sample packs.
 
 ## Not accepted
 

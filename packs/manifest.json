@@ -1,0 +1,44 @@
+{
+  "format": "ielts-reading-manifest",
+  "version": 1,
+  "repo": "l458022/ielts-reading-trainer",
+  "branch": "main",
+  "packs": [
+    {
+      "id": "reading-pack-2026-10-12-pollination",
+      "file": "reading-pack-2026-10-12-pollination.json",
+      "title": "The Economics of Pollination",
+      "titleCn": "授粉的经济价值",
+      "exams": 1,
+      "questions": 13,
+      "difficulty": "中",
+      "minutes": 20,
+      "tags": [
+        "自然环境",
+        "动植物"
+      ],
+      "contributor": "l458022",
+      "license": "CC BY 4.0",
+      "bytes": 22795,
+      "updatedAt": "2026-10-12T10:55:40.502Z"
+    },
+    {
+      "id": "reading-pack-2026-10-12-sleep",
+      "file": "reading-pack-2026-10-12-sleep.json",
+      "title": "The Science of Sleep",
+      "titleCn": "睡眠的科学",
+      "exams": 1,
+      "questions": 10,
+      "difficulty": "中",
+      "minutes": 20,
+      "tags": [
+        "健康",
+        "科学研究"
+      ],
+      "contributor": "l458022",
+      "license": "CC BY 4.0",
+      "bytes": 19381,
+      "updatedAt": "2026-10-12T10:55:40.502Z"
+    }
+  ]
+}

@@ -1,0 +1,382 @@
+{
+  "format": "ielts-reading-pack",
+  "version": 1,
+  "generator": "IELTS Reading Trainer",
+  "createdAt": "2026-10-12T10:55:40.502Z",
+  "exams": [
+    {
+      "id": "exam-pollination",
+      "title": "The Economics of Pollination",
+      "titleCn": "授粉的经济价值",
+      "book": "样题",
+      "test": 1,
+      "passage": 1,
+      "difficulty": "中",
+      "series": "预置样题",
+      "source": "原创样题 · 剑桥雅思题型风格",
+      "level": "学术类 · 中等",
+      "minutes": 20,
+      "tags": [
+        "自然环境",
+        "动植物"
+      ],
+      "intro": "昆虫授粉对全球农业的价值评估，以及授粉者多样性所面临的威胁。",
+      "sections": [
+        {
+          "id": "s1",
+          "title": "READING PASSAGE 1",
+          "paragraphs": [
+            {
+              "id": "A",
+              "text": "Ask most people to name an insect that keeps the human race alive and they will probably draw a blank. The answer, however, is the humble bee. Around three quarters of the world's flowering plants, including roughly a third of the food crops we eat, rely on animals to move pollen from one bloom to another, and no creature does this job more efficiently than the bee. Without these small pollinators, supermarket shelves would be stripped of apples, almonds, berries and much of the coffee that fuels the working day."
+            },
+            {
+              "id": "B",
+              "text": "Given how essential the service is, economists have spent two decades trying to attach a number to it. Early estimates, published in the late 1990s, put the value of insect pollination to global agriculture at around 160 billion euros. Later work raised the figure to an estimated 265 billion euros a year, with managed honeybees alone delivering just over half of that. The exact total remains contested, partly because researchers must first decide what is being valued: the gross output of pollination-dependent crops, or the share of profit that would vanish if pollinators disappeared."
+            },
+            {
+              "id": "C",
+              "text": "One reason the numbers vary so widely is that the workforce is far more diverse than the honeybee suggests. There are more than 20,000 bee species worldwide, and the great majority of them are solitary: a single female builds a nest, provisions it and dies before her young hatch out. Bumblebees, by contrast, live in colonies of a few hundred workers, and several species have been reared commercially to pollinate greenhouse tomatoes. Mason bees and leafcutter bees, used in orchards across North America and Europe, are often more effective pollinators than honeybees, partly because they begin foraging at cooler temperatures."
+            },
+            {
+              "id": "D",
+              "text": "The threats to this workforce are well documented. Neonicotinoid pesticides, widely used as seed coatings, impair a bee's navigation and its ability to learn the smell of profitable flowers. The spread of monoculture — vast fields of a single crop that flower for only two weeks a year — leaves bees with a brief feast followed by a long famine, and forces commercial beekeepers to truck hives across the country in a migratory pattern that itself stresses the insects. Climate change adds a further layer of disruption, because warmer springs can cause flowers to open before the bees that pollinate them have emerged from hibernation."
+            },
+            {
+              "id": "E",
+              "text": "Partly in response to these pressures, beekeeping has moved into the city. Urban apiaries now occupy rooftops in London, Paris, New York and Berlin, and studies in several cities have found that city honeybees can outperform their rural cousins, thanks to the greater variety of flowers in parks, gardens and railway embankments. The trend is not without controversy, however. Some researchers warn that hundreds of rooftop hives in a small area may compete with wild pollinators for the same limited resources, and a 2021 survey of Chicago beekeepers found that a striking number of colonies had died over the winter."
+            },
+            {
+              "id": "F",
+              "text": "Efforts to protect pollinators are therefore shifting from celebrating the honeybee to supporting the whole community. Farmers in parts of France and Germany now leave strips of wildflowers along field margins, and trials in the Netherlands suggest that these strips raise the yield of nearby crops by enough to offset the land they take. Conservationists argue that such measures will only work if they are combined with pesticide reform and a return to crop rotation, though the cost of these changes remains the central obstacle. What is not in dispute is the conclusion of a recent United Nations assessment: a system that relies on one insect, or one approach, is fragile, and diversity is the surest form of insurance."
+            }
+          ],
+          "questionGroups": [
+            {
+              "id": "g1",
+              "type": "headings",
+              "pool": [
+                "i",
+                "ii",
+                "iii",
+                "iv",
+                "v",
+                "vi",
+                "vii"
+              ],
+              "instruction": "Reading Passage 1 has six paragraphs, A-F. Choose the correct heading for each paragraph from the list of headings below.",
+              "note": "本题组有 7 个选项，其中 1 个是多余选项。",
+              "headings": [
+                "i  Small insects, a vital role",
+                "ii  Counting the cost of a free service",
+                "iii  A workforce larger than the honeybee",
+                "iv  Why city rooftops may not help",
+                "v  Counting the cost of a free service (重复标题)",
+                "vi  Pressures from chemicals and climate",
+                "vii  From one bee to the whole community"
+              ],
+              "questions": [
+                {
+                  "no": 1,
+                  "stem": "Paragraph A",
+                  "answer": "i",
+                  "keyPara": "A",
+                  "keySentence": "Around three quarters of the world's flowering plants, including roughly a third of the food crops we eat, rely on animals to move pollen from one bloom to another, and no creature does this job more efficiently than the bee.",
+                  "keySentenceCn": "全球约四分之三的开花植物，包括我们食用的约三分之一粮食作物，都依赖动物将花粉从一朵花传到另一朵花，而没有任何生物能比蜜蜂更高效地完成这项工作。",
+                  "explain": "A 段开篇点题：小小的蜜蜂承担着维系人类生存的关键工作，对应 i「小昆虫，大作用」。ii、v 都是价值估算，对应 B 段。",
+                  "words": [
+                    "humble 不起眼的"
+                  ]
+                },
+                {
+                  "no": 2,
+                  "stem": "Paragraph B",
+                  "answer": "ii",
+                  "keyPara": "B",
+                  "keySentence": "Given how essential the service is, economists have spent two decades trying to attach a number to it.",
+                  "keySentenceCn": "经济学家花了二十年时间试图给这项服务标上一个数字。",
+                  "explain": "B 段核心是给授粉服务估价：从 1600 亿到 2650 亿欧元的估算，对应 ii。注意 v 与 ii 表述故意近似，是本题的「孪生选项」陷阱——两个都说估值，但 v 是编造的干扰项。",
+                  "words": [
+                    "attach a number to 给……估个价"
+                  ]
+                },
+                {
+                  "no": 3,
+                  "stem": "Paragraph C",
+                  "answer": "iii",
+                  "keyPara": "C",
+                  "keySentence": "One reason the numbers vary so widely is that the workforce is far more diverse than the honeybee suggests.",
+                  "keySentenceCn": "估值差异如此之大的原因之一在于，授粉劳动者的多样性远超蜜蜂给人的印象。",
+                  "explain": "C 段讲 2 万多种蜂：独居蜂、熊蜂、壁蜂、切叶蜂，全段核心是「授粉队伍比人们以为的更庞大」，对应 iii。",
+                  "words": [
+                    "solitary 独居的",
+                    "provision 为……储备食物"
+                  ]
+                },
+                {
+                  "no": 4,
+                  "stem": "Paragraph D",
+                  "answer": "vi",
+                  "keyPara": "D",
+                  "keySentence": "Neonicotinoid pesticides, widely used as seed coatings, impair a bee's navigation and its ability to learn the smell of profitable flowers.",
+                  "keySentenceCn": "新烟碱类农药被广泛用作种子包衣，会损害蜜蜂的导航能力及其学习有利可图花朵气味的能力。",
+                  "explain": "D 段列举威胁：新烟碱农药、单一作物种植、气候变化，对应 vi。",
+                  "words": [
+                    "neonicotinoid 新烟碱（类农药）",
+                    "impair 损害"
+                  ]
+                },
+                {
+                  "no": 5,
+                  "stem": "Paragraph E",
+                  "answer": "iv",
+                  "keyPara": "E",
+                  "keySentence": "Some researchers warn that hundreds of rooftop hives in a small area may compete with wild pollinators for the same limited resources, and a 2021 survey of Chicago beekeepers found that a striking number of colonies had died over the winter.",
+                  "keySentenceCn": "一些研究者警告，在狭小区域内设置数百个屋顶蜂箱，可能会与野生授粉者争夺同样有限的资源。",
+                  "explain": "E 段前半讲城市养蜂的兴起，但转折词 however 之后才是重点：屋顶蜂群可能与野生授粉者竞争，甚至有越冬死亡——对应 iv「城市屋顶为何未必有帮助」。做 headings 题要重点看段中转折后的内容。",
+                  "words": [
+                    "apiary 蜂场",
+                    "controversy 争议"
+                  ]
+                },
+                {
+                  "no": 6,
+                  "stem": "Paragraph F",
+                  "answer": "vii",
+                  "keyPara": "F",
+                  "keySentence": "Efforts to protect pollinators are therefore shifting from celebrating the honeybee to supporting the whole community.",
+                  "keySentenceCn": "因此，保护授粉者的工作正从关注蜜蜂个体转向支持整个授粉群体。",
+                  "explain": "F 段讲保护措施的转向：野花带、农药改革、轮作，核心是「从单一蜜蜂转向整个群体」，对应 vii。",
+                  "words": [
+                    "crop rotation 轮作",
+                    "obstacle 障碍"
+                  ]
+                }
+              ]
+            },
+            {
+              "id": "g2",
+              "type": "tfng",
+              "options": [
+                "TRUE",
+                "FALSE",
+                "NOT GIVEN"
+              ],
+              "instruction": "Do the following statements agree with the information given in Reading Passage 1? Write TRUE if the statement agrees with the claims of the writer, FALSE if the statement contradicts the claims of the writer, NOT GIVEN if it is impossible to say what the writer thinks about this.",
+              "questions": [
+                {
+                  "no": 7,
+                  "stem": "About three quarters of flowering plants worldwide depend on animals for pollination.",
+                  "answer": "TRUE",
+                  "keyPara": "A",
+                  "keySentence": "Around three quarters of the world's flowering plants, including roughly a third of the food crops we eat, rely on animals to move pollen from one bloom to another, and no creature does this job more efficiently than the bee.",
+                  "keySentenceCn": "全球约四分之三的开花植物，包括我们食用的约三分之一粮食作物，都依赖动物将花粉从一朵花传到另一朵花。",
+                  "explain": "题干 three quarters of flowering plants = 原文 three quarters of the world's flowering plants，depend on animals for pollination = rely on animals to move pollen。数字与含义一致，TRUE。",
+                  "paraphrase": [
+                    [
+                      "depend on",
+                      "rely on"
+                    ]
+                  ],
+                  "words": []
+                },
+                {
+                  "no": 8,
+                  "stem": "The 2021 Chicago survey found that most urban bee colonies survived the winter.",
+                  "answer": "FALSE",
+                  "keyPara": "E",
+                  "keySentence": "Some researchers warn that hundreds of rooftop hives in a small area may compete with wild pollinators for the same limited resources, and a 2021 survey of Chicago beekeepers found that a striking number of colonies had died over the winter.",
+                  "keySentenceCn": "2021 年对芝加哥养蜂人的调查发现，有相当数量的蜂群在冬季死亡。",
+                  "explain": "原文说「大量蜂群死亡」，题干说「大多数蜂群存活」——方向完全相反，FALSE。判断题陷阱：偷换结果方向（死的说成活的）。",
+                  "trap": "反向偷换：survived ≠ died",
+                  "words": []
+                },
+                {
+                  "no": 9,
+                  "stem": "Mason bees are less effective pollinators than honeybees in orchards.",
+                  "answer": "FALSE",
+                  "keyPara": "C",
+                  "keySentence": "Mason bees and leafcutter bees, used in orchards across North America and Europe, are often more effective pollinators than honeybees, partly because they begin foraging at cooler temperatures.",
+                  "keySentenceCn": "在北美和欧洲果园中使用的壁蜂和切叶蜂，往往是比蜜蜂更高效的授粉者，部分原因是它们能在更凉爽的温度下开始觅食。",
+                  "explain": "题干 less effective = 原文 more effective，比较级方向被对调。FALSE。这是 TFNG 最高频陷阱：比较级反向。定位到 C 段末句。",
+                  "trap": "比较级反向：more ↔ less",
+                  "words": [
+                    "leafcutter bee 切叶蜂"
+                  ]
+                },
+                {
+                  "no": 10,
+                  "stem": "Bumblebees have been used to pollinate coffee plants in greenhouses.",
+                  "answer": "NOT GIVEN",
+                  "keyPara": "C",
+                  "keySentence": "Bumblebees, by contrast, live in colonies of a few hundred workers, and several species have been reared commercially to pollinate greenhouse tomatoes.",
+                  "keySentenceCn": "已有几个熊蜂物种被商业化养殖，用于为温室番茄授粉。",
+                  "explain": "原文只说熊蜂为温室番茄授粉，题干说的是 coffee plants（咖啡）。文中虽然 A 段提到 coffee，但没有任何地方说熊蜂给温室咖啡授粉——信息文中没有，NG。注意：NG 题绝不能脑补，「咖啡也由虫媒授粉」不能推出「熊蜂为温室咖啡授粉」。",
+                  "trap": "NG：番茄 ≠ 咖啡，话题被替换",
+                  "words": []
+                }
+              ]
+            },
+            {
+              "id": "g3",
+              "type": "gapfill",
+              "instruction": "Complete the summary below. Choose NO MORE THAN TWO WORDS from the passage for each answer.",
+              "questions": [
+                {
+                  "no": 11,
+                  "stem": "Neonicotinoid pesticides are applied to seeds as ______.",
+                  "answers": [
+                    "seed coatings",
+                    "coatings"
+                  ],
+                  "keyPara": "D",
+                  "keySentence": "Neonicotinoid pesticides, widely used as seed coatings, impair a bee's navigation and its ability to learn the smell of profitable flowers.",
+                  "keySentenceCn": "新烟碱类农药被广泛用作种子包衣，会损害蜜蜂的导航能力。",
+                  "explain": "题干 applied to seeds as ≈ 原文 used as seed coatings。字数正好两词，直接抄原文，不要改写。",
+                  "paraphrase": [
+                    [
+                      "applied to",
+                      "used as"
+                    ]
+                  ],
+                  "words": [
+                    "coating 包衣，涂层"
+                  ]
+                },
+                {
+                  "no": 12,
+                  "stem": "The pesticides also weaken a bee's ability to learn the ______ of a flower.",
+                  "answers": [
+                    "smell"
+                  ],
+                  "keyPara": "D",
+                  "keySentence": "Neonicotinoid pesticides, widely used as seed coatings, impair a bee's navigation and its ability to learn the smell of profitable flowers.",
+                  "keySentenceCn": "损害蜜蜂的导航能力以及其识别有利可图花朵气味的学习能力。",
+                  "explain": "定位 D 段第二句，learn the smell of profitable flowers。题干把 profitable 去掉不影响答案，只填 smell 一词。",
+                  "words": []
+                },
+                {
+                  "no": 13,
+                  "stem": "Monoculture gives bees a short ______ each year, followed by a long period without food.",
+                  "answers": [
+                    "feast"
+                  ],
+                  "keyPara": "D",
+                  "keySentence": "The spread of monoculture — vast fields of a single crop that flower for only two weeks a year — leaves bees with a brief feast followed by a long famine, and forces commercial beekeepers to truck hives across the country in a migratory pattern that itself stresses the insects.",
+                  "keySentenceCn": "单一作物种植的蔓延——大片田地只种一种作物、每年只开花两周——让蜜蜂经历短暂的盛宴，随之而来的是漫长的饥荒。",
+                  "explain": "brief feast = a short feast，followed by a long famine = followed by a long period without food。原文原词 feast，注意与 famine 区分。",
+                  "paraphrase": [
+                    [
+                      "brief",
+                      "short"
+                    ],
+                    [
+                      "a long famine",
+                      "a long period without food"
+                    ]
+                  ],
+                  "words": [
+                    "feast 盛宴",
+                    "famine 饥荒"
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "vocabulary": [
+        {
+          "word": "humble",
+          "pos": "adj.",
+          "meaning": "不起眼的，卑微的",
+          "sentence": "The answer, however, is the humble bee.",
+          "sentenceCn": "然而，答案是不起眼的蜜蜂。"
+        },
+        {
+          "word": "attach a number to",
+          "pos": "phr.",
+          "meaning": "给……估价",
+          "sentence": "Economists have spent two decades trying to attach a number to it.",
+          "sentenceCn": "经济学家花了二十年试图给它估一个价。"
+        },
+        {
+          "word": "contested",
+          "pos": "adj.",
+          "meaning": "有争议的",
+          "sentence": "The exact total remains contested.",
+          "sentenceCn": "确切总额仍有争议。"
+        },
+        {
+          "word": "solitary",
+          "pos": "adj.",
+          "meaning": "独居的",
+          "sentence": "The great majority of them are solitary.",
+          "sentenceCn": "它们中绝大多数是独居的。"
+        },
+        {
+          "word": "forage",
+          "pos": "v.",
+          "meaning": "觅食",
+          "sentence": "They begin foraging at cooler temperatures.",
+          "sentenceCn": "它们在更凉爽的温度下开始觅食。"
+        },
+        {
+          "word": "neonicotinoid",
+          "pos": "n.",
+          "meaning": "新烟碱（类杀虫剂）",
+          "sentence": "Neonicotinoid pesticides impair a bee's navigation.",
+          "sentenceCn": "新烟碱类农药损害蜜蜂的导航能力。"
+        },
+        {
+          "word": "monoculture",
+          "pos": "n.",
+          "meaning": "单一作物种植",
+          "sentence": "The spread of monoculture leaves bees with a brief feast followed by a long famine.",
+          "sentenceCn": "单一作物种植的蔓延让蜜蜂短暂饱食之后陷入长期饥荒。"
+        },
+        {
+          "word": "migratory",
+          "pos": "adj.",
+          "meaning": "迁徙的，流动的",
+          "sentence": "A migratory pattern that itself stresses the insects.",
+          "sentenceCn": "这种迁徙模式本身就会让昆虫感到压力。"
+        },
+        {
+          "word": "hibernation",
+          "pos": "n.",
+          "meaning": "冬眠",
+          "sentence": "Before the bees have emerged from hibernation.",
+          "sentenceCn": "在蜜蜂结束冬眠之前。"
+        },
+        {
+          "word": "apiary",
+          "pos": "n.",
+          "meaning": "蜂场，养蜂房",
+          "sentence": "Urban apiaries now occupy rooftops in London.",
+          "sentenceCn": "城市蜂场如今占据了伦敦的屋顶。"
+        },
+        {
+          "word": "offset",
+          "pos": "v.",
+          "meaning": "抵消，弥补",
+          "sentence": "These strips raise the yield of nearby crops by enough to offset the land they take.",
+          "sentenceCn": "这些花带使附近作物增产，足以抵消占用的土地。"
+        },
+        {
+          "word": "insurance",
+          "pos": "n.",
+          "meaning": "保险，保障",
+          "sentence": "Diversity is the surest form of insurance.",
+          "sentenceCn": "多样性是最可靠的保障。"
+        }
+      ],
+      "contribution": {
+        "contributor": "l458022",
+        "license": "CC BY 4.0",
+        "declaredAt": "2026-10-12T10:55:40.502Z",
+        "declaration": "copyright-ok;questions-original-or-tool-generated;no-privacy"
+      }
+    }
+  ]
+}

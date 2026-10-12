@@ -1,0 +1,35 @@
+name: Manifest
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'packs/**'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  build:
+    name: 生成题库索引 manifest
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v5
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: 扫描 packs/ 生成 manifest.json
+        run: node scripts/build-manifest.js
+      - name: 提交索引变更
+        run: |
+          if git diff --quiet packs/manifest.json; then
+            echo "manifest 无变化，跳过提交"
+            exit 0
+          fi
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add packs/manifest.json
+          git commit -m "chore: 自动更新题库索引 manifest [skip ci]"
+          git push
+          echo "manifest 已更新并推送"

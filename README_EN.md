@@ -24,6 +24,7 @@ requests** and no server.
 | Import any article | Paste an English article (blank-line separated) → **auto-generated questions** (rule engine, self-verified: every answer must be derivable from the text) / manual entry / mixed |
 | Contribution declaration | Declare "personal use only" or "contribute to the shared bank"; contributing requires three declarations (rights / originality / privacy) plus contributor name and license |
 | Question packs | One-click export/import of `ielts-reading-pack` JSON packs for sharing |
+| Community bank | 「🌐 Community bank」 on the home page lists packs straight from this repo's `packs/` directory and imports them in one click (**no server needed**: raw source with a jsDelivr CDN fallback). The app stays offline unless you open it |
 | Deep analysis | "Copy report" copies score + wrong answers + located sentences, ready to paste into any AI for further analysis |
 
 > Design principle: **no look-up or vocabulary hints during the exam** — that would leak
@@ -46,6 +47,24 @@ your local browser (localStorage).
 
 - Double-click `index.html`, or drag it into Chrome / Edge
 - To use it on your phone over LAN: `python -m http.server 8080`, then visit `http://<your-ip>:8080`
+
+## How the shared bank works (no server required)
+
+```
+Contributor                      Maintainer / CI                  Everyone else
+Import article → "contribute"    review declarations → merge PR   open 「🌐 Community bank」
+→ export pack → open a PR   →    CI scans packs/ → manifest   →   → see new packs → one-click import
+```
+
+- The data source is simply this repo's `packs/` directory, read directly by the browser
+  (both GitHub raw and jsDelivr send `Access-Control-Allow-Origin: *`), so **no server is needed**
+- `packs/manifest.json` is rebuilt automatically by CI (`.github/workflows/manifest.yml`)
+  whenever `packs/` changes — no manual maintenance
+- Every pack carries `contribution.contributor` and `contribution.license`, so downstream
+  users can see where each article came from and under what license
+- Privacy and offline-first: the app makes zero network requests by default; it only goes
+  online when you open the community bank or click download, and your study records always
+  stay in your own browser
 
 ## Importing Cambridge IELTS material (personal study)
 
@@ -83,8 +102,11 @@ See [CONTRIBUTING.md](CONTRIBUTING.md). Two ways to help:
 │   ├── dict-core.js      Offline core dictionary (~1,000 words, stemming-aware, look-up fallback)
 │   └── app.js            UI: answering / countdown / submit / report / look-up / import / word book
 ├── packs/                Shared question packs contributed by the community
+│   └── manifest.json     Auto-generated index (do not edit by hand)
+├── scripts/
+│   └── build-manifest.js Scans packs/ and writes manifest.json (CI + local)
 ├── .github/
-│   ├── workflows/        CI: 3 unit suites + headless Chrome E2E on every push and PR
+│   ├── workflows/        CI: unit + E2E; rebuilds the index when packs/ changes
 │   ├── ISSUE_TEMPLATE/   Issue forms: bug / feature request / question-pack contribution
 │   └── PULL_REQUEST_TEMPLATE.md
 └── test/

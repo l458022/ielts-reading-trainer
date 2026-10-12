@@ -108,6 +108,33 @@ main { max-width: 1180px; margin: 0 auto; padding: 24px; }
 .btn.warn { background: var(--amber); }
 .btn.warn:hover { background: #b45309; }
 .btn:disabled { opacity: .5; cursor: not-allowed; }
+.btn-sm { padding: 5px 12px; font-size: 12.5px; font-weight: 600; }
+
+/* ---------- 社区题库 ---------- */
+.cmty-toolbar { display: flex; align-items: center; gap: 12px; margin-bottom: 10px; }
+.cmty-status { font-size: 12.5px; color: var(--ink-3); }
+.cmty-loading, .cmty-empty {
+  font-size: 13px; color: var(--ink-3); background: var(--bg);
+  border: 1px dashed var(--line); border-radius: 10px; padding: 18px; text-align: center;
+}
+.cmty-row {
+  display: flex; align-items: center; gap: 14px; justify-content: space-between;
+  border: 1px solid var(--line); border-radius: 10px; padding: 12px 14px; margin-bottom: 10px;
+  background: var(--card);
+}
+.cmty-row:hover { border-color: var(--blue); }
+.cmty-info { min-width: 0; }
+.cmty-title { font-size: 14.5px; font-weight: 700; color: var(--ink); margin-bottom: 5px; }
+.cmty-title .cmty-en { font-weight: 500; color: var(--ink-3); font-size: 12.5px; }
+.cmty-meta { display: flex; flex-wrap: wrap; gap: 8px; font-size: 12px; color: var(--ink-2); margin-bottom: 4px; }
+.cmty-meta span { background: var(--blue-light); color: var(--blue); border-radius: 5px; padding: 1px 8px; }
+.cmty-src { font-size: 11.5px; color: var(--ink-3); }
+.cmty-foot {
+  display: flex; align-items: flex-end; justify-content: space-between; gap: 16px;
+  margin-top: 16px; padding-top: 14px; border-top: 1px solid var(--line);
+  font-size: 12px; color: var(--ink-3);
+}
+.cmty-foot a { color: var(--blue); text-decoration: underline; }
 
 /* ---------- 答题页 ---------- */
 .exam-header {

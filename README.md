@@ -23,6 +23,7 @@
 | 自动出题 | 粘贴任意英文文章 → 解析分段 → 规则引擎自动生成判断题/填空/标题匹配/单选，并自带校验（答案必须能被原文推出） |
 | 贡献声明 | 导入时可声明「仅自己用」或「贡献到共享题库」；贡献需勾选版权/原创/隐私三项声明并留下署名与许可 |
 | 题库包 | 一键导出/导入 `ielts-reading-pack` JSON 包，用于分享题库 |
+| 社区题库 | 首页「🌐 社区题库」从项目 GitHub 仓库的 `packs/` 目录在线阅读题库包并一键导入（**不需要自建服务器**：raw 源 + jsDelivr CDN 双源兜底）；只有你主动点开时才联网，平时完全离线 |
 | 深度分析 | 「复制报告」一键复制成绩+错题+定位句，可粘贴给任意 AI 做进一步分析 |
 
 > 设计原则：答题过程中**不提供**查词与重点词提示，避免变相给提示；交卷后才开放查词与词汇学习功能。
@@ -43,6 +44,19 @@
 
 - 本地使用：双击 `index.html`，或拖进 Chrome / Edge
 - 想用手机/局域网访问：`python -m http.server 8080` 后访问 `http://<电脑IP>:8080`
+
+## 共享题库怎么工作的（无需服务器）
+
+```
+贡献者                          维护者/CI                        所有用户
+导入文章 → 用途选「贡献」         审核声明 → 合并 PR               打开「🌐 社区题库」
+→ 导出处题库包 → 提 PR    →    CI 自动扫 packs/ 生成 manifest  →  → 看到新包 → 一键导入
+```
+
+- 数据源就是本仓库的 `packs/` 目录，浏览器直接读取（GitHub 的 raw / jsDelivr 都开放 CORS），**因此不需要租服务器**
+- `packs/manifest.json` 由 CI（`.github/workflows/manifest.yml`）在 `packs/` 变化时自动重建，无需手工维护
+- 每个包都带 `contribution.contributor` 与 `contribution.license`，下游用户能看到每篇文章的授权来源
+- 隐私与离线优先：应用默认零网络请求；只有打开「社区题库」或点「下载并导入」时才联网，学习记录始终只存本机
 
 ## 导入剑桥雅思真题（个人学习用途）
 
@@ -70,8 +84,11 @@
 │   ├── dict-core.js      离线核心词典（约 1000 词，含词形还原，点词查词兜底）
 │   └── app.js            交互：答题/倒计时/交卷/报告/点词查词/导入/贡献声明/错题本/生词本
 ├── packs/                公共题库包目录（社区贡献的 reading-pack-*.json）
+│   └── manifest.json     CI 自动生成的题库索引（禁止手改）
+├── scripts/
+│   └── build-manifest.js 扫描 packs/ 生成 manifest.json（CI 与本地均可跑）
 ├── .github/
-│   ├── workflows/        CI：push/PR 自动跑 3 套单测 + 无头 Chrome E2E
+│   ├── workflows/        CI：单测 + E2E；以及 packs 变化时自动重建索引
 │   ├── ISSUE_TEMPLATE/   Issue 表单：Bug / 功能建议 / 题库包贡献
 │   └── PULL_REQUEST_TEMPLATE.md
 └── test/

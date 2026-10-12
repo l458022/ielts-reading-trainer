@@ -39,7 +39,9 @@
       <h1>像雅思考生一样刷题，交卷后立刻知道错在哪</h1>
       <p>按套卷（C21 / C20 / C19…）× Test × Passage 刷阅读真题：在线限时做题 → 交卷自动逐题分析（原文定位 · 陷阱说明 · 关键句翻译 · 重点词汇）→ 错题本、生词本、成绩记录自动沉淀。预置 2 套完整样题；把你手上的剑桥雅思真题粘贴导入，即刻拥有同款真题题库（自动生成定位分析）。</p>
     </div>
-    <div class="sec-title">真题题库 <span class="en">Exam Library</span><span class="count" id="examCount"></span></div>
+    <div class="sec-title">真题题库 <span class="en">Exam Library</span><span class="count" id="examCount"></span>
+      <button class="btn ghost btn-sm" id="btnCommunity" style="margin-left:auto">🌐 社区题库</button>
+    </div>
     <div class="exam-grid" id="examGrid"></div>
 
     <div class="sec-title">使用说明 <span class="en">How it works</span></div>
@@ -169,10 +171,28 @@
     <div style="display:flex;gap:10px;margin-top:6px;flex-wrap:wrap">
       <button class="btn" id="impSubmit">导入并开始练习</button>
       <button class="btn ghost" id="impPreview">预览自动生成的题目</button>
+      <button class="btn ghost" id="impCommunity">🌐 社区题库</button>
       <button class="btn ghost" id="impExportPack">导出题库包</button>
       <button class="btn ghost" id="impImportPack">导入题库包</button>
       <button class="btn ghost" id="impCancel">取消</button>
       <input type="file" id="packFile" accept=".json" style="display:none">
+    </div>
+  </div>
+</div>
+
+<!-- 社区题库弹窗 -->
+<div class="modal-mask" id="communityMask">
+  <div class="modal" style="width:860px">
+    <h3>🌐 社区题库</h3>
+    <div class="m-sub">从项目 GitHub 仓库的 packs/ 目录在线阅读并导入。</div>
+    <div class="cmty-toolbar">
+      <button class="btn ghost" id="cmtyRefresh">🔄 刷新列表</button>
+      <span class="cmty-status" id="cmtyStatus"></span>
+    </div>
+    <div id="cmtyList"></div>
+    <div class="cmty-foot">
+      <div>想贡献自己的文章？导入文章 → 用途选「贡献到公共题库」→ 导出处题库包，按贡献指南提 PR。</div>
+      <div style="display:flex;gap:10px"><button class="btn ghost" id="cmtyClose">关闭</button></div>
     </div>
   </div>
 </div>
@@ -309,6 +329,50 @@ window.addEventListener("load", function () {
     log("entity-not-split", rpHtml.indexOf('data-w="amp"') === -1 && rpHtml.indexOf('data-w="lt"') === -1 && rpHtml.indexOf('data-w="gt"') === -1 && rpHtml.indexOf('data-w="quot"') === -1);
     log("entity-rendered-ok", rpHtml.indexOf("&amp;") !== -1 && rpHtml.indexOf("&lt;") !== -1 && rpHtml.indexOf("&gt;") !== -1);
     log("entity-words-clickable", document.querySelectorAll("#reportPassage .w").length > 20);
+
+    /* ===== 社区题库（GitHub 即数据库）：离线桩测试，不依赖真实网络 ===== */
+    log("community-entry-exists", !!document.getElementById("btnCommunity") && !!document.getElementById("impCommunity"));
+    var urls = RLApp.communityManifestUrls();
+    log("community-urls-2-sources", urls.length === 2 && urls[0].indexOf("raw.githubusercontent.com") !== -1 && urls[1].indexOf("cdn.jsdelivr.net") !== -1);
+    log("community-url-path", urls[0].indexOf("l458022/ielts-reading-trainer/main/packs/manifest.json") !== -1);
+    log("community-pack-url", RLApp.communityPackUrls("reading-pack-x.json")[0].indexOf("/packs/reading-pack-x.json") !== -1);
+    // 桩掉 XHR，验证「联网失败」有兜底提示且不抛错
+    var RealXHR = window.XMLHttpRequest;
+    window.XMLHttpRequest = function () {
+      this.open = function () {};
+      this.send = function () { if (this.onerror) this.onerror(); };
+    };
+    document.getElementById("btnCommunity").click();
+    log("community-modal-opens", document.getElementById("communityMask").className.indexOf("show") !== -1);
+    log("community-error-fallback", document.getElementById("cmtyStatus").textContent.indexOf("获取失败") !== -1);
+    window.XMLHttpRequest = RealXHR;
+    // 纯渲染：正常索引
+    var box = document.getElementById("cmtyList");
+    RLApp.renderCommunityList({
+      format: "ielts-reading-manifest", version: 1, updatedAt: new Date().toISOString(),
+      packs: [
+        { id: "p1", file: "reading-pack-2026-10-12-pollination.json", title: "The Economics of Pollination", titleCn: "授粉的经济价值", exams: 1, questions: 13, difficulty: "中", minutes: 20, tags: ["自然环境"], contributor: "l458022", license: "CC BY 4.0", bytes: 22790 },
+        { id: "p2", file: "reading-pack-2026-10-12-sleep.json", title: "The Science of Sleep", titleCn: "睡眠的科学", exams: 1, questions: 10, difficulty: "中", minutes: 20, tags: ["健康"], contributor: "alice", license: "CC0", bytes: 19384 }
+      ]
+    }, box);
+    log("community-rows-rendered", box.querySelectorAll(".cmty-row").length === 2);
+    log("community-row-title", box.innerHTML.indexOf("授粉的经济价值") !== -1 && box.innerHTML.indexOf("The Economics of Pollination") !== -1);
+    log("community-row-meta", box.innerHTML.indexOf("13 题") !== -1 && box.innerHTML.indexOf((22790 / 1024).toFixed(1) + " KB") !== -1);
+    log("community-row-license", box.innerHTML.indexOf("CC BY 4.0") !== -1 && box.innerHTML.indexOf("CC0") !== -1);
+    log("community-download-btn", box.querySelectorAll("[data-cmty]").length === 2);
+    // 纯渲染：空索引
+    RLApp.renderCommunityList({ packs: [] }, box);
+    log("community-empty-state", box.querySelectorAll(".cmty-row").length === 0 && box.innerHTML.indexOf("成为第一个贡献者") !== -1);
+    // 导入逻辑（社区下载与文件导入共用）
+    var beforeCount = JSON.parse(localStorage.getItem("rl_custom_exams") || "[]").length;
+    var added = RLApp.importPackObject({
+      format: "ielts-reading-pack", version: 1,
+      exams: [{ id: "cmty-1", title: "Community Article", titleCn: "社区文章", sections: [{ id: "s1", paragraphs: [{ id: "A", text: "Alpha bees make honey." }], questionGroups: [{ id: "g1", type: "tfng", instruction: "i", questions: [{ no: 1, stem: "Bees make honey.", answer: "TRUE" }] }] }] }]
+    });
+    log("community-import-adds", added === 1 && JSON.parse(localStorage.getItem("rl_custom_exams") || "[]").length === beforeCount + 1);
+    var rejected = false;
+    try { RLApp.importPackObject({ format: "wrong", exams: [] }); } catch (e2) { rejected = true; }
+    log("community-import-rejects-invalid", rejected);
   } catch (e) {
     out.push("[FAIL] exception: " + e.message);
   }
