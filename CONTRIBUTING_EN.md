@@ -40,14 +40,17 @@ Anyone can turn an English article they have the right to share into practice qu
    - the article contains no private, confidential, or inappropriate content
 4. Fill in your contributor handle and the license (CC BY 4.0 / CC0 / licensed republication)
 5. Click 「Export pack」 to get `reading-pack-YYYY-MM-DD.json`
-6. Submit it via a PR into the `packs/` directory, or send it to a maintainer
+6. Submit it via a PR into the `packs/` directory, **or simply send the JSON to a maintainer**
+   (email / chat / issue — whatever is easiest)
 
 Maintainers verify the declarations before merging. **After merging, CI automatically rebuilds
 the `packs/manifest.json` index**, so everyone can see your pack under 「🌐 Community bank」
 in the app and import it in one click — no server deployment required.
 
-> Want to see it in action? Open the app home page → 「🌐 Community bank」. It already ships
-> with this project's two sample packs.
+> **Don't want to touch Git?** That's fine. Just send your exported `reading-pack-*.json` to a
+> maintainer, who will publish it with the in-app "⬆ Publish new pack" button (see
+> [ADMIN.md](ADMIN.md)). Want to see it in action? Open the app home page → 「🌐 Community bank」.
+> It already ships with this project's two sample packs.
 
 ## Not accepted
 

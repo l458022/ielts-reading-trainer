@@ -189,6 +189,7 @@
     <div class="cmty-toolbar">
       <button class="btn ghost" id="cmtyRefresh">🔄 刷新列表</button>
       <button class="btn ghost" id="cmtyAdminToggle">⚙ 管理模式</button>
+      <button class="btn ghost" id="cmtyUploadToggle">⬆ 上架新题库包</button>
       <span class="cmty-status" id="cmtyStatus"></span>
     </div>
 
@@ -214,8 +215,24 @@
         <span class="cmty-status" id="cmtyTokenState"></span>
       </div>
       <div class="admin-hint" id="cmtyAdminHint" style="display:none">
-        ✅ 管理模式已开启：上方每个题库包会多出「编辑」「删除」按钮。
+        ✅ 管理模式已开启：上方每个题库包会多出「编辑」「删除」按钮，还可「⬆ 上架新题库包」。
       </div>
+    </div>
+
+    <div class="admin-box" id="cmtyUploadBox" style="display:none">
+      <div class="form-row">
+        <label>方式一 · 粘贴题库包 JSON（别人发你的，或你自己导出的）</label>
+        <textarea id="cmtyUploadText" spellcheck="false" style="min-height:130px;font-family:ui-monospace,Menlo,Consolas,monospace;font-size:12px" placeholder='{"format":"ielts-reading-pack","version":1,"exams":[...]}'></textarea>
+      </div>
+      <div class="form-row">
+        <label>方式二 · 从本机「贡献」试卷中选一份上架</label>
+        <div id="cmtyLocalList"></div>
+      </div>
+      <div class="admin-actions">
+        <button class="btn" id="cmtyUploadPaste">校验并上架</button>
+        <span class="cmty-status" id="cmtyUploadMsg"></span>
+      </div>
+      <div class="admin-hint">上架前会校验 JSON 语法、包结构与 keySentence 是否真在原文中；文件名重复会自动加后缀，不会覆盖已有包。</div>
     </div>
 
     <div id="cmtyList"></div>

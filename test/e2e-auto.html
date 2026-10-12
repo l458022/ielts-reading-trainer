@@ -188,6 +188,7 @@
     <div class="cmty-toolbar">
       <button class="btn ghost" id="cmtyRefresh">🔄 刷新列表</button>
       <button class="btn ghost" id="cmtyAdminToggle">⚙ 管理模式</button>
+      <button class="btn ghost" id="cmtyUploadToggle">⬆ 上架新题库包</button>
       <span class="cmty-status" id="cmtyStatus"></span>
     </div>
     <div class="admin-box" id="cmtyAdminBox" style="display:none">
@@ -199,6 +200,14 @@
         <span class="cmty-status" id="cmtyTokenState"></span>
       </div>
       <div class="admin-hint" id="cmtyAdminHint" style="display:none">✅ 管理模式已开启</div>
+    </div>
+    <div class="admin-box" id="cmtyUploadBox" style="display:none">
+      <div class="form-row"><label>方式一 · 粘贴题库包 JSON</label><textarea id="cmtyUploadText"></textarea></div>
+      <div class="form-row"><label>方式二 · 从本机「贡献」试卷中选一份上架</label><div id="cmtyLocalList"></div></div>
+      <div class="admin-actions">
+        <button class="btn" id="cmtyUploadPaste">校验并上架</button>
+        <span class="cmty-status" id="cmtyUploadMsg"></span>
+      </div>
     </div>
     <div id="cmtyList"></div>
     <div class="cmty-foot">
@@ -484,6 +493,64 @@ window.addEventListener("load", function () {
     RLApp.deleteCommunityPack({ file: "reading-pack-a.json", titleCn: "A 包" });
     log("admin-delete-two-steps", window.__reqs.length === 2 && window.__reqs[0].method === "GET" && window.__reqs[1].method === "DELETE");
     log("admin-delete-uses-sha", JSON.parse(window.__reqs[1].body).sha === "sha-abc");
+    // ===== 上架新题库包 =====
+    log("admin-slugify-ascii", RLApp.slugify("Urban Beekeeping") === "urban-beekeeping");
+    log("admin-slugify-mixed", RLApp.slugify("C21 Test 1-Passage 1") === "c21-test-1-passage-1");
+    log("admin-slugify-cjk-fallback", RLApp.slugify("城市养蜂") === "pack");
+    // 无令牌时不允许打开上架面板
+    RLApp.setGhToken("");
+    RLApp.toggleUploadBox();
+    log("admin-upload-blocked-without-token", document.getElementById("cmtyUploadBox").style.display === "none");
+    RLApp.setGhToken("github_pat_TESTTOKEN123");
+    // 打开面板：本机无贡献试卷时应给出提示
+    localStorage.removeItem("rl_custom_exams");
+    RLApp.toggleUploadBox();
+    log("admin-upload-panel-opens", document.getElementById("cmtyUploadBox").style.display === "block");
+    log("admin-upload-empty-local", document.getElementById("cmtyLocalList").textContent.indexOf("还没有标记为「贡献」") !== -1);
+    // 粘贴非法 JSON / 结构不合法 → 拦下且不发请求
+    fakeXhrInstalled(function () {});
+    document.getElementById("cmtyUploadText").value = "{ not json";
+    document.getElementById("cmtyUploadPaste").click();
+    log("admin-upload-blocks-bad-json", document.getElementById("cmtyUploadMsg").textContent.indexOf("JSON 语法错误") !== -1 && window.__reqs.length === 0);
+    document.getElementById("cmtyUploadText").value = '{"format":"nope","exams":[]}';
+    document.getElementById("cmtyUploadPaste").click();
+    log("admin-upload-blocks-bad-structure", document.getElementById("cmtyUploadMsg").textContent.indexOf("结构不合法") !== -1 && window.__reqs.length === 0);
+    // 合法包 → GET 查重（404 不存在）→ PUT 上架，文件名含日期与 slug
+    var upPack = { format: "ielts-reading-pack", version: 1, exams: [{ id: "u1", title: "Urban Beekeeping", titleCn: "城市养蜂", sections: [{ id: "s1", paragraphs: [{ id: "A", text: "Bees make honey." }], questionGroups: [{ id: "g1", type: "tfng", instruction: "i", questions: [{ no: 1, stem: "s", answer: "TRUE", keySentence: "Bees make honey." }] }] }] }] };
+    document.getElementById("cmtyUploadText").value = JSON.stringify(upPack);
+    window.confirm = function () { return true; };
+    window.__reqs = [];
+    fakeXhrInstalled(function (xhr) {   // 查重返回 404：文件名未被占用
+      if (xhr._m === "GET") { xhr.status = 404; xhr.responseText = JSON.stringify({ message: "Not Found" }); if (xhr.onload) xhr.onload(); }
+    });
+    document.getElementById("cmtyUploadPaste").click();
+    log("admin-upload-two-steps", window.__reqs.length === 2 && window.__reqs[0].method === "GET" && window.__reqs[1].method === "PUT");
+    var upUrl = decodeURIComponent(window.__reqs[1].url);
+    log("admin-upload-filename", upUrl.indexOf("contents/packs/reading-pack-") !== -1 && upUrl.indexOf("-urban-beekeeping.json") !== -1);
+    log("admin-upload-content-decoded", RLApp.b64ToUtf8(JSON.parse(window.__reqs[1].body).content).indexOf("Urban Beekeeping") !== -1);
+    log("admin-upload-no-sha-on-create", JSON.parse(window.__reqs[1].body).sha === undefined);
+    log("admin-upload-message", JSON.parse(window.__reqs[1].body).message.indexOf("上架题库包") !== -1);
+    // 重名：GET 返回 200 → 文件名自动加后缀，绝不覆盖
+    window.__reqs = [];
+    fakeXhrInstalled(function (xhr) {
+      if (xhr._m === "GET") { xhr.status = 200; xhr.responseText = JSON.stringify({ sha: "exists" }); if (xhr.onload) xhr.onload(); }
+    });
+    document.getElementById("cmtyUploadPaste").click();
+    var dupUrl = decodeURIComponent(window.__reqs[1].url);
+    log("admin-upload-renames-on-collision", /-urban-beekeeping-\d{6}\.json$/.test(dupUrl));
+    // 从本机贡献试卷上架
+    localStorage.setItem("rl_custom_exams", JSON.stringify([{ id: "local-1", title: "Local Article", titleCn: "本机文章", series: "文章导入 · 自动出题", sections: [{ id: "s1", paragraphs: [{ id: "A", text: "Cats sleep a lot." }], questionGroups: [{ id: "g1", type: "tfng", instruction: "i", questions: [{ no: 1, stem: "s", answer: "TRUE", keySentence: "Cats sleep a lot." }] }] }], contribution: { contributor: "bob", license: "CC0", declaredAt: new Date().toISOString(), declaration: "copyright-ok;questions-original-or-tool-generated;no-privacy" } }]));
+    RLApp.renderLocalContributionList();
+    log("admin-local-list-renders", document.querySelectorAll("#cmtyLocalList [data-cmty-up]").length === 1);
+    log("admin-local-list-meta", document.getElementById("cmtyLocalList").textContent.indexOf("bob") !== -1);
+    window.__reqs = [];
+    fakeXhrInstalled(function (xhr) {
+      if (xhr._m === "GET") { xhr.status = 404; xhr.responseText = JSON.stringify({ message: "Not Found" }); if (xhr.onload) xhr.onload(); }
+    });
+    document.querySelector("#cmtyLocalList [data-cmty-up]").click();
+    log("admin-local-upload-puts", window.__reqs.length === 2 && window.__reqs[1].method === "PUT" && decodeURIComponent(window.__reqs[1].url).indexOf("-local-article.json") !== -1);
+    log("admin-local-upload-keeps-contribution", RLApp.b64ToUtf8(JSON.parse(window.__reqs[1].body).content).indexOf('"contributor": "bob"') !== -1);
+    localStorage.removeItem("rl_custom_exams");
     // 清除令牌 → 管理按钮消失
     RLApp.clearAdminToken();
     RLApp.renderCommunityList(demoManifest, box2);

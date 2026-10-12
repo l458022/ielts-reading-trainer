@@ -1311,6 +1311,103 @@
     });
   }
 
+  /* ---------- 上架新题库包（管理员） ----------
+   * 两种入口：① 粘贴别人发来的题库包 JSON ② 选一份本机标记为「贡献」的试卷
+   * 都是 PUT 到 packs/ 下新文件，文件名带日期与标题 slug；重名自动加后缀 */
+  function slugify(s) {
+    var t = String(s || "").toLowerCase().replace(/[^a-z0-9]+/g, "-").replace(/^-+|-+$/g, "").slice(0, 40);
+    return t || "pack";
+  }
+
+  function uploadMsg(text) {
+    var m = el("cmtyUploadMsg");
+    if (m) m.textContent = text;
+  }
+
+  function toggleUploadBox() {
+    var box = el("cmtyUploadBox");
+    if (!box) return;
+    if (!isAdmin()) { toast("需要先设置管理令牌"); return; }
+    var show = box.style.display === "none";
+    box.style.display = show ? "block" : "none";
+    if (show) renderLocalContributionList();
+  }
+
+  function renderLocalContributionList() {
+    var wrap = el("cmtyLocalList");
+    if (!wrap) return;
+    var list = readLS(LS.custom, []).filter(function (e) { return e && e.contribution; });
+    if (!list.length) {
+      wrap.innerHTML = '<div class="cmty-empty" style="padding:10px">本机还没有标记为「贡献」的试卷。导入文章时把用途选为「贡献到公共题库」即可。</div>';
+      return;
+    }
+    wrap.innerHTML = list.map(function (e, i) {
+      var n = window.RLEngine.collectQuestions(e).length;
+      return '<div class="cmty-row" style="padding:8px 12px">' +
+        '<div class="cmty-info"><div class="cmty-title">' + esc(e.titleCn || e.title) +
+        ' <span class="cmty-en">' + esc(e.title) + "</span></div>" +
+        '<div class="cmty-src">' + n + " 题 · 贡献者 " + esc((e.contribution || {}).contributor || "anonymous") +
+        " · 授权 " + esc((e.contribution || {}).license || "未标注") + "</div></div>" +
+        '<button class="btn" data-cmty-up="' + i + '">上架这个</button>' +
+        "</div>";
+    }).join("");
+    Array.prototype.forEach.call(wrap.querySelectorAll("[data-cmty-up]"), function (btn) {
+      btn.addEventListener("click", function () {
+        var ex = list[Number(btn.getAttribute("data-cmty-up"))];
+        uploadPackObject({
+          format: "ielts-reading-pack", version: 1,
+          generator: "IELTS Reading Trainer", createdAt: new Date().toISOString(),
+          exams: [JSON.parse(JSON.stringify(ex))]
+        }, btn);
+      });
+    });
+  }
+
+  function uploadPackFromText() {
+    var text = (el("cmtyUploadText").value || "").trim();
+    if (!text) { uploadMsg("❌ 请先粘贴题库包 JSON，或从下方选一份本机试卷"); return; }
+    var pack;
+    try { pack = JSON.parse(text); }
+    catch (e) { uploadMsg("❌ JSON 语法错误：" + e.message); return; }
+    uploadPackObject(pack, null);
+  }
+
+  function uploadPackObject(pack, btn) {
+    if (!isAdmin()) { toast("需要先设置管理令牌"); return; }
+    var v = validatePack(pack);
+    if (!v.ok) { uploadMsg("❌ " + v.msg); return; }
+    if (v.missing.length && !confirm("有 " + v.missing.length + " 道题的 keySentence 无法在原文逐字找到（" + v.missing.slice(0, 6).join("、") + "），报告页将无法定位原句。仍要上架？")) return;
+    var ex = pack.exams[0] || {};
+    var today = new Date().toISOString().slice(0, 10);
+    var file = "reading-pack-" + today + "-" + slugify(ex.title || ex.titleCn) + ".json";
+    var label = btn ? btn.textContent : "";
+    if (btn) { btn.disabled = true; btn.textContent = "上架中…"; }
+    uploadMsg("⏳ 正在检查文件名…");
+    var restore = function () { if (btn) { btn.disabled = false; btn.textContent = label; } };
+
+    function doPut(name) {
+      uploadMsg("⏳ 正在提交到 GitHub…");
+      ghApi("PUT", PACKS_API + encodeURIComponent(name), {
+        message: "content(packs): 上架题库包 " + name,
+        content: utf8ToB64(JSON.stringify(pack, null, 2) + "\n"),
+        branch: COMMUNITY.branch
+      }, function () {
+        uploadMsg("✅ 已上架：" + name + "（索引约 1 分钟后自动更新）");
+        el("cmtyUploadText").value = "";
+        toast("已上架「" + (ex.titleCn || ex.title || name) + "」");
+        restore();
+        setTimeout(loadCommunityPacks, 3000);
+      }, function (err) {
+        uploadMsg("❌ 上架失败：" + err);
+        restore();
+      });
+    }
+    // 重名则加后缀，避免覆盖已有包
+    ghApi("GET", PACKS_API + encodeURIComponent(file), null,
+      function () { doPut(file.replace(/\.json$/, "-" + Date.now().toString().slice(-6) + ".json")); },
+      function () { doPut(file); });
+  }
+
   function importPackObject(pack) {
     if (!pack || pack.format !== "ielts-reading-pack" || !Array.isArray(pack.exams)) {
       throw new Error("不是有效的题库包");
@@ -1469,6 +1566,8 @@
     el("cmtyAdminToggle").addEventListener("click", toggleAdminBox);
     el("cmtyTokenSave").addEventListener("click", saveAdminToken);
     el("cmtyTokenClear").addEventListener("click", clearAdminToken);
+    el("cmtyUploadToggle").addEventListener("click", toggleUploadBox);
+    el("cmtyUploadPaste").addEventListener("click", uploadPackFromText);
     el("packEditSave").addEventListener("click", savePackEdit);
     el("packEditCancel").addEventListener("click", function () { el("packEditMask").className = "modal-mask"; });
     el("packEditMask").addEventListener("click", function (e) {
@@ -1493,6 +1592,9 @@
     saveAdminToken: saveAdminToken, clearAdminToken: clearAdminToken,
     deleteCommunityPack: deleteCommunityPack, editCommunityPack: editCommunityPack,
     savePackEdit: savePackEdit, validatePack: validatePack, refreshAdminUI: refreshAdminUI,
+    uploadPackFromText: uploadPackFromText, uploadPackObject: uploadPackObject,
+    toggleUploadBox: toggleUploadBox, renderLocalContributionList: renderLocalContributionList,
+    slugify: slugify,
     utf8ToB64: utf8ToB64, b64ToUtf8: b64ToUtf8, PACKS_API: PACKS_API
   };
 
