@@ -1,0 +1,4 @@
+# 统一换行符：保证 CI 生成的 packs/manifest.json 与仓库产物逐字节可比，
+# 否则 Windows 贡献者提交 CRLF 后，CI 会反复判定「索引有变化」而重复提交
+* text=auto
+packs/manifest.json text eol=lf
