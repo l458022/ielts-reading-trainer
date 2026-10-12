@@ -25,6 +25,7 @@ requests** and no server.
 | Contribution declaration | Declare "personal use only" or "contribute to the shared bank"; contributing requires three declarations (rights / originality / privacy) plus contributor name and license |
 | Question packs | One-click export/import of `ielts-reading-pack` JSON packs for sharing |
 | Community bank | 「🌐 Community bank」 on the home page lists packs straight from this repo's `packs/` directory and imports them in one click (**no server needed**: raw source with a jsDelivr CDN fallback). The app stays offline unless you open it |
+| Bank management | Repository maintainers paste their own **fine-grained GitHub token** into the app to edit or delete shared articles and questions directly — every action leaves an auditable, revertible commit. There is **no "admin password"**: the frontend is public, so a hard-coded secret is no secret at all; authority can only come from GitHub itself. See [ADMIN.md](ADMIN.md) |
 | Deep analysis | "Copy report" copies score + wrong answers + located sentences, ready to paste into any AI for further analysis |
 
 > Design principle: **no look-up or vocabulary hints during the exam** — that would leak
@@ -94,6 +95,7 @@ See [CONTRIBUTING.md](CONTRIBUTING.md). Two ways to help:
 ├── index.html            Page shell (import modal: book / Test / Passage / difficulty / source / declaration)
 ├── README.md             Chinese readme / README_EN.md English readme
 ├── CONTRIBUTING.md       Contributing guide (ZH) / CONTRIBUTING_EN.md (EN)
+├── ADMIN.md              Admin manual (token setup, in-app pack editing, security notes)
 ├── CODE_OF_CONDUCT.md    Contributor Covenant code of conduct (Chinese)
 ├── SECURITY.md           Security policy (private vulnerability reporting)
 ├── LICENSE               MIT (code only; contributed articles keep their own license)

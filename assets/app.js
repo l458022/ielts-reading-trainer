@@ -56,7 +56,8 @@
     importRows: [],        // 导入表单行
     homeTab: "book",        // 题库页 tab: book|scene|type
     homeBook: null,        // 当前选中的书卷
-    homeTypeFilter: null   // 题型筛选
+    homeTypeFilter: null,  // 题型筛选
+    communityManifest: null // 社区题库索引缓存
   };
 
   function allExams() {
@@ -105,9 +106,14 @@
   }
   function bookShort(ex) { return ex.book || "样题"; }
 
+  // 是否非内置试卷（可删除）：按 id 判断，兼容导入、题库包、社区下载三种来源
+  function isCustomExam(ex) {
+    return !(window.EXAMS || []).some(function (e) { return e.id === ex.id; });
+  }
+
   function examRow(ex) {
     var st = examStats(ex.id);
-    var custom = ex.series === "导入真题";
+    var custom = isCustomExam(ex);
     return '<div class="exam-row" data-id="' + esc(ex.id) + '">' +
       '<div class="cell-diff">' + difficultyBadge(ex.difficulty) + "</div>" +
       '<div class="cell-title"><b>' + esc(ex.title) + "</b>" +
@@ -1038,11 +1044,11 @@
     if (!box || !status) return;
     status.textContent = "正在获取题库索引…";
     box.innerHTML = '<div class="cmty-loading">⏳ 正在连接社区题库索引…</div>';
-    fetchJsonWithFallback(communityManifestUrls(), function (manifest) {
+    fetchManifest(function (manifest) {
+      state.communityManifest = manifest;
       renderCommunityList(manifest, box);
       var packs = (manifest && manifest.packs) || [];
       if (!packs.length) { status.textContent = "题库索引为空"; return; }
-      // 取最新一个包的日期作为「索引更新于」的近似（manifest 本身不含生成时间，以保持确定性）
       var newest = packs.reduce(function (a, b) {
         return String(a.updatedAt || "") > String(b.updatedAt || "") ? a : b;
       }, packs[0]);
@@ -1054,9 +1060,19 @@
     });
   }
 
+  /* 管理模式下改用 GitHub API 直读，绕过 raw 的 CDN 缓存（改动立即可见） */
+  function fetchManifest(cb, errCb) {
+    if (!isAdmin()) { fetchJsonWithFallback(communityManifestUrls(), cb, errCb); return; }
+    ghApi("GET", PACKS_API + "manifest.json", null, function (info) {
+      try { cb(JSON.parse(b64ToUtf8(info.content || ""))); }
+      catch (e) { errCb("索引解析失败"); }
+    }, function () { fetchJsonWithFallback(communityManifestUrls(), cb, errCb); });
+  }
+
   function renderCommunityList(manifest, box) {
     if (!box) return;
     var packs = (manifest && manifest.packs) || [];
+    var admin = isAdmin();
     if (!packs.length) {
       box.innerHTML = '<div class="cmty-empty">题库还没有内容。成为第一个贡献者：导入文章 → 用途选「贡献到公共题库」→ 导出发 PR。</div>';
       return;
@@ -1076,13 +1092,23 @@
         '<div class="cmty-meta">' + meta.map(function (m) { return "<span>" + m + "</span>"; }).join("") + "</div>" +
         '<div class="cmty-src">贡献者 ' + esc(p.contributor || "anonymous") + " · 授权 " + esc(p.license || "未标注") + "</div>" +
         "</div>" +
+        '<div class="cmty-acts">' +
         '<button class="btn" data-cmty="' + i + '">下载并导入</button>' +
+        (admin ? '<button class="btn ghost" data-cmty-edit="' + i + '">编辑</button>' +
+          '<button class="btn ghost danger" data-cmty-del="' + i + '">删除</button>' : "") +
+        "</div>" +
         "</div>";
     }).join("");
     Array.prototype.forEach.call(box.querySelectorAll("[data-cmty]"), function (btn) {
       btn.addEventListener("click", function () {
         downloadCommunityPack(packs[Number(btn.getAttribute("data-cmty"))], btn);
       });
+    });
+    Array.prototype.forEach.call(box.querySelectorAll("[data-cmty-edit]"), function (btn) {
+      btn.addEventListener("click", function () { editCommunityPack(packs[Number(btn.getAttribute("data-cmty-edit"))]); });
+    });
+    Array.prototype.forEach.call(box.querySelectorAll("[data-cmty-del]"), function (btn) {
+      btn.addEventListener("click", function () { deleteCommunityPack(packs[Number(btn.getAttribute("data-cmty-del"))], btn); });
     });
   }
 
@@ -1104,6 +1130,184 @@
     }, function (err) {
       toast("下载失败：" + err);
       if (btn) { btn.disabled = false; btn.textContent = label; }
+    });
+  }
+
+  /* ---------- 社区题库 · 管理员（令牌只存本机浏览器，绝不写进代码） ----------
+   * 安全模型：前端无法保存「真密码」——代码公开，任何写死的口令都等于没有。
+   * 因此权限来自 GitHub 本身：仓库所有者提供一个**细粒度 PAT**
+   * （仅授权本仓库，Contents: Read and write），应用用它调用 GitHub API 提交改动。
+   * 令牌只存在管理员自己的浏览器 localStorage：不进代码、不上传、每次操作
+   * 都会在仓库留下带时间与内容的提交记录（可审计、可回滚）。
+   * 注意：这仍是「单一管理员」模型，不适合多人协作分权——那需要真正的后端。 */
+  var LS_GH_TOKEN = "rl_gh_token";
+  var PACKS_API = "/repos/" + COMMUNITY.repo + "/contents/packs/";
+
+  function ghToken() {
+    try { return localStorage.getItem(LS_GH_TOKEN) || ""; } catch (e) { return ""; }
+  }
+  function setGhToken(t) {
+    try { t ? localStorage.setItem(LS_GH_TOKEN, t) : localStorage.removeItem(LS_GH_TOKEN); } catch (e) {}
+  }
+  function isAdmin() { return !!ghToken(); }
+
+  // GitHub contents API 用 base64 传内容，必须按 UTF-8 正确处理中文
+  function b64ToUtf8(b64) {
+    var bin = atob(String(b64).replace(/\s/g, ""));
+    var bytes = new Uint8Array(bin.length);
+    for (var i = 0; i < bin.length; i++) bytes[i] = bin.charCodeAt(i);
+    return new TextDecoder("utf-8").decode(bytes);
+  }
+  function utf8ToB64(str) {
+    var bytes = new TextEncoder().encode(str);
+    var bin = "";
+    for (var i = 0; i < bytes.length; i++) bin += String.fromCharCode(bytes[i]);
+    return btoa(bin);
+  }
+
+  function ghApi(method, path, body, cb, errCb) {
+    var xhr = new XMLHttpRequest();
+    xhr.open(method, "https://api.github.com" + path, true);
+    xhr.setRequestHeader("Authorization", "Bearer " + ghToken());
+    xhr.setRequestHeader("Accept", "application/vnd.github+json");
+    xhr.setRequestHeader("X-GitHub-Api-Version", "2022-11-28");
+    if (body) xhr.setRequestHeader("Content-Type", "application/json");
+    xhr.timeout = 25000;
+    xhr.onload = function () {
+      if (xhr.status >= 200 && xhr.status < 300) {
+        var data = {};
+        try { data = xhr.responseText ? JSON.parse(xhr.responseText) : {}; } catch (e) {}
+        cb(data);
+      } else {
+        var msg = "HTTP " + xhr.status;
+        try { var j = JSON.parse(xhr.responseText); if (j && j.message) msg += "：" + j.message; } catch (e) {}
+        if (xhr.status === 401) msg += "（令牌无效或已过期）";
+        else if (xhr.status === 403) msg += "（令牌权限不足，需要 Contents: Read and write）";
+        else if (xhr.status === 404) msg += "（文件不存在，或令牌未授权该仓库）";
+        errCb(msg);
+      }
+    };
+    xhr.onerror = function () { errCb("网络不可达"); };
+    xhr.ontimeout = function () { errCb("请求超时"); };
+    xhr.send(body ? JSON.stringify(body) : null);
+  }
+
+  function refreshAdminUI() {
+    var on = isAdmin();
+    var st = el("cmtyTokenState");
+    if (st) st.textContent = on ? "✅ 管理权限已启用（令牌仅存本机）" : "未设置令牌：只能浏览与下载";
+    var clr = el("cmtyTokenClear");
+    if (clr) clr.style.display = on ? "" : "none";
+    var hint = el("cmtyAdminHint");
+    if (hint) hint.style.display = on ? "" : "none";
+  }
+
+  function toggleAdminBox() {
+    var box = el("cmtyAdminBox");
+    if (!box) return;
+    box.style.display = box.style.display === "none" ? "block" : "none";
+    refreshAdminUI();
+  }
+
+  function saveAdminToken() {
+    var t = (el("cmtyToken").value || "").trim();
+    if (!t) { toast("请先粘贴 GitHub 令牌"); return; }
+    if (!/^(github_pat_|gh[pousr]_)/.test(t)) { toast("令牌格式不对：应以 github_pat_ 或 ghp_ 开头"); return; }
+    setGhToken(t);
+    el("cmtyToken").value = "";
+    refreshAdminUI();
+    toast("已开启管理模式（令牌只保存在本机浏览器）");
+    loadCommunityPacks();
+  }
+
+  function clearAdminToken() {
+    if (!confirm("清除本机保存的 GitHub 令牌？\n\n清除后将无法在应用内删改社区题库（仓库本身不受影响）。")) return;
+    setGhToken("");
+    refreshAdminUI();
+    renderCommunityList(state.communityManifest || { packs: [] }, el("cmtyList"));
+    toast("令牌已清除，已退出管理模式");
+  }
+
+  function deleteCommunityPack(item, btn) {
+    if (!item || !item.file) return;
+    if (!isAdmin()) { toast("需要先设置管理令牌"); return; }
+    if (!confirm("确定从社区题库删除「" + (item.titleCn || item.title || item.file) + "」？\n\n会向 GitHub 提交一次删除（历史仍可恢复），索引将由 CI 自动重建。")) return;
+    var label = "删除";
+    if (btn) { btn.disabled = true; btn.textContent = "删除中…"; }
+    ghApi("GET", PACKS_API + encodeURIComponent(item.file), null, function (info) {
+      ghApi("DELETE", PACKS_API + encodeURIComponent(item.file), {
+        message: "chore(packs): 管理员删除题库包 " + item.file,
+        sha: info.sha,
+        branch: COMMUNITY.branch
+      }, function () {
+        toast("已删除「" + (item.titleCn || item.title || item.file) + "」，索引稍后自动更新");
+        setTimeout(loadCommunityPacks, 1500);
+      }, function (err) {
+        toast("删除失败：" + err);
+        if (btn) { btn.disabled = false; btn.textContent = label; }
+      });
+    }, function (err) {
+      toast("读取文件信息失败：" + err);
+      if (btn) { btn.disabled = false; btn.textContent = label; }
+    });
+  }
+
+  var editingPack = { file: null, sha: null };
+
+  function editCommunityPack(item) {
+    if (!item || !item.file) return;
+    if (!isAdmin()) { toast("需要先设置管理令牌"); return; }
+    ghApi("GET", PACKS_API + encodeURIComponent(item.file), null, function (info) {
+      editingPack.file = item.file;
+      editingPack.sha = info.sha;
+      el("packEditPath").textContent = "packs/" + item.file + " · " + (item.titleCn || item.title || "");
+      el("packEditText").value = b64ToUtf8(info.content || "");
+      el("packEditMsg").textContent = "";
+      el("packEditMask").className = "modal-mask show";
+    }, function (err) { toast("读取题库包失败：" + err); });
+  }
+
+  // 保存前做两层校验：JSON 语法 + 结构 + keySentence 是否真在原文里（定位功能的前提）
+  function validatePack(pack) {
+    if (!pack || pack.format !== "ielts-reading-pack" || !Array.isArray(pack.exams) || !pack.exams.length) {
+      return { ok: false, msg: "结构不合法：需要 format=\"ielts-reading-pack\" 且 exams 为非空数组" };
+    }
+    var missing = [];
+    pack.exams.forEach(function (ex) {
+      var full = (ex.sections || []).map(function (s) {
+        return (s.paragraphs || []).map(function (p) { return p.text || ""; }).join(" ");
+      }).join(" ");
+      (ex.sections || []).forEach(function (s) {
+        (s.questionGroups || []).forEach(function (g) {
+          (g.questions || []).forEach(function (q) {
+            if (q.keySentence && full.indexOf(q.keySentence) === -1) missing.push("Q" + q.no);
+          });
+        });
+      });
+    });
+    return { ok: true, missing: missing };
+  }
+
+  function savePackEdit() {
+    var text = el("packEditText").value;
+    var pack;
+    try { pack = JSON.parse(text); }
+    catch (e) { el("packEditMsg").textContent = "❌ JSON 语法错误：" + e.message; return; }
+    var v = validatePack(pack);
+    if (!v.ok) { el("packEditMsg").textContent = "❌ " + v.msg; return; }
+    if (v.missing.length && !confirm("有 " + v.missing.length + " 道题的 keySentence 无法在原文逐字找到（" + v.missing.slice(0, 6).join("、") + "），报告页将无法定位原句。仍要保存？")) return;
+    el("packEditMsg").textContent = "⏳ 正在提交到 GitHub…";
+    ghApi("PUT", PACKS_API + encodeURIComponent(editingPack.file), {
+      message: "content(packs): 管理员更新题库包 " + editingPack.file,
+      content: utf8ToB64(JSON.stringify(pack, null, 2) + "\n"),
+      sha: editingPack.sha,
+      branch: COMMUNITY.branch
+    }, function () {
+      el("packEditMask").className = "modal-mask";
+      toast("已提交更新，正在刷新索引…");
+      setTimeout(loadCommunityPacks, 2000);
+    }, function (err) {
+      el("packEditMsg").textContent = "❌ 提交失败：" + err;
     });
   }
 
@@ -1261,6 +1465,16 @@
     el("communityMask").addEventListener("click", function (e) {
       if (e.target === this) this.className = "modal-mask";
     });
+    // 社区题库·管理（令牌仅存本机）
+    el("cmtyAdminToggle").addEventListener("click", toggleAdminBox);
+    el("cmtyTokenSave").addEventListener("click", saveAdminToken);
+    el("cmtyTokenClear").addEventListener("click", clearAdminToken);
+    el("packEditSave").addEventListener("click", savePackEdit);
+    el("packEditCancel").addEventListener("click", function () { el("packEditMask").className = "modal-mask"; });
+    el("packEditMask").addEventListener("click", function (e) {
+      if (e.target === this) this.className = "modal-mask";
+    });
+    refreshAdminUI();
     bindVocabTips();
     bindMobileTabs();
     renderHome();
@@ -1274,7 +1488,12 @@
     doImport: doImport, openImport: openImport, show: show,
     openCommunity: openCommunity, loadCommunityPacks: loadCommunityPacks,
     renderCommunityList: renderCommunityList, importPackObject: importPackObject,
-    communityManifestUrls: communityManifestUrls, communityPackUrls: communityPackUrls
+    communityManifestUrls: communityManifestUrls, communityPackUrls: communityPackUrls,
+    isAdmin: isAdmin, ghToken: ghToken, setGhToken: setGhToken, ghApi: ghApi,
+    saveAdminToken: saveAdminToken, clearAdminToken: clearAdminToken,
+    deleteCommunityPack: deleteCommunityPack, editCommunityPack: editCommunityPack,
+    savePackEdit: savePackEdit, validatePack: validatePack, refreshAdminUI: refreshAdminUI,
+    utf8ToB64: utf8ToB64, b64ToUtf8: b64ToUtf8, PACKS_API: PACKS_API
   };
 
   if (document.readyState === "loading") {

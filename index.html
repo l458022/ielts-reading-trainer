@@ -188,8 +188,36 @@
 
     <div class="cmty-toolbar">
       <button class="btn ghost" id="cmtyRefresh">🔄 刷新列表</button>
+      <button class="btn ghost" id="cmtyAdminToggle">⚙ 管理模式</button>
       <span class="cmty-status" id="cmtyStatus"></span>
     </div>
+
+    <div class="admin-box" id="cmtyAdminBox" style="display:none">
+      <div class="admin-warn">
+        <b>关于权限（请先读）</b>：前端代码是公开的，写死任何"管理员密码"都等于没有密码，
+        所以本应用<b>不使用密码</b>，而是用你自己的 GitHub 令牌来获得写权限。
+        <ul>
+          <li>令牌只保存在<b>你当前这台浏览器</b>的 localStorage，不会上传到任何地方，也不会进代码仓库</li>
+          <li>请使用<b>细粒度令牌（Fine-grained PAT）</b>：Repository access 只勾选
+            <code>l458022/ielts-reading-trainer</code>，Permissions 只给 <code>Contents: Read and write</code></li>
+          <li>创建入口：GitHub → 头像 → Settings → Developer settings → Personal access tokens → Fine-grained tokens → Generate new token</li>
+          <li>每次删改都会在仓库留下一条提交记录（可审计、可回滚）；公共电脑上用完请点「清除令牌」</li>
+        </ul>
+      </div>
+      <div class="form-row">
+        <label>GitHub 令牌</label>
+        <input type="password" id="cmtyToken" placeholder="github_pat_..." autocomplete="off">
+      </div>
+      <div class="admin-actions">
+        <button class="btn" id="cmtyTokenSave">保存令牌并启用</button>
+        <button class="btn ghost" id="cmtyTokenClear" style="display:none">清除令牌</button>
+        <span class="cmty-status" id="cmtyTokenState"></span>
+      </div>
+      <div class="admin-hint" id="cmtyAdminHint" style="display:none">
+        ✅ 管理模式已开启：上方每个题库包会多出「编辑」「删除」按钮。
+      </div>
+    </div>
+
     <div id="cmtyList"></div>
 
     <div class="cmty-foot">
@@ -197,6 +225,23 @@
       <div style="display:flex;gap:10px">
         <button class="btn ghost" id="cmtyClose">关闭</button>
       </div>
+    </div>
+  </div>
+</div>
+
+<!-- 题库包编辑弹窗（管理员） -->
+<div class="modal-mask" id="packEditMask">
+  <div class="modal" style="width:920px">
+    <h3>编辑题库包</h3>
+    <div class="m-sub" id="packEditPath"></div>
+    <div class="form-row">
+      <label>包内容（JSON，保存前会校验结构与 keySentence 是否真在原文中）</label>
+      <textarea id="packEditText" spellcheck="false" style="min-height:360px;font-family:ui-monospace,Menlo,Consolas,monospace;font-size:12.5px;line-height:1.5"></textarea>
+    </div>
+    <div class="form-row" id="packEditMsg" style="font-size:13px;color:var(--ink-2)"></div>
+    <div style="display:flex;gap:10px">
+      <button class="btn" id="packEditSave">保存并提交到 GitHub</button>
+      <button class="btn ghost" id="packEditCancel">取消</button>
     </div>
   </div>
 </div>

@@ -135,6 +135,22 @@ main { max-width: 1180px; margin: 0 auto; padding: 24px; }
   font-size: 12px; color: var(--ink-3);
 }
 .cmty-foot a { color: var(--blue); text-decoration: underline; }
+.cmty-acts { display: flex; gap: 8px; flex-shrink: 0; }
+.btn.ghost.danger { color: #b91c1c; border-color: #fecaca; }
+.btn.ghost.danger:hover { background: #fef2f2; }
+
+/* 管理模式 */
+.admin-box {
+  background: #fffbeb; border: 1px solid #fde68a; border-radius: 10px;
+  padding: 14px 16px; margin-bottom: 14px;
+}
+.admin-warn { font-size: 12.5px; color: #92400e; line-height: 1.75; }
+.admin-warn b { color: #78350f; }
+.admin-warn ul { margin: 6px 0 0 18px; }
+.admin-warn li { margin-bottom: 3px; }
+.admin-warn code { background: #fef3c7; padding: 1px 5px; border-radius: 4px; font-size: 11.5px; }
+.admin-actions { display: flex; align-items: center; gap: 10px; flex-wrap: wrap; }
+.admin-hint { margin-top: 8px; font-size: 12.5px; color: #166534; }
 
 /* ---------- 答题页 ---------- */
 .exam-header {

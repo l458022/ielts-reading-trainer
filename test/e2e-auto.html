@@ -187,12 +187,37 @@
     <div class="m-sub">从项目 GitHub 仓库的 packs/ 目录在线阅读并导入。</div>
     <div class="cmty-toolbar">
       <button class="btn ghost" id="cmtyRefresh">🔄 刷新列表</button>
+      <button class="btn ghost" id="cmtyAdminToggle">⚙ 管理模式</button>
       <span class="cmty-status" id="cmtyStatus"></span>
+    </div>
+    <div class="admin-box" id="cmtyAdminBox" style="display:none">
+      <div class="admin-warn">关于权限：令牌只保存在你当前这台浏览器。</div>
+      <div class="form-row"><label>GitHub 令牌</label><input type="password" id="cmtyToken" placeholder="github_pat_..."></div>
+      <div class="admin-actions">
+        <button class="btn" id="cmtyTokenSave">保存令牌并启用</button>
+        <button class="btn ghost" id="cmtyTokenClear" style="display:none">清除令牌</button>
+        <span class="cmty-status" id="cmtyTokenState"></span>
+      </div>
+      <div class="admin-hint" id="cmtyAdminHint" style="display:none">✅ 管理模式已开启</div>
     </div>
     <div id="cmtyList"></div>
     <div class="cmty-foot">
       <div>想贡献自己的文章？导入文章 → 用途选「贡献到公共题库」→ 导出处题库包，按贡献指南提 PR。</div>
       <div style="display:flex;gap:10px"><button class="btn ghost" id="cmtyClose">关闭</button></div>
+    </div>
+  </div>
+</div>
+
+<!-- 题库包编辑弹窗（管理员） -->
+<div class="modal-mask" id="packEditMask">
+  <div class="modal" style="width:920px">
+    <h3>编辑题库包</h3>
+    <div class="m-sub" id="packEditPath"></div>
+    <div class="form-row"><label>包内容（JSON）</label><textarea id="packEditText"></textarea></div>
+    <div class="form-row" id="packEditMsg"></div>
+    <div style="display:flex;gap:10px">
+      <button class="btn" id="packEditSave">保存并提交到 GitHub</button>
+      <button class="btn ghost" id="packEditCancel">取消</button>
     </div>
   </div>
 </div>
@@ -373,6 +398,97 @@ window.addEventListener("load", function () {
     var rejected = false;
     try { RLApp.importPackObject({ format: "wrong", exams: [] }); } catch (e2) { rejected = true; }
     log("community-import-rejects-invalid", rejected);
+
+    /* ===== 管理员权限：令牌本机保存 + GitHub API 提交 ===== */
+    // 未设令牌：不应出现编辑/删除按钮
+    RLApp.setGhToken("");
+    var box2 = document.getElementById("cmtyList");
+    var demoManifest = { packs: [{ id: "p1", file: "reading-pack-a.json", titleCn: "A 包", title: "Pack A", questions: 5, contributor: "x", license: "CC0", bytes: 1024 }] };
+    RLApp.renderCommunityList(demoManifest, box2);
+    log("admin-hidden-without-token", box2.querySelectorAll("[data-cmty-edit]").length === 0 && box2.querySelectorAll("[data-cmty-del]").length === 0);
+    log("admin-not-admin-by-default", RLApp.isAdmin() === false);
+    // 令牌格式校验：错误格式不保存
+    document.getElementById("cmtyToken").value = "not-a-token";
+    document.getElementById("cmtyTokenSave").click();
+    log("admin-rejects-bad-token-format", RLApp.ghToken() === "");
+    // 正确格式：保存成功并出现管理按钮
+    var fakeXhrInstalled = function (handler) {
+      window.__reqs = [];
+      window.XMLHttpRequest = function () {
+        var self = this;
+        this.open = function (m, u) { self._m = m; self._u = u; };
+        this.setRequestHeader = function (k, v) { (self._h = self._h || {})[k] = v; };
+        this.send = function (b) {
+          self._b = b;
+          window.__reqs.push({ method: self._m, url: self._u, headers: self._h || {}, body: b || null });
+          handler(self);
+        };
+      };
+    };
+    fakeXhrInstalled(function () {});  // 只记录请求，不返回
+    document.getElementById("cmtyToken").value = "github_pat_TESTTOKEN123";
+    document.getElementById("cmtyTokenSave").click();
+    log("admin-saves-token", RLApp.ghToken() === "github_pat_TESTTOKEN123" && RLApp.isAdmin() === true);
+    log("admin-token-cleared-from-input", document.getElementById("cmtyToken").value === "");
+    RLApp.renderCommunityList(demoManifest, box2);
+    log("admin-buttons-appear", box2.querySelectorAll("[data-cmty-edit]").length === 1 && box2.querySelectorAll("[data-cmty-del]").length === 1);
+    log("admin-token-state-ui", document.getElementById("cmtyTokenState").textContent.indexOf("管理权限已启用") !== -1);
+    // ghApi 请求构造：URL / 方法 / 鉴权头 / 分支
+    window.__reqs = [];
+    RLApp.ghApi("DELETE", RLApp.PACKS_API + "reading-pack-a.json", { message: "m", sha: "s", branch: "main" }, function () {}, function () {});
+    var rq = window.__reqs[0];
+    log("admin-api-url", rq.url === "https://api.github.com/repos/l458022/ielts-reading-trainer/contents/packs/reading-pack-a.json");
+    log("admin-api-method", rq.method === "DELETE");
+    log("admin-api-auth-header", rq.headers["Authorization"] === "Bearer github_pat_TESTTOKEN123");
+    log("admin-api-body", JSON.parse(rq.body).sha === "s" && JSON.parse(rq.body).branch === "main");
+    // UTF-8 往返（中文内容能正确 base64 提交的关键）
+    var cn = '{"titleCn":"授粉的经济价值","tags":["自然环境"]}';
+    log("admin-b64-utf8-roundtrip", RLApp.b64ToUtf8(RLApp.utf8ToB64(cn)) === cn);
+    log("admin-b64-actually-encoded", RLApp.utf8ToB64(cn).indexOf("5o6I") !== -1);
+    // 校验器：结构 + keySentence 定位
+    var goodPack = { format: "ielts-reading-pack", version: 1, exams: [{ id: "e1", sections: [{ id: "s1", paragraphs: [{ id: "A", text: "Bees make honey in summer." }], questionGroups: [{ id: "g1", questions: [{ no: 1, keySentence: "Bees make honey in summer." }, { no: 2, keySentence: "This sentence does not exist." }] }] }] }] };
+    var vres = RLApp.validatePack(goodPack);
+    log("admin-validate-ok-with-missing", vres.ok === true && vres.missing.length === 1 && vres.missing[0] === "Q2");
+    log("admin-validate-bad-format", RLApp.validatePack({ format: "x", exams: [] }).ok === false);
+    log("admin-validate-empty-exams", RLApp.validatePack({ format: "ielts-reading-pack", exams: [] }).ok === false);
+    // 编辑弹窗：假 XHR 返回文件内容 → textarea 应填入解码后的 JSON
+    var packText = JSON.stringify({ format: "ielts-reading-pack", version: 1, exams: [{ id: "e1", titleCn: "中文标题", sections: [] }] }, null, 2);
+    fakeXhrInstalled(function (xhr) {
+      xhr.status = 200;
+      xhr.responseText = JSON.stringify({ sha: "sha-abc", content: RLApp.utf8ToB64(packText) });
+      if (xhr.onload) xhr.onload();
+    });
+    RLApp.editCommunityPack({ file: "reading-pack-a.json", titleCn: "A 包" });
+    log("admin-edit-modal-opens", document.getElementById("packEditMask").className.indexOf("show") !== -1);
+    log("admin-edit-loads-content", document.getElementById("packEditText").value === packText);
+    log("admin-edit-path-shown", document.getElementById("packEditPath").textContent.indexOf("packs/reading-pack-a.json") !== -1);
+    // 保存：JSON 语法错误应被拦下且不发请求
+    document.getElementById("packEditText").value = "{ broken json";
+    document.getElementById("packEditSave").click();
+    log("admin-save-blocks-bad-json", document.getElementById("packEditMsg").textContent.indexOf("JSON 语法错误") !== -1 && window.__reqs.length === 1);
+    // 保存：结构不合法也应被拦下
+    document.getElementById("packEditText").value = '{"format":"wrong","exams":[]}';
+    document.getElementById("packEditSave").click();
+    log("admin-save-blocks-bad-structure", document.getElementById("packEditMsg").textContent.indexOf("结构不合法") !== -1 && window.__reqs.length === 1);
+    // 保存：合法内容 → 发出 PUT（含 sha 与 base64 内容）
+    document.getElementById("packEditText").value = JSON.stringify({ format: "ielts-reading-pack", version: 1, exams: [{ id: "e1", titleCn: "改过的标题", sections: [] }] });
+    window.confirm = function () { return true; };
+    document.getElementById("packEditSave").click();
+    var put = window.__reqs[1];
+    log("admin-save-puts", put.method === "PUT" && put.url.indexOf("contents/packs/reading-pack-a.json") !== -1);
+    log("admin-save-includes-sha", JSON.parse(put.body).sha === "sha-abc");
+    log("admin-save-commits-decoded-content", RLApp.b64ToUtf8(JSON.parse(put.body).content).indexOf("改过的标题") !== -1);
+    log("admin-save-message", JSON.parse(put.body).message.indexOf("管理员更新题库包") !== -1);
+    // 删除：GET sha → DELETE
+    window.__reqs = [];
+    RLApp.deleteCommunityPack({ file: "reading-pack-a.json", titleCn: "A 包" });
+    log("admin-delete-two-steps", window.__reqs.length === 2 && window.__reqs[0].method === "GET" && window.__reqs[1].method === "DELETE");
+    log("admin-delete-uses-sha", JSON.parse(window.__reqs[1].body).sha === "sha-abc");
+    // 清除令牌 → 管理按钮消失
+    RLApp.clearAdminToken();
+    RLApp.renderCommunityList(demoManifest, box2);
+    log("admin-clear-removes-buttons", RLApp.isAdmin() === false && box2.querySelectorAll("[data-cmty-del]").length === 0);
+    window.XMLHttpRequest = RealXHR;
   } catch (e) {
     out.push("[FAIL] exception: " + e.message);
   }
