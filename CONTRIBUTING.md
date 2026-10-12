@@ -11,10 +11,10 @@
    node test/generator_test.js     # 自动出题引擎（答案可判定性）47 项
    node test/dict_test.js          # 离线词典与样题覆盖率 18 项
    ```
-   浏览器端 E2E（需本机 Chrome）：
+   浏览器端 E2E（需本机 Chrome，把 `chrome` 换成本机 Chrome 可执行文件路径）：
    ```bash
-   "/c/Program Files/Google/Chrome/Application/chrome.exe" --headless --disable-gpu --no-sandbox \
-     --virtual-time-budget=5000 --dump-dom "file:///<绝对路径>/test/e2e-auto.html" | grep -o 'E2E \[[^<]*'
+   chrome --headless --disable-gpu --no-sandbox \
+     --virtual-time-budget=5000 --dump-dom "file:///<仓库绝对路径>/test/e2e-auto.html" | grep -o 'E2E \[[^<]*'
    ```
 3. 提交信息用中文或英文描述清楚「改了什么、为什么」
 4. 提 Pull Request，说明测试结果

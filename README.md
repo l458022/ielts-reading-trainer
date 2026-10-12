@@ -23,9 +23,9 @@
 
 ## 使用
 
-直接用浏览器打开 `index.html` 即可（无需服务器、无网络请求，数据存在本机浏览器）。
+直接用浏览器打开仓库根目录的 `index.html` 即可（无需服务器、无网络请求，数据存在本机浏览器）。
 
-- 本地路径：`C:/work buddy/雅思阅读练习/index.html`
+- 本地使用：双击 `index.html`，或拖进 Chrome / Edge
 - 想用手机/局域网访问：`python -m http.server 8080` 后访问 `http://<电脑IP>:8080`
 
 ## 导入剑桥雅思真题（个人学习用途）
@@ -69,9 +69,9 @@ node test/generator_test.js  # 47 项：四类题型生成/答案可推性/陷�
 node test/dict_test.js       # 18 项：词形还原/派生词优先/样题覆盖率(≥45%)
 ```
 
-E2E（需本机 Chrome）：
+E2E（需本机 Chrome，把 `chrome` 换成本机 Chrome 可执行文件路径；Windows 默认在 `C:\Program Files\Google\Chrome\Application\chrome.exe`，macOS 在 `/Applications/Google Chrome.app/Contents/MacOS/Google Chrome`）：
 ```bash
-"/c/Program Files/Google/Chrome/Application/chrome.exe" --headless --disable-gpu --no-sandbox \
-  --virtual-time-budget=5000 --dump-dom "file:///<绝对路径>/test/e2e-auto.html" | grep -o 'E2E \[[^<]*'
+chrome --headless --disable-gpu --no-sandbox \
+  --virtual-time-budget=5000 --dump-dom "file:///<仓库绝对路径>/test/e2e-auto.html" | grep -o 'E2E \[[^<]*'
 ```
 当前状态：单元测试 28 + 47 + 18 全通过；E2E 29/29 通过。
