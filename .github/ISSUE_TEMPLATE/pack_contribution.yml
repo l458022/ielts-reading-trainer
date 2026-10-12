@@ -1,0 +1,80 @@
+name: 📦 题库包贡献
+description: 提交一篇你有权分享的英文文章（自动或手动出题）到公共题库
+title: "[题库包] "
+labels: ["question-pack", "needs-review"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        ## ⚠️ 红线（不满足请勿提交）
+
+        - 只能提交**你拥有相应权利**的文章：原创 / 公有领域 / 已获授权
+        - **禁止**：商业出版物全文（含剑桥雅思真题）、商业备考站题目、考生回忆残缺真题
+        - 题目须为自出或由本工具自动生成
+        - 文章不得包含隐私、保密或不当内容
+
+        详见 [贡献指南 · 二、贡献文章与题目](https://github.com/l458022/ielts-reading-trainer/blob/main/CONTRIBUTING.md)
+  - type: input
+    id: title
+    attributes:
+      label: 文章标题
+      placeholder: "The Economics of Pollination"
+    validations:
+      required: true
+  - type: input
+    id: topic
+    attributes:
+      label: 话题 / 场景标签
+      placeholder: 环境 / 科技 / 教育 / 健康
+    validations:
+      required: true
+  - type: dropdown
+    id: source_mode
+    attributes:
+      label: 题目来源
+      options:
+        - 工具自动生成（导入时选「自动」）
+        - 我手动录入（导入时选「手动」）
+        - 混合（自动打底 + 手动补充）
+    validations:
+      required: true
+  - type: checkboxes
+    id: decl
+    attributes:
+      label: 三项声明（必须全部勾选）
+      options:
+        - label: 我对文章拥有相应权利（原创 / 公有领域 / 已获授权），不是从商业站点或出版物搬运
+          required: true
+        - label: 题目是我自己出的，或由本工具自动生成，不是从商业备考站复制
+          required: true
+        - label: 文章不含个人隐私、保密资料或不当内容
+          required: true
+  - type: input
+    id: license
+    attributes:
+      label: 授权方式
+      placeholder: "CC BY 4.0 / CC0 / 已获授权转载"
+    validations:
+      required: true
+  - type: input
+    id: contributor
+    attributes:
+      label: 贡献者署名
+      description: 将写入题库包与仓库贡献者名单
+    validations:
+      required: true
+  - type: textarea
+    id: pack
+    attributes:
+      label: 题库包 JSON
+      description: 应用内「导出题库包」得到的 reading-pack-YYYY-MM-DD.json 全文；太长可只贴前 200 行并在评论补充，或先提 PR 到 packs/ 目录
+      render: json
+    validations:
+      required: true
+  - type: checkboxes
+    id: verify
+    attributes:
+      label: 自检
+      options:
+        - label: 已在应用内导入并完整做过一遍（含交卷看报告）
+        - label: 每道题的 keySentence 都能在原文逐字找到（自动出题天然满足）

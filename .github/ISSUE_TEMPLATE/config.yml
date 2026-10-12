@@ -1,0 +1,14 @@
+blank_issues_enabled: false
+contact_links:
+  - name: 📖 贡献指南（中文）
+    url: https://github.com/l458022/ielts-reading-trainer/blob/main/CONTRIBUTING.md
+    about: 贡献代码或题库包前请先读——含题库包 JSON 格式与版权红线
+  - name: 📖 Contributing Guide (English)
+    url: https://github.com/l458022/ielts-reading-trainer/blob/main/CONTRIBUTING_EN.md
+    about: Read this before contributing code or question packs
+  - name: 🚀 在线演示
+    url: https://l458022.github.io/ielts-reading-trainer/
+    about: 免安装试用，先体验再决定要不要贡献
+  - name: 🔒 安全问题
+    url: https://github.com/l458022/ielts-reading-trainer/blob/main/SECURITY.md
+    about: 发现安全问题请按 SECURITY.md 私下报告，不要公开发帖

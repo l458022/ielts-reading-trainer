@@ -1,6 +1,10 @@
 # 雅思阅读练习室 · IELTS Reading Trainer
 
-> 中文 | [English](README_EN.md)
+> **中文** | [English](README_EN.md)
+>
+> 🚀 **[在线试用（免安装）](https://l458022.github.io/ielts-reading-trainer/)** ·
+> 🤝 [参与贡献](CONTRIBUTING.md) · 🐛 [提交 Issue](https://github.com/l458022/ielts-reading-trainer/issues/new/choose) ·
+> 📜 [行为准则](CODE_OF_CONDUCT.md) · 🔒 [安全政策](SECURITY.md)
 
 一个纯前端、离线可用的雅思阅读练习平台：像雅思哥阅读板块一样刷真题风格的题目，交卷后**自动逐题分析**——定位原句、讲解错因、翻译关键句、列出重点词汇。
 
@@ -51,11 +55,12 @@
 ## 目录
 
 ```
-雅思阅读练习/
-├── LICENSE               MIT（仅覆盖代码；贡献的文章按各自声明授权）
-├── CONTRIBUTING.md       贡献指南（代码 + 题库包，含题库包 JSON 格式）
-├── README.md            本文件
 ├── index.html            页面骨架（含导入弹窗：书卷/Test/Passage/难度/来源/贡献声明）
+├── README.md             中文说明 / README_EN.md 英文说明
+├── CONTRIBUTING.md       贡献指南·中 / CONTRIBUTING_EN.md 英
+├── CODE_OF_CONDUCT.md    贡献者行为准则（Contributor Covenant 中文本）
+├── SECURITY.md           安全政策（漏洞私下披露流程）
+├── LICENSE               MIT（仅覆盖代码；贡献的文章按各自声明授权）
 ├── assets/
 │   ├── style.css         样式（浅色学习界面，响应式）
 │   ├── data-exam1.js     预置样题1：授粉的经济价值（13题）
@@ -65,12 +70,16 @@
 │   ├── dict-core.js      离线核心词典（约 1000 词，含词形还原，点词查词兜底）
 │   └── app.js            交互：答题/倒计时/交卷/报告/点词查词/导入/贡献声明/错题本/生词本
 ├── packs/                公共题库包目录（社区贡献的 reading-pack-*.json）
+├── .github/
+│   ├── workflows/        CI：push/PR 自动跑 3 套单测 + 无头 Chrome E2E
+│   ├── ISSUE_TEMPLATE/   Issue 表单：Bug / 功能建议 / 题库包贡献
+│   └── PULL_REQUEST_TEMPLATE.md
 └── test/
     ├── engine_test.js    引擎单元测试（node test/engine_test.js）
     ├── generator_test.js 自动出题测试（node test/generator_test.js）
     ├── dict_test.js      词典与覆盖率测试（node test/dict_test.js）
     ├── e2e-auto.html     浏览器端 E2E（自动答题→交卷→点词查词→导入→贡献声明）
-    └── shot-*.png        页面渲染截图
+    └── shot-*.png        页面渲染截图（含线上演示站实拍）
 ```
 
 ## 测试

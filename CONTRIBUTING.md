@@ -1,5 +1,10 @@
 # 贡献指南
 
+> **中文** | [English](CONTRIBUTING_EN.md)
+>
+> 📦 想贡献文章/题目？直接看[第二节](#二贡献文章与题目丰富公共题库)。
+> 🐛 只想报 Bug 或提建议？用 [Issue 表单](https://github.com/l458022/ielts-reading-trainer/issues/new/choose)即可，不用读全文。
+
 感谢你为「雅思阅读练习室 / IELTS Reading Trainer」贡献内容！本项目有两类贡献：
 
 ## 一、贡献代码

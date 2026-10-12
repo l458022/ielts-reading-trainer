@@ -1,0 +1,45 @@
+name: 💡 功能建议
+description: 提出新功能或改进想法
+title: "[Feature] "
+labels: ["enhancement"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        提交前建议先搜一下已有 Issue，避免重复提议。
+        大功能最好先讨论再动手，节省双方时间。
+  - type: textarea
+    id: problem
+    attributes:
+      label: 想解决什么问题
+      description: 描述痛点或场景，而不是直接描述实现
+    validations:
+      required: true
+  - type: textarea
+    id: solution
+    attributes:
+      label: 建议的方案
+      description: 你心目中理想的行为是什么样的；有替代方案也请列出
+    validations:
+      required: true
+  - type: dropdown
+    id: area
+    attributes:
+      label: 相关模块
+      multiple: true
+      options:
+        - 题库结构（书卷/Test/Passage）
+        - 答题体验（题型/交互/计时）
+        - 交卷报告与分析
+        - 点词查词 / 离线词典
+        - 导入文章与自动出题
+        - 贡献声明 / 题库包
+        - 记录（历史/错题本/生词本）
+        - 其他
+  - type: checkboxes
+    id: contribute
+    attributes:
+      label: 参与意愿
+      options:
+        - label: 我愿意自己提交 PR 实现这个功能
+        - label: 我可以协助测试或补充语料

@@ -1,11 +1,15 @@
 # IELTS Reading Trainer · 雅思阅读练习室
 
+> [中文说明](README.md) | **English**
+>
+> 🚀 **[Live demo (no install)](https://l458022.github.io/ielts-reading-trainer/)** ·
+> 🤝 [Contributing](CONTRIBUTING_EN.md) · 🐛 [Open an issue](https://github.com/l458022/ielts-reading-trainer/issues/new/choose) ·
+> 📜 [Code of Conduct](CODE_OF_CONDUCT.md) · 🔒 [Security Policy](SECURITY.md)
+
 A **pure frontend, fully offline** IELTS reading practice platform. Practice Cambridge-style
 passages, get an automatic per-question analysis after submitting — sentence locating,
 error explanations, key-sentence translation, and vocabulary — all with **zero network
 requests** and no server.
-
-> [中文说明](README.md)
 
 ## Features
 
@@ -65,6 +69,11 @@ See [CONTRIBUTING.md](CONTRIBUTING.md). Two ways to help:
 
 ```
 ├── index.html            Page shell (import modal: book / Test / Passage / difficulty / source / declaration)
+├── README.md             Chinese readme / README_EN.md English readme
+├── CONTRIBUTING.md       Contributing guide (ZH) / CONTRIBUTING_EN.md (EN)
+├── CODE_OF_CONDUCT.md    Contributor Covenant code of conduct (Chinese)
+├── SECURITY.md           Security policy (private vulnerability reporting)
+├── LICENSE               MIT (code only; contributed articles keep their own license)
 ├── assets/
 │   ├── style.css         Styles (light study UI, responsive)
 │   ├── data-exam1.js     Sample exam 1: The Economics of Pollination (13 questions)
@@ -74,12 +83,16 @@ See [CONTRIBUTING.md](CONTRIBUTING.md). Two ways to help:
 │   ├── dict-core.js      Offline core dictionary (~1,000 words, stemming-aware, look-up fallback)
 │   └── app.js            UI: answering / countdown / submit / report / look-up / import / word book
 ├── packs/                Shared question packs contributed by the community
+├── .github/
+│   ├── workflows/        CI: 3 unit suites + headless Chrome E2E on every push and PR
+│   ├── ISSUE_TEMPLATE/   Issue forms: bug / feature request / question-pack contribution
+│   └── PULL_REQUEST_TEMPLATE.md
 └── test/
     ├── engine_test.js    Engine unit tests
     ├── generator_test.js Generator unit tests
     ├── dict_test.js      Dictionary + coverage tests
     ├── e2e-auto.html     Browser E2E (auto answer → submit → look-up → import → declaration)
-    └── shot-*.png        UI screenshots
+    └── shot-*.png        UI screenshots (including the live demo site)
 ```
 
 ## Tests

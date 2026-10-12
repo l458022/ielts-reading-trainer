@@ -1,0 +1,64 @@
+name: 🐛 Bug 报告
+description: 报告功能异常、数据错误或显示问题
+title: "[Bug] "
+labels: ["bug"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        提交前请确认：
+        - 已在最新版本（main 分支）复现
+        - 已搜索过现有 Issue，没有重复
+  - type: textarea
+    id: what
+    attributes:
+      label: 发生了什么
+      description: 清晰描述异常现象，避免只写"不好用"
+    validations:
+      required: true
+  - type: textarea
+    id: repro
+    attributes:
+      label: 复现步骤
+      description: 从打开应用开始一步写清楚
+      placeholder: |
+        1. 打开「xxx」试卷
+        2. 选择练习模式，答完 3 题
+        3. 点击「交卷并分析」
+        4. 报告页第 2 题定位句为空
+    validations:
+      required: true
+  - type: dropdown
+    id: area
+    attributes:
+      label: 出现场景
+      multiple: true
+      options:
+        - 首页题库（套题/场景/题型）
+        - 答题页
+        - 交卷报告 / 逐题解析
+        - 点词查词 / 生词本
+        - 导入文章 / 自动出题
+        - 题库包导入导出
+        - 倒计时 / 自动交卷
+        - 其他
+    validations:
+      required: true
+  - type: input
+    id: browser
+    attributes:
+      label: 浏览器与版本
+      placeholder: "Chrome 130 / Edge 130 / Firefox 132 / Safari 18"
+    validations:
+      required: true
+  - type: textarea
+    id: expected
+    attributes:
+      label: 期望行为
+      description: 你认为应该怎样才算正常
+  - type: textarea
+    id: extra
+    attributes:
+      label: 补充信息
+      description: 截图、控制台报错、出问题的试卷 JSON（如有）
+      render: text
