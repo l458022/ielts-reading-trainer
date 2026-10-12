@@ -1090,7 +1090,9 @@
         '<div class="cmty-title">' + esc(p.titleCn || p.title || p.id) +
         (p.title && p.titleCn ? ' <span class="cmty-en">' + esc(p.title) + "</span>" : "") + "</div>" +
         '<div class="cmty-meta">' + meta.map(function (m) { return "<span>" + m + "</span>"; }).join("") + "</div>" +
-        '<div class="cmty-src">贡献者 ' + esc(p.contributor || "anonymous") + " · 授权 " + esc(p.license || "未标注") + "</div>" +
+        '<div class="cmty-src">贡献者 ' + esc(p.contributor || "anonymous") + " · 授权 " + esc(p.license || "未标注") +
+        (p.sourceUrl ? ' · <a href="' + esc(p.sourceUrl) + '" target="_blank" rel="noopener">查看原文出处</a>' : "") + "</div>" +
+        (p.attribution ? '<div class="cmty-attr">' + esc(p.attribution) + "</div>" : "") +
         "</div>" +
         '<div class="cmty-acts">' +
         '<button class="btn" data-cmty="' + i + '">下载并导入</button>' +

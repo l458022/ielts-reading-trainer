@@ -44,6 +44,8 @@ function describePack(file, raw) {
   const tags = [...new Set(exams.flatMap((e) => (e.tags || []).map((t) => String(t))))].slice(0, 6);
   const contributors = [...new Set(exams.map((e) => (e.contribution || {}).contributor).filter(Boolean))];
   const licenses = [...new Set(exams.map((e) => (e.contribution || {}).license).filter(Boolean))];
+  const attributions = [...new Set(exams.map((e) => (e.contribution || {}).attribution).filter(Boolean))];
+  const sources = [...new Set(exams.map((e) => (e.contribution || {}).sourceUrl).filter(Boolean))];
   const difficulties = [...new Set(exams.map((e) => e.difficulty).filter(Boolean))];
   const minutes = Math.max(...exams.map((e) => Number(e.minutes) || 20));
 
@@ -59,6 +61,9 @@ function describePack(file, raw) {
     tags: tags,
     contributor: contributors.length ? contributors.join("、") : "anonymous",
     license: licenses.length ? licenses.join(" / ") : "未标注",
+    // CC BY 要求署名随作品呈现，所以索引里也带上出处与署名信息
+    attribution: attributions.join("；"),
+    sourceUrl: sources.length === 1 ? sources[0] : "",
     bytes: Buffer.byteLength(raw, "utf8"),
     updatedAt: pack.createdAt || new Date(0).toISOString()
   };

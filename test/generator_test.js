@@ -64,7 +64,10 @@ articles.forEach(art => {
       T("NG 题 Q" + q.no + " 替换词「" + swapped + "」全文未出现", swapped && lowFull.indexOf(swapped.toLowerCase()) === -1);
     }
     if (q.answer === "FALSE") {
-      T("FALSE 题 Q" + q.no + " 含反向标记", / not | cannot | may not | less | worse | slower | smaller | lower | weaker /i.test(" " + q.stem + " "));
+      // 可判定性：否定 / 比较方向反转 / 数字改动 三者任一
+      T("FALSE 题 Q" + q.no + " 可判定（否定或方向反转或数字改动）", G.isFalsifiable(q.stem, q.keySentence));
+      // 双重否定会让题目读不通（"was not unaware"），必须禁止
+      T("FALSE 题 Q" + q.no + " 无双重否定", !/\b(not|never)\s+\w*(un|in|im|ir|il|dis)\w+/i.test(q.stem));
     }
   });
 

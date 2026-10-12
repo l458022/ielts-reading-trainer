@@ -1,0 +1,343 @@
+{
+  "format": "ielts-reading-pack",
+  "version": 1,
+  "generator": "IELTS Reading Trainer",
+  "createdAt": "2026-10-12T13:47:48.614Z",
+  "exams": [
+    {
+      "id": "community-environmental-impacts-of-food",
+      "title": "Environmental Impacts of Food Production",
+      "titleCn": "食物生产的环境代价",
+      "book": "公共题库",
+      "test": 1,
+      "passage": 1,
+      "difficulty": "中",
+      "series": "公共题库 · 自动出题",
+      "source": "贡献者 l458022 · CC BY 4.0 · Hannah Ritchie、Pablo Rosado、Max Roser — Environmental Impacts of Food Production，Our World in Data，CC BY 4.0",
+      "level": "自定义",
+      "minutes": 20,
+      "tags": [
+        "环境",
+        "农业"
+      ],
+      "intro": "开放获取文章（CC BY 4.0）：Hannah Ritchie、Pablo Rosado、Max Roser — Environmental Impacts of Food Production，Our World in Data，CC BY 4.0　原文：https://ourworldindata.org/environmental-impacts-of-food",
+      "sections": [
+        {
+          "id": "s1",
+          "title": "READING PASSAGE 1",
+          "paragraphs": [
+            {
+              "id": "A",
+              "text": "First, it requires large amounts of fresh water, which can cause significant environmental pressures in regions with water stress. It needs water as input and pollutes rivers, lakes, and oceans by releasing nutrients. Finally, agriculture has a massive impact on the world’s environment due to its enormous land use. Half of the world’s habitable land is used for agriculture. Large parts of the world that were once covered by forests and wildlands are now used for agriculture. This loss of natural habitat has been the main driver for reducing the world’s biodiversity. Wildlife can rebound if we reduce agricultural land use and allow natural lands to restore. Ensuring everyone has access to a nutritious diet sustainably is one of the most significant challenges we face. On this page, you can find our data, visualizations, and writing relating to the environmental impacts of food. Tackling what we eat, and how we produce our food, plays a key role in tackling climate change, reducing water stress and pollution, restoring lands back to forests or grasslands, and protecting the world’s wildlife."
+            },
+            {
+              "id": "B",
+              "text": "Around half of the world’s habitable land is used for agriculture. Habitable land is land that is ice- and desert-free. This is what the visualization shows. Agricultural land is the sum of pasture used for livestock grazing, and cropland used for direct human consumption and animal feed. Three-quarters of this agricultural land is used for livestock, which is pasture plus cropland used for the production of animal feed. This gives the world just 18% of global calories, and 37% of its protein. The other quarter of land is for crops for human consumption, which provide the majority of the world's calories and protein. More than three-quarters of global agricultural land is used for livestock, despite meat and dairy making up a much smaller share of the world's protein and calories. 30% of food emissions come directly from livestock and fisheries. Ruminant livestock – mainly cattle – for example, produce methane through their digestive processes. Manure and pasture management also fall into this category."
+            },
+            {
+              "id": "C",
+              "text": "Crop production accounts for around a quarter of food emissions. This includes crops for human consumption and animal feed. Land use accounts for 24% of food emissions. Twice as many emissions result from land use for livestock (16%) as for crops for human consumption (8%). Finally, supply chains account for 18% of food emissions. This includes food processing, distribution, transport, packaging, and retail. Other studies estimate that an even larger fraction – up to one-third – of the world's greenhouse gas emissions come from food production. 5 These differences come from the inclusion of non-food agricultural products – such as textiles, biofuels, and industrial crops – plus uncertainties in food waste and land use emissions. One-quarter of the world's greenhouse gas emissions result from food and agriculture. What are the main contributors to food's emissions? While energy and industry make a bigger contribution than food, we must tackle both food and energy systems to address climate change."
+            },
+            {
+              "id": "D",
+              "text": "Michael Clark and colleagues modeled the amount of greenhouse gas emissions that would be emitted from food systems this century across a range of scenarios. As the visualization shows, this would take us well beyond the carbon budget for 1.5°C – we would emit two to three times more than this budget. And it would consume almost all of our budget for 2°C. Even if we stopped burning fossil fuels tomorrow – an impossibility – we would still go well beyond our 1.5°C target, and nearly miss our 2°C target. If we want to meet our global climate targets we need to reduce greenhouse gas emissions from food. What options do we have? Transport tends to be a small part of a food’s carbon footprint. Globally, transport accounts for just 5% of food system emissions. Most of food’s emissions come from land use change and emissions from their production on the farm."
+            },
+            {
+              "id": "E",
+              "text": "Since transport emissions are typically small, and the differences between foods are large, what types of food we eat matter much more than how far it has traveled. Locally-produced beef will have a much larger footprint than peas, regardless of whether it’s shipped across continents or not. Producing a kilogram of beef, for example, emits 60 kilograms of greenhouse gasses (CO 2 -equivalents). The production of a kilogram of peas, shown at the bottom of the chart, emits just 1 kilogram of greenhouse gasses. Whether the beef or peas are produced locally will have little impact on the difference between these two foods. The reason that transport accounts for such a small share of emissions is that most internationally traded food travels by boat, not by plane. Very little food is air-freighted; it accounts for only 0.16% of food miles. 7 For the few products which are transported by air, the emissions can be very high: flying emits 50 times more CO 2 eq than boat per tonne kilometer."
+            },
+            {
+              "id": "F",
+              "text": "Unlike aviation, shipping is a very carbon-efficient way to transport goods. So, even shipping food over long distances by boat emits only small amounts of carbon. A classic example of traded food is avocados. Shipping one kilogram of avocados from Mexico to the United Kingdom would generate 0.21kg CO 2 eq in transport emissions. 8 This is only around 8% of avocados’ total footprint. “Eat local” is a common recommendation to reduce your diet's carbon footprint. How does the impact of what you eat compare to where it comes from? Meat and dairy products tend to emit more greenhouse gasses than plant-based foods. This holds true whether we compare on the basis of mass (per kilogram), per kilocalorie, or per gram of protein, as shown in the chart. Within meat and dairy products, there is also a consistent pattern: larger animals tend to be less efficient and have a higher footprint. Beef typically has the largest emissions; followed by lamb; pork; chicken; then eggs and fish."
+            }
+          ],
+          "questionGroups": [
+            {
+              "id": "g-tfng",
+              "type": "tfng",
+              "options": [
+                "TRUE",
+                "FALSE",
+                "NOT GIVEN"
+              ],
+              "instruction": "Do the following statements agree with the information in the passage? Write TRUE if the statement agrees with the information, FALSE if the statement contradicts the information, NOT GIVEN if there is no information on this.",
+              "generated": true,
+              "questions": [
+                {
+                  "no": 1,
+                  "stem": "Twice as numerous emissions result from land employ for livestock (16%) as for crops for human consumption (8%).",
+                  "answer": "TRUE",
+                  "keyPara": "C",
+                  "keySentence": "Twice as many emissions result from land use for livestock (16%) as for crops for human consumption (8%).",
+                  "explain": "本题为机器生成：题干是原文定位句的同义复现（use ↔ employ；many ↔ numerous）。做题时先抓题干关键词回原文，再核对限定词与比较方向。",
+                  "generated": true
+                },
+                {
+                  "no": 2,
+                  "stem": "Since transport emissions are typically small, and the differences between foods are large, what types of food we eat matter much less than how far it has traveled.",
+                  "answer": "FALSE",
+                  "keyPara": "E",
+                  "keySentence": "Since transport emissions are typically small, and the differences between foods are large, what types of food we eat matter much more than how far it has traveled.",
+                  "explain": "本题为机器生成：原文为「Since transport emissions are typically small, and the differences between foods are large, what types of food we eat matter much more than how far it has traveled.」，题干通过改写使陈述与原文矛盾。做题时盯紧比较方向、肯定/否定和程度词。",
+                  "generated": true,
+                  "trap": "比较级反向（more → less），原文方向被对调"
+                },
+                {
+                  "no": 3,
+                  "stem": "7 For the few products which are transported by air, the emissions can be very high: flying emits 50 times more CO 2 eq than boat per tonne kilometer.",
+                  "answer": "TRUE",
+                  "keyPara": "E",
+                  "keySentence": "7 For the few products which are transported by air, the emissions can be very high: flying emits 50 times more CO 2 eq than boat per tonne kilometer.",
+                  "explain": "本题为机器生成：题干是原文定位句的同义复现，内容一致。做题时先抓题干关键词回原文，再核对限定词与比较方向。",
+                  "generated": true
+                },
+                {
+                  "no": 4,
+                  "stem": "First, it requires large amounts of fresh water, which can not cause significant environmental pressures in regions with water stress.",
+                  "answer": "FALSE",
+                  "keyPara": "A",
+                  "keySentence": "First, it requires large amounts of fresh water, which can cause significant environmental pressures in regions with water stress.",
+                  "explain": "本题为机器生成：原文为「First, it requires large amounts of fresh water, which can cause significant environmental pressures in regions with water stress.」，题干通过改写使陈述与原文矛盾。做题时盯紧比较方向、肯定/否定和程度词。",
+                  "generated": true,
+                  "trap": "情态动词被否定（can → not），与原文矛盾"
+                },
+                {
+                  "no": 5,
+                  "stem": "Finally, agriculture has a massive impact on the world’s environment due to its enormous land employ.",
+                  "answer": "TRUE",
+                  "keyPara": "A",
+                  "keySentence": "Finally, agriculture has a massive impact on the world’s environment due to its enormous land use.",
+                  "explain": "本题为机器生成：题干是原文定位句的同义复现（use ↔ employ）。做题时先抓题干关键词回原文，再核对限定词与比较方向。",
+                  "generated": true
+                },
+                {
+                  "no": 6,
+                  "stem": "This gives the world just 18% of global calories, and 37% of its protein.",
+                  "answer": "TRUE",
+                  "keyPara": "B",
+                  "keySentence": "This gives the world just 18% of global calories, and 37% of its protein.",
+                  "explain": "本题为机器生成：题干是原文定位句的同义复现，内容一致。做题时先抓题干关键词回原文，再核对限定词与比较方向。",
+                  "generated": true
+                }
+              ]
+            },
+            {
+              "id": "g-gapfill",
+              "type": "gapfill",
+              "generated": true,
+              "instruction": "Complete the sentences below. Choose NO MORE THAN TWO WORDS from the passage for each answer.",
+              "questions": [
+                {
+                  "no": 7,
+                  "stem": "____________ as many emissions result from land use for livestock (16%) as for crops for human consumption (8%).",
+                  "answer": "twice",
+                  "keyPara": "C",
+                  "keySentence": "Twice as many emissions result from land use for livestock (16%) as for crops for human consumption (8%).",
+                  "explain": "本题为机器生成：从原文定位句中挖掉关键词「twice」。答案必须是原文原词，注意词性与单复数。",
+                  "generated": true,
+                  "answers": [
+                    "twice"
+                  ]
+                },
+                {
+                  "no": 8,
+                  "stem": "____________ transport emissions are typically small, and the differences between foods are large, what types of food we eat matter much more than how far it has traveled.",
+                  "answer": "since",
+                  "keyPara": "E",
+                  "keySentence": "Since transport emissions are typically small, and the differences between foods are large, what types of food we eat matter much more than how far it has traveled.",
+                  "explain": "本题为机器生成：从原文定位句中挖掉关键词「since」。答案必须是原文原词，注意词性与单复数。",
+                  "generated": true,
+                  "answers": [
+                    "since"
+                  ]
+                },
+                {
+                  "no": 9,
+                  "stem": "7 For the few products which are ____________ by air, the emissions can be very high: flying emits 50 times more CO 2 eq than boat per tonne kilometer.",
+                  "answer": "transported",
+                  "keyPara": "E",
+                  "keySentence": "7 For the few products which are transported by air, the emissions can be very high: flying emits 50 times more CO 2 eq than boat per tonne kilometer.",
+                  "explain": "本题为机器生成：从原文定位句中挖掉关键词「transported」。答案必须是原文原词，注意词性与单复数。",
+                  "generated": true,
+                  "answers": [
+                    "transported"
+                  ]
+                }
+              ]
+            },
+            {
+              "id": "g-headings",
+              "type": "headings",
+              "generated": true,
+              "pool": [
+                "i",
+                "ii",
+                "iii",
+                "iv",
+                "v",
+                "vi",
+                "vii"
+              ],
+              "headings": [
+                "i  The role of water",
+                "ii  habitable in the modern world",
+                "iii  How emissions works",
+                "iv  A growing problem: emissions",
+                "v  The importance of emissions",
+                "vi  shipping and its effects",
+                "vii  An unexpected solution"
+              ],
+              "note": "本题组的标题由机器从段落关键词生成，其中若干为干扰项。",
+              "instruction": "The passage has 6 paragraphs. Choose the correct heading for each paragraph from the list below.",
+              "questions": [
+                {
+                  "no": 10,
+                  "stem": "Paragraph A",
+                  "answer": "i",
+                  "keyPara": "A",
+                  "keySentence": "First, it requires large amounts of fresh water, which can cause significant environmental pressures in regions with water stress.",
+                  "explain": "本题为机器生成：段落核心词为「water」。做标题题务必看段落首句+尾句，警惕「只在段中一笔带过」的干扰项。",
+                  "generated": true,
+                  "note": "标题由机器按段落关键词生成，答案为该段最匹配的标题；做题时先扫每段主题句。"
+                },
+                {
+                  "no": 11,
+                  "stem": "Paragraph B",
+                  "answer": "ii",
+                  "keyPara": "B",
+                  "keySentence": "Around half of the world’s habitable land is used for agriculture.",
+                  "explain": "本题为机器生成：段落核心词为「habitable」。做标题题务必看段落首句+尾句，警惕「只在段中一笔带过」的干扰项。",
+                  "generated": true,
+                  "note": "标题由机器按段落关键词生成，答案为该段最匹配的标题；做题时先扫每段主题句。"
+                },
+                {
+                  "no": 12,
+                  "stem": "Paragraph C",
+                  "answer": "iii",
+                  "keyPara": "C",
+                  "keySentence": "Crop production accounts for around a quarter of food emissions.",
+                  "explain": "本题为机器生成：段落核心词为「emissions works」。做标题题务必看段落首句+尾句，警惕「只在段中一笔带过」的干扰项。",
+                  "generated": true,
+                  "note": "标题由机器按段落关键词生成，答案为该段最匹配的标题；做题时先扫每段主题句。"
+                },
+                {
+                  "no": 13,
+                  "stem": "Paragraph D",
+                  "answer": "iv",
+                  "keyPara": "D",
+                  "keySentence": "Michael Clark and colleagues modeled the amount of greenhouse gas emissions that would be emitted from food systems this century across a range of scenarios.",
+                  "explain": "本题为机器生成：段落核心词为「emissions」。做标题题务必看段落首句+尾句，警惕「只在段中一笔带过」的干扰项。",
+                  "generated": true,
+                  "note": "标题由机器按段落关键词生成，答案为该段最匹配的标题；做题时先扫每段主题句。"
+                },
+                {
+                  "no": 14,
+                  "stem": "Paragraph E",
+                  "answer": "v",
+                  "keyPara": "E",
+                  "keySentence": "Since transport emissions are typically small, and the differences between foods are large, what types of food we eat matter much more than how far it has traveled.",
+                  "explain": "本题为机器生成：段落核心词为「emissions」。做标题题务必看段落首句+尾句，警惕「只在段中一笔带过」的干扰项。",
+                  "generated": true,
+                  "note": "标题由机器按段落关键词生成，答案为该段最匹配的标题；做题时先扫每段主题句。"
+                },
+                {
+                  "no": 15,
+                  "stem": "Paragraph F",
+                  "answer": "vi",
+                  "keyPara": "F",
+                  "keySentence": "Unlike aviation, shipping is a very carbon-efficient way to transport goods.",
+                  "explain": "本题为机器生成：段落核心词为「shipping」。做标题题务必看段落首句+尾句，警惕「只在段中一笔带过」的干扰项。",
+                  "generated": true,
+                  "note": "标题由机器按段落关键词生成，答案为该段最匹配的标题；做题时先扫每段主题句。"
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "vocabulary": [
+        {
+          "word": "greenhouse",
+          "pos": "n.",
+          "meaning": "温室",
+          "sentence": "Other studies estimate that an even larger fraction – up to one-third – of the world's greenhouse gas emissions come from food production."
+        },
+        {
+          "word": "transport",
+          "pos": "n.",
+          "meaning": "交通",
+          "sentence": "This includes food processing, distribution, transport, packaging, and retail."
+        },
+        {
+          "word": "production",
+          "pos": "n.",
+          "meaning": "生产",
+          "sentence": "Three-quarters of this agricultural land is used for livestock, which is pasture plus cropland used for the production of animal feed."
+        },
+        {
+          "word": "footprint",
+          "pos": "n.",
+          "meaning": "足迹",
+          "sentence": "Transport tends to be a small part of a food’s carbon footprint."
+        },
+        {
+          "word": "protein",
+          "pos": "n.",
+          "meaning": "蛋白质",
+          "sentence": "This gives the world just 18% of global calories, and 37% of its protein."
+        },
+        {
+          "word": "carbon",
+          "pos": "n.",
+          "meaning": "碳",
+          "sentence": "As the visualization shows, this would take us well beyond the carbon budget for 1."
+        },
+        {
+          "word": "water",
+          "pos": "n.",
+          "meaning": "水",
+          "sentence": "First, it requires large amounts of fresh water, which can cause significant environmental pressures in regions with water stress."
+        },
+        {
+          "word": "human",
+          "pos": "n.",
+          "meaning": "人类",
+          "sentence": "Agricultural land is the sum of pasture used for livestock grazing, and cropland used for direct human consumption and animal feed."
+        },
+        {
+          "word": "shipping",
+          "pos": "n.",
+          "meaning": "航运",
+          "sentence": "Unlike aviation, shipping is a very carbon-efficient way to transport goods."
+        },
+        {
+          "word": "climate",
+          "pos": "n.",
+          "meaning": "气候",
+          "sentence": "Tackling what we eat, and how we produce our food, plays a key role in tackling climate change, reducing water stress and pollution, restoring lands back to forests or grasslands, and protecting the world’s wildlife."
+        },
+        {
+          "word": "example",
+          "pos": "n.",
+          "meaning": "例子",
+          "sentence": "Ruminant livestock – mainly cattle – for example, produce methane through their digestive processes."
+        },
+        {
+          "word": "whether",
+          "pos": "conj.",
+          "meaning": "是否",
+          "sentence": "Locally-produced beef will have a much larger footprint than peas, regardless of whether it’s shipped across continents or not."
+        }
+      ],
+      "contribution": {
+        "contributor": "l458022",
+        "license": "CC BY 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
+        "sourceUrl": "https://ourworldindata.org/environmental-impacts-of-food",
+        "attribution": "Hannah Ritchie、Pablo Rosado、Max Roser — Environmental Impacts of Food Production，Our World in Data，CC BY 4.0",
+        "declaredAt": "2026-10-12T13:47:48.612Z",
+        "declaration": "copyright-ok;questions-original-or-tool-generated;no-privacy"
+      }
+    }
+  ]
+}

@@ -1,0 +1,342 @@
+{
+  "format": "ielts-reading-pack",
+  "version": 1,
+  "generator": "IELTS Reading Trainer",
+  "createdAt": "2026-10-12T13:48:02.273Z",
+  "exams": [
+    {
+      "id": "community-biodiversity",
+      "title": "Biodiversity",
+      "titleCn": "生物多样性的危机",
+      "book": "公共题库",
+      "test": 1,
+      "passage": 1,
+      "difficulty": "难",
+      "series": "公共题库 · 自动出题",
+      "source": "贡献者 l458022 · CC BY 4.0 · Hannah Ritchie、Fiona Spooner、Max Roser — Biodiversity，Our World in Data，CC BY 4.0",
+      "level": "自定义",
+      "minutes": 20,
+      "tags": [
+        "自然",
+        "环境"
+      ],
+      "intro": "开放获取文章（CC BY 4.0）：Hannah Ritchie、Fiona Spooner、Max Roser — Biodiversity，Our World in Data，CC BY 4.0　原文：https://ourworldindata.org/biodiversity",
+      "sections": [
+        {
+          "id": "s1",
+          "title": "READING PASSAGE 1",
+          "paragraphs": [
+            {
+              "id": "A",
+              "text": "But we are just one of many species on Earth, and our demand for resources – land, water, food, and shelter – shapes the environment for other wildlife too. For millennia, humans have been reshaping ecosystems, directly through competition and hunting of other animals, and indirectly through deforestation and land use changes for agriculture. You can find all our data, visualizations, and writing related to biodiversity on this page. It aims to provide context on how biodiversity has changed in the past; the state of wildlife today; and how we can use this knowledge to build a future path where humans and other species can thrive on our shared planet. The Living Planet Index tries to summarize the average change in population size of tens of thousands of studied animal populations. It distills this change into a single number. It's important to note that this data is not globally representative: some regions have much more data available than others. Biodiversity data is much more limited in the tropics, for example."
+            },
+            {
+              "id": "B",
+              "text": "Since 1970, the size of animal populations for which data is available has declined by 73%, on average. The decline for some populations is much larger; for some, it’s much smaller. And, in fact, many populations have been increasing in size. We cover this in the next key insight. The Living Planet Index is the biodiversity metric that always claims the headlines. It’s often misinterpreted. How should we understand it? But, reducing the state of global biodiversity into a single figure is a problem. It hides a huge diversity of changes in animal populations within the dataset. The Living Planet Project also shows us what percentage of studied populations have increased, decreased, and remained stable since 1970. Understanding the broad range of changes in populations is crucial if we’re to stop biodiversity loss – we need to know that not all animal populations are declining. We need to also know which populations are doing well and why they’re doing well."
+            },
+            {
+              "id": "C",
+              "text": "Beneath the popular index, the Living Planet database helps us understand where and what animals are deeply threatened, and what animals are thriving. A diverse range of mammals once roamed the planet. This changed quickly and dramatically with the rising number of humans over the course of the last 100,000 years. This looks at the change in wild mammals on the basis of biomass. This means that each animal is measured in tonnes of carbon that it holds. This is a function of its body mass. In an extended period between 50,000 to 10,000 years ago, hundreds of the world’s largest mammals were wiped out. This is called the Quaternary megafauna extinction event. Humans were the main driver of this, killing off species through overhunting and changes to their habitats. What’s staggering is how few humans were alive at this time: fewer than 5 million people across the world. Since then, wild mammals have continued to decline. A lot of this has been driven by the expansion of human agriculture into wild habitats."
+            },
+            {
+              "id": "D",
+              "text": "Wild mammal biomass has declined by 85% since the rise of humans. But we can turn things around by reducing the amount of land we use for agriculture. In the chart, we see the distribution of mammals on Earth. 3 These estimates compare mammals on the basis of biomass. This means that each animal is measured in tonnes of carbon that it holds. This is a function of its body mass. Each rectangle represents one million tonnes of carbon. The dominance of humans is clear. Alone, we account for around one-third of mammal biomass. Almost ten times greater than wild mammals. Our livestock then accounts for almost two-thirds. Cattle weigh almost ten times as much as all wild mammals combined. The biomass of all of the world’s wild mammals is about the same as our sheep. Poultry is not included here. But for birds, the distribution is similar: poultry biomass is more than twice that of wild birds."
+            },
+            {
+              "id": "E",
+              "text": "Mammals in Europe are a prime example. Many of the region’s iconic mammal species – such as the Eurasian beaver, European bison, and brown bear – have been making a return. In the chart, we see the average change in the population size of several mammal species in Europe. The studied time span differs from animal to animal, as the chart shows. For example between 1960 and 2016, populations of brown bears increased by an average of 44%. Between 1977 and 2016, populations of Eurasian otters increased by an average of 300%. Conservation efforts have played an important role in the return of these mammals, but it is not the only reason for this positive development. One important change is that the rise in agricultural productivity made it possible that agricultural land has declined across Europe, giving more habitat back to wildlife. Countries brought in hunting quotas or even complete bans on hunting. And some species – such as the European bison – were brought back through well-managed re-introduction programs."
+            },
+            {
+              "id": "F",
+              "text": "Hunting and habitat loss drove many large mammals in Europe close to extinction. New data shows us that many of the continent’s mammal populations are flourishing again. Wild mammal biomass has declined by 85% since the rise of humans. But we can turn things around by reducing the amount of land we use for agriculture. Hunting and habitat loss drove many large mammals in Europe close to extinction. New data shows us that many of the continent’s mammal populations are flourishing again. Leung, B., Hargreaves, A. L., Greenberg, D. A., McGill, B., Dornelas, M., & Freeman, R.. Clustered versus catastrophic global vertebrate declines. Nature, 588, 267-271. Bar-On, Y. M., Phillips, R., & Milo, R.. The biomass distribution on Earth. Proceedings of the National Academy of Sciences, 115, 6506-6511. Ledger, S.E.H., Rutherford, C.A., Benham, C., Burfield, I.J., Deinet, S., Eaton, M., Freeman, R., Gray C., Herrando, S., Puleston, H., Scott-Gatty, K., Staneva, A. and McRae, L. Wildlife Comeback in Europe: Opportunities and challenges for species recovery. Final report to Rewilding Europe by the Zoological Society of London, BirdLife International and the European Bird Census Council."
+            }
+          ],
+          "questionGroups": [
+            {
+              "id": "g-tfng",
+              "type": "tfng",
+              "options": [
+                "TRUE",
+                "FALSE",
+                "NOT GIVEN"
+              ],
+              "instruction": "Do the following statements agree with the information in the passage? Write TRUE if the statement agrees with the information, FALSE if the statement contradicts the information, NOT GIVEN if there is no information on this.",
+              "generated": true,
+              "questions": [
+                {
+                  "no": 1,
+                  "stem": "Since 1970, the size of animal populations for which data is available has declined by 73%, on average.",
+                  "answer": "TRUE",
+                  "keyPara": "B",
+                  "keySentence": "Since 1970, the size of animal populations for which data is available has declined by 73%, on average.",
+                  "explain": "本题为机器生成：题干是原文定位句的同义复现，内容一致。做题时先抓题干关键词回原文，再核对限定词与比较方向。",
+                  "generated": true
+                },
+                {
+                  "no": 2,
+                  "stem": "The Living Planet Project in addition shows us what percentage of studied populations have increased, decreased, and remained stable since 1970.",
+                  "answer": "TRUE",
+                  "keyPara": "B",
+                  "keySentence": "The Living Planet Project also shows us what percentage of studied populations have increased, decreased, and remained stable since 1970.",
+                  "explain": "本题为机器生成：题干是原文定位句的同义复现（also ↔ in addition）。做题时先抓题干关键词回原文，再核对限定词与比较方向。",
+                  "generated": true
+                },
+                {
+                  "no": 3,
+                  "stem": "What’s staggering is not how few humans were alive at this time: fewer than 5 million people across the world.",
+                  "answer": "FALSE",
+                  "keyPara": "C",
+                  "keySentence": "What’s staggering is how few humans were alive at this time: fewer than 5 million people across the world.",
+                  "explain": "本题为机器生成：原文为「What’s staggering is how few humans were alive at this time: fewer than 5 million people across the world.」，题干通过改写使陈述与原文矛盾。做题时盯紧比较方向、肯定/否定和程度词。",
+                  "generated": true,
+                  "trap": "系动词被否定（is not），与原文矛盾"
+                },
+                {
+                  "no": 4,
+                  "stem": "Wild mammal biomass has declined by 85% since the rise of humans.",
+                  "answer": "TRUE",
+                  "keyPara": "D",
+                  "keySentence": "Wild mammal biomass has declined by 85% since the rise of humans.",
+                  "explain": "本题为机器生成：题干是原文定位句的同义复现，内容一致。做题时先抓题干关键词回原文，再核对限定词与比较方向。",
+                  "generated": true
+                },
+                {
+                  "no": 5,
+                  "stem": "Wild mammal biomass has declined by 85% since the rise of humans.",
+                  "answer": "TRUE",
+                  "keyPara": "F",
+                  "keySentence": "Wild mammal biomass has declined by 85% since the rise of humans.",
+                  "explain": "本题为机器生成：题干是原文定位句的同义复现，内容一致。做题时先抓题干关键词回原文，再核对限定词与比较方向。",
+                  "generated": true
+                },
+                {
+                  "no": 6,
+                  "stem": "This changed quickly and dramatically with the rising number of humans over the course of the last 100,000 years.",
+                  "answer": "TRUE",
+                  "keyPara": "C",
+                  "keySentence": "This changed quickly and dramatically with the rising number of humans over the course of the last 100,000 years.",
+                  "explain": "本题为机器生成：题干是原文定位句的同义复现，内容一致。做题时先抓题干关键词回原文，再核对限定词与比较方向。",
+                  "generated": true
+                }
+              ]
+            },
+            {
+              "id": "g-gapfill",
+              "type": "gapfill",
+              "generated": true,
+              "instruction": "Complete the sentences below. Choose NO MORE THAN TWO WORDS from the passage for each answer.",
+              "questions": [
+                {
+                  "no": 7,
+                  "stem": "Since 1970, the size of animal populations for which data is ____________ has declined by 73%, on average.",
+                  "answer": "available",
+                  "keyPara": "B",
+                  "keySentence": "Since 1970, the size of animal populations for which data is available has declined by 73%, on average.",
+                  "explain": "本题为机器生成：从原文定位句中挖掉关键词「available」。答案必须是原文原词，注意词性与单复数。",
+                  "generated": true,
+                  "answers": [
+                    "available"
+                  ]
+                },
+                {
+                  "no": 8,
+                  "stem": "The Living Planet ____________ also shows us what percentage of studied populations have increased, decreased, and remained stable since 1970.",
+                  "answer": "project",
+                  "keyPara": "B",
+                  "keySentence": "The Living Planet Project also shows us what percentage of studied populations have increased, decreased, and remained stable since 1970.",
+                  "explain": "本题为机器生成：从原文定位句中挖掉关键词「project」。答案必须是原文原词，注意词性与单复数。",
+                  "generated": true,
+                  "answers": [
+                    "project"
+                  ]
+                },
+                {
+                  "no": 9,
+                  "stem": "What’s ____________ is how few humans were alive at this time: fewer than 5 million people across the world.",
+                  "answer": "staggering",
+                  "keyPara": "C",
+                  "keySentence": "What’s staggering is how few humans were alive at this time: fewer than 5 million people across the world.",
+                  "explain": "本题为机器生成：从原文定位句中挖掉关键词「staggering」。答案必须是原文原词，注意词性与单复数。",
+                  "generated": true,
+                  "answers": [
+                    "staggering"
+                  ]
+                }
+              ]
+            },
+            {
+              "id": "g-headings",
+              "type": "headings",
+              "generated": true,
+              "pool": [
+                "i",
+                "ii",
+                "iii",
+                "iv",
+                "v",
+                "vi",
+                "vii"
+              ],
+              "headings": [
+                "i  The role of wildlife",
+                "ii  populations in the modern world",
+                "iii  How animals works",
+                "iv  A growing problem: biomass",
+                "v  The importance of europe",
+                "vi  europe and its effects",
+                "vii  An unexpected solution"
+              ],
+              "note": "本题组的标题由机器从段落关键词生成，其中若干为干扰项。",
+              "instruction": "The passage has 6 paragraphs. Choose the correct heading for each paragraph from the list below.",
+              "questions": [
+                {
+                  "no": 10,
+                  "stem": "Paragraph A",
+                  "answer": "i",
+                  "keyPara": "A",
+                  "keySentence": "But we are just one of many species on Earth, and our demand for resources – land, water, food, and shelter – shapes the environment for other wildlife too.",
+                  "explain": "本题为机器生成：段落核心词为「wildlife」。做标题题务必看段落首句+尾句，警惕「只在段中一笔带过」的干扰项。",
+                  "generated": true,
+                  "note": "标题由机器按段落关键词生成，答案为该段最匹配的标题；做题时先扫每段主题句。"
+                },
+                {
+                  "no": 11,
+                  "stem": "Paragraph B",
+                  "answer": "ii",
+                  "keyPara": "B",
+                  "keySentence": "Since 1970, the size of animal populations for which data is available has declined by 73%, on average.",
+                  "explain": "本题为机器生成：段落核心词为「populations」。做标题题务必看段落首句+尾句，警惕「只在段中一笔带过」的干扰项。",
+                  "generated": true,
+                  "note": "标题由机器按段落关键词生成，答案为该段最匹配的标题；做题时先扫每段主题句。"
+                },
+                {
+                  "no": 12,
+                  "stem": "Paragraph C",
+                  "answer": "iii",
+                  "keyPara": "C",
+                  "keySentence": "Beneath the popular index, the Living Planet database helps us understand where and what animals are deeply threatened, and what animals are thriving.",
+                  "explain": "本题为机器生成：段落核心词为「animals works」。做标题题务必看段落首句+尾句，警惕「只在段中一笔带过」的干扰项。",
+                  "generated": true,
+                  "note": "标题由机器按段落关键词生成，答案为该段最匹配的标题；做题时先扫每段主题句。"
+                },
+                {
+                  "no": 13,
+                  "stem": "Paragraph D",
+                  "answer": "iv",
+                  "keyPara": "D",
+                  "keySentence": "Wild mammal biomass has declined by 85% since the rise of humans.",
+                  "explain": "本题为机器生成：段落核心词为「biomass」。做标题题务必看段落首句+尾句，警惕「只在段中一笔带过」的干扰项。",
+                  "generated": true,
+                  "note": "标题由机器按段落关键词生成，答案为该段最匹配的标题；做题时先扫每段主题句。"
+                },
+                {
+                  "no": 14,
+                  "stem": "Paragraph E",
+                  "answer": "v",
+                  "keyPara": "E",
+                  "keySentence": "Mammals in Europe are a prime example.",
+                  "explain": "本题为机器生成：段落核心词为「europe」。做标题题务必看段落首句+尾句，警惕「只在段中一笔带过」的干扰项。",
+                  "generated": true,
+                  "note": "标题由机器按段落关键词生成，答案为该段最匹配的标题；做题时先扫每段主题句。"
+                },
+                {
+                  "no": 15,
+                  "stem": "Paragraph F",
+                  "answer": "vi",
+                  "keyPara": "F",
+                  "keySentence": "Hunting and habitat loss drove many large mammals in Europe close to extinction.",
+                  "explain": "本题为机器生成：段落核心词为「europe」。做标题题务必看段落首句+尾句，警惕「只在段中一笔带过」的干扰项。",
+                  "generated": true,
+                  "note": "标题由机器按段落关键词生成，答案为该段最匹配的标题；做题时先扫每段主题句。"
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "vocabulary": [
+        {
+          "word": "animal",
+          "pos": "n.",
+          "meaning": "动物",
+          "sentence": "For millennia, humans have been reshaping ecosystems, directly through competition and hunting of other animals, and indirectly through deforestation and land use changes for agriculture."
+        },
+        {
+          "word": "species",
+          "pos": "n.",
+          "meaning": "物种",
+          "sentence": "But we are just one of many species on Earth, and our demand for resources – land, water, food, and shelter – shapes the environment for other wildlife too."
+        },
+        {
+          "word": "planet",
+          "pos": "n.",
+          "meaning": "行星",
+          "sentence": "It aims to provide context on how biodiversity has changed in the past; the state of wildlife today; and how we can use this knowledge to build a future path where humans and other species can thrive on our shared planet."
+        },
+        {
+          "word": "change",
+          "pos": "n.",
+          "meaning": "改变",
+          "sentence": "For millennia, humans have been reshaping ecosystems, directly through competition and hunting of other animals, and indirectly through deforestation and land use changes for agriculture."
+        },
+        {
+          "word": "distribution",
+          "pos": "n.",
+          "meaning": "分配，分发",
+          "sentence": "In the chart, we see the distribution of mammals on Earth."
+        },
+        {
+          "word": "extinction",
+          "pos": "n.",
+          "meaning": "灭绝",
+          "sentence": "This is called the Quaternary megafauna extinction event."
+        },
+        {
+          "word": "important",
+          "pos": "adj.",
+          "meaning": "重要的",
+          "sentence": "It's important to note that this data is not globally representative: some regions have much more data available than others."
+        },
+        {
+          "word": "example",
+          "pos": "n.",
+          "meaning": "例子",
+          "sentence": "Biodiversity data is much more limited in the tropics, for example."
+        },
+        {
+          "word": "carbon",
+          "pos": "n.",
+          "meaning": "碳",
+          "sentence": "This means that each animal is measured in tonnes of carbon that it holds."
+        },
+        {
+          "word": "earth",
+          "pos": "n.",
+          "meaning": "地球",
+          "sentence": "But we are just one of many species on Earth, and our demand for resources – land, water, food, and shelter – shapes the environment for other wildlife too."
+        },
+        {
+          "word": "population",
+          "pos": "n.",
+          "meaning": "种群，人口",
+          "sentence": "The Living Planet Index tries to summarize the average change in population size of tens of thousands of studied animal populations."
+        },
+        {
+          "word": "understand",
+          "pos": "v.",
+          "meaning": "理解",
+          "sentence": "How should we understand it?"
+        }
+      ],
+      "contribution": {
+        "contributor": "l458022",
+        "license": "CC BY 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
+        "sourceUrl": "https://ourworldindata.org/biodiversity",
+        "attribution": "Hannah Ritchie、Fiona Spooner、Max Roser — Biodiversity，Our World in Data，CC BY 4.0",
+        "declaredAt": "2026-10-12T13:48:02.272Z",
+        "declaration": "copyright-ok;questions-original-or-tool-generated;no-privacy"
+      }
+    }
+  ]
+}

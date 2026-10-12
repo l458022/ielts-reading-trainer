@@ -1,0 +1,344 @@
+{
+  "format": "ielts-reading-pack",
+  "version": 1,
+  "generator": "IELTS Reading Trainer",
+  "createdAt": "2026-10-12T13:48:00.342Z",
+  "exams": [
+    {
+      "id": "community-co2-and-greenhouse-gas-emissions",
+      "title": "CO₂ and Greenhouse Gas Emissions",
+      "titleCn": "二氧化碳与温室气体排放",
+      "book": "公共题库",
+      "test": 1,
+      "passage": 1,
+      "difficulty": "难",
+      "series": "公共题库 · 自动出题",
+      "source": "贡献者 l458022 · CC BY 4.0 · Hannah Ritchie、Pablo Rosado、Max Roser — CO₂ and Greenhouse Gas Emissions，Our World in Data，CC BY 4.0",
+      "level": "自定义",
+      "minutes": 20,
+      "tags": [
+        "环境",
+        "气候"
+      ],
+      "intro": "开放获取文章（CC BY 4.0）：Hannah Ritchie、Pablo Rosado、Max Roser — CO₂ and Greenhouse Gas Emissions，Our World in Data，CC BY 4.0　原文：https://ourworldindata.org/co2-and-greenhouse-gas-emissions",
+      "sections": [
+        {
+          "id": "s1",
+          "title": "READING PASSAGE 1",
+          "paragraphs": [
+            {
+              "id": "A",
+              "text": "CO 2 and other greenhouse gases like methane and nitrous oxide are emitted when we burn fossil fuels, produce materials such as steel, cement, and plastics, and grow the food we eat. If we want to reduce these emissions, we need to transform our energy systems, industries, and food systems. At the same time, we need to tackle energy poverty, low standards of living, and poor nutrition, which all remain enormous problems for billions of people. Technological advances could allow us to do both. The prices of solar, wind, and batteries have plummeted in recent decades, increasingly undercutting the cost of fossil fuel alternatives. Further progress could allow us to provide cheap, clean energy for everyone. Political change is essential to create a system that supports rapid decarbonization. Emissions are still rising in many parts of the world. However, several countries have managed to cut their emissions in recent decades. With affordable low-carbon technologies, other countries can increase their living standards without the high-carbon pathway that rich countries followed in the past."
+            },
+            {
+              "id": "B",
+              "text": "Human emissions of carbon dioxide and other greenhouse gases are the primary drivers of the global rise in temperatures. 1 This link between global temperatures and greenhouse gas concentrations – especially CO 2 – has been true throughout Earth’s history. 2 In the chart, we see the global average temperature relative to a baseline, which is the average between 1861 and 1890. This gives us an estimate of the temperature increase compared to “pre-industrial” times. Average global temperatures have risen by approximately 1.3°C since then (with even higher anomalies in the last few years). This warming has not been equally distributed across the world. The Northern Hemisphere has warmed more than the Southern Hemisphere. In some regions, temperatures have risen by more than 5°C. You can see this distribution in maps published by Berkeley Earth. Human emissions have been the main driver of this change. Aerosols have played a slight cooling role in global climate, and natural variability has played a minor role. This article from Carbon Brief explains this very well, with interactive graphics showing the relative contributions of different factors to the climate."
+            },
+            {
+              "id": "C",
+              "text": "If we want to stabilize (or even reduce) concentrations of CO 2 in the atmosphere, the world needs to reach net-zero emissions. This means our net carbon contributions to the atmosphere are zero: any remaining emissions are offset by carbon sinks. This requires significant reductions in emissions. In the chart, you can see global CO 2 emissions since 1750, broken down by world region. Emissions have increased rapidly over the last half-century. Current policies to reduce, or at least slow down, the growth of CO 2 emissions have already averted some future warming compared to a world without these policies. As we see in the chart, climate and energy policies – which include adopted and implemented policies (such as legislative decisions and executive orders) would reduce warming relative to a world with no climate policies. This chart maps out future greenhouse gas emissions scenarios under a range of assumptions: if no climate policies were implemented; if current policies continued; if all countries achieved their current future pledges for emissions reductions; and the necessary pathways compatible with limiting warming to 1.5°C or 2°C of warming this century. 4"
+            },
+            {
+              "id": "D",
+              "text": "But if we aim to limit warming to “well below 2°C” – as is laid out in the Paris Agreement – currently policies have us far off track. To achieve this goal, countries need to increase the ambition of these commitments and bring their policies in line with them. We can compare the total emissions of countries every year. But this fails to take population size into account; you’d expect a country with more people to have higher emissions. Even then, comparisons of total or per capita emissions today don’t capture historical contributions. Some countries that now have relatively low emissions have had high emissions for centuries. In the chart, we see one metric to compare across the world: emissions per person. There are massive differences in emissions across the globe. Some of the wealthiest countries emit 100 times more per person than the poorest. Domestic emissions in the UK have roughly halved since 1970. Emissions in the European Union have fallen by more than one-quarter."
+            },
+            {
+              "id": "E",
+              "text": "Part of this is because many rich countries have ‘offshored’ some of their emissions by importing CO 2 -intensive goods manufactured elsewhere – but we still see a significant decline in emissions after adjusting for trade. Consumption-based CO2 emissions have declined very substantially in many countries. Many of these countries have grown their economies at the same time: GDP per capita has increased while consumption-based emissions have fallen. The chart shows the data for various countries that have achieved this decoupling. The budget to keep temperatures below 1.5°C is less than a decade of current emissions. For 2°C, it’s less than three decades. IPCC, 2021: Climate Change 2021: The Physical Science Basis. Contribution of Working Group I to the Sixth Assessment Report of the Intergovernmental Panel on Climate Change [Masson-Delmotte, V., P. Zhai, A. Pirani, S.L. Connors, C. Péan, S. Berger, N. Caud, Y. Chen, L. Goldfarb, M.I. Gomis, M. Huang, K. Leitzell, E. Lonnoy, J.B.R. Matthews, T.K. Maycock, T. Waterfield, O. Yelekçi, R. Yu, and B. Zhou (eds.)]. Cambridge University Press, Cambridge, United Kingdom and New York, NY, USA, In press, doi:10.1017/9781009157896."
+            },
+            {
+              "id": "F",
+              "text": "Lacis, A. A., Schmidt, G. A., Rind, D., & Ruedy, R. A.. Atmospheric CO₂: Principal control knob governing Earth’s temperature. Science, 330, 356-359. Morice, C.P., J.J. Kennedy, N.A. Rayner, J.P. Winn, E. Hogan, R.E. Killick, R.J.H. Dunn, T.J. Osborn, P.D. Jones and I.R. Simpson (in press) An updated assessment of near-surface temperature change from 1850: the HadCRUT5 dataset. Journal of Geophysical Research (Atmospheres) doi:10.1029/2019JD032361 (supporting information). The underlying data for this chart is sourced from the Climate Action Tracker – based on policies and pledges as of April 2022. Our articles and data visualizations rely on work from many different people and organizations. When citing this topic page, please also cite the underlying data sources. This topic page can be cited as: All visualizations, data, and articles produced by Our World in Data are completely open access under the Creative Commons BY license. You have the permission to use, distribute, and reproduce these in any medium, provided the source and authors are credited."
+            }
+          ],
+          "questionGroups": [
+            {
+              "id": "g-tfng",
+              "type": "tfng",
+              "options": [
+                "TRUE",
+                "FALSE",
+                "NOT GIVEN"
+              ],
+              "instruction": "Do the following statements agree with the information in the passage? Write TRUE if the statement agrees with the information, FALSE if the statement contradicts the information, NOT GIVEN if there is no information on this.",
+              "generated": true,
+              "questions": [
+                {
+                  "no": 1,
+                  "stem": "Part of this is since numerous rich countries have ‘offshored’ some of their emissions by importing CO 2 -intensive goods manufactured elsewhere – but we still see a significant decline in emissions after adjusting for trade.",
+                  "answer": "TRUE",
+                  "keyPara": "E",
+                  "keySentence": "Part of this is because many rich countries have ‘offshored’ some of their emissions by importing CO 2 -intensive goods manufactured elsewhere – but we still see a significant decline in emissions after adjusting for trade.",
+                  "explain": "本题为机器生成：题干是原文定位句的同义复现（many ↔ numerous；because ↔ since）。做题时先抓题干关键词回原文，再核对限定词与比较方向。",
+                  "generated": true
+                },
+                {
+                  "no": 2,
+                  "stem": "Some of the wealthiest countries emit 100 times less per person than the poorest.",
+                  "answer": "FALSE",
+                  "keyPara": "D",
+                  "keySentence": "Some of the wealthiest countries emit 100 times more per person than the poorest.",
+                  "explain": "本题为机器生成：原文为「Some of the wealthiest countries emit 100 times more per person than the poorest.」，题干通过改写使陈述与原文矛盾。做题时盯紧比较方向、肯定/否定和程度词。",
+                  "generated": true,
+                  "trap": "比较级反向（more → less），原文方向被对调"
+                },
+                {
+                  "no": 3,
+                  "stem": "1 This link between global temperatures and greenhouse coal concentrations – especially CO 2 – has been true throughout Earth’s history.",
+                  "answer": "NOT GIVEN",
+                  "keyPara": "B",
+                  "keySentence": "1 This link between global temperatures and greenhouse gas concentrations – especially CO 2 – has been true throughout Earth’s history.",
+                  "explain": "本题为机器生成：原文说的是「1 This link between global temperatures and greenhouse gas concentrations – especially CO 2 – has been true throughout Earth’s history.」，题干把实体偷换成了别的东西，原文从未提及该组合——这是 NG 题的典型构造。",
+                  "generated": true,
+                  "trap": "实体偷换（gas → coal）：原文说的是「gas」，题干偷换成「coal」，属文中未提及"
+                },
+                {
+                  "no": 4,
+                  "stem": "In the chart, you can see global CO 2 emissions since 1750, broken down by world region.",
+                  "answer": "TRUE",
+                  "keyPara": "C",
+                  "keySentence": "In the chart, you can see global CO 2 emissions since 1750, broken down by world region.",
+                  "explain": "本题为机器生成：题干是原文定位句的同义复现，内容一致。做题时先抓题干关键词回原文，再核对限定词与比较方向。",
+                  "generated": true
+                },
+                {
+                  "no": 5,
+                  "stem": "Current policies to reduce, or at least slow down, the growth of CO 2 emissions have already averted some future warming compared to a world without these policies.",
+                  "answer": "TRUE",
+                  "keyPara": "C",
+                  "keySentence": "Current policies to reduce, or at least slow down, the growth of CO 2 emissions have already averted some future warming compared to a world without these policies.",
+                  "explain": "本题为机器生成：题干是原文定位句的同义复现，内容一致。做题时先抓题干关键词回原文，再核对限定词与比较方向。",
+                  "generated": true
+                },
+                {
+                  "no": 6,
+                  "stem": "But if we aim to limit warming to “well below 2°C” – as is not laid out in the Paris Agreement – currently policies have us far off track.",
+                  "answer": "FALSE",
+                  "keyPara": "D",
+                  "keySentence": "But if we aim to limit warming to “well below 2°C” – as is laid out in the Paris Agreement – currently policies have us far off track.",
+                  "explain": "本题为机器生成：原文为「But if we aim to limit warming to “well below 2°C” – as is laid out in the Paris Agreement – currently policies have us far off track.」，题干通过改写使陈述与原文矛盾。做题时盯紧比较方向、肯定/否定和程度词。",
+                  "generated": true,
+                  "trap": "系动词被否定（is not），与原文矛盾"
+                }
+              ]
+            },
+            {
+              "id": "g-gapfill",
+              "type": "gapfill",
+              "generated": true,
+              "instruction": "Complete the sentences below. Choose NO MORE THAN TWO WORDS from the passage for each answer.",
+              "questions": [
+                {
+                  "no": 7,
+                  "stem": "Part of this is because many rich countries have ‘____________’ some of their emissions by importing CO 2 -intensive goods manufactured elsewhere – but we still see a significant decline in emissions after adjusting for trade.",
+                  "answer": "offshored",
+                  "keyPara": "E",
+                  "keySentence": "Part of this is because many rich countries have ‘offshored’ some of their emissions by importing CO 2 -intensive goods manufactured elsewhere – but we still see a significant decline in emissions after adjusting for trade.",
+                  "explain": "本题为机器生成：从原文定位句中挖掉关键词「offshored」。答案必须是原文原词，注意词性与单复数。",
+                  "generated": true,
+                  "answers": [
+                    "offshored"
+                  ]
+                },
+                {
+                  "no": 8,
+                  "stem": "Some of the ____________ countries emit 100 times more per person than the poorest.",
+                  "answer": "wealthiest",
+                  "keyPara": "D",
+                  "keySentence": "Some of the wealthiest countries emit 100 times more per person than the poorest.",
+                  "explain": "本题为机器生成：从原文定位句中挖掉关键词「wealthiest」。答案必须是原文原词，注意词性与单复数。",
+                  "generated": true,
+                  "answers": [
+                    "wealthiest"
+                  ]
+                },
+                {
+                  "no": 9,
+                  "stem": "1 This ____________ between global temperatures and greenhouse gas concentrations – especially CO 2 – has been true throughout Earth’s history.",
+                  "answer": "link",
+                  "keyPara": "B",
+                  "keySentence": "1 This link between global temperatures and greenhouse gas concentrations – especially CO 2 – has been true throughout Earth’s history.",
+                  "explain": "本题为机器生成：从原文定位句中挖掉关键词「link」。答案必须是原文原词，注意词性与单复数。",
+                  "generated": true,
+                  "answers": [
+                    "link"
+                  ]
+                }
+              ]
+            },
+            {
+              "id": "g-headings",
+              "type": "headings",
+              "generated": true,
+              "pool": [
+                "i",
+                "ii",
+                "iii",
+                "iv",
+                "v",
+                "vi",
+                "vii"
+              ],
+              "headings": [
+                "i  The role of fossil",
+                "ii  global in the modern world",
+                "iii  How emissions works",
+                "iv  A growing problem: emissions",
+                "v  The importance of emissions",
+                "vi  lacis and its effects",
+                "vii  An unexpected solution"
+              ],
+              "note": "本题组的标题由机器从段落关键词生成，其中若干为干扰项。",
+              "instruction": "The passage has 6 paragraphs. Choose the correct heading for each paragraph from the list below.",
+              "questions": [
+                {
+                  "no": 10,
+                  "stem": "Paragraph A",
+                  "answer": "i",
+                  "keyPara": "A",
+                  "keySentence": "CO 2 and other greenhouse gases like methane and nitrous oxide are emitted when we burn fossil fuels, produce materials such as steel, cement, and plastics, and grow the food we eat.",
+                  "explain": "本题为机器生成：段落核心词为「fossil」。做标题题务必看段落首句+尾句，警惕「只在段中一笔带过」的干扰项。",
+                  "generated": true,
+                  "note": "标题由机器按段落关键词生成，答案为该段最匹配的标题；做题时先扫每段主题句。"
+                },
+                {
+                  "no": 11,
+                  "stem": "Paragraph B",
+                  "answer": "ii",
+                  "keyPara": "B",
+                  "keySentence": "Human emissions of carbon dioxide and other greenhouse gases are the primary drivers of the global rise in temperatures.",
+                  "explain": "本题为机器生成：段落核心词为「global」。做标题题务必看段落首句+尾句，警惕「只在段中一笔带过」的干扰项。",
+                  "generated": true,
+                  "note": "标题由机器按段落关键词生成，答案为该段最匹配的标题；做题时先扫每段主题句。"
+                },
+                {
+                  "no": 12,
+                  "stem": "Paragraph C",
+                  "answer": "iii",
+                  "keyPara": "C",
+                  "keySentence": "If we want to stabilize (or even reduce) concentrations of CO 2 in the atmosphere, the world needs to reach net-zero emissions.",
+                  "explain": "本题为机器生成：段落核心词为「emissions works」。做标题题务必看段落首句+尾句，警惕「只在段中一笔带过」的干扰项。",
+                  "generated": true,
+                  "note": "标题由机器按段落关键词生成，答案为该段最匹配的标题；做题时先扫每段主题句。"
+                },
+                {
+                  "no": 13,
+                  "stem": "Paragraph D",
+                  "answer": "iv",
+                  "keyPara": "D",
+                  "keySentence": "But if we aim to limit warming to “well below 2°C” – as is laid out in the Paris Agreement – currently policies have us far off track.",
+                  "explain": "本题为机器生成：段落核心词为「emissions」。做标题题务必看段落首句+尾句，警惕「只在段中一笔带过」的干扰项。",
+                  "generated": true,
+                  "note": "标题由机器按段落关键词生成，答案为该段最匹配的标题；做题时先扫每段主题句。"
+                },
+                {
+                  "no": 14,
+                  "stem": "Paragraph E",
+                  "answer": "v",
+                  "keyPara": "E",
+                  "keySentence": "Part of this is because many rich countries have ‘offshored’ some of their emissions by importing CO 2 -intensive goods manufactured elsewhere – but we still see a significant decline in emissions after adjusting for trade.",
+                  "explain": "本题为机器生成：段落核心词为「emissions」。做标题题务必看段落首句+尾句，警惕「只在段中一笔带过」的干扰项。",
+                  "generated": true,
+                  "note": "标题由机器按段落关键词生成，答案为该段最匹配的标题；做题时先扫每段主题句。"
+                },
+                {
+                  "no": 15,
+                  "stem": "Paragraph F",
+                  "answer": "vi",
+                  "keyPara": "F",
+                  "keySentence": "Lacis, A.",
+                  "explain": "本题为机器生成：段落核心词为「lacis」。做标题题务必看段落首句+尾句，警惕「只在段中一笔带过」的干扰项。",
+                  "generated": true,
+                  "note": "标题由机器按段落关键词生成，答案为该段最匹配的标题；做题时先扫每段主题句。"
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "vocabulary": [
+        {
+          "word": "climate",
+          "pos": "n.",
+          "meaning": "气候",
+          "sentence": "Aerosols have played a slight cooling role in global climate, and natural variability has played a minor role."
+        },
+        {
+          "word": "change",
+          "pos": "n.",
+          "meaning": "改变",
+          "sentence": "Political change is essential to create a system that supports rapid decarbonization."
+        },
+        {
+          "word": "temperature",
+          "pos": "n.",
+          "meaning": "温度",
+          "sentence": "Human emissions of carbon dioxide and other greenhouse gases are the primary drivers of the global rise in temperatures."
+        },
+        {
+          "word": "greenhouse",
+          "pos": "n.",
+          "meaning": "温室",
+          "sentence": "CO 2 and other greenhouse gases like methane and nitrous oxide are emitted when we burn fossil fuels, produce materials such as steel, cement, and plastics, and grow the food we eat."
+        },
+        {
+          "word": "reduce",
+          "pos": "v.",
+          "meaning": "减少，降低",
+          "sentence": "If we want to reduce these emissions, we need to transform our energy systems, industries, and food systems."
+        },
+        {
+          "word": "energy",
+          "pos": "n.",
+          "meaning": "能量",
+          "sentence": "If we want to reduce these emissions, we need to transform our energy systems, industries, and food systems."
+        },
+        {
+          "word": "carbon",
+          "pos": "n.",
+          "meaning": "碳",
+          "sentence": "With affordable low-carbon technologies, other countries can increase their living standards without the high-carbon pathway that rich countries followed in the past."
+        },
+        {
+          "word": "increase",
+          "pos": "n.",
+          "meaning": "增加",
+          "sentence": "With affordable low-carbon technologies, other countries can increase their living standards without the high-carbon pathway that rich countries followed in the past."
+        },
+        {
+          "word": "future",
+          "pos": "n.",
+          "meaning": "未来",
+          "sentence": "Current policies to reduce, or at least slow down, the growth of CO 2 emissions have already averted some future warming compared to a world without these policies."
+        },
+        {
+          "word": "earth",
+          "pos": "n.",
+          "meaning": "地球",
+          "sentence": "1 This link between global temperatures and greenhouse gas concentrations – especially CO 2 – has been true throughout Earth’s history."
+        },
+        {
+          "word": "significant",
+          "pos": "adj.",
+          "meaning": "重要的，显著的",
+          "sentence": "This requires significant reductions in emissions."
+        },
+        {
+          "word": "assessment",
+          "pos": "n.",
+          "meaning": "评估",
+          "sentence": "Contribution of Working Group I to the Sixth Assessment Report of the Intergovernmental Panel on Climate Change [Masson-Delmotte, V."
+        }
+      ],
+      "contribution": {
+        "contributor": "l458022",
+        "license": "CC BY 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
+        "sourceUrl": "https://ourworldindata.org/co2-and-greenhouse-gas-emissions",
+        "attribution": "Hannah Ritchie、Pablo Rosado、Max Roser — CO₂ and Greenhouse Gas Emissions，Our World in Data，CC BY 4.0",
+        "declaredAt": "2026-10-12T13:48:00.341Z",
+        "declaration": "copyright-ok;questions-original-or-tool-generated;no-privacy"
+      }
+    }
+  ]
+}

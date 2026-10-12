@@ -1,0 +1,344 @@
+{
+  "format": "ielts-reading-pack",
+  "version": 1,
+  "generator": "IELTS Reading Trainer",
+  "createdAt": "2026-10-12T13:47:54.575Z",
+  "exams": [
+    {
+      "id": "community-life-expectancy",
+      "title": "Life Expectancy",
+      "titleCn": "人类预期寿命的变迁",
+      "book": "公共题库",
+      "test": 1,
+      "passage": 1,
+      "difficulty": "中",
+      "series": "公共题库 · 自动出题",
+      "source": "贡献者 l458022 · CC BY 4.0 · Saloni Dattani、Lucas Rodés-Guirao、Hannah Ritchie、Esteban Ortiz-Ospina、Max Roser — Life Expectancy，Our World in Data，CC BY 4.0",
+      "level": "自定义",
+      "minutes": 20,
+      "tags": [
+        "健康",
+        "人口"
+      ],
+      "intro": "开放获取文章（CC BY 4.0）：Saloni Dattani、Lucas Rodés-Guirao、Hannah Ritchie、Esteban Ortiz-Ospina、Max Roser — Life Expectancy，Our World in Data，CC BY 4.0　原文：https://ourworldindata.org/life-expectancy",
+      "sections": [
+        {
+          "id": "s1",
+          "title": "READING PASSAGE 1",
+          "paragraphs": [
+            {
+              "id": "A",
+              "text": "The large reduction in child mortality has played an important role in increasing life expectancy. But life expectancy has increased at all ages. Infants, children, adults, and the elderly are all less likely to die than in the past, and death is being delayed. This remarkable shift results from advances in medicine, public health, and living standards. Along with it, many predictions of the ‘limit’ of life expectancy have been broken. On this page, you will find global data and research on life expectancy and related measures of longevity: the probability of death at a given age, the sex gap in life expectancy, lifespan inequality within countries, and more. In 2021, the global average life expectancy was just over 70 years. This is an astonishing fact – because just two hundred years ago, it was less than half. This extraordinary rise is the result of a wide range of advances in health – in nutrition, clean water, sanitation, neonatal healthcare, antibiotics, vaccines, and other technologies and public health efforts – and improvements in living standards, economic growth, and poverty reduction."
+            },
+            {
+              "id": "B",
+              "text": "These wide differences are also reflected within countries. Countries with a lower average life expectancy also tend to have wider variations in lifespans. 7 This is part of what happened. Child mortality used to be high and contributed significantly to short lifespans in the past, and it has declined greatly over time. But, especially in recent decades, child mortality declines have contributed much less to increasing life expectancy 8, and large declines in mortality are seen across all age groups. For example, 15-year-olds in 1816 in France had a life expectancy of 58 years. By 2021, the life expectancy of 15-year-olds increased to 83. These gains are also seen at older ages: someone who was 65 years old in 1816 would have a life expectancy of 76 years. By 2021, their life expectancy would be 86 years. It’s often argued that life expectancy across the world has only increased because child mortality has fallen. But this is untrue. The data shows that life expectancy has increased at all ages."
+            },
+            {
+              "id": "C",
+              "text": "But wars are only one of many reasons for the sex gap in life expectancy, which arises from a range of causes at different ages. 9 The gap begins at birth: newborn boys have a higher death rate than newborn girls, as they’re more vulnerable to diseases. 10 It continues in youth, when boys have a higher death rate than girls, typically due to violence and accidents. It’s sustained at older ages when men have higher death rates than women from chronic health conditions, which are partly due to higher rates of smoking, alcohol, and drug use. 11 The chart shows how the sex gap in life expectancy widened gradually over the twentieth century, largely because of the rise in smoking, especially among men. 12 Since then, it has been narrowing again in many but not all countries. 13 The chart shows which country had the highest recorded female life expectancy in each year. It comes from a study by Jim Oeppen and James W Vaupel. 14"
+            },
+            {
+              "id": "D",
+              "text": "The first dot shows Sweden’s life expectancy of 46 in 1840, the highest of any country that year. Over time, the record was pushed higher and higher. In 1928, an American statistician, Louis Dublin, used mortality data to predict the longest possible life expectancy that could be achieved. Life expectancy in the US was 57 years at the time, and his answer for the maximum was 64.8 years. 15 Because he lacked data from New Zealand, he was unaware that the limit had already been broken there. The horizontal lines on the chart show many predictions of the maximum limit of life expectancy. As you can see, the predictions have been broken again and again. Rather than slowing down, record life expectancy has risen steadily over time, by around one year every four years. By 2021, Hong Kong had the highest life expectancy of 88 years. The authors, Oeppen and Vaupel, explain that improvements in life expectancy shouldn’t be thought of as the result of one-off breakthroughs but instead “a regular stream of continuing progress”."
+            },
+            {
+              "id": "E",
+              "text": "As you can see, the chart also shows that the rise has not been completely constant. Major events – the World Wars, the 1918 Spanish flu pandemic, the HIV/AIDS epidemic, and the COVID-19 pandemic – have had a major impact on mortality rates and left a visible mark on life expectancy. Zijdeman, Richard and Filipa Ribeira da Silva. Life Expectancy at Birth (Total). http://hdl.handle.net/10622/LKYT53, accessed via the Clio Infra website. Zijdeman, R. L., & de Silva, F. R.. Life expectancy since 1820. Riley, J. C.. Estimates of regional and global life expectancy, 1800–2001. Population and Development Review, 31, 537–543. Barbieri, M., Wilmoth, J. R., Shkolnikov, V. M., Glei, D., Jasilionis, D., Jdanov, D., Boe, C., Riffe, T., Grigoriev, P., & Winant, C.. Data Resource Profile: The Human Mortality Database (HMD). International Journal of Epidemiology, 44, 1549–1556. https://doi.org/10.1093/ije/dyv105 Wrigley E.A. et al. English population history from family reconstitution 1580-1837, Cambridge University Press, Cambridge."
+            },
+            {
+              "id": "F",
+              "text": "Aburto, J. M., Villavicencio, F., Basellini, U., Kjærgaard, S., & Vaupel, J. W.. Dynamics of life expectancy and life span equality. Proceedings of the National Academy of Sciences, 117, 5250–5259. https://doi.org/10.1073/pnas.1915884117 Liou, L., Joe, W., Kumar, A., & Subramanian, S. V.. Inequalities in life expectancy: An analysis of 201 countries, 1950–2015. Social Science & Medicine, 253, 112964. https://doi.org/10.1016/j.socscimed.2020.112964 Permanyer, I., & Scholl, N.. Global trends in lifespan inequality: 1950-2015. PLOS ONE, 14, e0215742. https://doi.org/10.1371/journal.pone.0215742 Vaupel, J. W., Zhang, Z., & Van Raalte, A. A.. Life expectancy and disparity: An international comparison of life table data. BMJ Open, 1, e000128–e000128. https://doi.org/10.1136/bmjopen-2011-000128 Wilson, C.. Understanding Global Demographic Convergence since 1950. Population and Development Review, 37, 375–388. https://doi.org/10.1111/j.1728-4457.2011.00415.x Aburto, J. M., Villavicencio, F., Basellini, U., Kjærgaard, S., & Vaupel, J. W.. Dynamics of life expectancy and life span equality. Proceedings of the National Academy of Sciences, 117, 5250–5259. https://doi.org/10.1073/pnas.1915884117 Zarulli, V., Kashnitsky, I., & Vaupel, J. W.. Death rates at specific life stages mold the sex gap in life expectancy. Proceedings of the National Academy of Sciences, 118, e2010588118. https://doi.org/10.1073/pnas.2010588118"
+            }
+          ],
+          "questionGroups": [
+            {
+              "id": "g-tfng",
+              "type": "tfng",
+              "options": [
+                "TRUE",
+                "FALSE",
+                "NOT GIVEN"
+              ],
+              "instruction": "Do the following statements agree with the information in the passage? Write TRUE if the statement agrees with the information, FALSE if the statement contradicts the information, NOT GIVEN if there is no information on this.",
+              "generated": true,
+              "questions": [
+                {
+                  "no": 1,
+                  "stem": "10 It continues in youth, when boys have a higher death rate than girls, typically due to violence and accidents.",
+                  "answer": "TRUE",
+                  "keyPara": "C",
+                  "keySentence": "10 It continues in youth, when boys have a higher death rate than girls, typically due to violence and accidents.",
+                  "explain": "本题为机器生成：题干是原文定位句的同义复现，内容一致。做题时先抓题干关键词回原文，再核对限定词与比较方向。",
+                  "generated": true
+                },
+                {
+                  "no": 2,
+                  "stem": "12 Since then, it has been narrowing again in numerous however not all countries.",
+                  "answer": "TRUE",
+                  "keyPara": "C",
+                  "keySentence": "12 Since then, it has been narrowing again in many but not all countries.",
+                  "explain": "本题为机器生成：题干是原文定位句的同义复现（many ↔ numerous；but ↔ however）。做题时先抓题干关键词回原文，再核对限定词与比较方向。",
+                  "generated": true
+                },
+                {
+                  "no": 3,
+                  "stem": "15 Since he lacked data from Recent Zealand, he was unaware that the limit had already been broken there.",
+                  "answer": "TRUE",
+                  "keyPara": "D",
+                  "keySentence": "15 Because he lacked data from New Zealand, he was unaware that the limit had already been broken there.",
+                  "explain": "本题为机器生成：题干是原文定位句的同义复现（new ↔ recent；because ↔ since）。做题时先抓题干关键词回原文，再核对限定词与比较方向。",
+                  "generated": true
+                },
+                {
+                  "no": 4,
+                  "stem": "This is an astonishing fact – because just two hundred years ago, it was more than half.",
+                  "answer": "FALSE",
+                  "keyPara": "A",
+                  "keySentence": "This is an astonishing fact – because just two hundred years ago, it was less than half.",
+                  "explain": "本题为机器生成：原文为「This is an astonishing fact – because just two hundred years ago, it was less than half.」，题干通过改写使陈述与原文矛盾。做题时盯紧比较方向、肯定/否定和程度词。",
+                  "generated": true,
+                  "trap": "比较级反向（less → more），原文方向被对调"
+                },
+                {
+                  "no": 5,
+                  "stem": "But, especially in recent decades, child mortality declines have contributed much more to increasing life expectancy 8, and large declines in mortality are seen across all age groups.",
+                  "answer": "FALSE",
+                  "keyPara": "B",
+                  "keySentence": "But, especially in recent decades, child mortality declines have contributed much less to increasing life expectancy 8, and large declines in mortality are seen across all age groups.",
+                  "explain": "本题为机器生成：原文为「But, especially in recent decades, child mortality declines have contributed much less to increasing life expectancy 8, and large declines in mortality are seen across all age groups.」，题干通过改写使陈述与原文矛盾。做题时盯紧比较方向、肯定/否定和程度词。",
+                  "generated": true,
+                  "trap": "比较级反向（less → more），原文方向被对调"
+                },
+                {
+                  "no": 6,
+                  "stem": "These gains are not also seen at older ages: someone who was 65 years old in 1816 would have a life expectancy of 76 years.",
+                  "answer": "FALSE",
+                  "keyPara": "B",
+                  "keySentence": "These gains are also seen at older ages: someone who was 65 years old in 1816 would have a life expectancy of 76 years.",
+                  "explain": "本题为机器生成：原文为「These gains are also seen at older ages: someone who was 65 years old in 1816 would have a life expectancy of 76 years.」，题干通过改写使陈述与原文矛盾。做题时盯紧比较方向、肯定/否定和程度词。",
+                  "generated": true,
+                  "trap": "系动词被否定（are not），与原文矛盾"
+                }
+              ]
+            },
+            {
+              "id": "g-gapfill",
+              "type": "gapfill",
+              "generated": true,
+              "instruction": "Complete the sentences below. Choose NO MORE THAN TWO WORDS from the passage for each answer.",
+              "questions": [
+                {
+                  "no": 7,
+                  "stem": "10 It ____________ in youth, when boys have a higher death rate than girls, typically due to violence and accidents.",
+                  "answer": "continues",
+                  "keyPara": "C",
+                  "keySentence": "10 It continues in youth, when boys have a higher death rate than girls, typically due to violence and accidents.",
+                  "explain": "本题为机器生成：从原文定位句中挖掉关键词「continues」。答案必须是原文原词，注意词性与单复数。",
+                  "generated": true,
+                  "answers": [
+                    "continues"
+                  ]
+                },
+                {
+                  "no": 8,
+                  "stem": "12 Since then, it has been ____________ again in many but not all countries.",
+                  "answer": "narrowing",
+                  "keyPara": "C",
+                  "keySentence": "12 Since then, it has been narrowing again in many but not all countries.",
+                  "explain": "本题为机器生成：从原文定位句中挖掉关键词「narrowing」。答案必须是原文原词，注意词性与单复数。",
+                  "generated": true,
+                  "answers": [
+                    "narrowing"
+                  ]
+                },
+                {
+                  "no": 9,
+                  "stem": "15 Because he ____________ data from New Zealand, he was unaware that the limit had already been broken there.",
+                  "answer": "lacked",
+                  "keyPara": "D",
+                  "keySentence": "15 Because he lacked data from New Zealand, he was unaware that the limit had already been broken there.",
+                  "explain": "本题为机器生成：从原文定位句中挖掉关键词「lacked」。答案必须是原文原词，注意词性与单复数。",
+                  "generated": true,
+                  "answers": [
+                    "lacked"
+                  ]
+                }
+              ]
+            },
+            {
+              "id": "g-headings",
+              "type": "headings",
+              "generated": true,
+              "pool": [
+                "i",
+                "ii",
+                "iii",
+                "iv",
+                "v",
+                "vi",
+                "vii"
+              ],
+              "headings": [
+                "i  The role of expectancy",
+                "ii  expectancy in the modern world",
+                "iii  How expectancy works",
+                "iv  A growing problem: expectancy",
+                "v  The importance of expectancy",
+                "vi  https and its effects",
+                "vii  An unexpected solution"
+              ],
+              "note": "本题组的标题由机器从段落关键词生成，其中若干为干扰项。",
+              "instruction": "The passage has 6 paragraphs. Choose the correct heading for each paragraph from the list below.",
+              "questions": [
+                {
+                  "no": 10,
+                  "stem": "Paragraph A",
+                  "answer": "i",
+                  "keyPara": "A",
+                  "keySentence": "The large reduction in child mortality has played an important role in increasing life expectancy.",
+                  "explain": "本题为机器生成：段落核心词为「expectancy」。做标题题务必看段落首句+尾句，警惕「只在段中一笔带过」的干扰项。",
+                  "generated": true,
+                  "note": "标题由机器按段落关键词生成，答案为该段最匹配的标题；做题时先扫每段主题句。"
+                },
+                {
+                  "no": 11,
+                  "stem": "Paragraph B",
+                  "answer": "ii",
+                  "keyPara": "B",
+                  "keySentence": "These wide differences are also reflected within countries.",
+                  "explain": "本题为机器生成：段落核心词为「expectancy」。做标题题务必看段落首句+尾句，警惕「只在段中一笔带过」的干扰项。",
+                  "generated": true,
+                  "note": "标题由机器按段落关键词生成，答案为该段最匹配的标题；做题时先扫每段主题句。"
+                },
+                {
+                  "no": 12,
+                  "stem": "Paragraph C",
+                  "answer": "iii",
+                  "keyPara": "C",
+                  "keySentence": "But wars are only one of many reasons for the sex gap in life expectancy, which arises from a range of causes at different ages.",
+                  "explain": "本题为机器生成：段落核心词为「expectancy works」。做标题题务必看段落首句+尾句，警惕「只在段中一笔带过」的干扰项。",
+                  "generated": true,
+                  "note": "标题由机器按段落关键词生成，答案为该段最匹配的标题；做题时先扫每段主题句。"
+                },
+                {
+                  "no": 13,
+                  "stem": "Paragraph D",
+                  "answer": "iv",
+                  "keyPara": "D",
+                  "keySentence": "The first dot shows Sweden’s life expectancy of 46 in 1840, the highest of any country that year.",
+                  "explain": "本题为机器生成：段落核心词为「expectancy」。做标题题务必看段落首句+尾句，警惕「只在段中一笔带过」的干扰项。",
+                  "generated": true,
+                  "note": "标题由机器按段落关键词生成，答案为该段最匹配的标题；做题时先扫每段主题句。"
+                },
+                {
+                  "no": 14,
+                  "stem": "Paragraph E",
+                  "answer": "v",
+                  "keyPara": "E",
+                  "keySentence": "As you can see, the chart also shows that the rise has not been completely constant.",
+                  "explain": "本题为机器生成：段落核心词为「expectancy」。做标题题务必看段落首句+尾句，警惕「只在段中一笔带过」的干扰项。",
+                  "generated": true,
+                  "note": "标题由机器按段落关键词生成，答案为该段最匹配的标题；做题时先扫每段主题句。"
+                },
+                {
+                  "no": 15,
+                  "stem": "Paragraph F",
+                  "answer": "vi",
+                  "keyPara": "F",
+                  "keySentence": "Aburto, J.",
+                  "explain": "本题为机器生成：段落核心词为「https」。做标题题务必看段落首句+尾句，警惕「只在段中一笔带过」的干扰项。",
+                  "generated": true,
+                  "note": "标题由机器按段落关键词生成，答案为该段最匹配的标题；做题时先扫每段主题句。"
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "vocabulary": [
+        {
+          "word": "health",
+          "pos": "n.",
+          "meaning": "健康",
+          "sentence": "This remarkable shift results from advances in medicine, public health, and living standards."
+        },
+        {
+          "word": "child",
+          "pos": "n.",
+          "meaning": "儿童",
+          "sentence": "The large reduction in child mortality has played an important role in increasing life expectancy."
+        },
+        {
+          "word": "population",
+          "pos": "n.",
+          "meaning": "种群，人口",
+          "sentence": "Population and Development Review, 31, 537–543."
+        },
+        {
+          "word": "national",
+          "pos": "adj.",
+          "meaning": "国家的",
+          "sentence": "Proceedings of the National Academy of Sciences, 117, 5250–5259."
+        },
+        {
+          "word": "limit",
+          "pos": "n.",
+          "meaning": "限制",
+          "sentence": "Along with it, many predictions of the ‘limit’ of life expectancy have been broken."
+        },
+        {
+          "word": "international",
+          "pos": "adj.",
+          "meaning": "国际的",
+          "sentence": "International Journal of Epidemiology, 44, 1549–1556."
+        },
+        {
+          "word": "development",
+          "pos": "n.",
+          "meaning": "发展",
+          "sentence": "Population and Development Review, 31, 537–543."
+        },
+        {
+          "word": "reduction",
+          "pos": "n.",
+          "meaning": "减少",
+          "sentence": "The large reduction in child mortality has played an important role in increasing life expectancy."
+        },
+        {
+          "word": "medicine",
+          "pos": "n.",
+          "meaning": "药，医学",
+          "sentence": "This remarkable shift results from advances in medicine, public health, and living standards."
+        },
+        {
+          "word": "public",
+          "pos": "n.",
+          "meaning": "公众",
+          "sentence": "This remarkable shift results from advances in medicine, public health, and living standards."
+        },
+        {
+          "word": "result",
+          "pos": "n.",
+          "meaning": "结果",
+          "sentence": "This remarkable shift results from advances in medicine, public health, and living standards."
+        },
+        {
+          "word": "record",
+          "pos": "v.",
+          "meaning": "记录",
+          "sentence": "13 The chart shows which country had the highest recorded female life expectancy in each year."
+        }
+      ],
+      "contribution": {
+        "contributor": "l458022",
+        "license": "CC BY 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
+        "sourceUrl": "https://ourworldindata.org/life-expectancy",
+        "attribution": "Saloni Dattani、Lucas Rodés-Guirao、Hannah Ritchie、Esteban Ortiz-Ospina、Max Roser — Life Expectancy，Our World in Data，CC BY 4.0",
+        "declaredAt": "2026-10-12T13:47:54.573Z",
+        "declaration": "copyright-ok;questions-original-or-tool-generated;no-privacy"
+      }
+    }
+  ]
+}

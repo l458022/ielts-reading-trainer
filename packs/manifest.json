@@ -5,6 +5,146 @@
   "branch": "main",
   "packs": [
     {
+      "id": "reading-pack-2026-10-12-artificial-intelligence",
+      "file": "reading-pack-2026-10-12-artificial-intelligence.json",
+      "title": "Artificial Intelligence",
+      "titleCn": "人工智能的兴起",
+      "exams": 1,
+      "questions": 12,
+      "difficulty": "难",
+      "minutes": 20,
+      "tags": [
+        "科技",
+        "社会"
+      ],
+      "contributor": "l458022",
+      "license": "CC BY 4.0",
+      "attribution": "Edouard Mathieu、Charlie Giattino、Veronika Samborska、Max Roser — Artificial Intelligence，Our World in Data，CC BY 4.0",
+      "sourceUrl": "https://ourworldindata.org/artificial-intelligence",
+      "bytes": 20034,
+      "updatedAt": "2026-10-12T13:47:52.456Z"
+    },
+    {
+      "id": "reading-pack-2026-10-12-biodiversity",
+      "file": "reading-pack-2026-10-12-biodiversity.json",
+      "title": "Biodiversity",
+      "titleCn": "生物多样性的危机",
+      "exams": 1,
+      "questions": 15,
+      "difficulty": "难",
+      "minutes": 20,
+      "tags": [
+        "自然",
+        "环境"
+      ],
+      "contributor": "l458022",
+      "license": "CC BY 4.0",
+      "attribution": "Hannah Ritchie、Fiona Spooner、Max Roser — Biodiversity，Our World in Data，CC BY 4.0",
+      "sourceUrl": "https://ourworldindata.org/biodiversity",
+      "bytes": 23256,
+      "updatedAt": "2026-10-12T13:48:02.273Z"
+    },
+    {
+      "id": "reading-pack-2026-10-12-co2-and-greenhouse-gas-emissions",
+      "file": "reading-pack-2026-10-12-co2-and-greenhouse-gas-emissions.json",
+      "title": "CO₂ and Greenhouse Gas Emissions",
+      "titleCn": "二氧化碳与温室气体排放",
+      "exams": 1,
+      "questions": 15,
+      "difficulty": "难",
+      "minutes": 20,
+      "tags": [
+        "环境",
+        "气候"
+      ],
+      "contributor": "l458022",
+      "license": "CC BY 4.0",
+      "attribution": "Hannah Ritchie、Pablo Rosado、Max Roser — CO₂ and Greenhouse Gas Emissions，Our World in Data，CC BY 4.0",
+      "sourceUrl": "https://ourworldindata.org/co2-and-greenhouse-gas-emissions",
+      "bytes": 25477,
+      "updatedAt": "2026-10-12T13:48:00.342Z"
+    },
+    {
+      "id": "reading-pack-2026-10-12-environmental-impacts-of-food",
+      "file": "reading-pack-2026-10-12-environmental-impacts-of-food.json",
+      "title": "Environmental Impacts of Food Production",
+      "titleCn": "食物生产的环境代价",
+      "exams": 1,
+      "questions": 15,
+      "difficulty": "中",
+      "minutes": 20,
+      "tags": [
+        "环境",
+        "农业"
+      ],
+      "contributor": "l458022",
+      "license": "CC BY 4.0",
+      "attribution": "Hannah Ritchie、Pablo Rosado、Max Roser — Environmental Impacts of Food Production，Our World in Data，CC BY 4.0",
+      "sourceUrl": "https://ourworldindata.org/environmental-impacts-of-food",
+      "bytes": 23914,
+      "updatedAt": "2026-10-12T13:47:48.614Z"
+    },
+    {
+      "id": "reading-pack-2026-10-12-global-education",
+      "file": "reading-pack-2026-10-12-global-education.json",
+      "title": "Global Education",
+      "titleCn": "全球教育的普及",
+      "exams": 1,
+      "questions": 15,
+      "difficulty": "中",
+      "minutes": 20,
+      "tags": [
+        "教育",
+        "社会"
+      ],
+      "contributor": "l458022",
+      "license": "CC BY 4.0",
+      "attribution": "Hannah Ritchie、Veronika Samborska、Esteban Ortiz-Ospina、Max Roser — Global Education，Our World in Data，CC BY 4.0",
+      "sourceUrl": "https://ourworldindata.org/global-education",
+      "bytes": 23576,
+      "updatedAt": "2026-10-12T13:47:56.697Z"
+    },
+    {
+      "id": "reading-pack-2026-10-12-life-expectancy",
+      "file": "reading-pack-2026-10-12-life-expectancy.json",
+      "title": "Life Expectancy",
+      "titleCn": "人类预期寿命的变迁",
+      "exams": 1,
+      "questions": 15,
+      "difficulty": "中",
+      "minutes": 20,
+      "tags": [
+        "健康",
+        "人口"
+      ],
+      "contributor": "l458022",
+      "license": "CC BY 4.0",
+      "attribution": "Saloni Dattani、Lucas Rodés-Guirao、Hannah Ritchie、Esteban Ortiz-Ospina、Max Roser — Life Expectancy，Our World in Data，CC BY 4.0",
+      "sourceUrl": "https://ourworldindata.org/life-expectancy",
+      "bytes": 23802,
+      "updatedAt": "2026-10-12T13:47:54.575Z"
+    },
+    {
+      "id": "reading-pack-2026-10-12-pmc-green-space",
+      "file": "reading-pack-2026-10-12-pmc-green-space.json",
+      "title": "Urban green space engagement patterns and mental health in a Mediterranean City",
+      "titleCn": "城市绿地与心理健康",
+      "exams": 1,
+      "questions": 13,
+      "difficulty": "难",
+      "minutes": 20,
+      "tags": [
+        "健康",
+        "城市"
+      ],
+      "contributor": "l458022",
+      "license": "CC BY 4.0",
+      "attribution": "Lilli A, Liana A, Tsekeri E, Daras T, Kolokotsa D. — Europe PMC，CC BY 4.0",
+      "sourceUrl": "https://europepmc.org/article/PMC/PMC13576388",
+      "bytes": 24860,
+      "updatedAt": "2026-10-12T13:47:58.544Z"
+    },
+    {
       "id": "reading-pack-2026-10-12-pollination",
       "file": "reading-pack-2026-10-12-pollination.json",
       "title": "The Economics of Pollination",
@@ -19,8 +159,30 @@
       ],
       "contributor": "l458022",
       "license": "CC BY 4.0",
+      "attribution": "",
+      "sourceUrl": "",
       "bytes": 22795,
       "updatedAt": "2026-10-12T10:55:40.502Z"
+    },
+    {
+      "id": "reading-pack-2026-10-12-renewable-energy",
+      "file": "reading-pack-2026-10-12-renewable-energy.json",
+      "title": "Renewable Energy",
+      "titleCn": "可再生能源的转型",
+      "exams": 1,
+      "questions": 15,
+      "difficulty": "中",
+      "minutes": 20,
+      "tags": [
+        "能源",
+        "科技"
+      ],
+      "contributor": "l458022",
+      "license": "CC BY 4.0",
+      "attribution": "Hannah Ritchie、Max Roser、Pablo Rosado — Renewable Energy，Our World in Data，CC BY 4.0",
+      "sourceUrl": "https://ourworldindata.org/renewable-energy",
+      "bytes": 24618,
+      "updatedAt": "2026-10-12T13:47:50.430Z"
     },
     {
       "id": "reading-pack-2026-10-12-sleep",
@@ -37,8 +199,30 @@
       ],
       "contributor": "l458022",
       "license": "CC BY 4.0",
+      "attribution": "",
+      "sourceUrl": "",
       "bytes": 19381,
       "updatedAt": "2026-10-12T10:55:40.502Z"
+    },
+    {
+      "id": "reading-pack-2026-10-12-urbanization",
+      "file": "reading-pack-2026-10-12-urbanization.json",
+      "title": "Urbanization",
+      "titleCn": "城市化与城市生活",
+      "exams": 1,
+      "questions": 15,
+      "difficulty": "中",
+      "minutes": 20,
+      "tags": [
+        "社会",
+        "城市"
+      ],
+      "contributor": "l458022",
+      "license": "CC BY 4.0",
+      "attribution": "Esteban Ortiz-Ospina、Veronika Samborska、Hannah Ritchie、Max Roser — Urbanization，Our World in Data，CC BY 4.0",
+      "sourceUrl": "https://ourworldindata.org/urbanization",
+      "bytes": 25777,
+      "updatedAt": "2026-10-12T13:47:46.689Z"
     }
   ]
 }

@@ -1,0 +1,343 @@
+{
+  "format": "ielts-reading-pack",
+  "version": 1,
+  "generator": "IELTS Reading Trainer",
+  "createdAt": "2026-10-12T13:47:46.689Z",
+  "exams": [
+    {
+      "id": "community-urbanization",
+      "title": "Urbanization",
+      "titleCn": "城市化与城市生活",
+      "book": "公共题库",
+      "test": 1,
+      "passage": 1,
+      "difficulty": "中",
+      "series": "公共题库 · 自动出题",
+      "source": "贡献者 l458022 · CC BY 4.0 · Esteban Ortiz-Ospina、Veronika Samborska、Hannah Ritchie、Max Roser — Urbanization，Our World in Data，CC BY 4.0",
+      "level": "自定义",
+      "minutes": 20,
+      "tags": [
+        "社会",
+        "城市"
+      ],
+      "intro": "开放获取文章（CC BY 4.0）：Esteban Ortiz-Ospina、Veronika Samborska、Hannah Ritchie、Max Roser — Urbanization，Our World in Data，CC BY 4.0　原文：https://ourworldindata.org/urbanization",
+      "sections": [
+        {
+          "id": "s1",
+          "title": "READING PASSAGE 1",
+          "paragraphs": [
+            {
+              "id": "A",
+              "text": "This page looks at urbanization globally: how populations are distributed across different types of settlements; which cities are growing fastest and how dense they are; what living conditions in urban areas look like; and how urbanization relates to broader patterns of development. Because all of this depends on how “urban” is defined, the page also explains the main ways it’s measured, and what to keep in mind when using the data. Urbanization is the migration from rural areas into towns and cities. Over the past century, billions of people have made this move. Tracking these patterns is important because where people live shapes many aspects of their lives: how they work and move around, who they interact with, and the opportunities and risks they face. It also shapes what governments need to provide — from housing and transport to healthcare and schools. 1 But to track these trends and plan for them, we first need to agree on what counts as urban. That is not as simple as it sounds."
+            },
+            {
+              "id": "B",
+              "text": "The world’s population is spread across a range of settlements, from isolated houses and farms to megacities and everything in between. Drawing the line between urban and rural is not straightforward, and national statistical offices often use different criteria. The same town might be considered urban in one country and rural in another. This makes it hard to compare urbanization trends across countries. One way around this comparability issue is to go beyond a binary country-level category and instead use satellite images and population data to measure two things: how dense settlements are, and how many people live in them. Analysts can then apply a consistent classification across countries. This is the approach the United Nations has adopted for its headline figures in the 2025 Revision of the World Urbanization Prospects. 2 It applies the same population and density standards across countries to differentiate three categories of settlement: This is the data we draw on throughout this page. Below, we explain this framework, called Degree of Urbanisation (DEGURBA), in more detail and explain how it differs from earlier measurement standards."
+            },
+            {
+              "id": "C",
+              "text": "Starting with cities, two criteria apply: a density of at least 1,500 people per square kilometer, and a total population of at least 50,000. This is a fairly low threshold, especially for density. A residential neighborhood of low-rise apartments would have a density of around 5,000 to 10,000. Even a few hundred townhouses, each with 4 people in them, in a large neighborhood of one square kilometer would clear this density bar. 3 For towns and suburbs, the threshold is even lower: 300 people per square kilometer, with at least 5,000 people in total. One square kilometer contains 100 hectares, so this works out to about 3 people per hectare on average, which can be quite sparse. At the lower end of the spectrum are rural areas — everything that falls below the city and town categories. Since the threshold for towns is already relatively low, you can see that rural areas are really quite sparsely populated by this definition. Anything above 3 people per hectare can already fall outside the rural category, as long as the surrounding area has at least 5,000 people."
+            },
+            {
+              "id": "D",
+              "text": "The fact that the definition of rural areas in the UN data relies on such a low threshold for population density helps explain a pattern that can be surprising: in countries like India and Bangladesh, the share of the population classified as rural is very low (around 17% in India and 2% in Bangladesh ) even though agriculture remains a major source of employment. India and Bangladesh have both high population density and large households, so even areas that look like farmland from above can easily cross the town threshold. With 4–5 people per household, a landscape with just one house per hectare already has a density of 400–500 per square kilometer — well above the threshold for towns. This underscores the huge variation that exists across countries when it comes to population density in agricultural settings. In sparsely populated regions like the American Midwest or rural France, density stays well below the threshold and “rural” matches most people’s intuition. In South Asia, it often doesn’t. We return to this point in the section on urbanization and agricultural employment."
+            },
+            {
+              "id": "E",
+              "text": "In 2020, around 3.5 billion people lived in cities, another 2.8 billion in towns and suburbs, and around 1.6 billion in rural areas. This means that cities are home to 44% of the global population, with 36% in towns and suburbs, and 20% in rural areas. From a historical perspective, this is a dramatic shift. Even as recently as 1950, only around 20% of the world’s population lived in cities by this definition. You can explore the data for any country or region using the options on the interactive chart. The chart also allows you to compare regional distributions side by side. One pattern that stands out is how similar the distributions are across regions with very different income levels. Africa and Europe, for example, have similar shares of their populations in cities, towns, and rural areas — a fact that cuts against the common assumption that urbanization tracks closely with prosperity. We discuss this relationship and why it is weaker than many people expect in the section on urbanization and development."
+            },
+            {
+              "id": "F",
+              "text": "Another pattern worth noting is how stable the towns-and-suburbs share has been everywhere. Across most regions, it has stayed between 30–40% for decades. The main change has been the growing share of the population in cities and the declining share in rural areas. It’s intuitive to look for the point in time when the world transitioned from a majority rural to a majority urban population. But the crossover point, and the answer to the headline question, depends on how “urban” is defined. If we group cities and towns together, then around 80% of the world’s population now lives in urban areas. By this measure, the world has been mostly urban since at least the 1950s, the earliest point in the dataset. You can see this in the chart below. This is much earlier than you might have seen from UN reports, which announced that “the world became majority urban in 2007”, a milestone that received a lot of attention at the time."
+            }
+          ],
+          "questionGroups": [
+            {
+              "id": "g-tfng",
+              "type": "tfng",
+              "options": [
+                "TRUE",
+                "FALSE",
+                "NOT GIVEN"
+              ],
+              "instruction": "Do the following statements agree with the information in the passage? Write TRUE if the statement agrees with the information, FALSE if the statement contradicts the information, NOT GIVEN if there is no information on this.",
+              "generated": true,
+              "questions": [
+                {
+                  "no": 1,
+                  "stem": "Anything above 3 people per hectare can already fall outside the rural category, as long as the surrounding area has at least 5,000 people.",
+                  "answer": "TRUE",
+                  "keyPara": "C",
+                  "keySentence": "Anything above 3 people per hectare can already fall outside the rural category, as long as the surrounding area has at least 5,000 people.",
+                  "explain": "本题为机器生成：题干是原文定位句的同义复现，内容一致。做题时先抓题干关键词回原文，再核对限定词与比较方向。",
+                  "generated": true
+                },
+                {
+                  "no": 2,
+                  "stem": "This is not much earlier than you might have seen from UN reports, which announced that “the world became majority urban in 2007”, a milestone that received a lot of attention at the time.",
+                  "answer": "FALSE",
+                  "keyPara": "F",
+                  "keySentence": "This is much earlier than you might have seen from UN reports, which announced that “the world became majority urban in 2007”, a milestone that received a lot of attention at the time.",
+                  "explain": "本题为机器生成：原文为「This is much earlier than you might have seen from UN reports, which announced that “the world became majority urban in 2007”, a milestone that received a lot of attention at the time.」，题干通过改写使陈述与原文矛盾。做题时盯紧比较方向、肯定/否定和程度词。",
+                  "generated": true,
+                  "trap": "系动词被否定（is not），与原文矛盾"
+                },
+                {
+                  "no": 3,
+                  "stem": "Even as recently as 1950, only around 20% of the world’s population lived in cities by this definition.",
+                  "answer": "TRUE",
+                  "keyPara": "E",
+                  "keySentence": "Even as recently as 1950, only around 20% of the world’s population lived in cities by this definition.",
+                  "explain": "本题为机器生成：题干是原文定位句的同义复现，内容一致。做题时先抓题干关键词回原文，再核对限定词与比较方向。",
+                  "generated": true
+                },
+                {
+                  "no": 4,
+                  "stem": "This is not the approach the United Nations has adopted for its headline figures in the 2025 Revision of the World Urbanization Prospects.",
+                  "answer": "FALSE",
+                  "keyPara": "B",
+                  "keySentence": "This is the approach the United Nations has adopted for its headline figures in the 2025 Revision of the World Urbanization Prospects.",
+                  "explain": "本题为机器生成：原文为「This is the approach the United Nations has adopted for its headline figures in the 2025 Revision of the World Urbanization Prospects.」，题干通过改写使陈述与原文矛盾。做题时盯紧比较方向、肯定/否定和程度词。",
+                  "generated": true,
+                  "trap": "系动词被否定（is not），与原文矛盾"
+                },
+                {
+                  "no": 5,
+                  "stem": "2 It applies the same population and density standards across countries to differentiate three categories of settlement: This is the data we draw on throughout this page.",
+                  "answer": "TRUE",
+                  "keyPara": "B",
+                  "keySentence": "2 It applies the same population and density standards across countries to differentiate three categories of settlement: This is the data we draw on throughout this page.",
+                  "explain": "本题为机器生成：题干是原文定位句的同义复现，内容一致。做题时先抓题干关键词回原文，再核对限定词与比较方向。",
+                  "generated": true
+                },
+                {
+                  "no": 6,
+                  "stem": "With 4–5 people per household, a landscape with just one house per hectare already has a density of 400–500 per square kilometer — well above the threshold for towns.",
+                  "answer": "TRUE",
+                  "keyPara": "D",
+                  "keySentence": "With 4–5 people per household, a landscape with just one house per hectare already has a density of 400–500 per square kilometer — well above the threshold for towns.",
+                  "explain": "本题为机器生成：题干是原文定位句的同义复现，内容一致。做题时先抓题干关键词回原文，再核对限定词与比较方向。",
+                  "generated": true
+                }
+              ]
+            },
+            {
+              "id": "g-gapfill",
+              "type": "gapfill",
+              "generated": true,
+              "instruction": "Complete the sentences below. Choose NO MORE THAN TWO WORDS from the passage for each answer.",
+              "questions": [
+                {
+                  "no": 7,
+                  "stem": "____________ above 3 people per hectare can already fall outside the rural category, as long as the surrounding area has at least 5,000 people.",
+                  "answer": "anything",
+                  "keyPara": "C",
+                  "keySentence": "Anything above 3 people per hectare can already fall outside the rural category, as long as the surrounding area has at least 5,000 people.",
+                  "explain": "本题为机器生成：从原文定位句中挖掉关键词「anything」。答案必须是原文原词，注意词性与单复数。",
+                  "generated": true,
+                  "answers": [
+                    "anything"
+                  ]
+                },
+                {
+                  "no": 8,
+                  "stem": "This is much earlier than you might have ____________ from UN reports, which announced that “the world became majority urban in 2007”, a milestone that received a lot of attention at the time.",
+                  "answer": "seen",
+                  "keyPara": "F",
+                  "keySentence": "This is much earlier than you might have seen from UN reports, which announced that “the world became majority urban in 2007”, a milestone that received a lot of attention at the time.",
+                  "explain": "本题为机器生成：从原文定位句中挖掉关键词「seen」。答案必须是原文原词，注意词性与单复数。",
+                  "generated": true,
+                  "answers": [
+                    "seen"
+                  ]
+                },
+                {
+                  "no": 9,
+                  "stem": "Even as ____________ as 1950, only around 20% of the world’s population lived in cities by this definition.",
+                  "answer": "recently",
+                  "keyPara": "E",
+                  "keySentence": "Even as recently as 1950, only around 20% of the world’s population lived in cities by this definition.",
+                  "explain": "本题为机器生成：从原文定位句中挖掉关键词「recently」。答案必须是原文原词，注意词性与单复数。",
+                  "generated": true,
+                  "answers": [
+                    "recently"
+                  ]
+                }
+              ]
+            },
+            {
+              "id": "g-headings",
+              "type": "headings",
+              "generated": true,
+              "pool": [
+                "i",
+                "ii",
+                "iii",
+                "iv",
+                "v",
+                "vi",
+                "vii"
+              ],
+              "headings": [
+                "i  The role of urbanization",
+                "ii  population in the modern world",
+                "iii  How kilometer works",
+                "iv  A growing problem: density",
+                "v  The importance of cities",
+                "vi  urban and its effects",
+                "vii  An unexpected solution"
+              ],
+              "note": "本题组的标题由机器从段落关键词生成，其中若干为干扰项。",
+              "instruction": "The passage has 6 paragraphs. Choose the correct heading for each paragraph from the list below.",
+              "questions": [
+                {
+                  "no": 10,
+                  "stem": "Paragraph A",
+                  "answer": "i",
+                  "keyPara": "A",
+                  "keySentence": "This page looks at urbanization globally: how populations are distributed across different types of settlements; which cities are growing fastest and how dense they are; what living conditions in urban areas look like; and how urbanization relates to broader patterns of development.",
+                  "explain": "本题为机器生成：段落核心词为「urbanization」。做标题题务必看段落首句+尾句，警惕「只在段中一笔带过」的干扰项。",
+                  "generated": true,
+                  "note": "标题由机器按段落关键词生成，答案为该段最匹配的标题；做题时先扫每段主题句。"
+                },
+                {
+                  "no": 11,
+                  "stem": "Paragraph B",
+                  "answer": "ii",
+                  "keyPara": "B",
+                  "keySentence": "The world’s population is spread across a range of settlements, from isolated houses and farms to megacities and everything in between.",
+                  "explain": "本题为机器生成：段落核心词为「population」。做标题题务必看段落首句+尾句，警惕「只在段中一笔带过」的干扰项。",
+                  "generated": true,
+                  "note": "标题由机器按段落关键词生成，答案为该段最匹配的标题；做题时先扫每段主题句。"
+                },
+                {
+                  "no": 12,
+                  "stem": "Paragraph C",
+                  "answer": "iii",
+                  "keyPara": "C",
+                  "keySentence": "Starting with cities, two criteria apply: a density of at least 1,500 people per square kilometer, and a total population of at least 50,000.",
+                  "explain": "本题为机器生成：段落核心词为「kilometer works」。做标题题务必看段落首句+尾句，警惕「只在段中一笔带过」的干扰项。",
+                  "generated": true,
+                  "note": "标题由机器按段落关键词生成，答案为该段最匹配的标题；做题时先扫每段主题句。"
+                },
+                {
+                  "no": 13,
+                  "stem": "Paragraph D",
+                  "answer": "iv",
+                  "keyPara": "D",
+                  "keySentence": "The fact that the definition of rural areas in the UN data relies on such a low threshold for population density helps explain a pattern that can be surprising: in countries like India and Bangladesh, the share of the population classified as rural is very low (around 17% in India and 2% in Bangladesh ) even though agriculture remains a major source of employment.",
+                  "explain": "本题为机器生成：段落核心词为「density」。做标题题务必看段落首句+尾句，警惕「只在段中一笔带过」的干扰项。",
+                  "generated": true,
+                  "note": "标题由机器按段落关键词生成，答案为该段最匹配的标题；做题时先扫每段主题句。"
+                },
+                {
+                  "no": 14,
+                  "stem": "Paragraph E",
+                  "answer": "v",
+                  "keyPara": "E",
+                  "keySentence": "In 2020, around 3.",
+                  "explain": "本题为机器生成：段落核心词为「cities」。做标题题务必看段落首句+尾句，警惕「只在段中一笔带过」的干扰项。",
+                  "generated": true,
+                  "note": "标题由机器按段落关键词生成，答案为该段最匹配的标题；做题时先扫每段主题句。"
+                },
+                {
+                  "no": 15,
+                  "stem": "Paragraph F",
+                  "answer": "vi",
+                  "keyPara": "F",
+                  "keySentence": "Another pattern worth noting is how stable the towns-and-suburbs share has been everywhere.",
+                  "explain": "本题为机器生成：段落核心词为「urban」。做标题题务必看段落首句+尾句，警惕「只在段中一笔带过」的干扰项。",
+                  "generated": true,
+                  "note": "标题由机器按段落关键词生成，答案为该段最匹配的标题；做题时先扫每段主题句。"
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "vocabulary": [
+        {
+          "word": "rural",
+          "pos": "adj.",
+          "meaning": "农村的",
+          "sentence": "Urbanization is the migration from rural areas into towns and cities."
+        },
+        {
+          "word": "population",
+          "pos": "n.",
+          "meaning": "种群，人口",
+          "sentence": "This page looks at urbanization globally: how populations are distributed across different types of settlements; which cities are growing fastest and how dense they are; what living conditions in urban areas look like; and how urbanization relates to broader patterns of development."
+        },
+        {
+          "word": "urban",
+          "pos": "adj.",
+          "meaning": "城市的",
+          "sentence": "This page looks at urbanization globally: how populations are distributed across different types of settlements; which cities are growing fastest and how dense they are; what living conditions in urban areas look like; and how urbanization relates to broader patterns of development."
+        },
+        {
+          "word": "square",
+          "pos": "adj.",
+          "meaning": "方形的",
+          "sentence": "Starting with cities, two criteria apply: a density of at least 1,500 people per square kilometer, and a total population of at least 50,000."
+        },
+        {
+          "word": "different",
+          "pos": "adj.",
+          "meaning": "不同的",
+          "sentence": "This page looks at urbanization globally: how populations are distributed across different types of settlements; which cities are growing fastest and how dense they are; what living conditions in urban areas look like; and how urbanization relates to broader patterns of development."
+        },
+        {
+          "word": "majority",
+          "pos": "n.",
+          "meaning": "多数",
+          "sentence": "It’s intuitive to look for the point in time when the world transitioned from a majority rural to a majority urban population."
+        },
+        {
+          "word": "another",
+          "pos": "det.",
+          "meaning": "另一个",
+          "sentence": "The same town might be considered urban in one country and rural in another."
+        },
+        {
+          "word": "explain",
+          "pos": "v.",
+          "meaning": "解释",
+          "sentence": "Because all of this depends on how “urban” is defined, the page also explains the main ways it’s measured, and what to keep in mind when using the data."
+        },
+        {
+          "word": "pattern",
+          "pos": "n.",
+          "meaning": "模式",
+          "sentence": "This page looks at urbanization globally: how populations are distributed across different types of settlements; which cities are growing fastest and how dense they are; what living conditions in urban areas look like; and how urbanization relates to broader patterns of development."
+        },
+        {
+          "word": "development",
+          "pos": "n.",
+          "meaning": "发展",
+          "sentence": "This page looks at urbanization globally: how populations are distributed across different types of settlements; which cities are growing fastest and how dense they are; what living conditions in urban areas look like; and how urbanization relates to broader patterns of development."
+        },
+        {
+          "word": "compare",
+          "pos": "v.",
+          "meaning": "比较",
+          "sentence": "This makes it hard to compare urbanization trends across countries."
+        },
+        {
+          "word": "measure",
+          "pos": "v.",
+          "meaning": "测量",
+          "sentence": "Because all of this depends on how “urban” is defined, the page also explains the main ways it’s measured, and what to keep in mind when using the data."
+        }
+      ],
+      "contribution": {
+        "contributor": "l458022",
+        "license": "CC BY 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
+        "sourceUrl": "https://ourworldindata.org/urbanization",
+        "attribution": "Esteban Ortiz-Ospina、Veronika Samborska、Hannah Ritchie、Max Roser — Urbanization，Our World in Data，CC BY 4.0",
+        "declaredAt": "2026-10-12T13:47:46.688Z",
+        "declaration": "copyright-ok;questions-original-or-tool-generated;no-privacy"
+      }
+    }
+  ]
+}

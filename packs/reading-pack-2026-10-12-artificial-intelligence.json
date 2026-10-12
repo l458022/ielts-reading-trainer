@@ -1,0 +1,302 @@
+{
+  "format": "ielts-reading-pack",
+  "version": 1,
+  "generator": "IELTS Reading Trainer",
+  "createdAt": "2026-10-12T13:47:52.456Z",
+  "exams": [
+    {
+      "id": "community-artificial-intelligence",
+      "title": "Artificial Intelligence",
+      "titleCn": "人工智能的兴起",
+      "book": "公共题库",
+      "test": 1,
+      "passage": 1,
+      "difficulty": "难",
+      "series": "公共题库 · 自动出题",
+      "source": "贡献者 l458022 · CC BY 4.0 · Edouard Mathieu、Charlie Giattino、Veronika Samborska、Max Roser — Artificial Intelligence，Our World in Data，CC BY 4.0",
+      "level": "自定义",
+      "minutes": 20,
+      "tags": [
+        "科技",
+        "社会"
+      ],
+      "intro": "开放获取文章（CC BY 4.0）：Edouard Mathieu、Charlie Giattino、Veronika Samborska、Max Roser — Artificial Intelligence，Our World in Data，CC BY 4.0　原文：https://ourworldindata.org/artificial-intelligence",
+      "sections": [
+        {
+          "id": "s1",
+          "title": "READING PASSAGE 1",
+          "paragraphs": [
+            {
+              "id": "A",
+              "text": "Artificial intelligence (AI) systems already greatly impact our lives — they increasingly shape what we see, believe, and do. Based on the steady advances in AI technology and the significant recent increases in investment, we should expect AI technology to become even more powerful and impactful in the following years and decades. It is easy to underestimate how much the world can change within a lifetime, so it is worth taking seriously what those who work on AI expect for the future. Many AI experts believe there is a real chance that human-level artificial intelligence will be developed within the following decades, and some think it will exist much sooner. How such powerful AI systems are built and used will be very important for the future of our world and our own lives. All technologies have positive and negative consequences, but with AI, the range of these consequences is extraordinarily large: the technology has immense potential for good. Still, it comes with significant downsides and high risks."
+            },
+            {
+              "id": "B",
+              "text": "A technology with such an enormous impact needs to be of central interest to people across our entire society. However, currently, the question of how this technology will be developed and used is left to a small group of entrepreneurs and engineers. With our publications on artificial intelligence, we want to help change this status quo and support a broader societal engagement. On this page, you will find charts of AI-related metrics, articles, and key insights to help you better understand what is happening and where we might be heading. We hope that this work will be helpful for the growing and necessary public conversation on AI. How AI gets built is currently decided by a small group of technologists. It should be in all of our interest to become informed and engaged. Many believe there is a real chance that human-level AI will be developed within the next decades, and some believe that it will exist much sooner."
+            },
+            {
+              "id": "C",
+              "text": "Our articles and data visualizations rely on work from many different people and organizations. When citing this topic page, please also cite the underlying data sources. This topic page can be cited as: All visualizations, data, and articles produced by Our World in Data are completely open access under the Creative Commons BY license. You have the permission to use, distribute, and reproduce these in any medium, provided the source and authors are credited. The data produced by third parties and made available by Our World in Data is subject to the license terms from the original third-party authors. We will always indicate the original source of the data in our documentation, so you should always check the license of any such third-party data before use and redistribution."
+            }
+          ],
+          "questionGroups": [
+            {
+              "id": "g-tfng",
+              "type": "tfng",
+              "options": [
+                "TRUE",
+                "FALSE",
+                "NOT GIVEN"
+              ],
+              "instruction": "Do the following statements agree with the information in the passage? Write TRUE if the statement agrees with the information, FALSE if the statement contradicts the information, NOT GIVEN if there is no information on this.",
+              "generated": true,
+              "questions": [
+                {
+                  "no": 1,
+                  "stem": "Based on the steady advances in AI technology and the significant recent increases in investment, we should expect AI technology to become even more powerful and impactful in the following years and decades.",
+                  "answer": "TRUE",
+                  "keyPara": "A",
+                  "keySentence": "Based on the steady advances in AI technology and the significant recent increases in investment, we should expect AI technology to become even more powerful and impactful in the following years and decades.",
+                  "explain": "本题为机器生成：题干是原文定位句的同义复现，内容一致。做题时先抓题干关键词回原文，再核对限定词与比较方向。",
+                  "generated": true
+                },
+                {
+                  "no": 2,
+                  "stem": "Many AI experts believe there is a real chance that human-level artificial intelligence will not be developed within the following decades, and some think it will exist much sooner.",
+                  "answer": "FALSE",
+                  "keyPara": "A",
+                  "keySentence": "Many AI experts believe there is a real chance that human-level artificial intelligence will be developed within the following decades, and some think it will exist much sooner.",
+                  "explain": "本题为机器生成：原文为「Many AI experts believe there is a real chance that human-level artificial intelligence will be developed within the following decades, and some think it will exist much sooner.」，题干通过改写使陈述与原文矛盾。做题时盯紧比较方向、肯定/否定和程度词。",
+                  "generated": true,
+                  "trap": "情态动词被否定（will → not），与原文矛盾"
+                },
+                {
+                  "no": 3,
+                  "stem": "However, currently, the question of how this technology will be developed and used is left to a tiny group of entrepreneurs and engineers.",
+                  "answer": "TRUE",
+                  "keyPara": "B",
+                  "keySentence": "However, currently, the question of how this technology will be developed and used is left to a small group of entrepreneurs and engineers.",
+                  "explain": "本题为机器生成：题干是原文定位句的同义复现（small ↔ tiny）。做题时先抓题干关键词回原文，再核对限定词与比较方向。",
+                  "generated": true
+                },
+                {
+                  "no": 4,
+                  "stem": "On this page, you will find charts of AI-related metrics, articles, and key insights to help you worse understand what is happening and where we might be heading.",
+                  "answer": "FALSE",
+                  "keyPara": "B",
+                  "keySentence": "On this page, you will find charts of AI-related metrics, articles, and key insights to help you better understand what is happening and where we might be heading.",
+                  "explain": "本题为机器生成：原文为「On this page, you will find charts of AI-related metrics, articles, and key insights to help you better understand what is happening and where we might be heading.」，题干通过改写使陈述与原文矛盾。做题时盯紧比较方向、肯定/否定和程度词。",
+                  "generated": true,
+                  "trap": "比较级反向（better → worse），原文方向被对调"
+                },
+                {
+                  "no": 5,
+                  "stem": "This topic page can be cited as: All visualizations, data, and articles produced by Our World in Data are completely open access under the Creative Commons BY license.",
+                  "answer": "TRUE",
+                  "keyPara": "C",
+                  "keySentence": "This topic page can be cited as: All visualizations, data, and articles produced by Our World in Data are completely open access under the Creative Commons BY license.",
+                  "explain": "本题为机器生成：题干是原文定位句的同义复现，内容一致。做题时先抓题干关键词回原文，再核对限定词与比较方向。",
+                  "generated": true
+                },
+                {
+                  "no": 6,
+                  "stem": "The data produced by third parties and made available by Our World in Data is not subject to the license terms from the original third-party authors.",
+                  "answer": "FALSE",
+                  "keyPara": "C",
+                  "keySentence": "The data produced by third parties and made available by Our World in Data is subject to the license terms from the original third-party authors.",
+                  "explain": "本题为机器生成：原文为「The data produced by third parties and made available by Our World in Data is subject to the license terms from the original third-party authors.」，题干通过改写使陈述与原文矛盾。做题时盯紧比较方向、肯定/否定和程度词。",
+                  "generated": true,
+                  "trap": "系动词被否定（is not），与原文矛盾"
+                }
+              ]
+            },
+            {
+              "id": "g-gapfill",
+              "type": "gapfill",
+              "generated": true,
+              "instruction": "Complete the sentences below. Choose NO MORE THAN TWO WORDS from the passage for each answer.",
+              "questions": [
+                {
+                  "no": 7,
+                  "stem": "____________ on the steady advances in AI technology and the significant recent increases in investment, we should expect AI technology to become even more powerful and impactful in the following years and decades.",
+                  "answer": "based",
+                  "keyPara": "A",
+                  "keySentence": "Based on the steady advances in AI technology and the significant recent increases in investment, we should expect AI technology to become even more powerful and impactful in the following years and decades.",
+                  "explain": "本题为机器生成：从原文定位句中挖掉关键词「based」。答案必须是原文原词，注意词性与单复数。",
+                  "generated": true,
+                  "answers": [
+                    "based"
+                  ]
+                },
+                {
+                  "no": 8,
+                  "stem": "Many AI ____________ believe there is a real chance that human-level artificial intelligence will be developed within the following decades, and some think it will exist much sooner.",
+                  "answer": "experts",
+                  "keyPara": "A",
+                  "keySentence": "Many AI experts believe there is a real chance that human-level artificial intelligence will be developed within the following decades, and some think it will exist much sooner.",
+                  "explain": "本题为机器生成：从原文定位句中挖掉关键词「experts」。答案必须是原文原词，注意词性与单复数。",
+                  "generated": true,
+                  "answers": [
+                    "experts"
+                  ]
+                },
+                {
+                  "no": 9,
+                  "stem": "____________, currently, the question of how this technology will be developed and used is left to a small group of entrepreneurs and engineers.",
+                  "answer": "however",
+                  "keyPara": "B",
+                  "keySentence": "However, currently, the question of how this technology will be developed and used is left to a small group of entrepreneurs and engineers.",
+                  "explain": "本题为机器生成：从原文定位句中挖掉关键词「however」。答案必须是原文原词，注意词性与单复数。",
+                  "generated": true,
+                  "answers": [
+                    "however"
+                  ]
+                }
+              ]
+            },
+            {
+              "id": "g-headings",
+              "type": "headings",
+              "generated": true,
+              "pool": [
+                "i",
+                "ii",
+                "iii",
+                "iv",
+                "v",
+                "vi",
+                "vii"
+              ],
+              "headings": [
+                "i  The role of intelligence",
+                "ii  technology in the modern world",
+                "iii  How visualizations works",
+                "iv  An unexpected solution",
+                "v  The limits of measurement",
+                "vi  Lessons from history",
+                "vii  A warning about technology"
+              ],
+              "note": "本题组的标题由机器从段落关键词生成，其中若干为干扰项。",
+              "instruction": "The passage has 3 paragraphs. Choose the correct heading for each paragraph from the list below.",
+              "questions": [
+                {
+                  "no": 10,
+                  "stem": "Paragraph A",
+                  "answer": "i",
+                  "keyPara": "A",
+                  "keySentence": "Artificial intelligence (AI) systems already greatly impact our lives — they increasingly shape what we see, believe, and do.",
+                  "explain": "本题为机器生成：段落核心词为「intelligence」。做标题题务必看段落首句+尾句，警惕「只在段中一笔带过」的干扰项。",
+                  "generated": true,
+                  "note": "标题由机器按段落关键词生成，答案为该段最匹配的标题；做题时先扫每段主题句。"
+                },
+                {
+                  "no": 11,
+                  "stem": "Paragraph B",
+                  "answer": "ii",
+                  "keyPara": "B",
+                  "keySentence": "A technology with such an enormous impact needs to be of central interest to people across our entire society.",
+                  "explain": "本题为机器生成：段落核心词为「technology」。做标题题务必看段落首句+尾句，警惕「只在段中一笔带过」的干扰项。",
+                  "generated": true,
+                  "note": "标题由机器按段落关键词生成，答案为该段最匹配的标题；做题时先扫每段主题句。"
+                },
+                {
+                  "no": 12,
+                  "stem": "Paragraph C",
+                  "answer": "iii",
+                  "keyPara": "C",
+                  "keySentence": "Our articles and data visualizations rely on work from many different people and organizations.",
+                  "explain": "本题为机器生成：段落核心词为「visualizations works」。做标题题务必看段落首句+尾句，警惕「只在段中一笔带过」的干扰项。",
+                  "generated": true,
+                  "note": "标题由机器按段落关键词生成，答案为该段最匹配的标题；做题时先扫每段主题句。"
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "vocabulary": [
+        {
+          "word": "technology",
+          "pos": "n.",
+          "meaning": "技术",
+          "sentence": "Based on the steady advances in AI technology and the significant recent increases in investment, we should expect AI technology to become even more powerful and impactful in the following years and decades."
+        },
+        {
+          "word": "believe",
+          "pos": "v.",
+          "meaning": "相信",
+          "sentence": "Artificial intelligence (AI) systems already greatly impact our lives — they increasingly shape what we see, believe, and do."
+        },
+        {
+          "word": "artificial",
+          "pos": "adj.",
+          "meaning": "人造的",
+          "sentence": "Artificial intelligence (AI) systems already greatly impact our lives — they increasingly shape what we see, believe, and do."
+        },
+        {
+          "word": "significant",
+          "pos": "adj.",
+          "meaning": "重要的，显著的",
+          "sentence": "Based on the steady advances in AI technology and the significant recent increases in investment, we should expect AI technology to become even more powerful and impactful in the following years and decades."
+        },
+        {
+          "word": "powerful",
+          "pos": "adj.",
+          "meaning": "强大的",
+          "sentence": "Based on the steady advances in AI technology and the significant recent increases in investment, we should expect AI technology to become even more powerful and impactful in the following years and decades."
+        },
+        {
+          "word": "expect",
+          "pos": "v.",
+          "meaning": "预期，期望",
+          "sentence": "Based on the steady advances in AI technology and the significant recent increases in investment, we should expect AI technology to become even more powerful and impactful in the following years and decades."
+        },
+        {
+          "word": "become",
+          "pos": "v.",
+          "meaning": "变成，成为",
+          "sentence": "Based on the steady advances in AI technology and the significant recent increases in investment, we should expect AI technology to become even more powerful and impactful in the following years and decades."
+        },
+        {
+          "word": "change",
+          "pos": "n.",
+          "meaning": "改变",
+          "sentence": "It is easy to underestimate how much the world can change within a lifetime, so it is worth taking seriously what those who work on AI expect for the future."
+        },
+        {
+          "word": "future",
+          "pos": "n.",
+          "meaning": "未来",
+          "sentence": "It is easy to underestimate how much the world can change within a lifetime, so it is worth taking seriously what those who work on AI expect for the future."
+        },
+        {
+          "word": "exist",
+          "pos": "v.",
+          "meaning": "存在",
+          "sentence": "Many AI experts believe there is a real chance that human-level artificial intelligence will be developed within the following decades, and some think it will exist much sooner."
+        },
+        {
+          "word": "group",
+          "pos": "n.",
+          "meaning": "群体，组",
+          "sentence": "However, currently, the question of how this technology will be developed and used is left to a small group of entrepreneurs and engineers."
+        },
+        {
+          "word": "conversation",
+          "pos": "n.",
+          "meaning": "对话",
+          "sentence": "We hope that this work will be helpful for the growing and necessary public conversation on AI."
+        }
+      ],
+      "contribution": {
+        "contributor": "l458022",
+        "license": "CC BY 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
+        "sourceUrl": "https://ourworldindata.org/artificial-intelligence",
+        "attribution": "Edouard Mathieu、Charlie Giattino、Veronika Samborska、Max Roser — Artificial Intelligence，Our World in Data，CC BY 4.0",
+        "declaredAt": "2026-10-12T13:47:52.454Z",
+        "declaration": "copyright-ok;questions-original-or-tool-generated;no-privacy"
+      }
+    }
+  ]
+}

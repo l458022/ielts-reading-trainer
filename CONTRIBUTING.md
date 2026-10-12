@@ -48,6 +48,37 @@
 > 维护者会用应用内的「⬆ 上架新题库包」直接上架（见 [ADMIN.md](ADMIN.md)）。
 > 想先看看效果？打开应用首页 → 「🌐 社区题库」，里面已收录本项目的两套样题包。
 
+### 用开放授权文章扩充题库（推荐，零版权风险）
+
+除了自己的原创文章，也可以从**允许再分享**的公开信源取文章。仓库自带两个脚本：
+
+```bash
+# 1) 抽正文（支持 Our World in Data = CC BY 4.0；Europe PMC 的 CC BY 论文）
+node scripts/fetch-source.js owid https://ourworldindata.org/biodiversity --words 950 --out article.json
+node scripts/fetch-source.js pmc  PMC13576388                              --words 950 --out article.json
+
+# 2) 出题并自校验（不通过就不会产出包）
+node scripts/make-pack.js --source article.json --slug biodiversity \
+  --title-cn "生物多样性的危机" --tags "自然,环境" --difficulty 难 \
+  --out packs/reading-pack-$(date +%F)-biodiversity.json
+
+# 3) 重建索引
+node scripts/build-manifest.js
+```
+
+可用的信源与授权（脚本会校验授权，不合格直接拒绝）：
+
+| 信源 | 授权 | 说明 |
+|------|------|------|
+| [Our World in Data](https://ourworldindata.org/) | CC BY 4.0 | 社会 / 环境 / 健康 / 经济，话题贴合雅思学术类 |
+| [Europe PMC](https://europepmc.org/) 的开放获取论文 | CC BY 4.0 | 只接受标明 CC BY 的，脚本会核对 license 字段 |
+| 美国政府机构出版物（NASA / NOAA / NIH 等） | 公有领域 | 需人工确认页面无第三方版权声明 |
+
+已收录文章的出处与署名见 [packs/SOURCES.md](packs/SOURCES.md)。
+
+> ⚠️ **不接受**：商业出版物全文（含剑桥雅思真题）、商业备考站题目、考生回忆残缺真题、
+> 以及 CC BY-NC / CC BY-ND 等限制性授权的内容。
+
 ## 不欢迎的内容
 
 - 从商业出版物/备考站点搬运的文章与题目（版权风险）

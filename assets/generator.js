@@ -60,6 +60,12 @@ window.RLGenerator = (function () {
     return String(s).toLowerCase().replace(/[^a-z0-9\s'-]/g, " ").split(/\s+/).filter(Boolean);
   }
   function isStop(w) { return STOP.indexOf(w) !== -1; }
+
+  /* 标题题专用停用词：副词、介词、泛指词做标题会很荒谬
+   * （旧版曾生成 "The rise of around"、"depends in the modern world" 这类标题）。
+   * 单独一张表，避免影响填空题的关键词选择。 */
+  var HEADING_STOP = ("around,across,within,without,almost,nearly,often,always,never,however,therefore,despite,although,though,whether,towards,toward,beyond,rather,quite,perhaps,likely,mainly,largely,simply,actually,exactly,especially,particularly,generally,usually,sometimes,together,instead,still,already,again,also,about,above,below,between,during,through,against,along,among,per,via,plus,minus,depends,depend,include,includes,including,according,based,common,greater,smaller,higher,lower,number,numbers,amount,amounts,level,levels,share,shares,point,points,part,parts,place,places,time,times,people,world,country,countries,year,years,data,chart,charts,figure,figures,shows,show,shown,using,used,make,makes,made,take,takes,give,gives,become,becomes,became,remain,remains,seem,seems,appear,appears,might,must,may,cannot,since,while,where,whose,whom,different,several,various,following,other,others,many,much,most,less,least,more,such,same,next,last,first,second,third").split(",");
+  function isHeadingStop(w) { return isStop(w) || HEADING_STOP.indexOf(w) !== -1; }
   function esc(s) { return String(s); }
 
   // 句子信息量打分：数字、专有名词、比较、因果、长度
@@ -118,10 +124,35 @@ window.RLGenerator = (function () {
   }
 
   // FALSE：词法可判定的反向改写。返回 null 表示该句安全不可反向（跳过）
+  /* FALSE 题的可判定性判据：题干必须与原文构成「可判定的矛盾」，三种任一即可
+   *   ① 题干含否定成分
+   *   ② 比较级 / 趋势方向被对调（原文 less ↔ 题干 more、higher ↔ lower 等）
+   *   ③ 数字被改动
+   * 旧版只认 ①，把「less than half → more than half」这类完全合格的题误判为不合格。 */
+  var NEG_STEM = /\b(not|never|none|no longer|without|cannot|unable|unlikely|unaware|untrue|incorrect|impossible|invalid|fewer|hardly|rarely)\b/i;
+  var UP_DIR = /\b(more|higher|larger|greater|faster|better|stronger|increas\w*|ris\w*|ros\w*|grew|grow\w*|exceed\w*|above)\b/i;
+  var DOWN_DIR = /\b(less|lower|smaller|fewer|slower|worse|weaker|decreas\w*|fall\w*|fell|declin\w*|reduc\w*|below)\b/i;
+
+  function isFalsifiable(stem, keySentence) {
+    var stemS = String(stem || "");
+    var keyS = String(keySentence || "");
+    if (NEG_STEM.test(stemS)) return true;
+    if ((UP_DIR.test(stemS) && DOWN_DIR.test(keyS)) || (DOWN_DIR.test(stemS) && UP_DIR.test(keyS))) return true;
+    var ns = stemS.match(/\d+(?:[.,]\d+)?/g) || [];
+    var nk = keyS.match(/\d+(?:[.,]\d+)?/g) || [];
+    if (ns.length && nk.length && ns.some(function (x) { return nk.indexOf(x) === -1; })) return true;
+    return false;
+  }
+
+  // 句子已含否定成分时不再反向改写，否则会造出双重否定（如 "was not unaware"）
+  var ALREADY_NEGATIVE = /\b(not|never|none|nothing|nobody|nowhere|without|no longer|unaware|unlikely|unable|uncertain|unclear|unusual|uncommon|unknown|unsafe|unfair|unequal|invalid|inadequate|incorrect|incomplete|ineffective|inefficient|impossible|improbable|irregular|irrelevant|illegal|illiterate|disagree|disappear|dislike|disorder|disprove|dissimilar)\b/i;
+
   function toFalseStem(sentence) {
     var s = " " + sentence + " ";
     var trap = "";
     var m;
+    // 0) 已含否定的句子直接放弃（返回 null 让调用方换一句），避免双重否定
+    if (ALREADY_NEGATIVE.test(sentence)) return null;
     // 1) 比较级反向
     if ((m = s.match(/\b(more|better|faster|greater|higher|stronger)\b/i))) {
       var inv = { more: "less", better: "worse", faster: "slower", greater: "smaller", higher: "lower", stronger: "weaker" }[m[1].toLowerCase()];
@@ -282,13 +313,26 @@ window.RLGenerator = (function () {
 
   /* ---------- 标题匹配生成 ---------- */
   function genHeadings(paragraphs) {
+    // 标题题按雅思惯例最多覆盖 8 段（罗马数字 i–viii）。段落更多时直接不生成：
+    // 旧版会继续生成，导致第 9 段起编号与答案变成 undefined（无效题），
+    // 而粘贴长文章的用户几乎必然触发。
+    if (paragraphs.length > 8) return null;
     var all = paragraphs.map(function (p) { return p.text.toLowerCase(); }).join(" ");
+    // 关键词：只取实词，并给「出现在段落主题句（首句）」的词加权，
+    // 避免挑出 around / depends 这类无法作标题的词
     function topWords(text) {
       var freq = {};
+      var topic = (splitSentences(text)[0] || "").toLowerCase();
       words(text).forEach(function (w) {
-        if (w.length >= 5 && !isStop(w)) freq[w] = (freq[w] || 0) + 1;
+        if (w.length >= 5 && !isHeadingStop(w)) {
+          freq[w] = (freq[w] || 0) + 1 + (topic.indexOf(w) !== -1 ? 2 : 0);
+        }
       });
-      return Object.keys(freq).sort(function (a, b) { return freq[b] - freq[a]; }).slice(0, 2);
+      // 排序：主题句权重 + 频次优先，同分时取更长的词（长词更可能是名词/术语，
+      // 短词常是动词或泛指词，做标题很怪）
+      return Object.keys(freq).sort(function (a, b) {
+        return (freq[b] - freq[a]) || (b.length - a.length);
+      }).slice(0, 2);
     }
     var templates = [
       "The role of %s", "%s in the modern world", "How %s works", "A growing problem: %s",
@@ -312,8 +356,9 @@ window.RLGenerator = (function () {
     for (var i = 0; i < needDistract && i < distractors.length; i++) {
       pool.push({ label: distractors[i], isAnswer: false });
     }
-    // 编号 i..vii（答案用罗马数字）
+    // 编号 i..viii（答案用罗马数字）；池子最多 8 项，编号必然存在
     var roman = ["i", "ii", "iii", "iv", "v", "vi", "vii", "viii"];
+    pool = pool.slice(0, roman.length);
     pool.forEach(function (p, i) { p.roman = roman[i]; });
     var questions = titles.map(function (t, i) {
       var matched = pool.filter(function (p) { return p.isAnswer && p.label === t.text; })[0];
@@ -384,7 +429,10 @@ window.RLGenerator = (function () {
     var groups = [];
     if (types.indexOf("tfng") !== -1) groups.push(genTrueFalse(paragraphs, opts.tfngCount || 6));
     if (types.indexOf("gapfill") !== -1) groups.push(genGapfill(paragraphs, opts.gapfillCount || 3));
-    if (types.indexOf("headings") !== -1 && paragraphs.length >= 2) groups.push(genHeadings(paragraphs));
+    if (types.indexOf("headings") !== -1 && paragraphs.length >= 2) {
+      var hg = genHeadings(paragraphs);
+      if (hg) groups.push(hg);   // 段落过多时 genHeadings 返回 null，跳过该题型
+    }
     if (types.indexOf("mcq") !== -1) groups.push(genMcq(paragraphs, opts.mcqCount || 3));
     if (!groups.length) return null;
     // 重排题号（跨题型连续）
@@ -410,7 +458,7 @@ window.RLGenerator = (function () {
           if (!qq.answer && !(qq.answers && qq.answers.length)) issues.push(tag + " 无答案");
           if (g.type === "tfng") {
             if (["TRUE", "FALSE", "NOT GIVEN"].indexOf(qq.answer) === -1) issues.push(tag + " TFNG 答案非法");
-            if (qq.answer === "FALSE" && !/ not | cannot | may not | less | worse | slower | smaller | lower | weaker /i.test(" " + qq.stem + " ")) {
+            if (qq.answer === "FALSE" && !isFalsifiable(qq.stem, qq.keySentence)) {
               issues.push(tag + " FALSE 题未检出反向标记");
             }
             if (qq.answer === "NOT GIVEN" && !qq.trap) issues.push(tag + " NG 题缺少陷阱说明");
@@ -429,6 +477,7 @@ window.RLGenerator = (function () {
   return {
     generateExam: generateExam, verifyExam: verifyExam,
     splitSentences: splitSentences, toFalseStem: toFalseStem, toNgStem: toNgStem,
-    toTrueStem: toTrueStem, pickSentences: pickSentences
+    toTrueStem: toTrueStem, pickSentences: pickSentences,
+    isFalsifiable: isFalsifiable
   };
 })();

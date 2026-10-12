@@ -1,0 +1,344 @@
+{
+  "format": "ielts-reading-pack",
+  "version": 1,
+  "generator": "IELTS Reading Trainer",
+  "createdAt": "2026-10-12T13:47:50.430Z",
+  "exams": [
+    {
+      "id": "community-renewable-energy",
+      "title": "Renewable Energy",
+      "titleCn": "可再生能源的转型",
+      "book": "公共题库",
+      "test": 1,
+      "passage": 1,
+      "difficulty": "中",
+      "series": "公共题库 · 自动出题",
+      "source": "贡献者 l458022 · CC BY 4.0 · Hannah Ritchie、Max Roser、Pablo Rosado — Renewable Energy，Our World in Data，CC BY 4.0",
+      "level": "自定义",
+      "minutes": 20,
+      "tags": [
+        "能源",
+        "科技"
+      ],
+      "intro": "开放获取文章（CC BY 4.0）：Hannah Ritchie、Max Roser、Pablo Rosado — Renewable Energy，Our World in Data，CC BY 4.0　原文：https://ourworldindata.org/renewable-energy",
+      "sections": [
+        {
+          "id": "s1",
+          "title": "READING PASSAGE 1",
+          "paragraphs": [
+            {
+              "id": "A",
+              "text": "This page was first published in December 2020. We revised this page in August 2026 to reflect the change in how primary energy is measured. Since the Industrial Revolution, the energy mix of most countries across the world has become dominated by fossil fuels. This has major implications for the global climate, as well as for human health. Three-quarters of global greenhouse gas emissions result from the burning of fossil fuels for energy. Fossil fuels are responsible for large amounts of local air pollution – a health problem that leads to at least 5 million premature deaths each year. To reduce CO 2 emissions and local air pollution, the world needs to rapidly shift towards low-carbon sources of energy – nuclear and renewable technologies. Renewable energy will play a key role in decarbonizing our energy systems in the coming decades. But how rapidly is our production of renewable energy changing? What technologies look most promising in transforming our energy mix?"
+            },
+            {
+              "id": "B",
+              "text": "In this article we look at the data on renewable energy technologies across the world; what share of energy they account for today, and how quickly this is changing. We often hear about the rapid growth of renewable technologies in media reports. But how much of an impact has this growth had on our energy systems? In this interactive chart, we see the share of primary energy that came from renewable technologies – the combination of hydropower, solar, wind, geothermal, wave, tidal, and modern biofuels. Traditional biomass – which can be an important energy source in lower-income settings is not included. Note that this data measures primary energy in terms of total energy supply. For more details, read how primary energy measurement has changed across our charts. Note that this is based on renewable energy's share in the energy mix. Energy consumption represents the sum of electricity, transport, and heating. We look at the electricity mix later in this article."
+            },
+            {
+              "id": "C",
+              "text": "In the charts shown here, we look at the breakdown of renewable technologies by their components – hydropower, solar, wind, and others. The first chart shows this as a stacked area chart, which allows us to more readily see the breakdown of the renewable mix and the relative contribution of each. The second chart is shown as a line chart, allowing us to see more clearly how each source is changing over time. Globally we see that hydropower is the largest modern renewable source. However, we also see wind and solar power both growing rapidly. In the sections above we looked at the role of renewables in the total energy mix. This includes not only electricity but also transport and heating. Electricity forms only one component of energy consumption. Since transport and heating tend to be harder to decarbonize – they are more reliant on oil and gas – renewables tend to have a higher share in the electricity mix versus the total energy mix."
+            },
+            {
+              "id": "D",
+              "text": "Hydroelectric power has been one of our oldest and largest sources of low-carbon energy. Hydroelectric generation at scale dates back more than a century, and is still our largest renewable source – excluding traditional biomass, it still accounts for around 40% of renewable generation. However, the scale of hydroelectric power generation varies significantly across the world. This interactive chart shows its contribution by country. This interactive chart shows the amount of energy generated from wind each year. This includes both onshore and offshore wind farms. Wind generation at scale – compared to hydropower, for example – is a relatively modern renewable energy source but is growing quickly in many countries across the world. The previous section looked at the energy output from wind farms across the world. Energy output is a function of power (installed capacity) multiplied by the time of generation. Energy generation is therefore a function of how much wind capacity is installed. This interactive chart shows installed wind capacity – including both onshore and offshore – across the world."
+            },
+            {
+              "id": "E",
+              "text": "Solar generation at scale – compared to hydropower, for example – is a relatively modern renewable energy source but is growing quickly in many countries across the world. The previous section looked at the energy output from solar across the world. Energy output is a function of power (installed capacity) multiplied by the time of generation. Energy generation is therefore a function of how much solar capacity is installed. This interactive chart shows installed solar capacity across the world. Traditional biomass – the burning of charcoal, organic wastes, and crop residues – was an important energy source for a long period of human history. It remains an important source in lower-income settings today. However, high-quality estimates of energy consumption from these sources are difficult to find. The Energy Institute Statistical Review of World Energy – our main data source on energy – only publishes data on commercially traded energy, so traditional biomass is not included."
+            },
+            {
+              "id": "F",
+              "text": "However, modern biofuels are included in this energy data. Bioethanol and biodiesel – fuel made from crops such as corn, sugarcane, hemp, and cassava – are now a key transport fuel in many countries. Our articles and data visualizations rely on work from many different people and organizations. When citing this topic page, please also cite the underlying data sources. This topic page can be cited as: All visualizations, data, and articles produced by Our World in Data are completely open access under the Creative Commons BY license. You have the permission to use, distribute, and reproduce these in any medium, provided the source and authors are credited. The data produced by third parties and made available by Our World in Data is subject to the license terms from the original third-party authors. We will always indicate the original source of the data in our documentation, so you should always check the license of any such third-party data before use and redistribution."
+            }
+          ],
+          "questionGroups": [
+            {
+              "id": "g-tfng",
+              "type": "tfng",
+              "options": [
+                "TRUE",
+                "FALSE",
+                "NOT GIVEN"
+              ],
+              "instruction": "Do the following statements agree with the information in the passage? Write TRUE if the statement agrees with the information, FALSE if the statement contradicts the information, NOT GIVEN if there is no information on this.",
+              "generated": true,
+              "questions": [
+                {
+                  "no": 1,
+                  "stem": "Hydroelectric generation at scale dates back more than a century, and is still our largest renewable source – excluding traditional biomass, it still accounts for around 40% of renewable generation.",
+                  "answer": "TRUE",
+                  "keyPara": "D",
+                  "keySentence": "Hydroelectric generation at scale dates back more than a century, and is still our largest renewable source – excluding traditional biomass, it still accounts for around 40% of renewable generation.",
+                  "explain": "本题为机器生成：题干是原文定位句的同义复现，内容一致。做题时先抓题干关键词回原文，再核对限定词与比较方向。",
+                  "generated": true
+                },
+                {
+                  "no": 2,
+                  "stem": "Since transport and heating tend to be harder to decarbonize – they are less reliant on oil and gas – renewables tend to have a higher share in the electricity mix versus the total energy mix.",
+                  "answer": "FALSE",
+                  "keyPara": "C",
+                  "keySentence": "Since transport and heating tend to be harder to decarbonize – they are more reliant on oil and gas – renewables tend to have a higher share in the electricity mix versus the total energy mix.",
+                  "explain": "本题为机器生成：原文为「Since transport and heating tend to be harder to decarbonize – they are more reliant on oil and gas – renewables tend to have a higher share in the electricity mix versus the total energy mix.」，题干通过改写使陈述与原文矛盾。做题时盯紧比较方向、肯定/否定和程度词。",
+                  "generated": true,
+                  "trap": "比较级反向（more → less），原文方向被对调"
+                },
+                {
+                  "no": 3,
+                  "stem": "We revised this page in August 2026 to reflect the change in how primary energy is measured.",
+                  "answer": "TRUE",
+                  "keyPara": "A",
+                  "keySentence": "We revised this page in August 2026 to reflect the change in how primary energy is measured.",
+                  "explain": "本题为机器生成：题干是原文定位句的同义复现，内容一致。做题时先抓题干关键词回原文，再核对限定词与比较方向。",
+                  "generated": true
+                },
+                {
+                  "no": 4,
+                  "stem": "Fossil fuels are not responsible for large amounts of local air pollution – a health problem that leads to at least 5 million premature deaths each year.",
+                  "answer": "FALSE",
+                  "keyPara": "A",
+                  "keySentence": "Fossil fuels are responsible for large amounts of local air pollution – a health problem that leads to at least 5 million premature deaths each year.",
+                  "explain": "本题为机器生成：原文为「Fossil fuels are responsible for large amounts of local air pollution – a health problem that leads to at least 5 million premature deaths each year.」，题干通过改写使陈述与原文矛盾。做题时盯紧比较方向、肯定/否定和程度词。",
+                  "generated": true,
+                  "trap": "系动词被否定（are not），与原文矛盾"
+                },
+                {
+                  "no": 5,
+                  "stem": "Traditional biomass – which can be an crucial energy source in lower-income settings is not included.",
+                  "answer": "TRUE",
+                  "keyPara": "B",
+                  "keySentence": "Traditional biomass – which can be an important energy source in lower-income settings is not included.",
+                  "explain": "本题为机器生成：题干是原文定位句的同义复现（important ↔ crucial）。做题时先抓题干关键词回原文，再核对限定词与比较方向。",
+                  "generated": true
+                },
+                {
+                  "no": 6,
+                  "stem": "The second chart is shown as a line chart, allowing us to see less clearly how each source is changing over time.",
+                  "answer": "FALSE",
+                  "keyPara": "C",
+                  "keySentence": "The second chart is shown as a line chart, allowing us to see more clearly how each source is changing over time.",
+                  "explain": "本题为机器生成：原文为「The second chart is shown as a line chart, allowing us to see more clearly how each source is changing over time.」，题干通过改写使陈述与原文矛盾。做题时盯紧比较方向、肯定/否定和程度词。",
+                  "generated": true,
+                  "trap": "比较级反向（more → less），原文方向被对调"
+                }
+              ]
+            },
+            {
+              "id": "g-gapfill",
+              "type": "gapfill",
+              "generated": true,
+              "instruction": "Complete the sentences below. Choose NO MORE THAN TWO WORDS from the passage for each answer.",
+              "questions": [
+                {
+                  "no": 7,
+                  "stem": "Hydroelectric generation at scale ____________ back more than a century, and is still our largest renewable source – excluding traditional biomass, it still accounts for around 40% of renewable generation.",
+                  "answer": "dates",
+                  "keyPara": "D",
+                  "keySentence": "Hydroelectric generation at scale dates back more than a century, and is still our largest renewable source – excluding traditional biomass, it still accounts for around 40% of renewable generation.",
+                  "explain": "本题为机器生成：从原文定位句中挖掉关键词「dates」。答案必须是原文原词，注意词性与单复数。",
+                  "generated": true,
+                  "answers": [
+                    "dates"
+                  ]
+                },
+                {
+                  "no": 8,
+                  "stem": "Since transport and heating tend to be ____________ to decarbonize – they are more reliant on oil and gas – renewables tend to have a higher share in the electricity mix versus the total energy mix.",
+                  "answer": "harder",
+                  "keyPara": "C",
+                  "keySentence": "Since transport and heating tend to be harder to decarbonize – they are more reliant on oil and gas – renewables tend to have a higher share in the electricity mix versus the total energy mix.",
+                  "explain": "本题为机器生成：从原文定位句中挖掉关键词「harder」。答案必须是原文原词，注意词性与单复数。",
+                  "generated": true,
+                  "answers": [
+                    "harder"
+                  ]
+                },
+                {
+                  "no": 9,
+                  "stem": "We ____________ this page in August 2026 to reflect the change in how primary energy is measured.",
+                  "answer": "revised",
+                  "keyPara": "A",
+                  "keySentence": "We revised this page in August 2026 to reflect the change in how primary energy is measured.",
+                  "explain": "本题为机器生成：从原文定位句中挖掉关键词「revised」。答案必须是原文原词，注意词性与单复数。",
+                  "generated": true,
+                  "answers": [
+                    "revised"
+                  ]
+                }
+              ]
+            },
+            {
+              "id": "g-headings",
+              "type": "headings",
+              "generated": true,
+              "pool": [
+                "i",
+                "ii",
+                "iii",
+                "iv",
+                "v",
+                "vi",
+                "vii"
+              ],
+              "headings": [
+                "i  The role of energy",
+                "ii  energy in the modern world",
+                "iii  How renewable works",
+                "iv  A growing problem: energy",
+                "v  The importance of energy",
+                "vi  biofuels and its effects",
+                "vii  An unexpected solution"
+              ],
+              "note": "本题组的标题由机器从段落关键词生成，其中若干为干扰项。",
+              "instruction": "The passage has 6 paragraphs. Choose the correct heading for each paragraph from the list below.",
+              "questions": [
+                {
+                  "no": 10,
+                  "stem": "Paragraph A",
+                  "answer": "i",
+                  "keyPara": "A",
+                  "keySentence": "This page was first published in December 2020.",
+                  "explain": "本题为机器生成：段落核心词为「energy」。做标题题务必看段落首句+尾句，警惕「只在段中一笔带过」的干扰项。",
+                  "generated": true,
+                  "note": "标题由机器按段落关键词生成，答案为该段最匹配的标题；做题时先扫每段主题句。"
+                },
+                {
+                  "no": 11,
+                  "stem": "Paragraph B",
+                  "answer": "ii",
+                  "keyPara": "B",
+                  "keySentence": "In this article we look at the data on renewable energy technologies across the world; what share of energy they account for today, and how quickly this is changing.",
+                  "explain": "本题为机器生成：段落核心词为「energy」。做标题题务必看段落首句+尾句，警惕「只在段中一笔带过」的干扰项。",
+                  "generated": true,
+                  "note": "标题由机器按段落关键词生成，答案为该段最匹配的标题；做题时先扫每段主题句。"
+                },
+                {
+                  "no": 12,
+                  "stem": "Paragraph C",
+                  "answer": "iii",
+                  "keyPara": "C",
+                  "keySentence": "In the charts shown here, we look at the breakdown of renewable technologies by their components – hydropower, solar, wind, and others.",
+                  "explain": "本题为机器生成：段落核心词为「renewable works」。做标题题务必看段落首句+尾句，警惕「只在段中一笔带过」的干扰项。",
+                  "generated": true,
+                  "note": "标题由机器按段落关键词生成，答案为该段最匹配的标题；做题时先扫每段主题句。"
+                },
+                {
+                  "no": 13,
+                  "stem": "Paragraph D",
+                  "answer": "iv",
+                  "keyPara": "D",
+                  "keySentence": "Hydroelectric power has been one of our oldest and largest sources of low-carbon energy.",
+                  "explain": "本题为机器生成：段落核心词为「energy」。做标题题务必看段落首句+尾句，警惕「只在段中一笔带过」的干扰项。",
+                  "generated": true,
+                  "note": "标题由机器按段落关键词生成，答案为该段最匹配的标题；做题时先扫每段主题句。"
+                },
+                {
+                  "no": 14,
+                  "stem": "Paragraph E",
+                  "answer": "v",
+                  "keyPara": "E",
+                  "keySentence": "Solar generation at scale – compared to hydropower, for example – is a relatively modern renewable energy source but is growing quickly in many countries across the world.",
+                  "explain": "本题为机器生成：段落核心词为「energy」。做标题题务必看段落首句+尾句，警惕「只在段中一笔带过」的干扰项。",
+                  "generated": true,
+                  "note": "标题由机器按段落关键词生成，答案为该段最匹配的标题；做题时先扫每段主题句。"
+                },
+                {
+                  "no": 15,
+                  "stem": "Paragraph F",
+                  "answer": "vi",
+                  "keyPara": "F",
+                  "keySentence": "However, modern biofuels are included in this energy data.",
+                  "explain": "本题为机器生成：段落核心词为「biofuels」。做标题题务必看段落首句+尾句，警惕「只在段中一笔带过」的干扰项。",
+                  "generated": true,
+                  "note": "标题由机器按段落关键词生成，答案为该段最匹配的标题；做题时先扫每段主题句。"
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "vocabulary": [
+        {
+          "word": "energy",
+          "pos": "n.",
+          "meaning": "能量",
+          "sentence": "We revised this page in August 2026 to reflect the change in how primary energy is measured."
+        },
+        {
+          "word": "renewable",
+          "pos": "adj.",
+          "meaning": "可再生的",
+          "sentence": "To reduce CO 2 emissions and local air pollution, the world needs to rapidly shift towards low-carbon sources of energy – nuclear and renewable technologies."
+        },
+        {
+          "word": "generation",
+          "pos": "n.",
+          "meaning": "一代人",
+          "sentence": "Hydroelectric generation at scale dates back more than a century, and is still our largest renewable source – excluding traditional biomass, it still accounts for around 40% of renewable generation."
+        },
+        {
+          "word": "solar",
+          "pos": "adj.",
+          "meaning": "太阳的",
+          "sentence": "In this interactive chart, we see the share of primary energy that came from renewable technologies – the combination of hydropower, solar, wind, geothermal, wave, tidal, and modern biofuels."
+        },
+        {
+          "word": "modern",
+          "pos": "adj.",
+          "meaning": "现代的",
+          "sentence": "In this interactive chart, we see the share of primary energy that came from renewable technologies – the combination of hydropower, solar, wind, geothermal, wave, tidal, and modern biofuels."
+        },
+        {
+          "word": "power",
+          "pos": "n.",
+          "meaning": "力量，权力",
+          "sentence": "However, we also see wind and solar power both growing rapidly."
+        },
+        {
+          "word": "transport",
+          "pos": "n.",
+          "meaning": "交通",
+          "sentence": "Energy consumption represents the sum of electricity, transport, and heating."
+        },
+        {
+          "word": "function",
+          "pos": "n.",
+          "meaning": "功能",
+          "sentence": "Energy output is a function of power (installed capacity) multiplied by the time of generation."
+        },
+        {
+          "word": "primary",
+          "pos": "adj.",
+          "meaning": "首要的，初级的",
+          "sentence": "We revised this page in August 2026 to reflect the change in how primary energy is measured."
+        },
+        {
+          "word": "important",
+          "pos": "adj.",
+          "meaning": "重要的",
+          "sentence": "Traditional biomass – which can be an important energy source in lower-income settings is not included."
+        },
+        {
+          "word": "fossil",
+          "pos": "n.",
+          "meaning": "化石",
+          "sentence": "Since the Industrial Revolution, the energy mix of most countries across the world has become dominated by fossil fuels."
+        },
+        {
+          "word": "pollution",
+          "pos": "n.",
+          "meaning": "污染",
+          "sentence": "Fossil fuels are responsible for large amounts of local air pollution – a health problem that leads to at least 5 million premature deaths each year."
+        }
+      ],
+      "contribution": {
+        "contributor": "l458022",
+        "license": "CC BY 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
+        "sourceUrl": "https://ourworldindata.org/renewable-energy",
+        "attribution": "Hannah Ritchie、Max Roser、Pablo Rosado — Renewable Energy，Our World in Data，CC BY 4.0",
+        "declaredAt": "2026-10-12T13:47:50.429Z",
+        "declaration": "copyright-ok;questions-original-or-tool-generated;no-privacy"
+      }
+    }
+  ]
+}

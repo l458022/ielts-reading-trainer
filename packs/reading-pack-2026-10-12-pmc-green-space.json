@@ -1,0 +1,313 @@
+{
+  "format": "ielts-reading-pack",
+  "version": 1,
+  "generator": "IELTS Reading Trainer",
+  "createdAt": "2026-10-12T13:47:58.544Z",
+  "exams": [
+    {
+      "id": "community-pmc-green-space",
+      "title": "Urban green space engagement patterns and mental health in a Mediterranean City",
+      "titleCn": "城市绿地与心理健康",
+      "book": "公共题库",
+      "test": 1,
+      "passage": 1,
+      "difficulty": "难",
+      "series": "公共题库 · 自动出题",
+      "source": "贡献者 l458022 · CC BY 4.0 · Lilli A, Liana A, Tsekeri E, Daras T, Kolokotsa D. — Europe PMC，CC BY 4.0",
+      "level": "自定义",
+      "minutes": 20,
+      "tags": [
+        "健康",
+        "城市"
+      ],
+      "intro": "开放获取文章（CC BY 4.0）：Lilli A, Liana A, Tsekeri E, Daras T, Kolokotsa D. — Europe PMC，CC BY 4.0　原文：https://europepmc.org/article/PMC/PMC13576388",
+      "sections": [
+        {
+          "id": "s1",
+          "title": "READING PASSAGE 1",
+          "paragraphs": [
+            {
+              "id": "A",
+              "text": "Urbanization has reshaped the scale, structure, and lived experience of cities worldwide, generating both opportunities and significant public health challenges. While urban environments often provide improved access to employment, services, and social networks, they also concentrate environmental and psychosocial stressors, including air and noise pollution, urban heat, high population density, limited access to natural environments, and socio-spatial inequalities. These conditions can adversely affect both physical and mental health outcomes. Mental health has become a major global public health concern. According to the World Health Organization, mental health is defined as “a state of well-being in which every individual realizes his or her own potential, can cope with the normal stresses of life, can work productively and fruitfully, and is able to make a contribution to his or her community”. Despite this broad and positive conceptualization, mental disorders remain highly prevalent worldwide, with studies estimating that approximately 10% of the global population experienced mental disorders in 2013, rising to nearly 13% by 2020,. Evidence consistently suggests that urban living is associated with a higher risk of mental illness—including depression, psychosis, and substance use disorders—compared with rural environments,,,,. Addressing the determinants of mental health in urban contexts is therefore an urgent priority for both public health policy and urban planning."
+            },
+            {
+              "id": "B",
+              "text": "Within this context, urban green spaces (GSs) have increasingly been recognized as a key environmental resource capable of supporting both physical and mental well-being. In this study, GSs are defined as outdoor environments dominated by natural elements, including vegetated areas such as urban parks, gardens, and forests, as well as environments characterized by water features such as coastlines or lakes. This broader conceptualization reflects recent evidence emphasizing that different types of natural environments, including both green and blue spaces, may contribute to mental health through distinct restorative mechanisms. GSs provide multiple ecosystem services that contribute to healthier urban environments, including air purification, temperature regulation, noise mitigation, and opportunities for physical activity and social interaction. In addition to these environmental benefits, a growing body of research demonstrates that exposure to natural environments can reduce psychological stress, improve mood, enhance cognitive functioning, and promote overall well-being. Consequently, the integration and equitable distribution of GSs within cities have become important strategies for improving urban livability and population health."
+            },
+            {
+              "id": "C",
+              "text": "A substantial and rapidly expanding body of research has explored the relationship between GS exposure and mental health, consistently highlighting natural environments as important protective factors for mental well-being in increasingly urbanized societies. Recent systematic reviews and meta-analyses provide strong evidence that access to natural environments is associated with improved mental health outcomes and reduced psychological distress,,. For example, Collins et al. identified consistent associations between GS exposure and improved mental health indicators across multiple geographical contexts. Similarly, Sui et al. demonstrated longitudinal links between neighborhood natural environments and better mental health outcomes. Emerging research using geographically informed ecological momentary assessment further highlights how daily interactions with specific places and environments can influence moment-to-moment mental states and well-being. Despite this growing evidence base, substantial proportion of existing studies rely primarily on structural or proximity-based indicators—such as residential greenness indices (e.g., NDVI), distance to parks, or percentage of green land cover—as proxies for exposure to nature,,. Specifically, a systematic mapping of the literature showed that approximately 61% of observational studies use quantity-based indicators, while substantially fewer studies consider measures related to greenspace quality, proximity, or actual visitation patterns. While such metrics provide valuable information about the spatial distribution of green infrastructure, they often fail to capture the extent to which individuals actually interact with these environments. Consequently, the distinction between potential exposure and realized exposure remains insufficiently explored. This limitation is particularly important because the health benefits of urban GSs are increasingly understood to depend not only on their presence in the urban landscape, but also on the frequency, duration, characteristics and purpose of their use."
+            },
+            {
+              "id": "D",
+              "text": "Several theoretical frameworks have been proposed to explain the mechanisms through which exposure and engagement with natural environments may be associated with mental health. Among these, Stress Recovery Theory (SRT) and Attention Restoration Theory (ART) are the two most widely cited. SRT proposes that contact with natural environments facilitates emotional recovery and reduces psychological stress, whereas ART suggests that natural environments restore directed attention and depleted cognitive resources. Together, these theories provide a conceptual basis for understanding how different dimensions of GS exposure and engagement may be associated with mental health and well-being. Fig. 1 presents the conceptual framework underpinning these hypothesized relationships. Fig. 1 Conceptual framework linking urban GS exposure and engagement with mental health dimensions assessed by the GHQ-12. Dashed arrows represent hypothesized pathways derived from SRT and ART. These pathways represent the theoretical framework underpinning the study and were not directly tested."
+            }
+          ],
+          "questionGroups": [
+            {
+              "id": "g-tfng",
+              "type": "tfng",
+              "options": [
+                "TRUE",
+                "FALSE",
+                "NOT GIVEN"
+              ],
+              "instruction": "Do the following statements agree with the information in the passage? Write TRUE if the statement agrees with the information, FALSE if the statement contradicts the information, NOT GIVEN if there is no information on this.",
+              "generated": true,
+              "questions": [
+                {
+                  "no": 1,
+                  "stem": "Despite this broad and positive conceptualization, mental disorders remain highly prevalent worldwide, with studies estimating that approximately 10% of the global population experienced mental disorders in 2013, rising to nearly 13% by 2020,.",
+                  "answer": "TRUE",
+                  "keyPara": "A",
+                  "keySentence": "Despite this broad and positive conceptualization, mental disorders remain highly prevalent worldwide, with studies estimating that approximately 10% of the global population experienced mental disorders in 2013, rising to nearly 13% by 2020,.",
+                  "explain": "本题为机器生成：题干是原文定位句的同义复现，内容一致。做题时先抓题干关键词回原文，再核对限定词与比较方向。",
+                  "generated": true
+                },
+                {
+                  "no": 2,
+                  "stem": "Specifically, a systematic mapping of the literature showed that approximately 61% of observational studies employ quantity-based indicators, while substantially fewer studies consider measures related to greenspace quality, proximity, or actual visitation patterns.",
+                  "answer": "TRUE",
+                  "keyPara": "C",
+                  "keySentence": "Specifically, a systematic mapping of the literature showed that approximately 61% of observational studies use quantity-based indicators, while substantially fewer studies consider measures related to greenspace quality, proximity, or actual visitation patterns.",
+                  "explain": "本题为机器生成：题干是原文定位句的同义复现（use ↔ employ）。做题时先抓题干关键词回原文，再核对限定词与比较方向。",
+                  "generated": true
+                },
+                {
+                  "no": 3,
+                  "stem": "This limitation is particularly crucial because the health benefits of urban GSs are increasingly understood to depend not only on their presence in the urban landscape, but also on the frequency, duration, characteristics and purpose of their employ.",
+                  "answer": "TRUE",
+                  "keyPara": "C",
+                  "keySentence": "This limitation is particularly important because the health benefits of urban GSs are increasingly understood to depend not only on their presence in the urban landscape, but also on the frequency, duration, characteristics and purpose of their use.",
+                  "explain": "本题为机器生成：题干是原文定位句的同义复现（important ↔ crucial；use ↔ employ）。做题时先抓题干关键词回原文，再核对限定词与比较方向。",
+                  "generated": true
+                },
+                {
+                  "no": 4,
+                  "stem": "1 Conceptual framework linking urban GS exposure and engagement with mental health dimensions assessed by the GHQ-12.",
+                  "answer": "TRUE",
+                  "keyPara": "D",
+                  "keySentence": "1 Conceptual framework linking urban GS exposure and engagement with mental health dimensions assessed by the GHQ-12.",
+                  "explain": "本题为机器生成：题干是原文定位句的同义复现，内容一致。做题时先抓题干关键词回原文，再核对限定词与比较方向。",
+                  "generated": true
+                },
+                {
+                  "no": 5,
+                  "stem": "Urbanization has reshaped the scale, structure, and lived experience of cities worldwide, generating both opportunities and significant public health challenges.",
+                  "answer": "TRUE",
+                  "keyPara": "A",
+                  "keySentence": "Urbanization has reshaped the scale, structure, and lived experience of cities worldwide, generating both opportunities and significant public health challenges.",
+                  "explain": "本题为机器生成：题干是原文定位句的同义复现，内容一致。做题时先抓题干关键词回原文，再核对限定词与比较方向。",
+                  "generated": true
+                },
+                {
+                  "no": 6,
+                  "stem": "Within this context, urban green spaces (GSs) have increasingly been recognized as a key environmental resource capable of supporting both physical and mental well-being.",
+                  "answer": "TRUE",
+                  "keyPara": "B",
+                  "keySentence": "Within this context, urban green spaces (GSs) have increasingly been recognized as a key environmental resource capable of supporting both physical and mental well-being.",
+                  "explain": "本题为机器生成：题干是原文定位句的同义复现，内容一致。做题时先抓题干关键词回原文，再核对限定词与比较方向。",
+                  "generated": true
+                }
+              ]
+            },
+            {
+              "id": "g-gapfill",
+              "type": "gapfill",
+              "generated": true,
+              "instruction": "Complete the sentences below. Choose NO MORE THAN TWO WORDS from the passage for each answer.",
+              "questions": [
+                {
+                  "no": 7,
+                  "stem": "Despite this broad and ____________ conceptualization, mental disorders remain highly prevalent worldwide, with studies estimating that approximately 10% of the global population experienced mental disorders in 2013, rising to nearly 13% by 2020,.",
+                  "answer": "positive",
+                  "keyPara": "A",
+                  "keySentence": "Despite this broad and positive conceptualization, mental disorders remain highly prevalent worldwide, with studies estimating that approximately 10% of the global population experienced mental disorders in 2013, rising to nearly 13% by 2020,.",
+                  "explain": "本题为机器生成：从原文定位句中挖掉关键词「positive」。答案必须是原文原词，注意词性与单复数。",
+                  "generated": true,
+                  "answers": [
+                    "positive"
+                  ]
+                },
+                {
+                  "no": 8,
+                  "stem": "____________, a systematic mapping of the literature showed that approximately 61% of observational studies use quantity-based indicators, while substantially fewer studies consider measures related to greenspace quality, proximity, or actual visitation patterns.",
+                  "answer": "specifically",
+                  "keyPara": "C",
+                  "keySentence": "Specifically, a systematic mapping of the literature showed that approximately 61% of observational studies use quantity-based indicators, while substantially fewer studies consider measures related to greenspace quality, proximity, or actual visitation patterns.",
+                  "explain": "本题为机器生成：从原文定位句中挖掉关键词「specifically」。答案必须是原文原词，注意词性与单复数。",
+                  "generated": true,
+                  "answers": [
+                    "specifically"
+                  ]
+                },
+                {
+                  "no": 9,
+                  "stem": "This ____________ is particularly important because the health benefits of urban GSs are increasingly understood to depend not only on their presence in the urban landscape, but also on the frequency, duration, characteristics and purpose of their use.",
+                  "answer": "limitation",
+                  "keyPara": "C",
+                  "keySentence": "This limitation is particularly important because the health benefits of urban GSs are increasingly understood to depend not only on their presence in the urban landscape, but also on the frequency, duration, characteristics and purpose of their use.",
+                  "explain": "本题为机器生成：从原文定位句中挖掉关键词「limitation」。答案必须是原文原词，注意词性与单复数。",
+                  "generated": true,
+                  "answers": [
+                    "limitation"
+                  ]
+                }
+              ]
+            },
+            {
+              "id": "g-headings",
+              "type": "headings",
+              "generated": true,
+              "pool": [
+                "i",
+                "ii",
+                "iii",
+                "iv",
+                "v",
+                "vi",
+                "vii"
+              ],
+              "headings": [
+                "i  The role of health",
+                "ii  urban in the modern world",
+                "iii  How mental works",
+                "iv  A growing problem: environments",
+                "v  An unexpected solution",
+                "vi  The limits of measurement",
+                "vii  Lessons from history"
+              ],
+              "note": "本题组的标题由机器从段落关键词生成，其中若干为干扰项。",
+              "instruction": "The passage has 4 paragraphs. Choose the correct heading for each paragraph from the list below.",
+              "questions": [
+                {
+                  "no": 10,
+                  "stem": "Paragraph A",
+                  "answer": "i",
+                  "keyPara": "A",
+                  "keySentence": "Urbanization has reshaped the scale, structure, and lived experience of cities worldwide, generating both opportunities and significant public health challenges.",
+                  "explain": "本题为机器生成：段落核心词为「health」。做标题题务必看段落首句+尾句，警惕「只在段中一笔带过」的干扰项。",
+                  "generated": true,
+                  "note": "标题由机器按段落关键词生成，答案为该段最匹配的标题；做题时先扫每段主题句。"
+                },
+                {
+                  "no": 11,
+                  "stem": "Paragraph B",
+                  "answer": "ii",
+                  "keyPara": "B",
+                  "keySentence": "Within this context, urban green spaces (GSs) have increasingly been recognized as a key environmental resource capable of supporting both physical and mental well-being.",
+                  "explain": "本题为机器生成：段落核心词为「urban」。做标题题务必看段落首句+尾句，警惕「只在段中一笔带过」的干扰项。",
+                  "generated": true,
+                  "note": "标题由机器按段落关键词生成，答案为该段最匹配的标题；做题时先扫每段主题句。"
+                },
+                {
+                  "no": 12,
+                  "stem": "Paragraph C",
+                  "answer": "iii",
+                  "keyPara": "C",
+                  "keySentence": "A substantial and rapidly expanding body of research has explored the relationship between GS exposure and mental health, consistently highlighting natural environments as important protective factors for mental well-being in increasingly urbanized societies.",
+                  "explain": "本题为机器生成：段落核心词为「mental works」。做标题题务必看段落首句+尾句，警惕「只在段中一笔带过」的干扰项。",
+                  "generated": true,
+                  "note": "标题由机器按段落关键词生成，答案为该段最匹配的标题；做题时先扫每段主题句。"
+                },
+                {
+                  "no": 13,
+                  "stem": "Paragraph D",
+                  "answer": "iv",
+                  "keyPara": "D",
+                  "keySentence": "Several theoretical frameworks have been proposed to explain the mechanisms through which exposure and engagement with natural environments may be associated with mental health.",
+                  "explain": "本题为机器生成：段落核心词为「environments」。做标题题务必看段落首句+尾句，警惕「只在段中一笔带过」的干扰项。",
+                  "generated": true,
+                  "note": "标题由机器按段落关键词生成，答案为该段最匹配的标题；做题时先扫每段主题句。"
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "vocabulary": [
+        {
+          "word": "health",
+          "pos": "n.",
+          "meaning": "健康",
+          "sentence": "Urbanization has reshaped the scale, structure, and lived experience of cities worldwide, generating both opportunities and significant public health challenges."
+        },
+        {
+          "word": "mental",
+          "pos": "adj.",
+          "meaning": "心理的",
+          "sentence": "These conditions can adversely affect both physical and mental health outcomes."
+        },
+        {
+          "word": "urban",
+          "pos": "adj.",
+          "meaning": "城市的",
+          "sentence": "Urbanization has reshaped the scale, structure, and lived experience of cities worldwide, generating both opportunities and significant public health challenges."
+        },
+        {
+          "word": "natural",
+          "pos": "adj.",
+          "meaning": "自然的",
+          "sentence": "While urban environments often provide improved access to employment, services, and social networks, they also concentrate environmental and psychosocial stressors, including air and noise pollution, urban heat, high population density, limited access to natural environments, and socio-spatial inequalities."
+        },
+        {
+          "word": "exposure",
+          "pos": "n.",
+          "meaning": "暴露，接触",
+          "sentence": "In addition to these environmental benefits, a growing body of research demonstrates that exposure to natural environments can reduce psychological stress, improve mood, enhance cognitive functioning, and promote overall well-being."
+        },
+        {
+          "word": "provide",
+          "pos": "v.",
+          "meaning": "提供",
+          "sentence": "While urban environments often provide improved access to employment, services, and social networks, they also concentrate environmental and psychosocial stressors, including air and noise pollution, urban heat, high population density, limited access to natural environments, and socio-spatial inequalities."
+        },
+        {
+          "word": "evidence",
+          "pos": "n.",
+          "meaning": "证据",
+          "sentence": "Evidence consistently suggests that urban living is associated with a higher risk of mental illness—including depression, psychosis, and substance use disorders—compared with rural environments,,,,."
+        },
+        {
+          "word": "environmental",
+          "pos": "adj.",
+          "meaning": "环境的",
+          "sentence": "While urban environments often provide improved access to employment, services, and social networks, they also concentrate environmental and psychosocial stressors, including air and noise pollution, urban heat, high population density, limited access to natural environments, and socio-spatial inequalities."
+        },
+        {
+          "word": "population",
+          "pos": "n.",
+          "meaning": "种群，人口",
+          "sentence": "While urban environments often provide improved access to employment, services, and social networks, they also concentrate environmental and psychosocial stressors, including air and noise pollution, urban heat, high population density, limited access to natural environments, and socio-spatial inequalities."
+        },
+        {
+          "word": "important",
+          "pos": "adj.",
+          "meaning": "重要的",
+          "sentence": "Consequently, the integration and equitable distribution of GSs within cities have become important strategies for improving urban livability and population health."
+        },
+        {
+          "word": "physical",
+          "pos": "adj.",
+          "meaning": "身体的，物理的",
+          "sentence": "These conditions can adversely affect both physical and mental health outcomes."
+        },
+        {
+          "word": "public",
+          "pos": "n.",
+          "meaning": "公众",
+          "sentence": "Urbanization has reshaped the scale, structure, and lived experience of cities worldwide, generating both opportunities and significant public health challenges."
+        }
+      ],
+      "contribution": {
+        "contributor": "l458022",
+        "license": "CC BY 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
+        "sourceUrl": "https://europepmc.org/article/PMC/PMC13576388",
+        "attribution": "Lilli A, Liana A, Tsekeri E, Daras T, Kolokotsa D. — Europe PMC，CC BY 4.0",
+        "declaredAt": "2026-10-12T13:47:58.544Z",
+        "declaration": "copyright-ok;questions-original-or-tool-generated;no-privacy"
+      }
+    }
+  ]
+}

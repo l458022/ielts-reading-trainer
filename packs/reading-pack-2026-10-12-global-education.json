@@ -1,0 +1,343 @@
+{
+  "format": "ielts-reading-pack",
+  "version": 1,
+  "generator": "IELTS Reading Trainer",
+  "createdAt": "2026-10-12T13:47:56.697Z",
+  "exams": [
+    {
+      "id": "community-global-education",
+      "title": "Global Education",
+      "titleCn": "全球教育的普及",
+      "book": "公共题库",
+      "test": 1,
+      "passage": 1,
+      "difficulty": "中",
+      "series": "公共题库 · 自动出题",
+      "source": "贡献者 l458022 · CC BY 4.0 · Hannah Ritchie、Veronika Samborska、Esteban Ortiz-Ospina、Max Roser — Global Education，Our World in Data，CC BY 4.0",
+      "level": "自定义",
+      "minutes": 20,
+      "tags": [
+        "教育",
+        "社会"
+      ],
+      "intro": "开放获取文章（CC BY 4.0）：Hannah Ritchie、Veronika Samborska、Esteban Ortiz-Ospina、Max Roser — Global Education，Our World in Data，CC BY 4.0　原文：https://ourworldindata.org/global-education",
+      "sections": [
+        {
+          "id": "s1",
+          "title": "READING PASSAGE 1",
+          "paragraphs": [
+            {
+              "id": "A",
+              "text": "A good education offers individuals the opportunity to lead richer, more interesting lives. At a societal level, it creates opportunities for humanity to solve its pressing problems. The world has gone through a dramatic transition over the last few centuries, from one where very few had any basic education to one where most people do. This is not only reflected in the inputs to education — enrollment and attendance — but also in outcomes, where literacy rates have greatly improved. Getting children into school is also not enough: what they learn matters. There are large differences in educational outcomes: in low-income countries, most children cannot read by the end of primary school. These inequalities in education exacerbate poverty and existing inequalities in global incomes. But formal education is a very recent phenomenon. In the chart, we see the share of the adult population — those older than 15 — who has received some basic education and those who haven’t."
+            },
+            {
+              "id": "B",
+              "text": "In the early 1800s, fewer than 1 in 5 adults had some basic education. Education was a luxury; in all places, it was only available to a small elite. But you can see that this share has grown dramatically, such that this ratio is now reversed. Less than 1 in 5 adults has not received any formal education. This is reflected in literacy data, too: two centuries ago, very few could read and write. Now, most adults have basic literacy skills. International statistics often focus on enrollment and attendance as the markers of educational progress. The aim is to get children into school. However, being in school does not guarantee that a child receives a high-quality education. In fact, in many countries, the data shows that children learn very little. In the chart, you can see the share of students who could read with comprehension at the end of primary education. This means they achieved minimum proficiency and could identify key ideas in texts and connect them to their own experiences. Here is the same visualization for skills in mathematics."
+            },
+            {
+              "id": "C",
+              "text": "Making sure that every child gets to go to school is essential. But the world also needs to focus on what children learn once they’re in the classroom. Research suggests that many children — especially in the world’s poorest countries — learn only very little in school. What can we do to improve this? This can be measured as the total number of years that children spend in school. However, researchers can also adjust for the quality of education to estimate how many years of quality learning they receive. This is done using an indicator called “ learning-adjusted years of schooling ”. In many of the world’s poorest countries, children receive less than three years of learning-adjusted schooling. In most rich countries, this is more than 10 years. Across most countries in South Asia and Sub-Saharan Africa, where most of the world’s children live, they get less than 7 years of quality schooling on average."
+            },
+            {
+              "id": "D",
+              "text": "Many children who attend primary school drop out and do not attend secondary school. That means many more children or adolescents are missing from secondary school than from primary education. We send two regular newsletters so you can stay up to date on our work and receive curated highlights from across Our World in Data. At the global level, until recently, boys were far more likely to attend school than girls. The world has focused on closing this gap to ensure every child gets this opportunity. Today, these gender gaps have largely disappeared. In the chart, we see the difference in the global enrollment rates for primary, secondary, and tertiary (post-secondary) education. We see these lines converging over time, and recently they either completely met or become very narrow: rates between boys and girls are very similar. While the differences are small globally, there are some countries where the differences are still large: girls in Afghanistan, for example, are much less likely to go to school."
+            },
+            {
+              "id": "E",
+              "text": "Research suggests that many children — especially in the world’s poorest countries — learn only very little in school. What can we do to improve this? The world needs ideas and innovation to make progress. Creative and talented people are everywhere, but the opportunity to develop is limited to only a small number of well-off children. The world loses out as a result. One of the first and most basic indicators that captures a child’s opportunity to get formal education is the enrollment rate. This tells us what percentage of children of a given age group are enrolled in school. This doesn’t tell us how often they attend or the quality of their learning, but it gives us a basic insight into the number of children in school. Gross rates take all children enrolled in a given level of education and divide this by the population of children within the appropriate age group for that level (for example, aged 5 to 10 for primary education). This means they can include children who are older or younger than the “official age”, such as those who started school late or repeated a year. For this reason, rates can be over 100%."
+            },
+            {
+              "id": "F",
+              "text": "Net rates only include children enrolled in school at the “official age”. So, an older child resitting a given year would not be included in the total. While most children in the world now get enrolled in primary school, the time that they will spend in formal education varies a lot. A child who completes primary school, but then only goes to secondary school for a year or two (if at all), will get far fewer years of education than one who completes primary, secondary, and then goes on to tertiary education. This “school life expectancy” tells us something about how much they can learn. In the chart, you can explore several indicators that try to capture years of schooling at different education levels, and for each gender. You'll find the average years of schooling completed by today’s adults, the number of years that children starting school are expected to spend in education, and the learning-adjusted years that show what this time really means once we account for how much students actually learn."
+            }
+          ],
+          "questionGroups": [
+            {
+              "id": "g-tfng",
+              "type": "tfng",
+              "options": [
+                "TRUE",
+                "FALSE",
+                "NOT GIVEN"
+              ],
+              "instruction": "Do the following statements agree with the information in the passage? Write TRUE if the statement agrees with the information, FALSE if the statement contradicts the information, NOT GIVEN if there is no information on this.",
+              "generated": true,
+              "questions": [
+                {
+                  "no": 1,
+                  "stem": "Across most countries in South Asia and Sub-Saharan Africa, where most of the world’s children live, they get less than 7 years of quality schooling on average.",
+                  "answer": "TRUE",
+                  "keyPara": "C",
+                  "keySentence": "Across most countries in South Asia and Sub-Saharan Africa, where most of the world’s children live, they get less than 7 years of quality schooling on average.",
+                  "explain": "本题为机器生成：题干是原文定位句的同义复现，内容一致。做题时先抓题干关键词回原文，再核对限定词与比较方向。",
+                  "generated": true
+                },
+                {
+                  "no": 2,
+                  "stem": "In the chart, we see the share of the adult population — those older than 15 — who has received some basic education and those who haven’t.",
+                  "answer": "TRUE",
+                  "keyPara": "A",
+                  "keySentence": "In the chart, we see the share of the adult population — those older than 15 — who has received some basic education and those who haven’t.",
+                  "explain": "本题为机器生成：题干是原文定位句的同义复现，内容一致。做题时先抓题干关键词回原文，再核对限定词与比较方向。",
+                  "generated": true
+                },
+                {
+                  "no": 3,
+                  "stem": "Less than 1 in 5 adults has not received any formal education.",
+                  "answer": "TRUE",
+                  "keyPara": "B",
+                  "keySentence": "Less than 1 in 5 adults has not received any formal education.",
+                  "explain": "本题为机器生成：题干是原文定位句的同义复现，内容一致。做题时先抓题干关键词回原文，再核对限定词与比较方向。",
+                  "generated": true
+                },
+                {
+                  "no": 4,
+                  "stem": "In the early 1800s, fewer than 1 in 5 adults had some basic education.",
+                  "answer": "TRUE",
+                  "keyPara": "B",
+                  "keySentence": "In the early 1800s, fewer than 1 in 5 adults had some basic education.",
+                  "explain": "本题为机器生成：题干是原文定位句的同义复现，内容一致。做题时先抓题干关键词回原文，再核对限定词与比较方向。",
+                  "generated": true
+                },
+                {
+                  "no": 5,
+                  "stem": "That means many less children or adolescents are missing from secondary school than from primary education.",
+                  "answer": "FALSE",
+                  "keyPara": "D",
+                  "keySentence": "That means many more children or adolescents are missing from secondary school than from primary education.",
+                  "explain": "本题为机器生成：原文为「That means many more children or adolescents are missing from secondary school than from primary education.」，题干通过改写使陈述与原文矛盾。做题时盯紧比较方向、肯定/否定和程度词。",
+                  "generated": true,
+                  "trap": "比较级反向（more → less），原文方向被对调"
+                },
+                {
+                  "no": 6,
+                  "stem": "While the differences are small globally, there are some countries where the differences are still large: girls in Afghanistan, for example, are much less likely to go to hospital.",
+                  "answer": "NOT GIVEN",
+                  "keyPara": "D",
+                  "keySentence": "While the differences are small globally, there are some countries where the differences are still large: girls in Afghanistan, for example, are much less likely to go to school.",
+                  "explain": "本题为机器生成：原文说的是「While the differences are small globally, there are some countries where the differences are still large: girls in Afghanistan, for example, are much less likely to go to school.」，题干把实体偷换成了别的东西，原文从未提及该组合——这是 NG 题的典型构造。",
+                  "generated": true,
+                  "trap": "实体偷换（school → hospital）：原文说的是「school」，题干偷换成「hospital」，属文中未提及"
+                }
+              ]
+            },
+            {
+              "id": "g-gapfill",
+              "type": "gapfill",
+              "generated": true,
+              "instruction": "Complete the sentences below. Choose NO MORE THAN TWO WORDS from the passage for each answer.",
+              "questions": [
+                {
+                  "no": 7,
+                  "stem": "Across most countries in ____________ Asia and Sub-Saharan Africa, where most of the world’s children live, they get less than 7 years of quality schooling on average.",
+                  "answer": "south",
+                  "keyPara": "C",
+                  "keySentence": "Across most countries in South Asia and Sub-Saharan Africa, where most of the world’s children live, they get less than 7 years of quality schooling on average.",
+                  "explain": "本题为机器生成：从原文定位句中挖掉关键词「south」。答案必须是原文原词，注意词性与单复数。",
+                  "generated": true,
+                  "answers": [
+                    "south"
+                  ]
+                },
+                {
+                  "no": 8,
+                  "stem": "In the chart, we see the share of the adult population — those older than 15 — who has received some basic education and those who ____________’t.",
+                  "answer": "haven",
+                  "keyPara": "A",
+                  "keySentence": "In the chart, we see the share of the adult population — those older than 15 — who has received some basic education and those who haven’t.",
+                  "explain": "本题为机器生成：从原文定位句中挖掉关键词「haven」。答案必须是原文原词，注意词性与单复数。",
+                  "generated": true,
+                  "answers": [
+                    "haven"
+                  ]
+                },
+                {
+                  "no": 9,
+                  "stem": "Less than 1 in 5 adults has not ____________ any formal education.",
+                  "answer": "received",
+                  "keyPara": "B",
+                  "keySentence": "Less than 1 in 5 adults has not received any formal education.",
+                  "explain": "本题为机器生成：从原文定位句中挖掉关键词「received」。答案必须是原文原词，注意词性与单复数。",
+                  "generated": true,
+                  "answers": [
+                    "received"
+                  ]
+                }
+              ]
+            },
+            {
+              "id": "g-headings",
+              "type": "headings",
+              "generated": true,
+              "pool": [
+                "i",
+                "ii",
+                "iii",
+                "iv",
+                "v",
+                "vi",
+                "vii"
+              ],
+              "headings": [
+                "i  The role of education",
+                "ii  education in the modern world",
+                "iii  How school works",
+                "iv  A growing problem: school",
+                "v  The importance of children",
+                "vi  school and its effects",
+                "vii  An unexpected solution"
+              ],
+              "note": "本题组的标题由机器从段落关键词生成，其中若干为干扰项。",
+              "instruction": "The passage has 6 paragraphs. Choose the correct heading for each paragraph from the list below.",
+              "questions": [
+                {
+                  "no": 10,
+                  "stem": "Paragraph A",
+                  "answer": "i",
+                  "keyPara": "A",
+                  "keySentence": "A good education offers individuals the opportunity to lead richer, more interesting lives.",
+                  "explain": "本题为机器生成：段落核心词为「education」。做标题题务必看段落首句+尾句，警惕「只在段中一笔带过」的干扰项。",
+                  "generated": true,
+                  "note": "标题由机器按段落关键词生成，答案为该段最匹配的标题；做题时先扫每段主题句。"
+                },
+                {
+                  "no": 11,
+                  "stem": "Paragraph B",
+                  "answer": "ii",
+                  "keyPara": "B",
+                  "keySentence": "In the early 1800s, fewer than 1 in 5 adults had some basic education.",
+                  "explain": "本题为机器生成：段落核心词为「education」。做标题题务必看段落首句+尾句，警惕「只在段中一笔带过」的干扰项。",
+                  "generated": true,
+                  "note": "标题由机器按段落关键词生成，答案为该段最匹配的标题；做题时先扫每段主题句。"
+                },
+                {
+                  "no": 12,
+                  "stem": "Paragraph C",
+                  "answer": "iii",
+                  "keyPara": "C",
+                  "keySentence": "Making sure that every child gets to go to school is essential.",
+                  "explain": "本题为机器生成：段落核心词为「school works」。做标题题务必看段落首句+尾句，警惕「只在段中一笔带过」的干扰项。",
+                  "generated": true,
+                  "note": "标题由机器按段落关键词生成，答案为该段最匹配的标题；做题时先扫每段主题句。"
+                },
+                {
+                  "no": 13,
+                  "stem": "Paragraph D",
+                  "answer": "iv",
+                  "keyPara": "D",
+                  "keySentence": "Many children who attend primary school drop out and do not attend secondary school.",
+                  "explain": "本题为机器生成：段落核心词为「school」。做标题题务必看段落首句+尾句，警惕「只在段中一笔带过」的干扰项。",
+                  "generated": true,
+                  "note": "标题由机器按段落关键词生成，答案为该段最匹配的标题；做题时先扫每段主题句。"
+                },
+                {
+                  "no": 14,
+                  "stem": "Paragraph E",
+                  "answer": "v",
+                  "keyPara": "E",
+                  "keySentence": "Research suggests that many children — especially in the world’s poorest countries — learn only very little in school.",
+                  "explain": "本题为机器生成：段落核心词为「children」。做标题题务必看段落首句+尾句，警惕「只在段中一笔带过」的干扰项。",
+                  "generated": true,
+                  "note": "标题由机器按段落关键词生成，答案为该段最匹配的标题；做题时先扫每段主题句。"
+                },
+                {
+                  "no": 15,
+                  "stem": "Paragraph F",
+                  "answer": "vi",
+                  "keyPara": "F",
+                  "keySentence": "Net rates only include children enrolled in school at the “official age”.",
+                  "explain": "本题为机器生成：段落核心词为「school」。做标题题务必看段落首句+尾句，警惕「只在段中一笔带过」的干扰项。",
+                  "generated": true,
+                  "note": "标题由机器按段落关键词生成，答案为该段最匹配的标题；做题时先扫每段主题句。"
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "vocabulary": [
+        {
+          "word": "education",
+          "pos": "n.",
+          "meaning": "教育",
+          "sentence": "A good education offers individuals the opportunity to lead richer, more interesting lives."
+        },
+        {
+          "word": "school",
+          "pos": "n.",
+          "meaning": "学校",
+          "sentence": "Getting children into school is also not enough: what they learn matters."
+        },
+        {
+          "word": "primary",
+          "pos": "adj.",
+          "meaning": "首要的，初级的",
+          "sentence": "There are large differences in educational outcomes: in low-income countries, most children cannot read by the end of primary school."
+        },
+        {
+          "word": "child",
+          "pos": "n.",
+          "meaning": "儿童",
+          "sentence": "Getting children into school is also not enough: what they learn matters."
+        },
+        {
+          "word": "secondary",
+          "pos": "adj.",
+          "meaning": "次要的，中学的",
+          "sentence": "Many children who attend primary school drop out and do not attend secondary school."
+        },
+        {
+          "word": "opportunity",
+          "pos": "n.",
+          "meaning": "机会",
+          "sentence": "A good education offers individuals the opportunity to lead richer, more interesting lives."
+        },
+        {
+          "word": "quality",
+          "pos": "n.",
+          "meaning": "质量",
+          "sentence": "However, being in school does not guarantee that a child receives a high-quality education."
+        },
+        {
+          "word": "level",
+          "pos": "n.",
+          "meaning": "水平",
+          "sentence": "At a societal level, it creates opportunities for humanity to solve its pressing problems."
+        },
+        {
+          "word": "little",
+          "pos": "adj.",
+          "meaning": "小的",
+          "sentence": "In fact, in many countries, the data shows that children learn very little."
+        },
+        {
+          "word": "spend",
+          "pos": "v.",
+          "meaning": "花费",
+          "sentence": "This can be measured as the total number of years that children spend in school."
+        },
+        {
+          "word": "population",
+          "pos": "n.",
+          "meaning": "种群，人口",
+          "sentence": "In the chart, we see the share of the adult population — those older than 15 — who has received some basic education and those who haven’t."
+        },
+        {
+          "word": "progress",
+          "pos": "n.",
+          "meaning": "进步",
+          "sentence": "International statistics often focus on enrollment and attendance as the markers of educational progress."
+        }
+      ],
+      "contribution": {
+        "contributor": "l458022",
+        "license": "CC BY 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
+        "sourceUrl": "https://ourworldindata.org/global-education",
+        "attribution": "Hannah Ritchie、Veronika Samborska、Esteban Ortiz-Ospina、Max Roser — Global Education，Our World in Data，CC BY 4.0",
+        "declaredAt": "2026-10-12T13:47:56.696Z",
+        "declaration": "copyright-ok;questions-original-or-tool-generated;no-privacy"
+      }
+    }
+  ]
+}
