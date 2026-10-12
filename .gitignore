@@ -1,0 +1,8 @@
+# 系统/编辑器垃圾文件
+Thumbs.db
+desktop.ini
+.DS_Store
+*.tmp
+*.log
+
+# 本地跳过：应用本身无构建产物，所有源码即交付物

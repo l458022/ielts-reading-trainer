@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>雅思阅读练习室 · IELTS Reading Trainer</title>
+<link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+
+<!-- 顶部导航 -->
+<header class="topbar">
+  <div class="brand" id="brandHome">
+    <span class="logo">R</span>
+    雅思阅读练习室 <small>IELTS Reading Trainer</small>
+  </div>
+  <nav class="nav">
+    <button id="nav-home" class="active">题库</button>
+    <button id="nav-history">练习记录</button>
+    <button id="nav-import">＋ 导入真题</button>
+    <button id="nav-examMode">考试模式</button>
+    <button id="nav-practiceMode">练习模式</button>
+  </nav>
+</header>
+
+<!-- 试卷信息条（答题/报告时显示） -->
+<div id="examTopbar" style="display:none;max-width:1180px;margin:14px auto 0;padding:0 24px">
+  <div class="exam-header">
+    <h2 id="examTitle">试卷</h2>
+    <span class="progress" id="progress">已答 0/0</span>
+    <div class="timer" id="timer">00:00</div>
+  </div>
+</div>
+
+<main>
+  <!-- ========== 首页：题库 ========== -->
+  <section id="view-home" class="view active">
+    <div class="hero">
+      <h1>像雅思考生一样刷题，交卷后立刻知道错在哪</h1>
+      <p>按套卷（C21 / C20 / C19…）× Test × Passage 刷阅读真题：在线限时做题 → 交卷自动逐题分析（原文定位 · 陷阱说明 · 关键句翻译 · 重点词汇）→ 错题本、生词本、成绩记录自动沉淀。预置 2 套完整样题；把你手上的剑桥雅思真题粘贴导入，即刻拥有同款真题题库（自动生成定位分析）。</p>
+    </div>
+    <div class="sec-title">真题题库 <span class="en">Exam Library</span><span class="count" id="examCount"></span></div>
+    <div class="exam-grid" id="examGrid"></div>
+
+    <div class="sec-title">使用说明 <span class="en">How it works</span></div>
+    <div class="panel">
+      <div class="kv"><b>1. 选题</b>在题库卡片上点击任意试卷，默认进入「练习模式」（不限时、每题可看定位提示）；想做整套限时训练，从右上角进入「考试模式」。</div>
+      <div class="kv"><b>2. 做题</b>左侧文章、右侧题目。判断题 / 选择题 / 填空题 / 匹配题 / 标题匹配题均支持，鼠标或触屏直接作答。</div>
+      <div class="kv"><b>3. 分析</b>交卷后生成分析报告：正确率与 Band 估算、各题型得分、每道错题的<b>原文定位句（点击可在文章中高亮）</b>、关键句中英对照、同义替换线索与陷阱类型、本题重点词汇。</div>
+      <div class="kv"><b>4. 巩固</b>错题自动进入「练习记录 → 错题本」，重点词可加入「生词本」；点「复制报告」可把成绩与错题发给 AI 做进一步深度分析。</div>
+      <div class="kv"><b>5. 导入真题</b>点右上角「导入真题」，填好书卷（如 C21）、Test/Passage 编号和难度，按空行分段粘贴文章、逐题录入题干与答案，系统自动完成段落编号、原句定位与陷阱标注。真题来源于你自己已购的剑桥雅思书籍，仅供个人学习；想要逐题精解，把文章内容发我即可帮你写成完整解析。</div>
+    </div>
+  </section>
+
+  <!-- ========== 答题页 ========== -->
+  <section id="view-exam" class="view">
+    <div class="mobile-tabs">
+      <button data-mtab="passage" class="active">阅读文章</button>
+      <button data-mtab="question">题目</button>
+    </div>
+    <div class="exam-body">
+      <div class="panel" id="passagePanel">
+        <div class="panel-title">阅读文章 <span class="tag">Passage</span></div>
+        <div id="passageBody"></div>
+      </div>
+      <div class="panel" id="questionPanel">
+        <div class="panel-title">题目 <span class="tag">Questions</span></div>
+        <div id="questionBody"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== 分析报告页 ========== -->
+  <section id="view-report" class="view">
+    <div class="report-head">
+      <div class="score-ring" id="scoreRing"></div>
+      <div class="report-meta" id="reportMeta"></div>
+    </div>
+    <div class="report-actions" id="reportActions"></div>
+    <div class="exam-body">
+      <div class="panel" id="reportPassagePanel">
+        <div class="panel-title">原文与词汇 <span class="tag">Passage</span></div>
+        <div id="reportPassage"></div>
+      </div>
+      <div class="panel" id="reportAnswerPanel">
+        <div class="panel-title">逐题解析 <span class="tag">Analysis</span></div>
+        <div id="reportAnswers"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== 记录页 ========== -->
+  <section id="view-history" class="view"></section>
+</main>
+
+<!-- 导入文章弹窗 -->
+<div class="modal-mask" id="importMask">
+  <div class="modal" style="width:860px">
+    <h3>导入英文文章 · 创建练习题</h3>
+    <div class="m-sub">粘贴任意英文文章（空行分段），选择题目来源与用途。文章与题目数据仅保存在本机浏览器。</div>
+
+    <div class="form-2col">
+      <div class="form-row"><label>试卷名称（如 C21-Test 1-Passage 1 / My Article）</label><input type="text" id="impTitle" placeholder="导入的文章"></div>
+      <div class="form-row"><label>中文副标题</label><input type="text" id="impTitleCn" placeholder=""></div>
+    </div>
+    <div class="form-4col">
+      <div class="form-row"><label>所属书卷/合集</label><input type="text" id="impBook" list="bookList" placeholder="C21 / 我的文章"><datalist id="bookList"><option value="C21"><option value="C20"><option value="C19"><option value="C18"><option value="C17"><option value="C16"><option value="C15"><option value="C14"><option value="C13"><option value="C12"><option value="C11"><option value="C10"><option value="C9"><option value="C8"><option value="C7"><option value="C6"><option value="C5"><option value="我的文章"></datalist></div>
+      <div class="form-row"><label>Test 编号</label><input type="number" id="impTest" value="1" min="1" max="9"></div>
+      <div class="form-row"><label>Passage 编号</label><input type="number" id="impPassageNo" value="1" min="1" max="9"></div>
+      <div class="form-row"><label>难度系数</label><select id="impDifficulty"><option>易</option><option selected>中</option><option>难</option></select></div>
+    </div>
+    <div class="form-2col">
+      <div class="form-row"><label>建议用时（分钟）</label><input type="number" id="impMinutes" value="20"></div>
+      <div class="form-row"><label>话题/场景（如：环境、教育、科技）</label><input type="text" id="impTag" placeholder="环境"></div>
+    </div>
+    <div class="form-row">
+      <label>文章内容（每个段落之间空一行，系统自动标注 A/B/C… 段）</label>
+      <textarea id="impPassage" style="min-height:150px" placeholder="在此粘贴英文文章。段落之间用空行分隔。"></textarea>
+    </div>
+
+    <div class="form-row">
+      <label>题目来源</label>
+      <div class="src-picker">
+        <label class="src-opt"><input type="radio" name="srcMode" value="auto" checked> <b>自动生成题目</b><span>内置规则引擎离线出题（判断/填空/标题匹配），每题带原句定位与解析，即刻可练</span></label>
+        <label class="src-opt"><input type="radio" name="srcMode" value="manual"> <b>我自己出题</b><span>逐题手动录入题干与答案（真题可用这种方式）</span></label>
+        <label class="src-opt"><input type="radio" name="srcMode" value="mix"> <b>混合</b><span>自动生成打底，再手动补充</span></label>
+      </div>
+    </div>
+
+    <div class="form-row" id="autoOpts">
+      <label>自动生成的题型</label>
+      <div class="type-check">
+        <label><input type="checkbox" id="autoTfng" checked> 判断题（6 题）</label>
+        <label><input type="checkbox" id="autoGap" checked> 句子填空（3 题）</label>
+        <label><input type="checkbox" id="autoHeading" checked> 段落标题匹配</label>
+      </div>
+      <div class="hint-text">生成规则：TRUE=同义复现 / FALSE=反向改写 / NG=实体偷换；填空从原句挖关键词；标题按段落关键词生成并带干扰项。所有题目均可回原文定位。</div>
+    </div>
+
+    <div class="form-row" id="manualRows" style="display:none">
+      <label>题目录入（题干粘贴文章相关句子；选项仅单选题需要，用分号分隔；答案填 TRUE/FALSE/NOT GIVEN、选项字母或所填词）</label>
+      <div id="importRows"></div>
+      <div class="hint-text" style="margin-top:8px"><button class="hint-btn" id="impAddRow" style="margin-left:0">＋ 添加一行题目</button></div>
+    </div>
+
+    <div class="form-row">
+      <label>用途</label>
+      <div class="src-picker">
+        <label class="src-opt"><input type="radio" name="useMode" value="self" checked> <b>仅自己练习</b><span>保存在本机浏览器，不上传、不分享</span></label>
+        <label class="src-opt"><input type="radio" name="useMode" value="contribute"> <b>贡献到公共题库</b><span>把这份文章与题目打包，提交给本项目的共享题库（见下方确认）</span></label>
+      </div>
+    </div>
+
+    <div class="form-row contribute-box" id="contributeBox" style="display:none">
+      <label>贡献确认（全部勾选后才能贡献）</label>
+      <div class="declare-list">
+        <label><input type="checkbox" id="declCopyright"> 我确认对这篇文章拥有相应权利：原创、公有领域，或已获授权可以分享（不是从商业站点/出版物扒来的全文）。</label>
+        <label><input type="checkbox" id="declOriginal"> 我确认题目是我自己出的，或由本工具自动生成，没有从雅思哥/小站等商业备考站复制题目。</label>
+        <label><input type="checkbox" id="declPrivacy"> 我确认文章不含个人隐私、保密资料或不当内容。</label>
+      </div>
+      <div class="form-2col" style="margin-top:10px">
+        <div class="form-row"><label>贡献者昵称（显示在题库来源中）</label><input type="text" id="impContributor" placeholder="anonymous"></div>
+        <div class="form-row"><label>文章授权方式</label><select id="impLicense"><option value="CC BY 4.0">CC BY 4.0（署名）</option><option value="CC0">CC0（公有领域奉献）</option><option value="原文转载已获授权">已获授权转载</option></select></div>
+      </div>
+    </div>
+
+    <div class="form-row" id="verifyBox" style="display:none"></div>
+
+    <div style="display:flex;gap:10px;margin-top:6px;flex-wrap:wrap">
+      <button class="btn" id="impSubmit">导入并开始练习</button>
+      <button class="btn ghost" id="impPreview">预览自动生成的题目</button>
+      <button class="btn ghost" id="impExportPack">导出题库包</button>
+      <button class="btn ghost" id="impImportPack">导入题库包</button>
+      <button class="btn ghost" id="impCancel">取消</button>
+      <input type="file" id="packFile" accept=".json" style="display:none">
+    </div>
+  </div>
+</div>
+
+<div class="toast" id="toast"></div>
+<div class="vocab-tip" id="vocabTip"></div>
+
+<script src="assets/data-exam1.js"></script>
+<script src="assets/data-exam2.js"></script>
+<script src="assets/engine.js"></script>
+<script src="assets/generator.js"></script>
+<script src="assets/dict-core.js"></script>
+<script src="assets/app.js"></script>
+</body>
+</html>
