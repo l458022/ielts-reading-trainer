@@ -39,6 +39,7 @@
       <h1>像雅思考生一样刷题，交卷后立刻知道错在哪</h1>
       <p>按套卷（C21 / C20 / C19…）× Test × Passage 刷阅读真题：在线限时做题 → 交卷自动逐题分析（原文定位 · 陷阱说明 · 关键句翻译 · 重点词汇）→ 错题本、生词本、成绩记录自动沉淀。预置 2 套完整样题；把你手上的剑桥雅思真题粘贴导入，即刻拥有同款真题题库（自动生成定位分析）。</p>
     </div>
+    <div class="storage-warn" id="storageWarn" style="display:none"></div>
     <div class="cmty-banner" id="cmtyBanner" style="display:none">
       🌐 <b>社区题库</b>还有开放授权的雅思文章——可以一键导入。
       <button class="btn" id="cmtyBannerBtn">去看看并一键导入</button>
@@ -680,22 +681,42 @@ window.addEventListener("load", function () {
     RLApp.state.communityManifest = { packs: bigPacks };
     localStorage.removeItem("rl_custom_exams");
     RLApp.bulkImportCommunity();
-    log("bulk23-all-imported", JSON.parse(localStorage.getItem("rl_custom_exams") || "[]").length === 23);
+    log("bulk23-all-imported", RLApp.readLS("rl_custom_exams", []).length === 23);
     log("bulk23-raw-tried-at-most-2", rawTries <= 2);
     log("bulk23-cdn-tried-23", cdnTries === 23);
     log("bulk23-result-msg", document.getElementById("cmtyBulkMsg").textContent.indexOf("已导入 23 篇") !== -1);
+
+    /* ===== 本地存储被禁用：不能谎报成功，要明确告知 ===== */
+    log("storage-available-in-normal-browser", RLApp.storageAvailable() === true);
+    var origSetItem = localStorage.setItem;
+    localStorage.setItem = function () { throw new Error("blocked by browser"); };
+    log("storage-write-reports-false", RLApp.writeLS("rl_test_probe", { a: 1 }) === false);
+    log("storage-memory-fallback-reads-back", JSON.stringify(RLApp.readLS("rl_test_probe", null)) === '{"a":1}');
+    // 导入必须仍然可用（内存兜底），且必须弹出警告条
+    localStorage.removeItem("rl_custom_exams");
+    var memBefore = RLApp.readLS("rl_custom_exams", []).length;
+    RLApp.importPackObject({ format: "ielts-reading-pack", exams: [{ id: "z1", title: "Z", sections: [{ id: "s1", paragraphs: [], questionGroups: [] }] }] });
+    log("import-works-in-memory", RLApp.readLS("rl_custom_exams", []).length === memBefore + 1);
+    RLApp.noteStorageProblem();
+    var warn = document.getElementById("storageWarn");
+    log("storage-warn-banner-shown", warn.style.display === "block" && warn.textContent.indexOf("禁用了本地存储") !== -1);
+    localStorage.setItem = origSetItem;
+    // 恢复正常后，写回 localStorage 应成功
+    log("storage-write-ok-after-restore", RLApp.writeLS("rl_test_probe", { b: 2 }) === true);
+    localStorage.removeItem("rl_test_probe");
+    localStorage.removeItem("rl_custom_exams");
     RLApp.resetSourceHealth(true);
     localStorage.removeItem("rl_custom_exams");
     RLApp.state.communityManifest = null;
 
     // ===== 首页提示条 + 一键导入全部 =====
-    localStorage.removeItem("rl_custom_exams");
+    RLApp.writeLS("rl_custom_exams", []);
     RLApp.refreshCommunityBanner();
     log("banner-shown-when-empty", document.getElementById("cmtyBanner").style.display === "block");
-    localStorage.setItem("rl_custom_exams", JSON.stringify([{ id: "c1", contribution: { sourceUrl: "https://example.org/a" } }]));
+    RLApp.writeLS("rl_custom_exams", [{ id: "c1", contribution: { sourceUrl: "https://example.org/a" } }]);
     RLApp.refreshCommunityBanner();
-    log("banner-hidden-after-import", document.getElementById("cmtyBanner").style.display === "none");
-    localStorage.removeItem("rl_custom_exams");
+    log("banner-hidden-after-import", document.getElementById("cmtyBanner").style.display === "none",  "display=" + document.getElementById("cmtyBanner").style.display + " custom=" + RLApp.readLS("rl_custom_exams", []).length + " lsRaw=" + String(localStorage.getItem("rl_custom_exams")).slice(0,60));
+    RLApp.writeLS("rl_custom_exams", []);
     RLApp.refreshCommunityBanner();
     log("banner-back-when-cleared", document.getElementById("cmtyBanner").style.display === "block");
     log("bulk-button-exists", !!document.getElementById("cmtyBulk"));
@@ -720,7 +741,7 @@ window.addEventListener("load", function () {
     });
     localStorage.removeItem("rl_custom_exams");
     RLApp.bulkImportCommunity();
-    log("bulk-imports-all-3", JSON.parse(localStorage.getItem("rl_custom_exams") || "[]").length === 3);
+    log("bulk-imports-all-3", RLApp.readLS("rl_custom_exams", []).length === 3);
     log("bulk-switches-to-home", RLApp.state.view === "home");
     log("bulk-requests-3", window.__reqs.length === 3 && window.__reqs[0].url.indexOf("reading-pack-a.json") !== -1);
     log("bulk-keeps-modal-with-result", document.getElementById("communityMask").className.indexOf("show") !== -1 && document.getElementById("cmtyBulkMsg").textContent.indexOf("已导入 3 篇") !== -1);
@@ -730,7 +751,7 @@ window.addEventListener("load", function () {
     fakeXhrInstalled(function (xhr) { if (xhr.onerror) xhr.onerror(); });
     localStorage.removeItem("rl_custom_exams");
     RLApp.bulkImportCommunity();
-    log("bulk-survives-all-failed", JSON.parse(localStorage.getItem("rl_custom_exams") || "[]").length === 0);
+    log("bulk-survives-all-failed", RLApp.readLS("rl_custom_exams", []).length === 0);
     localStorage.removeItem("rl_custom_exams");
     RLApp.state.communityManifest = null;
     // 清除令牌 → 管理按钮消失

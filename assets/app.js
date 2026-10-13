@@ -12,17 +12,42 @@
     vocab: "rl_vocabbook"
   };
 
+  /* ---------- 存储层 ----------
+   * localStorage 可能不可用：隐私/无痕模式、浏览器「屏蔽站点数据」设置、
+   * 广告拦截类扩展、file:// 下的限制等。此时 setItem 会抛异常。
+   * 旧实现 catch 掉就当没事，于是「显示导入成功但题库里什么都没有」。
+   * 现在：① 启动时探测可用性 ② 不可用时退化为内存存储（本次会话仍能用）
+   * ③ 明确告知用户，而不是假装成功。 */
+  var memStore = {};
+  var storageOK = (function () {
+    try {
+      var probe = "__rl_probe__";
+      localStorage.setItem(probe, "1");
+      if (localStorage.getItem(probe) !== "1") return false;
+      localStorage.removeItem(probe);
+      return true;
+    } catch (e) { return false; }
+  })();
+
   function readLS(key, def) {
+    // 内存副本优先：它代表「最近一次写入」——持久化失败时数据只在这里
+    if (Object.prototype.hasOwnProperty.call(memStore, key)) return memStore[key];
     try {
       var raw = localStorage.getItem(key);
       return raw ? JSON.parse(raw) : def;
     } catch (e) { return def; }
   }
+
+  /** 返回 true 表示已持久化；false 表示只写进了内存（浏览器禁用存储 / 空间不足） */
   function writeLS(key, val) {
-    try { localStorage.setItem(key, JSON.stringify(val)); return true; }
-    catch (e) {
-      // 不能静默吞掉：存储写满时用户会看到「导入成功」却什么都没发生
-      console.warn("[storage] 写入失败 " + key + "：" + e.message);
+    if (!storageOK) { memStore[key] = val; return false; }
+    try {
+      localStorage.setItem(key, JSON.stringify(val));
+      delete memStore[key];        // 已落盘，清掉内存副本，避免读到过期数据
+      return true;
+    } catch (e) {
+      console.warn("[storage] 写入失败 " + key + "：" + e.message + "（已退化为内存存储）");
+      memStore[key] = val;
       return false;
     }
   }
@@ -963,8 +988,8 @@
     var list = readLS(LS.custom, []);
     list.push(exam);
     if (!writeLS(LS.custom, list)) {
-      toast("保存失败：浏览器存储空间不足，请先到「练习记录」清理旧数据后重试");
-      return;
+      // 写不进本地存储：内存里已存住，本次会话照常可用，但必须告知用户
+      noteStorageProblem();
     }
     el("importMask").className = "modal-mask";
     renderHome();
@@ -1628,6 +1653,7 @@
         if (btn) { btn.disabled = false; btn.textContent = label; }
         renderHome();
         var msg = "✅ 已导入 " + done + " 篇" + (failed ? "，" + failed + " 篇失败（可稍后重试）" : "");
+        if (!storageOK) msg += "（⚠ 浏览器禁用了本地存储，本次仅在当前页面有效）";
         setBulkMsg(msg + "　共 " + allExams().length + " 套试卷，关闭本窗口即可看到");
         toast("导入完成：" + done + " 篇" + (failed ? "，失败 " + failed + " 篇" : ""));
         return;
@@ -1667,9 +1693,27 @@
       list.push(copy);
       added++;
     });
-    writeLS(LS.custom, list);
+    // 必须核对写入结果：旧版不检查，浏览器禁用存储时会「显示导入成功但什么都没有」
+    var persisted = writeLS(LS.custom, list);
+    if (!persisted) noteStorageProblem();
     return added;
   }
+
+  /* 存储不可用时的提示：只在本次会话提示一次，避免刷屏 */
+  var storageWarned = false;
+  function noteStorageProblem() {
+    if (storageWarned) return;
+    storageWarned = true;
+    var b = el("storageWarn");
+    if (b) {
+      b.style.display = "block";
+      b.innerHTML = "⚠️ <b>你的浏览器禁用了本地存储</b>，导入的试卷只在当前页面有效，" +
+        "刷新或关闭页面后会全部丢失。<br>常见原因：无痕/隐私模式、浏览器设置里屏蔽了站点数据、" +
+        "广告拦截类扩展。请改用普通窗口，或在设置中允许本站保存数据。";
+    }
+  }
+
+  function storageAvailable() { return storageOK; }
 
   function importPack(file) {
     var reader = new FileReader();
@@ -1824,6 +1868,7 @@
       if (e.target === this) this.className = "modal-mask";
     });
     refreshAdminUI();
+    if (!storageOK) noteStorageProblem();   // 启动即告知，别等用户导入后才发现
     bindVocabTips();
     bindMobileTabs();
     renderHome();
@@ -1851,6 +1896,8 @@
     fetchCommunity: fetchCommunity, resetSourceHealth: resetSourceHealth,
     orderedSources: orderedSources, sourceHealth: sourceHealth, setBulkMsg: setBulkMsg,
     COMMUNITY_SOURCES: COMMUNITY_SOURCES,
+    storageAvailable: storageAvailable, noteStorageProblem: noteStorageProblem,
+    importPackObject: importPackObject, writeLS: writeLS, readLS: readLS,
     slugify: slugify,
     utf8ToB64: utf8ToB64, b64ToUtf8: b64ToUtf8, PACKS_API: PACKS_API
   };
