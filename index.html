@@ -39,7 +39,9 @@
       <h1>像雅思考生一样刷题，交卷后立刻知道错在哪</h1>
       <p>按套卷（C21 / C20 / C19…）× Test × Passage 刷阅读真题：在线限时做题 → 交卷自动逐题分析（原文定位 · 陷阱说明 · 关键句翻译 · 重点词汇）→ 错题本、生词本、成绩记录自动沉淀。预置 2 套完整样题；把你手上的剑桥雅思真题粘贴导入，即刻拥有同款真题题库（自动生成定位分析）。</p>
     </div>
-    <div class="storage-warn" id="storageWarn" style="display:none"></div>
+    <button class="storage-warn" id="storageWarn" style="display:none" type="button">
+      ⚠️ 临时模式：浏览器禁用了本地存储，关闭页面后数据会丢失。 <b>点这里解决 →</b>
+    </button>
 
     <div class="cmty-banner" id="cmtyBanner" style="display:none">
       🌐 <b>社区题库</b>还有一批开放授权的雅思文章（自然 / 环境 / 健康 / 科技 / 教育 / 能源…，
@@ -299,5 +301,30 @@
 <script src="assets/generator.js"></script>
 <script src="assets/dict-core.js"></script>
 <script src="assets/app.js"></script>
+
+  <!-- 本地存储不可用：说明 + 自愈 + 退路 -->
+  <div class="modal-mask" id="storageMask">
+    <div class="modal modal-storage">
+      <h3>⚠️ 浏览器禁用了本地存储</h3>
+      <p class="sd-intro">
+        不影响刷题——你现在就能正常导入和练习，只是导入的试卷<b>关闭页面后会丢失</b>。<br>
+        网页<b>无法自己申请</b>这个权限（浏览器安全限制），需要你放行一下，或者用下面的「备份」兜住。
+      </p>
+      <div class="sd-title">检测结果</div>
+      <div id="storageDiag"></div>
+      <div class="sd-title">怎么放行？</div>
+      <ol id="storageSteps" class="sd-steps"></ol>
+      <div class="sd-title">不想改设置？用备份文件兜住</div>
+      <p class="sd-intro">导出备份 → 下次打开时「导入备份」，题库和练习记录就都回来了。</p>
+      <div class="modal-actions sd-actions">
+        <button class="btn" id="storageRetry">我已放行，重新检测</button>
+        <button class="btn ghost" id="storageExport">导出备份</button>
+        <button class="btn ghost" id="storageImport">导入备份</button>
+        <button class="btn ghost" id="storageTemp">先不管，继续刷题</button>
+      </div>
+      <input type="file" id="storageImportFile" accept=".json,application/json" style="display:none">
+    </div>
+  </div>
+
 </body>
 </html>

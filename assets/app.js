@@ -19,7 +19,8 @@
    * 现在：① 启动时探测可用性 ② 不可用时退化为内存存储（本次会话仍能用）
    * ③ 明确告知用户，而不是假装成功。 */
   var memStore = {};
-  var storageOK = (function () {
+
+  function probeStorage() {
     try {
       var probe = "__rl_probe__";
       localStorage.setItem(probe, "1");
@@ -27,7 +28,34 @@
       localStorage.removeItem(probe);
       return true;
     } catch (e) { return false; }
-  })();
+  }
+  var storageOK = probeStorage();
+
+  /** 重新检测：用户在浏览器里放行后，无需刷新页面即可恢复（并把临时数据补写回去） */
+  function recheckStorage() {
+    var now = probeStorage();
+    if (now && !storageOK) {
+      // 存储恢复了：把临时模式下攒的数据补写到 localStorage，避免用户丢东西
+      Object.keys(memStore).forEach(function (k) {
+        try { localStorage.setItem(k, JSON.stringify(memStore[k])); } catch (e) {}
+      });
+      memStore = {};
+    }
+    storageOK = now;
+    return now;
+  }
+
+  /* 存储不可用的原因诊断（网页拿不到权限，只能帮用户定位到该改哪里） */
+  function diagnoseStorage() {
+    var tips = [];
+    try { if (!navigator.cookieEnabled) tips.push("浏览器报告 Cookie 已关闭"); } catch (e) {}
+    if (location.protocol === "file:") tips.push("你是用本地文件（file://）打开的，建议改用在线地址");
+    var idb = false;
+    try { idb = !!window.indexedDB; } catch (e) {}
+    if (!idb) tips.push("IndexedDB 也不可用，基本可以确定是「站点数据被整体屏蔽」");
+    if (!tips.length) tips.push("最常见的是：无痕/隐私窗口、浏览器屏蔽了本站的站点数据、或广告拦截类扩展");
+    return tips;
+  }
 
   function readLS(key, def) {
     // 内存副本优先：它代表「最近一次写入」——持久化失败时数据只在这里
@@ -1699,18 +1727,103 @@
     return added;
   }
 
-  /* 存储不可用时的提示：只在本次会话提示一次，避免刷屏 */
-  var storageWarned = false;
+  /* 存储不可用时的处理：不丢内容、不打扰、能自愈。
+   * 网页无法自行获得存储权限（浏览器安全边界），所以这里只做三件事：
+   *   ① 继续用内存把内容存住（用户什么都不用做就能刷题）
+   *   ② 一次性弹窗说清「为什么会这样 + 怎么放行 + 重新检测」
+   *   ③ 提供备份导出/导入，刷新后也能把题库找回来 */
+  var storageNotified = false;
   function noteStorageProblem() {
-    if (storageWarned) return;
-    storageWarned = true;
     var b = el("storageWarn");
-    if (b) {
-      b.style.display = "block";
-      b.innerHTML = "⚠️ <b>你的浏览器禁用了本地存储</b>，导入的试卷只在当前页面有效，" +
-        "刷新或关闭页面后会全部丢失。<br>常见原因：无痕/隐私模式、浏览器设置里屏蔽了站点数据、" +
-        "广告拦截类扩展。请改用普通窗口，或在设置中允许本站保存数据。";
+    if (b) b.style.display = "inline-flex";   // 弹窗之外留一条可点击的常驻提示
+    if (storageNotified) return;
+    storageNotified = true;
+    openStorageModal();
+  }
+
+  function openStorageModal() {
+    var mask = el("storageMask");
+    if (!mask) return;
+    var diag = el("storageDiag");
+    if (diag) {
+      diag.innerHTML = diagnoseStorage().map(function (t) {
+        return '<div class="sd-line">• ' + esc(t) + "</div>";
+      }).join("");
     }
+    var isFile = location.protocol === "file:";
+    var steps = el("storageSteps");
+    if (steps) {
+      steps.innerHTML = isFile
+        ? "<li>不要直接双击打开网页文件，改用在线地址（或本机起一个本地服务器）。</li>" +
+          "<li>若仍不行：换一个普通窗口（非无痕）再打开。</li>"
+        : "<li>确认不是<b>无痕 / 隐私窗口</b>——无痕窗口换成普通窗口即可。</li>" +
+          "<li>检查浏览器设置里是否<b>屏蔽了本站的站点数据</b>：地址栏左侧的「🔒/⚙」图标 → 网站设置 → 把 Cookie 与站点数据改为「允许」。</li>" +
+          "<li>临时<b>停用广告拦截类扩展</b>（uBlock / AdGuard 等会拦存储）。</li>";
+    }
+    mask.className = "modal-mask show";
+  }
+
+  function closeStorageModal() {
+    var mask = el("storageMask");
+    if (mask) mask.className = "modal-mask";
+  }
+
+  /** 用户按提示放行后点「重新检测」：立刻生效，不用刷新，并把临时数据补写回去 */
+  function retryStorage() {
+    if (recheckStorage()) {
+      closeStorageModal();
+      var b = el("storageWarn");
+      if (b) b.style.display = "none";
+      toast("已开启本地存储，题库会永久保存在本机");
+      renderHome();
+      return true;
+    }
+    var diag = el("storageDiag");
+    if (diag) {
+      diag.innerHTML = '<div class="sd-line sd-bad">✗ 仍然不可用，请按下面步骤再试一次。</div>' +
+        diagnoseStorage().map(function (t) { return '<div class="sd-line">• ' + esc(t) + "</div>"; }).join("");
+    }
+    toast("还没生效，请检查浏览器设置后重试");
+    return false;
+  }
+
+  /* 备份导出 / 导入：临时模式下刷新会丢数据，用文件兜住 */
+  function exportBackup() {
+    var data = {
+      format: "ielts-reading-backup", version: 1, exportedAt: new Date().toISOString(),
+      custom: readLS(LS.custom, []), history: readLS(LS.history, []),
+      wrong: readLS(LS.wrong, []), vocab: readLS(LS.vocab, [])
+    };
+    var blob = new Blob([JSON.stringify(data)], { type: "application/json" });
+    var a = document.createElement("a");
+    a.href = URL.createObjectURL(blob);
+    a.download = "ielts-backup-" + new Date().toISOString().slice(0, 10) + ".json";
+    document.body.appendChild(a); a.click();
+    setTimeout(function () { URL.revokeObjectURL(a.href); a.remove(); }, 1000);
+    toast("已导出备份文件，下次打开时可用「导入备份」恢复");
+  }
+
+  /** 纯逻辑：把备份对象写回各存储（单独抽出，方便测试与复用） */
+  function applyBackup(d) {
+    if (!d || d.format !== "ielts-reading-backup") throw new Error("不是本应用导出的备份文件");
+    if (Array.isArray(d.custom)) writeLS(LS.custom, d.custom);
+    if (Array.isArray(d.history)) writeLS(LS.history, d.history);
+    if (Array.isArray(d.wrong)) writeLS(LS.wrong, d.wrong);
+    if (Array.isArray(d.vocab)) writeLS(LS.vocab, d.vocab);
+    return (d.custom || []).length;
+  }
+
+  function importBackupFile(file) {
+    var reader = new FileReader();
+    reader.onload = function () {
+      try {
+        var n = applyBackup(JSON.parse(reader.result));
+        closeStorageModal();
+        renderHome();
+        toast("备份已恢复：" + n + " 套试卷");
+      } catch (e) { toast("恢复失败：" + e.message); }
+    };
+    reader.readAsText(file);
   }
 
   function storageAvailable() { return storageOK; }
@@ -1719,7 +1832,9 @@
     var reader = new FileReader();
     reader.onload = function () {
       try {
-        var added = importPackObject(JSON.parse(reader.result));
+        var parsed = JSON.parse(reader.result);
+        if (parsed && parsed.format === "ielts-reading-backup") { importBackupFile(file); return; }
+        var added = importPackObject(parsed);
         el("importMask").className = "modal-mask";
         renderHome();
         toast("已导入题库包：" + added + " 套试卷");
@@ -1847,6 +1962,14 @@
     // 社区题库
     el("btnCommunity").addEventListener("click", openCommunity);
     el("cmtyBannerBtn").addEventListener("click", openCommunity);
+    el("storageWarn").addEventListener("click", openStorageModal);
+    el("storageRetry").addEventListener("click", retryStorage);
+    el("storageTemp").addEventListener("click", closeStorageModal);
+    el("storageExport").addEventListener("click", exportBackup);
+    el("storageImport").addEventListener("click", function () { el("storageImportFile").click(); });
+    el("storageImportFile").addEventListener("change", function () {
+      if (this.files && this.files[0]) importBackupFile(this.files[0]);
+    });
     el("impCommunity").addEventListener("click", openCommunity);
     el("cmtyRefresh").addEventListener("click", loadCommunityPacks);
     el("cmtyBulk").addEventListener("click", bulkImportCommunity);
@@ -1897,6 +2020,10 @@
     orderedSources: orderedSources, sourceHealth: sourceHealth, setBulkMsg: setBulkMsg,
     COMMUNITY_SOURCES: COMMUNITY_SOURCES,
     storageAvailable: storageAvailable, noteStorageProblem: noteStorageProblem,
+    recheckStorage: recheckStorage, diagnoseStorage: diagnoseStorage, probeStorage: probeStorage,
+    openStorageModal: openStorageModal, closeStorageModal: closeStorageModal,
+    retryStorage: retryStorage, exportBackup: exportBackup, importBackupFile: importBackupFile,
+    applyBackup: applyBackup,
     importPackObject: importPackObject, writeLS: writeLS, readLS: readLS,
     slugify: slugify,
     utf8ToB64: utf8ToB64, b64ToUtf8: b64ToUtf8, PACKS_API: PACKS_API
