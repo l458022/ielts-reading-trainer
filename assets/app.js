@@ -997,7 +997,10 @@
   function communityManifestUrls() {
     var raw = "https://raw.githubusercontent.com/" + COMMUNITY.repo + "/" + COMMUNITY.branch + "/";
     var cdn = "https://cdn.jsdelivr.net/gh/" + COMMUNITY.repo + "@" + COMMUNITY.branch + "/";
-    return [raw + COMMUNITY.manifestPath, cdn + COMMUNITY.manifestPath];
+    // 加时间戳破缓存：raw 的 CDN 会缓存 5 分钟、jsDelivr 对分支可缓存到 12 小时，
+    // 不破缓存的话「刚上架的包」可能长时间看不到。索引文件很小，多这一次请求值得。
+    var bust = "?t=" + Date.now();
+    return [raw + COMMUNITY.manifestPath + bust, cdn + COMMUNITY.manifestPath + bust];
   }
   function communityPackUrls(file) {
     var raw = "https://raw.githubusercontent.com/" + COMMUNITY.repo + "/" + COMMUNITY.branch + "/packs/";
