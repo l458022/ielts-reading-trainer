@@ -1,0 +1,330 @@
+{
+  "format": "ielts-reading-pack",
+  "version": 1,
+  "generator": "IELTS Reading Trainer",
+  "createdAt": "2026-10-13T13:16:00.263Z",
+  "exams": [
+    {
+      "id": "community-pmc-diet-gut-microbiota",
+      "title": "The Impact of Diet and Lifestyle on Gut Microbiota and Human Health",
+      "titleCn": "饮食与肠道菌群",
+      "book": "公共题库",
+      "test": 1,
+      "passage": 1,
+      "difficulty": "中",
+      "series": "公共题库 · 自动出题",
+      "source": "贡献者 l458022 · CC BY 4.0 · Conlon MA, Bird AR. — Europe PMC，CC BY 4.0",
+      "level": "自定义",
+      "minutes": 20,
+      "tags": [
+        "健康",
+        "饮食"
+      ],
+      "intro": "开放获取文章（CC BY 4.0）：Conlon MA, Bird AR. — Europe PMC，CC BY 4.0　原文：https://europepmc.org/article/PMC/PMC4303825",
+      "sections": [
+        {
+          "id": "s1",
+          "title": "READING PASSAGE 1",
+          "paragraphs": [
+            {
+              "id": "A",
+              "text": "There are approximately 10 times as many microorganisms within the gastro-intestinal (GI) tract of humans (approximately 100 trillion) as there are somatic cells within the body.  While most of the microbes are bacteria, the gut can also harbor yeasts, single-cell eukaryotes, viruses and small parasitic worms.  The number, type and function of microbes vary along the length of the GI tract but the majority is found within the large bowel where they contribute to the fermentation of undigested food components, especially carbohydrates/fiber, and to fecal bulk.  Some of the most commonly found or recognized genera of gut bacteria in adults are Bifidobacterium, Lactobacillus, Bacteroides, Clostridium, Escherichia, Streptococcus and Ruminococcus.  Approximately 60% of the bacteria belong to the Bacteroidetes or Firmicutes phyla [ 1 ].  Microbes which produce methane have been detected in about 50% of individuals and are classified as Archaea and not bacteria [ 2 ]. Although individuals may have up to several hundred species of microbes within their gut, recent findings from The Human Microbiome Project and others [ 3, 4 ] show that thousands of different microbes may inhabit the gut of human populations collectively and confirm a high degree of variation in the composition of these populations between individuals.  Despite this variation in taxa the abundance of many of the microbial genes for basic or house-keeping metabolic activities are quite similar between individuals [ 3 ].  There is growing evidence that imbalances in gut microbial populations can be associated with disease, including inflammatory bowel disease (IBD) [ 5 ], and could be contributing factors.  Consequently, there is increased awareness of the role of the microbiota in maintaining health and significant research and commercial investment in this area.  Gut microbes produce a large number of bioactive compounds that can influence health; some like vitamins are beneficial, but some products are toxic."
+            },
+            {
+              "id": "B",
+              "text": "Host immune defenses along the intestine, including a mucus barrier, help prevent potentially harmful bacteria from causing damage to tissues.  The maintenance of a diverse and thriving population of beneficial gut bacteria helps to keep harmful bacteria at bay by competing for nutrients and sites of colonization.  Dietary means, particularly the use of a range of fibers, may be the best way of maintaining a healthy gut microbiota population.  Strategies such as ingestion of live beneficial bacteria (probiotics) may also assist in maintaining health.  In this review, we will expand upon these subjects relating to diet and lifestyle, the gut microbiota and health, and provide some indication of opportunities and knowledge gaps in this area. Microbial mass is a significant contributor to fecal bulk, which in turn is an important determinant of bowel health. Consumption of dietary fibers reduces the risk of colorectal cancer (CRC) [ 6 ] at least partly as a consequence of dilution and elimination of toxins through fecal bulk, driven by increases in fermentative bacteria and the presence of water-holding fibers [ 7, 8, 9 ]. Aspects of this will be discussed in more detail later in the review."
+            },
+            {
+              "id": "C",
+              "text": "Gut microbes are capable of producing a vast range of products, the generation of which can be dependent on many factors, including nutrient availability and the luminal environment, particularly pH [ 10 ].  A more in-depth review of gut microbial products can be found elsewhere [ 11 ].  Microbial products can be taken up by GI tissues, potentially reach circulation and other tissues, and be excreted in urine or breath.  Fermentation of fiber and protein by large bowel bacteria results in some of the most abundant and physiologically important products, namely short chain fatty acids (SCFA) which act as key sources of energy for colorectal tissues and bacteria, and promote cellular mechanisms that maintain tissue integrity [ 12, 13, 14 ].  SCFA can reach the circulation and impact immune function and inflammation in tissues such as the lung [ 15 ].  However, some protein fermentation products such as ammonia, phenols and hydrogen sulphide can also be toxic."
+            },
+            {
+              "id": "D",
+              "text": "There are many other products which deserve mention for their influence on health.  Bacteria such as Bifidobacterium can generate vitamins (e. g. , K, B 12, Biotin, Folate, Thiamine) [ 11 ].  Synthesis of secondary bile acids, important components of lipid transport and turnover in humans, is mediated via bacteria, including Lactobacillus, Bifidobacterium and Bacteroides [ 11 ].  Numerous lipids with biological activity are produced by bacteria, including lipopolysaccharide (LPS), a component of the cell wall of gram negative bacteria that can cause tissue inflammation [ 16 ].  Also, many enteropathogenic bacteria (e. g. , some E.  coli strains) can produce toxins or cause diahorrea under the right conditions, but under normal circumstances other non-pathogenic commensal bacteria with similar metabolic activities outcompete and eventually eliminate them [ 17 ].  Bacteria such as Bifidobacterium can also help prevent pathogenic infection through production of acetate [ 18 ]. Many enzymes produced by microbes influence digestion and health. Indeed, much of the microbial diversity in the human gut may be attributable to the spectrum of microbial enzymatic capacity needed to degrade nutrients, particularly the many forms of complex polysaccharides that are consumed by humans [ 19 ]. Some bacteria such as Bacteroides thetaiotamicron have the capacity to produce an array of enzymes needed for carbohydrate breakdown [ 20 ], but in general numerous microbes appear to be required in a step-wise breakdown and use of complex substrates. Bacterial phytases of the large intestine degrade phytic acid present in grains, releasing minerals such as calcium, magnesium and phosphate that are complexed with it [ 21 ], making these available to host tissues (e.g., bone). Enzymes which degrade mucins help bacteria meet their energy needs and assist in the normal turnover of the mucus barrier lining the gut."
+            },
+            {
+              "id": "E",
+              "text": "Competition between bacteria for substrates has a significant influence on which products are generated. Hydrogen is used by many bacteria and there is a hydrogen economy within the gut based around production by some bacteria and its use by others, including methanogens and sulphate-reducing bacteria (SRB) [ 22, 23 ]. The use of hydrogen for production of methane by methanogenic Archaea may limit acetate production by other microbes, thereby potentially limiting production of beneficial butyrate and impacting health [ 2, 23 ]. The role of methanogens in health is not yet clear. Breath methane correlates with levels of constipation in irritable bowel syndrome (IBS) [ 24 ] but methanogens numbers are depleted in IBD [ 2 ]."
+            }
+          ],
+          "questionGroups": [
+            {
+              "id": "g-tfng",
+              "type": "tfng",
+              "options": [
+                "TRUE",
+                "FALSE",
+                "NOT GIVEN"
+              ],
+              "instruction": "Do the following statements agree with the information in the passage? Write TRUE if the statement agrees with the information, FALSE if the statement contradicts the information, NOT GIVEN if there is no information on this.",
+              "generated": true,
+              "questions": [
+                {
+                  "no": 1,
+                  "stem": "There are approximately 10 times as numerous microorganisms within the gastro-intestinal (GI) tract of humans (approximately 100 trillion) as there are somatic cells within the body.",
+                  "answer": "TRUE",
+                  "keyPara": "A",
+                  "keySentence": "There are approximately 10 times as many microorganisms within the gastro-intestinal (GI) tract of humans (approximately 100 trillion) as there are somatic cells within the body.",
+                  "explain": "本题为机器生成：题干是原文定位句的同义复现（many ↔ numerous）。做题时先抓题干关键词回原文，再核对限定词与比较方向。",
+                  "generated": true
+                },
+                {
+                  "no": 2,
+                  "stem": "Numerous lipids with biological activity are produced by bacteria, including lipopolysaccharide (LPS), a component of the cell wall of gram negative bacteria that can not cause tissue inflammation [ 16 ].",
+                  "answer": "FALSE",
+                  "keyPara": "D",
+                  "keySentence": "Numerous lipids with biological activity are produced by bacteria, including lipopolysaccharide (LPS), a component of the cell wall of gram negative bacteria that can cause tissue inflammation [ 16 ].",
+                  "explain": "本题为机器生成：原文为「Numerous lipids with biological activity are produced by bacteria, including lipopolysaccharide (LPS), a component of the cell wall of gram negative bacteria that can cause tissue inflammation [ 16 ].」，题干通过改写使陈述与原文矛盾。做题时盯紧比较方向、肯定/否定和程度词。",
+                  "generated": true,
+                  "trap": "情态动词被否定（can → not），与原文矛盾"
+                },
+                {
+                  "no": 3,
+                  "stem": "Microbes which produce methane have been detected in around 50% of individuals and are classified as Archaea and not bacteria [ 2 ].",
+                  "answer": "TRUE",
+                  "keyPara": "A",
+                  "keySentence": "Microbes which produce methane have been detected in about 50% of individuals and are classified as Archaea and not bacteria [ 2 ].",
+                  "explain": "本题为机器生成：题干是原文定位句的同义复现（about ↔ around）。做题时先抓题干关键词回原文，再核对限定词与比较方向。",
+                  "generated": true
+                },
+                {
+                  "no": 4,
+                  "stem": "Synthesis of secondary bile acids, important components of lipid communication and turnover in humans, is mediated via bacteria, including Lactobacillus, Bifidobacterium and Bacteroides [ 11 ].",
+                  "answer": "NOT GIVEN",
+                  "keyPara": "D",
+                  "keySentence": "Synthesis of secondary bile acids, important components of lipid transport and turnover in humans, is mediated via bacteria, including Lactobacillus, Bifidobacterium and Bacteroides [ 11 ].",
+                  "explain": "本题为机器生成：原文说的是「Synthesis of secondary bile acids, important components of lipid transport and turnover in humans, is mediated via bacteria, including Lactobacillus, Bifidobacterium and Bacteroides [ 11 ].」，题干把实体偷换成了别的东西，原文从未提及该组合——这是 NG 题的典型构造。",
+                  "generated": true,
+                  "trap": "实体偷换（transport → communication）：原文说的是「transport」，题干偷换成「communication」，属文中未提及"
+                },
+                {
+                  "no": 5,
+                  "stem": "Hydrogen is not used by many bacteria and there is a hydrogen economy within the gut based around production by some bacteria and its use by others, including methanogens and sulphate-reducing bacteria (SRB) [ 22, 23 ].",
+                  "answer": "FALSE",
+                  "keyPara": "E",
+                  "keySentence": "Hydrogen is used by many bacteria and there is a hydrogen economy within the gut based around production by some bacteria and its use by others, including methanogens and sulphate-reducing bacteria (SRB) [ 22, 23 ].",
+                  "explain": "本题为机器生成：原文为「Hydrogen is used by many bacteria and there is a hydrogen economy within the gut based around production by some bacteria and its use by others, including methanogens and sulphate-reducing bacteria (SRB) [ 22, 23 ].」，题干通过改写使陈述与原文矛盾。做题时盯紧比较方向、肯定/否定和程度词。",
+                  "generated": true,
+                  "trap": "系动词被否定（is not），与原文矛盾"
+                },
+                {
+                  "no": 6,
+                  "stem": "The employ of hydrogen for production of methane by methanogenic Archaea may limit acetate production by other microbes, thereby potentially limiting production of beneficial butyrate and impacting health [ 2, 23 ].",
+                  "answer": "TRUE",
+                  "keyPara": "E",
+                  "keySentence": "The use of hydrogen for production of methane by methanogenic Archaea may limit acetate production by other microbes, thereby potentially limiting production of beneficial butyrate and impacting health [ 2, 23 ].",
+                  "explain": "本题为机器生成：题干是原文定位句的同义复现（use ↔ employ）。做题时先抓题干关键词回原文，再核对限定词与比较方向。",
+                  "generated": true
+                }
+              ]
+            },
+            {
+              "id": "g-gapfill",
+              "type": "gapfill",
+              "generated": true,
+              "instruction": "Complete the sentences below. Choose NO MORE THAN TWO WORDS from the passage for each answer.",
+              "questions": [
+                {
+                  "no": 7,
+                  "stem": "There are approximately 10 ____________ as many microorganisms within the gastro-intestinal (GI) tract of humans (approximately 100 trillion) as there are somatic cells within the body.",
+                  "answer": "times",
+                  "keyPara": "A",
+                  "keySentence": "There are approximately 10 times as many microorganisms within the gastro-intestinal (GI) tract of humans (approximately 100 trillion) as there are somatic cells within the body.",
+                  "explain": "本题为机器生成：从原文定位句中挖掉关键词「times」。答案必须是原文原词，注意词性与单复数。",
+                  "generated": true,
+                  "answers": [
+                    "times"
+                  ]
+                },
+                {
+                  "no": 8,
+                  "stem": "Numerous ____________ with biological activity are produced by bacteria, including lipopolysaccharide (LPS), a component of the cell wall of gram negative bacteria that can cause tissue inflammation [ 16 ].",
+                  "answer": "lipids",
+                  "keyPara": "D",
+                  "keySentence": "Numerous lipids with biological activity are produced by bacteria, including lipopolysaccharide (LPS), a component of the cell wall of gram negative bacteria that can cause tissue inflammation [ 16 ].",
+                  "explain": "本题为机器生成：从原文定位句中挖掉关键词「lipids」。答案必须是原文原词，注意词性与单复数。",
+                  "generated": true,
+                  "answers": [
+                    "lipids"
+                  ]
+                },
+                {
+                  "no": 9,
+                  "stem": "Microbes which produce methane have been ____________ in about 50% of individuals and are classified as Archaea and not bacteria [ 2 ].",
+                  "answer": "detected",
+                  "keyPara": "A",
+                  "keySentence": "Microbes which produce methane have been detected in about 50% of individuals and are classified as Archaea and not bacteria [ 2 ].",
+                  "explain": "本题为机器生成：从原文定位句中挖掉关键词「detected」。答案必须是原文原词，注意词性与单复数。",
+                  "generated": true,
+                  "answers": [
+                    "detected"
+                  ]
+                }
+              ]
+            },
+            {
+              "id": "g-headings",
+              "type": "headings",
+              "generated": true,
+              "pool": [
+                "i",
+                "ii",
+                "iii",
+                "iv",
+                "v",
+                "vi",
+                "vii"
+              ],
+              "headings": [
+                "i  The role of approximately",
+                "ii  bacteria in the modern world",
+                "iii  How products works",
+                "iv  A growing problem: bacteria",
+                "v  The importance of bacteria",
+                "vi  An unexpected solution",
+                "vii  The limits of measurement"
+              ],
+              "note": "本题组的标题由机器从段落关键词生成，其中若干为干扰项。",
+              "instruction": "The passage has 5 paragraphs. Choose the correct heading for each paragraph from the list below.",
+              "questions": [
+                {
+                  "no": 10,
+                  "stem": "Paragraph A",
+                  "answer": "i",
+                  "keyPara": "A",
+                  "keySentence": "There are approximately 10 times as many microorganisms within the gastro-intestinal (GI) tract of humans (approximately 100 trillion) as there are somatic cells within the body.",
+                  "explain": "本题为机器生成：段落核心词为「approximately」。做标题题务必看段落首句+尾句，警惕「只在段中一笔带过」的干扰项。",
+                  "generated": true,
+                  "note": "标题由机器按段落关键词生成，答案为该段最匹配的标题；做题时先扫每段主题句。"
+                },
+                {
+                  "no": 11,
+                  "stem": "Paragraph B",
+                  "answer": "ii",
+                  "keyPara": "B",
+                  "keySentence": "Host immune defenses along the intestine, including a mucus barrier, help prevent potentially harmful bacteria from causing damage to tissues.",
+                  "explain": "本题为机器生成：段落核心词为「bacteria」。做标题题务必看段落首句+尾句，警惕「只在段中一笔带过」的干扰项。",
+                  "generated": true,
+                  "note": "标题由机器按段落关键词生成，答案为该段最匹配的标题；做题时先扫每段主题句。"
+                },
+                {
+                  "no": 12,
+                  "stem": "Paragraph C",
+                  "answer": "iii",
+                  "keyPara": "C",
+                  "keySentence": "Gut microbes are capable of producing a vast range of products, the generation of which can be dependent on many factors, including nutrient availability and the luminal environment, particularly pH [ 10 ].",
+                  "explain": "本题为机器生成：段落核心词为「products works」。做标题题务必看段落首句+尾句，警惕「只在段中一笔带过」的干扰项。",
+                  "generated": true,
+                  "note": "标题由机器按段落关键词生成，答案为该段最匹配的标题；做题时先扫每段主题句。"
+                },
+                {
+                  "no": 13,
+                  "stem": "Paragraph D",
+                  "answer": "iv",
+                  "keyPara": "D",
+                  "keySentence": "There are many other products which deserve mention for their influence on health.",
+                  "explain": "本题为机器生成：段落核心词为「bacteria」。做标题题务必看段落首句+尾句，警惕「只在段中一笔带过」的干扰项。",
+                  "generated": true,
+                  "note": "标题由机器按段落关键词生成，答案为该段最匹配的标题；做题时先扫每段主题句。"
+                },
+                {
+                  "no": 14,
+                  "stem": "Paragraph E",
+                  "answer": "v",
+                  "keyPara": "E",
+                  "keySentence": "Competition between bacteria for substrates has a significant influence on which products are generated.",
+                  "explain": "本题为机器生成：段落核心词为「bacteria」。做标题题务必看段落首句+尾句，警惕「只在段中一笔带过」的干扰项。",
+                  "generated": true,
+                  "note": "标题由机器按段落关键词生成，答案为该段最匹配的标题；做题时先扫每段主题句。"
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "vocabulary": [
+        {
+          "word": "health",
+          "pos": "n.",
+          "meaning": "健康",
+          "sentence": "Consequently, there is increased awareness of the role of the microbiota in maintaining health and significant research and commercial investment in this area."
+        },
+        {
+          "word": "production",
+          "pos": "n.",
+          "meaning": "生产",
+          "sentence": "Bacteria such as Bifidobacterium can also help prevent pathogenic infection through production of acetate [ 18 ]."
+        },
+        {
+          "word": "influence",
+          "pos": "n.",
+          "meaning": "影响",
+          "sentence": "Gut microbes produce a large number of bioactive compounds that can influence health; some like vitamins are beneficial, but some products are toxic."
+        },
+        {
+          "word": "produce",
+          "pos": "v.",
+          "meaning": "生产，产生",
+          "sentence": "Microbes which produce methane have been detected in about 50% of individuals and are classified as Archaea and not bacteria [ 2 ]."
+        },
+        {
+          "word": "significant",
+          "pos": "adj.",
+          "meaning": "重要的，显著的",
+          "sentence": "Consequently, there is increased awareness of the role of the microbiota in maintaining health and significant research and commercial investment in this area."
+        },
+        {
+          "word": "important",
+          "pos": "adj.",
+          "meaning": "重要的",
+          "sentence": "Microbial mass is a significant contributor to fecal bulk, which in turn is an important determinant of bowel health."
+        },
+        {
+          "word": "found",
+          "pos": "v.",
+          "meaning": "发现（find 的过去式）；创立",
+          "sentence": "The number, type and function of microbes vary along the length of the GI tract but the majority is found within the large bowel where they contribute to the fermentation of undigested food components, especially carbohydrates/fiber, and to fecal bulk."
+        },
+        {
+          "word": "human",
+          "pos": "n.",
+          "meaning": "人类",
+          "sentence": "There are approximately 10 times as many microorganisms within the gastro-intestinal (GI) tract of humans (approximately 100 trillion) as there are somatic cells within the body."
+        },
+        {
+          "word": "population",
+          "pos": "n.",
+          "meaning": "种群，人口",
+          "sentence": "Although individuals may have up to several hundred species of microbes within their gut, recent findings from The Human Microbiome Project and others [ 3, 4 ] show that thousands of different microbes may inhabit the gut of human populations collectively and confirm a high degree of variation in the composition of these populations between individuals."
+        },
+        {
+          "word": "function",
+          "pos": "n.",
+          "meaning": "功能",
+          "sentence": "The number, type and function of microbes vary along the length of the GI tract but the majority is found within the large bowel where they contribute to the fermentation of undigested food components, especially carbohydrates/fiber, and to fecal bulk."
+        },
+        {
+          "word": "similar",
+          "pos": "adj.",
+          "meaning": "相似的",
+          "sentence": "Despite this variation in taxa the abundance of many of the microbial genes for basic or house-keeping metabolic activities are quite similar between individuals [ 3 ]."
+        },
+        {
+          "word": "disease",
+          "pos": "n.",
+          "meaning": "疾病",
+          "sentence": "There is growing evidence that imbalances in gut microbial populations can be associated with disease, including inflammatory bowel disease (IBD) [ 5 ], and could be contributing factors."
+        }
+      ],
+      "contribution": {
+        "contributor": "l458022",
+        "license": "CC BY 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
+        "sourceUrl": "https://europepmc.org/article/PMC/PMC4303825",
+        "attribution": "Conlon MA, Bird AR. — Europe PMC，CC BY 4.0",
+        "declaredAt": "2026-10-13T13:16:00.262Z",
+        "declaration": "copyright-ok;questions-original-or-tool-generated;no-privacy"
+      }
+    }
+  ]
+}

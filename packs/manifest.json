@@ -223,6 +223,246 @@
       "sourceUrl": "https://ourworldindata.org/urbanization",
       "bytes": 25777,
       "updatedAt": "2026-10-12T13:47:46.689Z"
+    },
+    {
+      "id": "reading-pack-2026-10-13-pmc-air-pollution",
+      "file": "reading-pack-2026-10-13-pmc-air-pollution.json",
+      "title": "Environmental and Health Impacts of Air Pollution: A Review",
+      "titleCn": "空气污染的健康代价",
+      "exams": 1,
+      "questions": 14,
+      "difficulty": "中",
+      "minutes": 20,
+      "tags": [
+        "环境",
+        "健康"
+      ],
+      "contributor": "l458022",
+      "license": "CC BY 4.0",
+      "attribution": "Manisalidis I, Stavropoulou E, Stavropoulos A, Bezirtzoglou E. — Europe PMC，CC BY 4.0",
+      "sourceUrl": "https://europepmc.org/article/PMC/PMC7044178",
+      "bytes": 25451,
+      "updatedAt": "2026-10-13T13:15:01.790Z"
+    },
+    {
+      "id": "reading-pack-2026-10-13-pmc-deep-sea-plastic",
+      "file": "reading-pack-2026-10-13-pmc-deep-sea-plastic.json",
+      "title": "Plastic microfibre ingestion by deep-sea organisms",
+      "titleCn": "深海塑料污染",
+      "exams": 1,
+      "questions": 13,
+      "difficulty": "难",
+      "minutes": 20,
+      "tags": [
+        "海洋",
+        "生态"
+      ],
+      "contributor": "l458022",
+      "license": "CC BY 4.0",
+      "attribution": "Taylor ML, Gwinnett C, Robinson LF, Woodall LC. — Europe PMC，CC BY 4.0",
+      "sourceUrl": "https://europepmc.org/article/PMC/PMC5043174",
+      "bytes": 24597,
+      "updatedAt": "2026-10-13T13:14:50.329Z"
+    },
+    {
+      "id": "reading-pack-2026-10-13-pmc-deep-sea-sink",
+      "file": "reading-pack-2026-10-13-pmc-deep-sea-sink.json",
+      "title": "The deep sea is a major sink for microplastic debris",
+      "titleCn": "深海：微塑料的归宿",
+      "exams": 1,
+      "questions": 14,
+      "difficulty": "难",
+      "minutes": 20,
+      "tags": [
+        "海洋",
+        "环境"
+      ],
+      "contributor": "l458022",
+      "license": "CC BY 4.0",
+      "attribution": "Woodall LC, Sanchez-Vidal A, Canals M, Paterson GL, Coppock R, Sleight V, Calafat A, Rogers AD, Narayanaswamy BE, Thompson RC. — Europe PMC，CC BY 4.0",
+      "sourceUrl": "https://europepmc.org/article/PMC/PMC4448771",
+      "bytes": 25583,
+      "updatedAt": "2026-10-13T13:15:07.135Z"
+    },
+    {
+      "id": "reading-pack-2026-10-13-pmc-diet-gut-microbiota",
+      "file": "reading-pack-2026-10-13-pmc-diet-gut-microbiota.json",
+      "title": "The Impact of Diet and Lifestyle on Gut Microbiota and Human Health",
+      "titleCn": "饮食与肠道菌群",
+      "exams": 1,
+      "questions": 14,
+      "difficulty": "中",
+      "minutes": 20,
+      "tags": [
+        "健康",
+        "饮食"
+      ],
+      "contributor": "l458022",
+      "license": "CC BY 4.0",
+      "attribution": "Conlon MA, Bird AR. — Europe PMC，CC BY 4.0",
+      "sourceUrl": "https://europepmc.org/article/PMC/PMC4303825",
+      "bytes": 26283,
+      "updatedAt": "2026-10-13T13:16:00.263Z"
+    },
+    {
+      "id": "reading-pack-2026-10-13-pmc-digital-wellbeing",
+      "file": "reading-pack-2026-10-13-pmc-digital-wellbeing.json",
+      "title": "Designing for Motivation, Engagement and Wellbeing in Digital Experience",
+      "titleCn": "数字产品的动机与福祉设计",
+      "exams": 1,
+      "questions": 14,
+      "difficulty": "难",
+      "minutes": 20,
+      "tags": [
+        "科技",
+        "心理"
+      ],
+      "contributor": "l458022",
+      "license": "CC BY 4.0",
+      "attribution": "Peters D, Calvo RA, Ryan RM. — Europe PMC，CC BY 4.0",
+      "sourceUrl": "https://europepmc.org/article/PMC/PMC5985470",
+      "bytes": 26039,
+      "updatedAt": "2026-10-13T13:15:42.346Z"
+    },
+    {
+      "id": "reading-pack-2026-10-13-pmc-food-waste",
+      "file": "reading-pack-2026-10-13-pmc-food-waste.json",
+      "title": "Food waste within food supply chains: quantification and potential for change to 2050",
+      "titleCn": "食物供应链的浪费",
+      "exams": 1,
+      "questions": 14,
+      "difficulty": "中",
+      "minutes": 20,
+      "tags": [
+        "农业",
+        "环境"
+      ],
+      "contributor": "l458022",
+      "license": "CC BY 4.0",
+      "attribution": "Parfitt J, Barthel M, Macnaughton S. — Europe PMC，CC BY 4.0",
+      "sourceUrl": "https://europepmc.org/article/PMC/PMC2935112",
+      "bytes": 25434,
+      "updatedAt": "2026-10-13T13:15:35.983Z"
+    },
+    {
+      "id": "reading-pack-2026-10-13-pmc-invasive-species",
+      "file": "reading-pack-2026-10-13-pmc-invasive-species.json",
+      "title": "Scientists' warning on invasive alien species",
+      "titleCn": "入侵物种的生态警告",
+      "exams": 1,
+      "questions": 13,
+      "difficulty": "难",
+      "minutes": 20,
+      "tags": [
+        "生态",
+        "环境"
+      ],
+      "contributor": "l458022",
+      "license": "CC BY 4.0",
+      "attribution": "Pyšek P, Hulme PE, Simberloff D, Bacher S, Blackburn TM, Carlton JT, Dawson W, Essl F, Foxcroft LC, Genovesi P, Jeschke JM, Kühn I, Liebhold AM, Mandrak NE, Meyerson LA, Pauchard A, Pergl J, Roy HE, Seebens H, van Kleunen M, Vilà M, Wingfield MJ, Richardson DM. — Europe PMC，CC BY 4.0",
+      "sourceUrl": "https://europepmc.org/article/PMC/PMC7687187",
+      "bytes": 24400,
+      "updatedAt": "2026-10-13T13:14:56.807Z"
+    },
+    {
+      "id": "reading-pack-2026-10-13-pmc-microplastics-water",
+      "file": "reading-pack-2026-10-13-pmc-microplastics-water.json",
+      "title": "Microplastics in freshwaters and drinking water: Critical review and assessment of data quality",
+      "titleCn": "微塑料与饮用水",
+      "exams": 1,
+      "questions": 15,
+      "difficulty": "难",
+      "minutes": 20,
+      "tags": [
+        "环境",
+        "健康"
+      ],
+      "contributor": "l458022",
+      "license": "CC BY 4.0",
+      "attribution": "Koelmans AA, Mohamed Nor NH, Hermsen E, Kooi M, Mintenig SM, De France J. — Europe PMC，CC BY 4.0",
+      "sourceUrl": "https://europepmc.org/article/PMC/PMC6449537",
+      "bytes": 25693,
+      "updatedAt": "2026-10-13T13:15:54.623Z"
+    },
+    {
+      "id": "reading-pack-2026-10-13-pmc-physical-activity-ageing",
+      "file": "reading-pack-2026-10-13-pmc-physical-activity-ageing.json",
+      "title": "Physical activity in older age: perspectives for healthy ageing and frailty",
+      "titleCn": "老年身体活动",
+      "exams": 1,
+      "questions": 13,
+      "difficulty": "中",
+      "minutes": 20,
+      "tags": [
+        "健康",
+        "老龄化"
+      ],
+      "contributor": "l458022",
+      "license": "CC BY 4.0",
+      "attribution": "McPhee JS, French DP, Jackson D, Nazroo J, Pendleton N, Degens H. — Europe PMC，CC BY 4.0",
+      "sourceUrl": "https://europepmc.org/article/PMC/PMC4889622",
+      "bytes": 23948,
+      "updatedAt": "2026-10-13T13:15:18.198Z"
+    },
+    {
+      "id": "reading-pack-2026-10-13-pmc-renewable-mining",
+      "file": "reading-pack-2026-10-13-pmc-renewable-mining.json",
+      "title": "Renewable energy production will exacerbate mining threats to biodiversity",
+      "titleCn": "可再生能源与采矿压力",
+      "exams": 1,
+      "questions": 14,
+      "difficulty": "难",
+      "minutes": 20,
+      "tags": [
+        "能源",
+        "环境"
+      ],
+      "contributor": "l458022",
+      "license": "CC BY 4.0",
+      "attribution": "Sonter LJ, Dade MC, Watson JEM, Valenta RK, Valenta RK. — Europe PMC，CC BY 4.0",
+      "sourceUrl": "https://europepmc.org/article/PMC/PMC7463236",
+      "bytes": 25939,
+      "updatedAt": "2026-10-13T13:15:49.335Z"
+    },
+    {
+      "id": "reading-pack-2026-10-13-pmc-sleep-immune",
+      "file": "reading-pack-2026-10-13-pmc-sleep-immune.json",
+      "title": "The Sleep-Immune Crosstalk in Health and Disease",
+      "titleCn": "睡眠与免疫系统",
+      "exams": 1,
+      "questions": 13,
+      "difficulty": "难",
+      "minutes": 20,
+      "tags": [
+        "健康",
+        "睡眠"
+      ],
+      "contributor": "l458022",
+      "license": "CC BY 4.0",
+      "attribution": "Besedovsky L, Lange T, Haack M. — Europe PMC，CC BY 4.0",
+      "sourceUrl": "https://europepmc.org/article/PMC/PMC6689741",
+      "bytes": 25326,
+      "updatedAt": "2026-10-13T13:15:30.574Z"
+    },
+    {
+      "id": "reading-pack-2026-10-13-pmc-urban-heat-island",
+      "file": "reading-pack-2026-10-13-pmc-urban-heat-island.json",
+      "title": "Disproportionate exposure to urban heat island intensity across major US cities",
+      "titleCn": "城市热岛的不均暴露",
+      "exams": 1,
+      "questions": 13,
+      "difficulty": "难",
+      "minutes": 20,
+      "tags": [
+        "城市",
+        "气候"
+      ],
+      "contributor": "l458022",
+      "license": "CC BY 4.0",
+      "attribution": "Hsu A, Sheriff G, Chakraborty T, Manya D. — Europe PMC，CC BY 4.0",
+      "sourceUrl": "https://europepmc.org/article/PMC/PMC8149665",
+      "bytes": 25067,
+      "updatedAt": "2026-10-13T13:15:12.900Z"
     }
   ]
 }

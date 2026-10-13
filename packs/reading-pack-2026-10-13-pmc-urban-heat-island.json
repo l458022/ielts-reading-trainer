@@ -1,0 +1,315 @@
+{
+  "format": "ielts-reading-pack",
+  "version": 1,
+  "generator": "IELTS Reading Trainer",
+  "createdAt": "2026-10-13T13:15:12.900Z",
+  "exams": [
+    {
+      "id": "community-pmc-urban-heat-island",
+      "title": "Disproportionate exposure to urban heat island intensity across major US cities",
+      "titleCn": "城市热岛的不均暴露",
+      "book": "公共题库",
+      "test": 1,
+      "passage": 1,
+      "difficulty": "难",
+      "series": "公共题库 · 自动出题",
+      "source": "贡献者 l458022 · CC BY 4.0 · Hsu A, Sheriff G, Chakraborty T, Manya D. — Europe PMC，CC BY 4.0",
+      "level": "自定义",
+      "minutes": 20,
+      "tags": [
+        "城市",
+        "气候"
+      ],
+      "intro": "开放获取文章（CC BY 4.0）：Hsu A, Sheriff G, Chakraborty T, Manya D. — Europe PMC，CC BY 4.0　原文：https://europepmc.org/article/PMC/PMC8149665",
+      "sections": [
+        {
+          "id": "s1",
+          "title": "READING PASSAGE 1",
+          "paragraphs": [
+            {
+              "id": "A",
+              "text": "Built environments are commonly hotter than their neighboring rural counterparts 1. This phenomenon, commonly referred to as the urban heat island effect, contributes to a range of public health issues. Heat-related mortality in the USA, for example, causes more deaths (around 1500 per year) than other severe weather events 2 – 4. Heat exposure is also associated with several non-fatal health outcomes, including heat strokes, dehydration, loss of labor productivity, and decreased learning 5 – 12. Characteristics of the built environment (e.g., green space, urban form, city size, spectral reflectance) not only create temperature differentials between urban and surrounding rural areas 13 – 16 but also contribute to intracity temperature variation 17 – 20. This variation has the potential to cause disparities in the distribution of the burden of adverse heat-related outcomes across sociodemographic groups. Like other environmental stressors, such as air pollution 21, low-income or otherwise marginalized communities may experience disproportionately higher levels of heat intensity 22. Small-scale case studies have found disparities in the distribution of urban heat island intensity within single cities 23 or differences in exposure among population groups within a few cities in different countries 24 – 26. Although evidence suggests that extreme heat-related morbidity and mortality in cities disproportionately affect marginalized groups 27 – 30, there has been little research showing whether these groups have systematic disproportionately high exposure to the heat island effect."
+            },
+            {
+              "id": "B",
+              "text": "Instead, research linking intracity differences in heat exposure to sociodemographic factors has typically been done in an ad hoc manner for a small number of individual cities 23, 29 – 32. Examining the relationship between the distribution of annual urban heat island exposure and income at the neighborhood level, ref. 25 find that the distribution tended to favor those with higher incomes in 18 out of 25 selected global cities. While illustrative, these results are difficult to generalize since the sociodemographic information comes from a variety of sources with distinct definitions and methods, and the sample of global cities was chosen in response to data constraints rather than random sampling. It also does not convey information about potential disparities for other US cities. In 108 US cities, ref. 26 find that neighborhoods that were redlined in the 1930s have summer surface temperature profiles that are significantly higher than other coded residential areas (“redlining” refers to the historical practice of denying home loans or insurance based on an area’s racial composition). In light of substantial demographic changes and urban growth patterns over the past 90 years, however, the extent to which this finding translates into current racial or income disparities remains unclear."
+            },
+            {
+              "id": "C",
+              "text": "While these studies are suggestive, it is difficult to extrapolate their results to a widespread or national level for several reasons. Varying methodological approaches to quantifying urban heat island intensity may lead to different conclusions, or analyses may not be representative. One obstacle to a more uniform approach has been the lack of consistent multicity delineations of urban and rural areas that are also comparable with the administrative areas of aggregation for which socioeconomic data are collected. Case studies may also reflect selection bias. Prior beliefs regarding inequitable distributions of heat exposure may have motivated such scientific inquiry for particular locations, such that the chosen cities may not be representative of the nation as a whole. Combining high-resolution satellite-based temperature data with sociodemographic data from the US Census, we find that the average person of color lives in a census tract with higher summer daytime surface urban heat island (SUHI) intensity than non-Hispanic whites in all but 6 of the 175 largest urbanized areas in the continental United States. A similar pattern emerges for people living in households below the poverty line relative to those at more than two times the poverty line. In nearly half the urbanized areas, the average person of color faces a higher summer daytime SUHI intensity than the average person living below poverty, despite the fact that, on average, only 10% of people of color live below the poverty line. This last finding suggests that widespread inequalities in heat exposure by race and ethnicity may not be well explained by differences in income alone. While we do not observe major differences in SUHI intensity for very young or elderly populations in most major cities, when compared to the total population, we find that the same racial and ethnic disparities in SUHI for specific populations of color compared to non-Hispanic whites are also consistent for these age demographics."
+            },
+            {
+              "id": "D",
+              "text": "Conceptually, an environmental risk analysis typically includes three components: hazard—measures of the spatial distribution of a potential harm; exposure—the intersection of the spatial distribution of human populations with the hazard; and vulnerability—the propensity to suffer damage when exposed to the hazard (see, for example, refs. 33, 34 ). We calculate harm on the basis of the census tract level database of SUHI intensity for the USA we developed in ref. 35. During summer months, relatively large SUHI intensity is associated with increased local warming and extreme heat events in urban areas 13, 36, 37. For exposure, we use census tract level demographic information from the 2017 5-year American Community Survey (ACS). A comprehensive vulnerability assessment would require detailed information, not only about sociodemographic variables but also about other elements such as household resources, social capital, community resources, comorbidities, etc. that could be obtained at an individual or community level through localized fieldwork 38, 39. Although such an assessment is beyond the scope of this study, we consider one salient aspect, age, to evaluate whether differences in exposure by sensitive age groups affect conclusions drawn regarding exposure for the general population. In both very young and older populations, the body’s ability to thermoregulate is compromised, and many older individuals have comorbidities or predispositions that increase the likelihood of heat-related illness and death 40, 41. Between 2004 and 2018, 39% of heat-related deaths in the USA occurred in ages 65 years or older 42. Our framework is thus consistent with several studies using heat exposure to represent climate-related hazards and age to represent vulnerability to analyze the risk of heat stress in urban areas in Brazil, China, Finland, the Philippines, and the USA 34, 43 – 46."
+            }
+          ],
+          "questionGroups": [
+            {
+              "id": "g-tfng",
+              "type": "tfng",
+              "options": [
+                "TRUE",
+                "FALSE",
+                "NOT GIVEN"
+              ],
+              "instruction": "Do the following statements agree with the information in the passage? Write TRUE if the statement agrees with the information, FALSE if the statement contradicts the information, NOT GIVEN if there is no information on this.",
+              "generated": true,
+              "questions": [
+                {
+                  "no": 1,
+                  "stem": "Heat-related mortality in the USA, for example, causes more deaths (around 1500 per year) than other severe weather events 2 – 4.",
+                  "answer": "TRUE",
+                  "keyPara": "A",
+                  "keySentence": "Heat-related mortality in the USA, for example, causes more deaths (around 1500 per year) than other severe weather events 2 – 4.",
+                  "explain": "本题为机器生成：题干是原文定位句的同义复现，内容一致。做题时先抓题干关键词回原文，再核对限定词与比较方向。",
+                  "generated": true
+                },
+                {
+                  "no": 2,
+                  "stem": "While illustrative, these results are not difficult to generalize since the sociodemographic information comes from a variety of sources with distinct definitions and methods, and the sample of global cities was chosen in response to data constraints rather than random sampling.",
+                  "answer": "FALSE",
+                  "keyPara": "B",
+                  "keySentence": "While illustrative, these results are difficult to generalize since the sociodemographic information comes from a variety of sources with distinct definitions and methods, and the sample of global cities was chosen in response to data constraints rather than random sampling.",
+                  "explain": "本题为机器生成：原文为「While illustrative, these results are difficult to generalize since the sociodemographic information comes from a variety of sources with distinct definitions and methods, and the sample of global cities was chosen in response to data constraints rather than random sampling.」，题干通过改写使陈述与原文矛盾。做题时盯紧比较方向、肯定/否定和程度词。",
+                  "generated": true,
+                  "trap": "系动词被否定（are not），与原文矛盾"
+                },
+                {
+                  "no": 3,
+                  "stem": "Built environments are commonly hotter than their neighboring rural counterparts 1.",
+                  "answer": "TRUE",
+                  "keyPara": "A",
+                  "keySentence": "Built environments are commonly hotter than their neighboring rural counterparts 1.",
+                  "explain": "本题为机器生成：题干是原文定位句的同义复现，内容一致。做题时先抓题干关键词回原文，再核对限定词与比较方向。",
+                  "generated": true
+                },
+                {
+                  "no": 4,
+                  "stem": "Instead, research linking intracity differences in heat exposure to sociodemographic factors has typically been done in an ad hoc manner for a tiny number of individual cities 23, 29 – 32.",
+                  "answer": "TRUE",
+                  "keyPara": "B",
+                  "keySentence": "Instead, research linking intracity differences in heat exposure to sociodemographic factors has typically been done in an ad hoc manner for a small number of individual cities 23, 29 – 32.",
+                  "explain": "本题为机器生成：题干是原文定位句的同义复现（small ↔ tiny）。做题时先抓题干关键词回原文，再核对限定词与比较方向。",
+                  "generated": true
+                },
+                {
+                  "no": 5,
+                  "stem": "During winter months, relatively large SUHI intensity is associated with increased local warming and extreme heat events in urban areas 13, 36, 37.",
+                  "answer": "NOT GIVEN",
+                  "keyPara": "D",
+                  "keySentence": "During summer months, relatively large SUHI intensity is associated with increased local warming and extreme heat events in urban areas 13, 36, 37.",
+                  "explain": "本题为机器生成：原文说的是「During summer months, relatively large SUHI intensity is associated with increased local warming and extreme heat events in urban areas 13, 36, 37.」，题干把实体偷换成了别的东西，原文从未提及该组合——这是 NG 题的典型构造。",
+                  "generated": true,
+                  "trap": "实体偷换（summer → winter）：原文说的是「summer」，题干偷换成「winter」，属文中未提及"
+                },
+                {
+                  "no": 6,
+                  "stem": "Varying methodological approaches to quantifying urban heat island intensity may lead to different conclusions, or analyses may not be representative.",
+                  "answer": "TRUE",
+                  "keyPara": "C",
+                  "keySentence": "Varying methodological approaches to quantifying urban heat island intensity may lead to different conclusions, or analyses may not be representative.",
+                  "explain": "本题为机器生成：题干是原文定位句的同义复现，内容一致。做题时先抓题干关键词回原文，再核对限定词与比较方向。",
+                  "generated": true
+                }
+              ]
+            },
+            {
+              "id": "g-gapfill",
+              "type": "gapfill",
+              "generated": true,
+              "instruction": "Complete the sentences below. Choose NO MORE THAN TWO WORDS from the passage for each answer.",
+              "questions": [
+                {
+                  "no": 7,
+                  "stem": "Heat-related mortality in the USA, for example, ____________ more deaths (around 1500 per year) than other severe weather events 2 – 4.",
+                  "answer": "causes",
+                  "keyPara": "A",
+                  "keySentence": "Heat-related mortality in the USA, for example, causes more deaths (around 1500 per year) than other severe weather events 2 – 4.",
+                  "explain": "本题为机器生成：从原文定位句中挖掉关键词「causes」。答案必须是原文原词，注意词性与单复数。",
+                  "generated": true,
+                  "answers": [
+                    "causes"
+                  ]
+                },
+                {
+                  "no": 8,
+                  "stem": "While ____________, these results are difficult to generalize since the sociodemographic information comes from a variety of sources with distinct definitions and methods, and the sample of global cities was chosen in response to data constraints rather than random sampling.",
+                  "answer": "illustrative",
+                  "keyPara": "B",
+                  "keySentence": "While illustrative, these results are difficult to generalize since the sociodemographic information comes from a variety of sources with distinct definitions and methods, and the sample of global cities was chosen in response to data constraints rather than random sampling.",
+                  "explain": "本题为机器生成：从原文定位句中挖掉关键词「illustrative」。答案必须是原文原词，注意词性与单复数。",
+                  "generated": true,
+                  "answers": [
+                    "illustrative"
+                  ]
+                },
+                {
+                  "no": 9,
+                  "stem": "Built ____________ are commonly hotter than their neighboring rural counterparts 1.",
+                  "answer": "environments",
+                  "keyPara": "A",
+                  "keySentence": "Built environments are commonly hotter than their neighboring rural counterparts 1.",
+                  "explain": "本题为机器生成：从原文定位句中挖掉关键词「environments」。答案必须是原文原词，注意词性与单复数。",
+                  "generated": true,
+                  "answers": [
+                    "environments"
+                  ]
+                }
+              ]
+            },
+            {
+              "id": "g-headings",
+              "type": "headings",
+              "generated": true,
+              "pool": [
+                "i",
+                "ii",
+                "iii",
+                "iv",
+                "v",
+                "vi",
+                "vii"
+              ],
+              "headings": [
+                "i  The role of commonly",
+                "ii  cities in the modern world",
+                "iii  How widespread works",
+                "iv  A growing problem: exposure",
+                "v  An unexpected solution",
+                "vi  The limits of measurement",
+                "vii  Lessons from history"
+              ],
+              "note": "本题组的标题由机器从段落关键词生成，其中若干为干扰项。",
+              "instruction": "The passage has 4 paragraphs. Choose the correct heading for each paragraph from the list below.",
+              "questions": [
+                {
+                  "no": 10,
+                  "stem": "Paragraph A",
+                  "answer": "i",
+                  "keyPara": "A",
+                  "keySentence": "Built environments are commonly hotter than their neighboring rural counterparts 1.",
+                  "explain": "本题为机器生成：段落核心词为「commonly」。做标题题务必看段落首句+尾句，警惕「只在段中一笔带过」的干扰项。",
+                  "generated": true,
+                  "note": "标题由机器按段落关键词生成，答案为该段最匹配的标题；做题时先扫每段主题句。"
+                },
+                {
+                  "no": 11,
+                  "stem": "Paragraph B",
+                  "answer": "ii",
+                  "keyPara": "B",
+                  "keySentence": "Instead, research linking intracity differences in heat exposure to sociodemographic factors has typically been done in an ad hoc manner for a small number of individual cities 23, 29 – 32.",
+                  "explain": "本题为机器生成：段落核心词为「cities」。做标题题务必看段落首句+尾句，警惕「只在段中一笔带过」的干扰项。",
+                  "generated": true,
+                  "note": "标题由机器按段落关键词生成，答案为该段最匹配的标题；做题时先扫每段主题句。"
+                },
+                {
+                  "no": 12,
+                  "stem": "Paragraph C",
+                  "answer": "iii",
+                  "keyPara": "C",
+                  "keySentence": "While these studies are suggestive, it is difficult to extrapolate their results to a widespread or national level for several reasons.",
+                  "explain": "本题为机器生成：段落核心词为「widespread works」。做标题题务必看段落首句+尾句，警惕「只在段中一笔带过」的干扰项。",
+                  "generated": true,
+                  "note": "标题由机器按段落关键词生成，答案为该段最匹配的标题；做题时先扫每段主题句。"
+                },
+                {
+                  "no": 13,
+                  "stem": "Paragraph D",
+                  "answer": "iv",
+                  "keyPara": "D",
+                  "keySentence": "Conceptually, an environmental risk analysis typically includes three components: hazard—measures of the spatial distribution of a potential harm; exposure—the intersection of the spatial distribution of human populations with the hazard; and vulnerability—the propensity to suffer damage when exposed to the hazard (see, for example, refs.",
+                  "explain": "本题为机器生成：段落核心词为「exposure」。做标题题务必看段落首句+尾句，警惕「只在段中一笔带过」的干扰项。",
+                  "generated": true,
+                  "note": "标题由机器按段落关键词生成，答案为该段最匹配的标题；做题时先扫每段主题句。"
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "vocabulary": [
+        {
+          "word": "exposure",
+          "pos": "n.",
+          "meaning": "暴露，接触",
+          "sentence": "Heat exposure is also associated with several non-fatal health outcomes, including heat strokes, dehydration, loss of labor productivity, and decreased learning 5 – 12."
+        },
+        {
+          "word": "urban",
+          "pos": "adj.",
+          "meaning": "城市的",
+          "sentence": "This phenomenon, commonly referred to as the urban heat island effect, contributes to a range of public health issues."
+        },
+        {
+          "word": "distribution",
+          "pos": "n.",
+          "meaning": "分配，分发",
+          "sentence": "This variation has the potential to cause disparities in the distribution of the burden of adverse heat-related outcomes across sociodemographic groups."
+        },
+        {
+          "word": "island",
+          "pos": "n.",
+          "meaning": "岛",
+          "sentence": "This phenomenon, commonly referred to as the urban heat island effect, contributes to a range of public health issues."
+        },
+        {
+          "word": "level",
+          "pos": "n.",
+          "meaning": "水平",
+          "sentence": "Like other environmental stressors, such as air pollution 21, low-income or otherwise marginalized communities may experience disproportionately higher levels of heat intensity 22."
+        },
+        {
+          "word": "temperature",
+          "pos": "n.",
+          "meaning": "温度",
+          "sentence": ", green space, urban form, city size, spectral reflectance) not only create temperature differentials between urban and surrounding rural areas 13 – 16 but also contribute to intracity temperature variation 17 – 20."
+        },
+        {
+          "word": "information",
+          "pos": "n.",
+          "meaning": "信息",
+          "sentence": "While illustrative, these results are difficult to generalize since the sociodemographic information comes from a variety of sources with distinct definitions and methods, and the sample of global cities was chosen in response to data constraints rather than random sampling."
+        },
+        {
+          "word": "population",
+          "pos": "n.",
+          "meaning": "种群，人口",
+          "sentence": "Small-scale case studies have found disparities in the distribution of urban heat island intensity within single cities 23 or differences in exposure among population groups within a few cities in different countries 24 – 26."
+        },
+        {
+          "word": "community",
+          "pos": "n.",
+          "meaning": "社区，群体",
+          "sentence": "For exposure, we use census tract level demographic information from the 2017 5-year American Community Survey (ACS)."
+        },
+        {
+          "word": "income",
+          "pos": "n.",
+          "meaning": "收入",
+          "sentence": "Like other environmental stressors, such as air pollution 21, low-income or otherwise marginalized communities may experience disproportionately higher levels of heat intensity 22."
+        },
+        {
+          "word": "person",
+          "pos": "n.",
+          "meaning": "人",
+          "sentence": "Combining high-resolution satellite-based temperature data with sociodemographic data from the US Census, we find that the average person of color lives in a census tract with higher summer daytime surface urban heat island (SUHI) intensity than non-Hispanic whites in all but 6 of the 175 largest urbanized areas in the continental United States."
+        },
+        {
+          "word": "rural",
+          "pos": "adj.",
+          "meaning": "农村的",
+          "sentence": "Built environments are commonly hotter than their neighboring rural counterparts 1."
+        }
+      ],
+      "contribution": {
+        "contributor": "l458022",
+        "license": "CC BY 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
+        "sourceUrl": "https://europepmc.org/article/PMC/PMC8149665",
+        "attribution": "Hsu A, Sheriff G, Chakraborty T, Manya D. — Europe PMC，CC BY 4.0",
+        "declaredAt": "2026-10-13T13:15:12.899Z",
+        "declaration": "copyright-ok;questions-original-or-tool-generated;no-privacy"
+      }
+    }
+  ]
+}

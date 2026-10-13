@@ -153,6 +153,9 @@ main { max-width: 1180px; margin: 0 auto; padding: 24px; }
 .admin-warn code { background: #fef3c7; padding: 1px 5px; border-radius: 4px; font-size: 11.5px; }
 .admin-actions { display: flex; align-items: center; gap: 10px; flex-wrap: wrap; }
 .admin-hint { margin-top: 8px; font-size: 12.5px; color: #166534; }
+.iss-ok { color: #15803d; font-weight: 600; }
+.iss-warn { color: #b45309; font-weight: 600; }
+.iss-bad { color: #b91c1c; font-weight: 600; }
 
 /* ---------- 答题页 ---------- */
 .exam-header {

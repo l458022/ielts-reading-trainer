@@ -1374,7 +1374,7 @@
     uploadPackObject(pack, null);
   }
 
-  function uploadPackObject(pack, btn) {
+  function uploadPackObject(pack, btn, onDone) {
     if (!isAdmin()) { toast("需要先设置管理令牌"); return; }
     var v = validatePack(pack);
     if (!v.ok) { uploadMsg("❌ " + v.msg); return; }
@@ -1399,6 +1399,7 @@
         toast("已上架「" + (ex.titleCn || ex.title || name) + "」");
         restore();
         setTimeout(loadCommunityPacks, 3000);
+        if (onDone) onDone(name);
       }, function (err) {
         uploadMsg("❌ 上架失败：" + err);
         restore();
@@ -1408,6 +1409,137 @@
     ghApi("GET", PACKS_API + encodeURIComponent(file), null,
       function () { doPut(file.replace(/\.json$/, "-" + Date.now().toString().slice(-6) + ".json")); },
       function () { doPut(file); });
+  }
+
+  /* ---------- 从 Issue 导入投稿（管理员） ----------
+   * 贡献者用「📦 题库包贡献」Issue 表单贴 JSON 提交 → 这里扫描开放 Issue，
+   * 解析出题库包 → 校验 → 一键上架 → 自动回复并关闭 Issue。
+   * 好处：贡献者完全不用懂 Git，维护者仍逐条把关。 */
+  var PACK_LABEL = "question-pack";
+
+  // Issue 表单会把每个字段渲染成 "### 字段名" + 值
+  function issueField(body, label) {
+    if (!body) return "";
+    var re = new RegExp("###\\s*" + label.replace(/[.*+?^${}()|[\]\\/]/g, "\\$&") + "\\s*\\n+([\\s\\S]*?)(?=\\n###|$)");
+    var m = body.match(re);
+    return m ? m[1].trim() : "";
+  }
+
+  // 题库包 JSON：优先取代码块，退而求其次取首尾大括号之间
+  function parseIssuePack(body) {
+    if (!body) return null;
+    var text = null;
+    var m = body.match(/```(?:json)?\s*([\s\S]*?)```/);
+    if (m) text = m[1];
+    else {
+      var i = body.indexOf("{"), j = body.lastIndexOf("}");
+      if (i !== -1 && j > i) text = body.slice(i, j + 1);
+    }
+    if (!text) return null;
+    try { return JSON.parse(text.trim()); } catch (e) { return null; }
+  }
+
+  function fetchOpenPackIssues(cb, errCb) {
+    var path = "/repos/" + COMMUNITY.repo + "/issues?state=open&labels=" + PACK_LABEL + "&per_page=30";
+    ghApi("GET", path, null, cb, function () {
+      // 令牌可能没有 Issues 读权限 → 退化为匿名读取公开 Issue
+      fetchJson("https://api.github.com" + path, cb, errCb);
+    });
+  }
+
+  function toggleIssueBox() {
+    var box = el("cmtyIssueBox");
+    if (!box) return;
+    if (!isAdmin()) { toast("需要先设置管理令牌"); return; }
+    var show = box.style.display === "none";
+    box.style.display = show ? "block" : "none";
+    if (show) loadIssueSubmissions();
+  }
+
+  function loadIssueSubmissions() {
+    var box = el("cmtyIssueList"), msg = el("cmtyIssueMsg");
+    if (!box) return;
+    if (msg) msg.textContent = "⏳ 正在读取投稿 Issue…";
+    box.innerHTML = '<div class="cmty-loading">⏳ 正在读取 GitHub Issue…</div>';
+    fetchOpenPackIssues(function (issues) {
+      var items = (issues || [])
+        .filter(function (it) { return !it.pull_request; })
+        .map(function (it) {
+          return {
+            no: it.number,
+            title: it.title,
+            url: it.html_url,
+            user: (it.user || {}).login || "",
+            body: it.body || "",
+            pack: parseIssuePack(it.body || "")
+          };
+        });
+      if (msg) msg.textContent = items.length ? ("共 " + items.length + " 条待处理投稿") : "没有待处理投稿";
+      renderIssueSubmissions(items, box);
+    }, function (err) {
+      box.innerHTML = "";
+      if (msg) msg.textContent = "读取失败：" + err;
+    });
+  }
+
+  function renderIssueSubmissions(items, box) {
+    if (!box) return;
+    if (!items.length) {
+      box.innerHTML = '<div class="cmty-empty" style="padding:10px">没有待处理的投稿。贡献者用「📦 题库包贡献」Issue 表单提交后，会出现在这里。</div>';
+      return;
+    }
+    box.innerHTML = items.map(function (it, i) {
+      var v = it.pack ? validatePack(it.pack) : { ok: false };
+      var ex = it.pack && it.pack.exams && it.pack.exams[0];
+      var qn = ex ? (ex.sections || []).reduce(function (n, s) {
+        return n + (s.questionGroups || []).reduce(function (m, g) { return m + (g.questions || []).length; }, 0);
+      }, 0) : 0;
+      var status;
+      if (!it.pack) status = '<span class="iss-bad">✗ 正文里没找到题库包 JSON（可能贴在评论中）</span>';
+      else if (!v.ok) status = '<span class="iss-bad">✗ 结构不合法：' + esc(v.msg) + "</span>";
+      else if (v.missing.length) status = '<span class="iss-warn">⚠ 可上架（' + v.missing.length + " 题的 keySentence 未命中原文）</span>";
+      else status = '<span class="iss-ok">✓ 校验通过</span>';
+      return '<div class="cmty-row">' +
+        '<div class="cmty-info">' +
+        '<div class="cmty-title">#' + it.no + " " + esc(it.title.replace(/^\[题库包\]\s*/, "")) + "</div>" +
+        '<div class="cmty-meta">' +
+        "<span>投稿人 " + esc(it.user || "未知") + "</span>" +
+        (ex ? "<span>" + esc(ex.titleCn || ex.title || "") + "</span><span>" + qn + " 题</span>" : "") +
+        '<span>授权 ' + esc(issueField(it.body, "授权方式") || "未填") + "</span>" +
+        "</div>" +
+        '<div class="cmty-src">' + status +
+        ' · <a href="' + esc(it.url) + '" target="_blank" rel="noopener">查看 Issue</a></div>' +
+        "</div>" +
+        '<div class="cmty-acts">' +
+        (it.pack && v.ok ? '<button class="btn" data-iss="' + i + '">上架</button>' : "") +
+        "</div>" +
+        "</div>";
+    }).join("");
+    Array.prototype.forEach.call(box.querySelectorAll("[data-iss]"), function (btn) {
+      btn.addEventListener("click", function () { publishIssuePack(items[Number(btn.getAttribute("data-iss"))], btn); });
+    });
+  }
+
+  function publishIssuePack(item, btn) {
+    if (!item || !item.pack) return;
+    if (!confirm("上架 Issue #" + item.no + " 的题库包？\n\n上架后会自动在该 Issue 下回复并关闭。")) return;
+    uploadPackObject(item.pack, btn, function (filename) {
+      // 回复 + 关闭 Issue（需要令牌带 Issues: Read and write）
+      ghApi("POST", "/repos/" + COMMUNITY.repo + "/issues/" + item.no + "/comments", {
+        body: "✅ 已上架到公共题库：`packs/" + filename + "`\n\n约 1 分钟后可在应用内「🌐 社区题库」看到并一键下载。感谢投稿！"
+      }, function () {
+        ghApi("PATCH", "/repos/" + COMMUNITY.repo + "/issues/" + item.no, { state: "closed" }, function () {
+          toast("已上架并关闭 Issue #" + item.no);
+          loadIssueSubmissions();
+        }, function (err) {
+          toast("已上架，但关闭 Issue 失败：" + err + "（令牌需要 Issues 读写权限）");
+          loadIssueSubmissions();
+        });
+      }, function (err) {
+        toast("已上架，但回复 Issue 失败：" + err + "（令牌需要 Issues 读写权限）");
+        loadIssueSubmissions();
+      });
+    });
   }
 
   function importPackObject(pack) {
@@ -1570,6 +1702,8 @@
     el("cmtyTokenClear").addEventListener("click", clearAdminToken);
     el("cmtyUploadToggle").addEventListener("click", toggleUploadBox);
     el("cmtyUploadPaste").addEventListener("click", uploadPackFromText);
+    el("cmtyIssueToggle").addEventListener("click", toggleIssueBox);
+    el("cmtyIssueRefresh").addEventListener("click", loadIssueSubmissions);
     el("packEditSave").addEventListener("click", savePackEdit);
     el("packEditCancel").addEventListener("click", function () { el("packEditMask").className = "modal-mask"; });
     el("packEditMask").addEventListener("click", function (e) {
@@ -1596,6 +1730,9 @@
     savePackEdit: savePackEdit, validatePack: validatePack, refreshAdminUI: refreshAdminUI,
     uploadPackFromText: uploadPackFromText, uploadPackObject: uploadPackObject,
     toggleUploadBox: toggleUploadBox, renderLocalContributionList: renderLocalContributionList,
+    toggleIssueBox: toggleIssueBox, loadIssueSubmissions: loadIssueSubmissions,
+    renderIssueSubmissions: renderIssueSubmissions, publishIssuePack: publishIssuePack,
+    parseIssuePack: parseIssuePack, issueField: issueField,
     slugify: slugify,
     utf8ToB64: utf8ToB64, b64ToUtf8: b64ToUtf8, PACKS_API: PACKS_API
   };

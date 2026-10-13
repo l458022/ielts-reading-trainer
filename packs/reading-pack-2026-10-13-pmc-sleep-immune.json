@@ -1,0 +1,317 @@
+{
+  "format": "ielts-reading-pack",
+  "version": 1,
+  "generator": "IELTS Reading Trainer",
+  "createdAt": "2026-10-13T13:15:30.574Z",
+  "exams": [
+    {
+      "id": "community-pmc-sleep-immune",
+      "title": "The Sleep-Immune Crosstalk in Health and Disease",
+      "titleCn": "睡眠与免疫系统",
+      "book": "公共题库",
+      "test": 1,
+      "passage": 1,
+      "difficulty": "难",
+      "series": "公共题库 · 自动出题",
+      "source": "贡献者 l458022 · CC BY 4.0 · Besedovsky L, Lange T, Haack M. — Europe PMC，CC BY 4.0",
+      "level": "自定义",
+      "minutes": 20,
+      "tags": [
+        "健康",
+        "睡眠"
+      ],
+      "intro": "开放获取文章（CC BY 4.0）：Besedovsky L, Lange T, Haack M. — Europe PMC，CC BY 4.0　原文：https://europepmc.org/article/PMC/PMC6689741",
+      "sections": [
+        {
+          "id": "s1",
+          "title": "READING PASSAGE 1",
+          "paragraphs": [
+            {
+              "id": "A",
+              "text": "Sleep-immune interactions are well-known phenomena in everyday life and folk wisdom.  There is no doubt that an infection makes us tired and increases the desire to sleep, and a good night’s sleep is commonly recommended as ‟the best medicineˮ for an infectious disease.  Along this line, it is assumed that prolonged sleep loss weakens our body’s defense system and thus renders us more prone to catch a cold or any other infection.  The scientific analyses of these notions started in 350 BC, when Artistotle elaborated in his book On Sleep and Sleeplessness that sleep is induced by hot vapors that arise from the stomach during digestion, and that a similar sleep response can be observed in feverish patients.  In the early 20th century, researchers postulated a hypnotoxin that increases during wakefulness, induces sleep, and is cleared again during sleep ( 265, 333 ). The first hypnotoxin, discovered in the 1980s, turned out to be the bacterial cell wall component muramyl peptide, and like more than 2,000 yr ago, it was assumed that it derives from the gastrointestinal tract.  By activating the immune system and the release of sleep regulatory substances like the cytokines tumor necrosis factor (TNF) and interleukin (IL)-1β, these muramyl peptides and other microbial products were shown in animal models to contribute to the homeostatic regulation of slow-wave sleep (SWS), the deepest form of sleep.  We now know that both cytokines likewise mediate the SWS response to an infectious challenge.  With respect to the sleep-to-immune directionality, early studies in the late 19th century showed that total sleep deprivation in dogs leads to death after several days (reviewed in Ref.  38 )."
+            },
+            {
+              "id": "B",
+              "text": "Later studies using more controlled approaches found that sleep deprivation of rats is lethal after ~2–3 wk, and a breakdown of host defense indicated by a systemic bacterial infection was reported after applying the same method of sleep deprivation ( 172, 175 ).  Together with other experiments from recent times, these findings suggest an important role of sleep for immune defense ( 47, 79 ). This review is based on findings from experimental, in-laboratory animal and human models that manipulate sleep or components of the immune system, as well as human field studies conducted in populations with various habitual sleep durations, chronic sleep disturbances, or chronic infectious or inflammatory diseases.  It aims to summarize sleep changes in response to infectious and noninfectious challenges and to describe, on the other hand, the role of sleep in fine-tuning the immune system to foster immune defense.  We start in section I by introducing basic aspects of sleep and the immune system and the means by which they can interact with each other.  In section II, we outline how the components of the immune system signal to the brain and how sleep is altered during acute and chronic infectious or inflammatory diseases.  Section III summarizes research that was performed mainly in the last two decades and assessed the sleep-to-immune directionality, including the impact of sleep on immune parameters and function, vaccination responses, and infection outcome and risk."
+            },
+            {
+              "id": "C",
+              "text": "This section includes mainly experimental studies in which sleep was actively manipulated.  In section IV we focus on observational studies investigating the association between chronic sleep deficiency and immune parameters and describe how this association may contribute to increased disease risk.  Section V summarizes data on studies examining possible countermeasures to reinstate immune balance, including recovery sleep following total or partial sleep deprivation, napping, extension of sleep duration, and cognitive behavioral therapy.  Finally, in section VI, we provide conclusions on the available data, highlight the problems and pitfalls in this scientific field, and propose some questions open for future research.  See FIGURE 1 for an overview of the topics covered by this review and the sections in which they are described. Research approaches for investigating sleep-immune interactions and potential influencing factors. Experimental studies investigate causal relationships between sleep and immune parameters by manipulating sleep or immunological factors, but have low ecologic validity (i.e., they cannot be easily translated into everyday situations). Field studies investigate naturally existing associations between sleep characteristics and immune parameters; however, causality cannot be inferred. Several factors (summarized in sect. VI B ) influence the results of studies, including specifics of the study design, methods, and environmental factors. Orange numbers in brackets refer to the section dealing with the denoted topic. SD, sleep deprivation; LPS, lipopolysaccharide."
+            },
+            {
+              "id": "D",
+              "text": "Sleep is not a passive condition; the brain and the body are highly active during this particular behavioral state. Sleep can be characterized by a prototypical posture (usually recumbency), an increased arousal threshold with a reduced responsiveness to external stimuli, and a loss of consciousness. In contrast to coma, it can be easily reversed. Sleep is regulated homeostatically, meaning that sleep increases in duration and intensity after a prolonged period without sleep. In addition to this homeostatic component, a second process that is independent from prior wakefulness modulates the timing of sleep, namely, the circadian system. This system is responsible for imposing and synchronizing a close to 24-h rhythm on several behaviors and body functions, including the propensity to sleep or be awake along the 24-h sleep-wake cycle. The homeostatic and circadian components constitute the two factors of the so-called two-process model describing the regulation of sleep ( 64, 65 ). Several brain mechanisms are involved in this regulation, which have been reviewed in detail elsewhere."
+            }
+          ],
+          "questionGroups": [
+            {
+              "id": "g-tfng",
+              "type": "tfng",
+              "options": [
+                "TRUE",
+                "FALSE",
+                "NOT GIVEN"
+              ],
+              "instruction": "Do the following statements agree with the information in the passage? Write TRUE if the statement agrees with the information, FALSE if the statement contradicts the information, NOT GIVEN if there is no information on this.",
+              "generated": true,
+              "questions": [
+                {
+                  "no": 1,
+                  "stem": "The first hypnotoxin, discovered in the 1980s, turned out to be the bacterial cell wall component muramyl peptide, and like more than 2,000 yr ago, it was assumed that it derives from the gastrointestinal tract.",
+                  "answer": "TRUE",
+                  "keyPara": "A",
+                  "keySentence": "The first hypnotoxin, discovered in the 1980s, turned out to be the bacterial cell wall component muramyl peptide, and like more than 2,000 yr ago, it was assumed that it derives from the gastrointestinal tract.",
+                  "explain": "本题为机器生成：题干是原文定位句的同义复现，内容一致。做题时先抓题干关键词回原文，再核对限定词与比较方向。",
+                  "generated": true
+                },
+                {
+                  "no": 2,
+                  "stem": "Later studies using less controlled approaches found that sleep deprivation of rats is lethal after ~2–3 wk, and a breakdown of host defense indicated by a systemic bacterial infection was reported after applying the same method of sleep deprivation ( 172, 175 ).",
+                  "answer": "FALSE",
+                  "keyPara": "B",
+                  "keySentence": "Later studies using more controlled approaches found that sleep deprivation of rats is lethal after ~2–3 wk, and a breakdown of host defense indicated by a systemic bacterial infection was reported after applying the same method of sleep deprivation ( 172, 175 ).",
+                  "explain": "本题为机器生成：原文为「Later studies using more controlled approaches found that sleep deprivation of rats is lethal after ~2–3 wk, and a breakdown of host defense indicated by a systemic bacterial infection was reported after applying the same method of sleep deprivation ( 172, 175 ).」，题干通过改写使陈述与原文矛盾。做题时盯紧比较方向、肯定/否定和程度词。",
+                  "generated": true,
+                  "trap": "比较级反向（more → less），原文方向被对调"
+                },
+                {
+                  "no": 3,
+                  "stem": "This system is responsible for imposing and synchronizing a close to 24-h rhythm on several behaviors and mind functions, including the propensity to sleep or be awake along the 24-h sleep-wake cycle.",
+                  "answer": "NOT GIVEN",
+                  "keyPara": "D",
+                  "keySentence": "This system is responsible for imposing and synchronizing a close to 24-h rhythm on several behaviors and body functions, including the propensity to sleep or be awake along the 24-h sleep-wake cycle.",
+                  "explain": "本题为机器生成：原文说的是「This system is responsible for imposing and synchronizing a close to 24-h rhythm on several behaviors and body functions, including the propensity to sleep or be awake along the 24-h sleep-wake cycle.」，题干把实体偷换成了别的东西，原文从未提及该组合——这是 NG 题的典型构造。",
+                  "generated": true,
+                  "trap": "实体偷换（body → mind）：原文说的是「body」，题干偷换成「mind」，属文中未提及"
+                },
+                {
+                  "no": 4,
+                  "stem": "Along this line, it is assumed that prolonged sleep loss weakens our body’s defense system and thus renders us more prone to catch a cold or any other infection.",
+                  "answer": "TRUE",
+                  "keyPara": "A",
+                  "keySentence": "Along this line, it is assumed that prolonged sleep loss weakens our body’s defense system and thus renders us more prone to catch a cold or any other infection.",
+                  "explain": "本题为机器生成：题干是原文定位句的同义复现，内容一致。做题时先抓题干关键词回原文，再核对限定词与比较方向。",
+                  "generated": true
+                },
+                {
+                  "no": 5,
+                  "stem": "Together with other surveys from recent times, these findings suggest an important role of sleep for immune defense ( 47, 79 ).",
+                  "answer": "NOT GIVEN",
+                  "keyPara": "B",
+                  "keySentence": "Together with other experiments from recent times, these findings suggest an important role of sleep for immune defense ( 47, 79 ).",
+                  "explain": "本题为机器生成：原文说的是「Together with other experiments from recent times, these findings suggest an important role of sleep for immune defense ( 47, 79 ).」，题干把实体偷换成了别的东西，原文从未提及该组合——这是 NG 题的典型构造。",
+                  "generated": true,
+                  "trap": "实体偷换（experiments → surveys）：原文说的是「experiments」，题干偷换成「surveys」，属文中未提及"
+                },
+                {
+                  "no": 6,
+                  "stem": "See FIGURE 1 for an overview of the topics covered by this review and the sections in which they are not described.",
+                  "answer": "FALSE",
+                  "keyPara": "C",
+                  "keySentence": "See FIGURE 1 for an overview of the topics covered by this review and the sections in which they are described.",
+                  "explain": "本题为机器生成：原文为「See FIGURE 1 for an overview of the topics covered by this review and the sections in which they are described.」，题干通过改写使陈述与原文矛盾。做题时盯紧比较方向、肯定/否定和程度词。",
+                  "generated": true,
+                  "trap": "系动词被否定（are not），与原文矛盾"
+                }
+              ]
+            },
+            {
+              "id": "g-gapfill",
+              "type": "gapfill",
+              "generated": true,
+              "instruction": "Complete the sentences below. Choose NO MORE THAN TWO WORDS from the passage for each answer.",
+              "questions": [
+                {
+                  "no": 7,
+                  "stem": "The first hypnotoxin, ____________ in the 1980s, turned out to be the bacterial cell wall component muramyl peptide, and like more than 2,000 yr ago, it was assumed that it derives from the gastrointestinal tract.",
+                  "answer": "discovered",
+                  "keyPara": "A",
+                  "keySentence": "The first hypnotoxin, discovered in the 1980s, turned out to be the bacterial cell wall component muramyl peptide, and like more than 2,000 yr ago, it was assumed that it derives from the gastrointestinal tract.",
+                  "explain": "本题为机器生成：从原文定位句中挖掉关键词「discovered」。答案必须是原文原词，注意词性与单复数。",
+                  "generated": true,
+                  "answers": [
+                    "discovered"
+                  ]
+                },
+                {
+                  "no": 8,
+                  "stem": "____________ studies using more controlled approaches found that sleep deprivation of rats is lethal after ~2–3 wk, and a breakdown of host defense indicated by a systemic bacterial infection was reported after applying the same method of sleep deprivation ( 172, 175 ).",
+                  "answer": "later",
+                  "keyPara": "B",
+                  "keySentence": "Later studies using more controlled approaches found that sleep deprivation of rats is lethal after ~2–3 wk, and a breakdown of host defense indicated by a systemic bacterial infection was reported after applying the same method of sleep deprivation ( 172, 175 ).",
+                  "explain": "本题为机器生成：从原文定位句中挖掉关键词「later」。答案必须是原文原词，注意词性与单复数。",
+                  "generated": true,
+                  "answers": [
+                    "later"
+                  ]
+                },
+                {
+                  "no": 9,
+                  "stem": "This system is ____________ for imposing and synchronizing a close to 24-h rhythm on several behaviors and body functions, including the propensity to sleep or be awake along the 24-h sleep-wake cycle.",
+                  "answer": "responsible",
+                  "keyPara": "D",
+                  "keySentence": "This system is responsible for imposing and synchronizing a close to 24-h rhythm on several behaviors and body functions, including the propensity to sleep or be awake along the 24-h sleep-wake cycle.",
+                  "explain": "本题为机器生成：从原文定位句中挖掉关键词「responsible」。答案必须是原文原词，注意词性与单复数。",
+                  "generated": true,
+                  "answers": [
+                    "responsible"
+                  ]
+                }
+              ]
+            },
+            {
+              "id": "g-headings",
+              "type": "headings",
+              "generated": true,
+              "pool": [
+                "i",
+                "ii",
+                "iii",
+                "iv",
+                "v",
+                "vi",
+                "vii"
+              ],
+              "headings": [
+                "i  The role of sleep",
+                "ii  sleep in the modern world",
+                "iii  How sleep works",
+                "iv  A growing problem: sleep",
+                "v  An unexpected solution",
+                "vi  The limits of measurement",
+                "vii  Lessons from history"
+              ],
+              "note": "本题组的标题由机器从段落关键词生成，其中若干为干扰项。",
+              "instruction": "The passage has 4 paragraphs. Choose the correct heading for each paragraph from the list below.",
+              "questions": [
+                {
+                  "no": 10,
+                  "stem": "Paragraph A",
+                  "answer": "i",
+                  "keyPara": "A",
+                  "keySentence": "Sleep-immune interactions are well-known phenomena in everyday life and folk wisdom.",
+                  "explain": "本题为机器生成：段落核心词为「sleep」。做标题题务必看段落首句+尾句，警惕「只在段中一笔带过」的干扰项。",
+                  "generated": true,
+                  "note": "标题由机器按段落关键词生成，答案为该段最匹配的标题；做题时先扫每段主题句。"
+                },
+                {
+                  "no": 11,
+                  "stem": "Paragraph B",
+                  "answer": "ii",
+                  "keyPara": "B",
+                  "keySentence": "Later studies using more controlled approaches found that sleep deprivation of rats is lethal after ~2–3 wk, and a breakdown of host defense indicated by a systemic bacterial infection was reported after applying the same method of sleep deprivation ( 172, 175 ).",
+                  "explain": "本题为机器生成：段落核心词为「sleep」。做标题题务必看段落首句+尾句，警惕「只在段中一笔带过」的干扰项。",
+                  "generated": true,
+                  "note": "标题由机器按段落关键词生成，答案为该段最匹配的标题；做题时先扫每段主题句。"
+                },
+                {
+                  "no": 12,
+                  "stem": "Paragraph C",
+                  "answer": "iii",
+                  "keyPara": "C",
+                  "keySentence": "This section includes mainly experimental studies in which sleep was actively manipulated.",
+                  "explain": "本题为机器生成：段落核心词为「sleep works」。做标题题务必看段落首句+尾句，警惕「只在段中一笔带过」的干扰项。",
+                  "generated": true,
+                  "note": "标题由机器按段落关键词生成，答案为该段最匹配的标题；做题时先扫每段主题句。"
+                },
+                {
+                  "no": 13,
+                  "stem": "Paragraph D",
+                  "answer": "iv",
+                  "keyPara": "D",
+                  "keySentence": "Sleep is not a passive condition; the brain and the body are highly active during this particular behavioral state.",
+                  "explain": "本题为机器生成：段落核心词为「sleep」。做标题题务必看段落首句+尾句，警惕「只在段中一笔带过」的干扰项。",
+                  "generated": true,
+                  "note": "标题由机器按段落关键词生成，答案为该段最匹配的标题；做题时先扫每段主题句。"
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "vocabulary": [
+        {
+          "word": "sleep",
+          "pos": "n.",
+          "meaning": "睡眠",
+          "sentence": "Sleep-immune interactions are well-known phenomena in everyday life and folk wisdom."
+        },
+        {
+          "word": "immune",
+          "pos": "adj.",
+          "meaning": "免疫的",
+          "sentence": "Sleep-immune interactions are well-known phenomena in everyday life and folk wisdom."
+        },
+        {
+          "word": "system",
+          "pos": "n.",
+          "meaning": "系统",
+          "sentence": "Along this line, it is assumed that prolonged sleep loss weakens our body’s defense system and thus renders us more prone to catch a cold or any other infection."
+        },
+        {
+          "word": "field",
+          "pos": "n.",
+          "meaning": "田野，领域",
+          "sentence": "This review is based on findings from experimental, in-laboratory animal and human models that manipulate sleep or components of the immune system, as well as human field studies conducted in populations with various habitual sleep durations, chronic sleep disturbances, or chronic infectious or inflammatory diseases."
+        },
+        {
+          "word": "brain",
+          "pos": "n.",
+          "meaning": "大脑",
+          "sentence": "In section II, we outline how the components of the immune system signal to the brain and how sleep is altered during acute and chronic infectious or inflammatory diseases."
+        },
+        {
+          "word": "scientific",
+          "pos": "adj.",
+          "meaning": "科学的",
+          "sentence": "The scientific analyses of these notions started in 350 BC, when Artistotle elaborated in his book On Sleep and Sleeplessness that sleep is induced by hot vapors that arise from the stomach during digestion, and that a similar sleep response can be observed in feverish patients."
+        },
+        {
+          "word": "contribute",
+          "pos": "v.",
+          "meaning": "贡献，促成",
+          "sentence": "By activating the immune system and the release of sleep regulatory substances like the cytokines tumor necrosis factor (TNF) and interleukin (IL)-1β, these muramyl peptides and other microbial products were shown in animal models to contribute to the homeostatic regulation of slow-wave sleep (SWS), the deepest form of sleep."
+        },
+        {
+          "word": "describe",
+          "pos": "v.",
+          "meaning": "描述",
+          "sentence": "It aims to summarize sleep changes in response to infectious and noninfectious challenges and to describe, on the other hand, the role of sleep in fine-tuning the immune system to foster immune defense."
+        },
+        {
+          "word": "disease",
+          "pos": "n.",
+          "meaning": "疾病",
+          "sentence": "There is no doubt that an infection makes us tired and increases the desire to sleep, and a good night’s sleep is commonly recommended as ‟the best medicineˮ for an infectious disease."
+        },
+        {
+          "word": "animal",
+          "pos": "n.",
+          "meaning": "动物",
+          "sentence": "By activating the immune system and the release of sleep regulatory substances like the cytokines tumor necrosis factor (TNF) and interleukin (IL)-1β, these muramyl peptides and other microbial products were shown in animal models to contribute to the homeostatic regulation of slow-wave sleep (SWS), the deepest form of sleep."
+        },
+        {
+          "word": "early",
+          "pos": "adj.",
+          "meaning": "早的",
+          "sentence": "In the early 20th century, researchers postulated a hypnotoxin that increases during wakefulness, induces sleep, and is cleared again during sleep ( 265, 333 )."
+        },
+        {
+          "word": "human",
+          "pos": "n.",
+          "meaning": "人类",
+          "sentence": "This review is based on findings from experimental, in-laboratory animal and human models that manipulate sleep or components of the immune system, as well as human field studies conducted in populations with various habitual sleep durations, chronic sleep disturbances, or chronic infectious or inflammatory diseases."
+        }
+      ],
+      "contribution": {
+        "contributor": "l458022",
+        "license": "CC BY 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
+        "sourceUrl": "https://europepmc.org/article/PMC/PMC6689741",
+        "attribution": "Besedovsky L, Lange T, Haack M. — Europe PMC，CC BY 4.0",
+        "declaredAt": "2026-10-13T13:15:30.572Z",
+        "declaration": "copyright-ok;questions-original-or-tool-generated;no-privacy"
+      }
+    }
+  ]
+}

@@ -1,0 +1,330 @@
+{
+  "format": "ielts-reading-pack",
+  "version": 1,
+  "generator": "IELTS Reading Trainer",
+  "createdAt": "2026-10-13T13:15:49.335Z",
+  "exams": [
+    {
+      "id": "community-pmc-renewable-mining",
+      "title": "Renewable energy production will exacerbate mining threats to biodiversity",
+      "titleCn": "可再生能源与采矿压力",
+      "book": "公共题库",
+      "test": 1,
+      "passage": 1,
+      "difficulty": "难",
+      "series": "公共题库 · 自动出题",
+      "source": "贡献者 l458022 · CC BY 4.0 · Sonter LJ, Dade MC, Watson JEM, Valenta RK, Valenta RK. — Europe PMC，CC BY 4.0",
+      "level": "自定义",
+      "minutes": 20,
+      "tags": [
+        "能源",
+        "环境"
+      ],
+      "intro": "开放获取文章（CC BY 4.0）：Sonter LJ, Dade MC, Watson JEM, Valenta RK, Valenta RK. — Europe PMC，CC BY 4.0　原文：https://europepmc.org/article/PMC/PMC7463236",
+      "sections": [
+        {
+          "id": "s1",
+          "title": "READING PASSAGE 1",
+          "paragraphs": [
+            {
+              "id": "A",
+              "text": "Climate change poses serious threats to biodiversity 1, 2. To keep temperature increases below 2 °C, and halt associated biodiversity losses, 140 nations committed to the Paris Climate Change Accord to reduce anthropogenic greenhouse gas emissions by 90% (from 2010 levels) and reach carbon neutrality by 2100 3. Energy sector innovation is where most progress is achievable 4, but since renewable energies currently account for only 17% of global energy consumption 5, significant production increases must occur to phase out fossil fuel use 6. However, the production of renewable energies is also material-intensive—much more so than fossil fuels 7 —meaning that future production will also escalate demand for many metals 8 – 11. It is unlikely that these new demands will be met by diverting use from other sectors or from recycling materials alone 12, 13. When required commodities exist in biodiverse countries that lack strong resource governance, such as the world’s second largest untouched lithium reserve in Bolivia’s Salar de Uyuni salt pan 5 —a biodiverse area currently untouched by mining 14 —mining poses serious threats to species and ecosystems 15."
+            },
+            {
+              "id": "B",
+              "text": "Global conservation efforts are often naive to the threats posed by significant growth in renewable energies. Production infrastructure (e.g. for wind and solar farms) has a significant spatial footprint 16 and other environmental risks 17, but potentially more extensive are the direct and indirect consequences of associated mining activities 15, 18. While some protected areas (PAs) prevent mineral extraction and prospecting activities, more than 14% of PAs contain metal mines within or nearby their boundaries 19 and consequences for biodiversity may extend many kilometers from mining sites 20. Other areas that are increasingly important for future conservation investment (such as Key Biodiversity Areas 21 ), are not designed to consider the distribution of mineral resources and pressures to extract them, as they focus instead on the needs of biodiversity only. Conservation plans for these sites must identify and develop strategies to manage all major threats to biodiversity, to ensure that mining the materials needed for renewable energy production does not simply replace the climate change-related threats mitigated by reducing fossil fuel use 22, 23."
+            },
+            {
+              "id": "C",
+              "text": "Here, we map the global extent of areas potentially influenced by mining, according to 62,381 pre-operational, operational, and closed mining properties that target 40 commodities (Supplementary Table 1 ).  We use a 50 km wide radius around each mining property to capture the potential influence of both direct and indirect impacts of mining on biodiversity, but also produced a conservative estimate of mining areas using a 10 km radius (see “Methods” section).  We distinguish areas targeting the materials that, among many other uses in society today, will be critical for renewable energy production (here referred to as critical mining areas) from those targeting other materials (e. g.  fossil fuels and fertilizers; referred to as other mining areas).  We quantify the spatial overlap of mining areas with nationally designated PAs 24 and sites considered important priorities for halting biodiversity loss (Key Biodiversity Areas 21 and Remaining Wilderness 25 ). We compare this overlap between mining and non-mining areas (using the latter as a baseline); between critical and other mining areas (to determine threats by renewable energy production); and among closed, operational and pre-operational areas (to indicate potential future trends).  We also develop and examine an index of mine density (i. e.  the number of mining properties within 50 km of each 1 km 2 cell), which indicates local human pressure 26 and thus potential extinction risk for many endangered species 27, within overlap areas to determine differences between critical mining areas and other mining areas.  We find that mining areas overlap with conservation areas and priorities and, although these areas are not more likely to overlap than other mining areas are, their areas overlapping with PAs and Remaining Wilderness do contain a greater mining density."
+            },
+            {
+              "id": "D",
+              "text": "Mining potentially influences 49. 9 million km 2 of Earth’s terrestrial land area (37%, excluding Antarctica), assuming impacts extend 50 km from mine sites (Fig.  1 )—an enormous spatial footprint not specifically factored into global biodiversity threat maps 26 or conservation plans 28.  Most mining areas (82%) target materials critical for renewable energy production (Supplementary Table 2 ).  Critical mining areas contain five times more mines and target three times more commodities than other mining areas do (Supplementary Table 1 ).  However, despite their larger spatial extent, critical mining areas are less dense than other mining areas (2. 0 vs.  3. 5 for operational mining properties; Supplementary Table 2 ), due to differences in resource distributions and relative production costs.  For example, annual coal production (7813 Mt in 2018) 29 greatly exceeds that of copper metal (21 Mt) 30 (i. e.  a commodity required for renewable energies; Table 1 )."
+            },
+            {
+              "id": "E",
+              "text": "Most copper is produced in the form of concentrate, so the tonnage of material transported in a similar way to coal would be in the order of 80 Mt.  Thus, the world coal industry transports two orders of magnitude (100×) more material than the copper industry.  This assertion is supported by production data per mine 31, showing that the average material transported from a coal mine is more than 10 times the amount of concentrate shipped from a copper mine.  As a result, costs per mine for coal are more dependent on pre-existing proximate processing and transportation infrastructure, leading to a closer clustering of these operations. Mining areas were mapped using a 50-cell radius around 62,381 pre-operational, operational, and closed mining properties. Mining areas with properties targeting materials critical for renewable energy technology and infrastructure are shown in blue, areas with properties targeting other materials are shown in orange, and those targeting both commodity types are shown in pink. Color shading (light to dark) indicates the density of mining areas—i.e. the number of mining properties within a 50-cell radius of each 1 km cell."
+            }
+          ],
+          "questionGroups": [
+            {
+              "id": "g-tfng",
+              "type": "tfng",
+              "options": [
+                "TRUE",
+                "FALSE",
+                "NOT GIVEN"
+              ],
+              "instruction": "Do the following statements agree with the information in the passage? Write TRUE if the statement agrees with the information, FALSE if the statement contradicts the information, NOT GIVEN if there is no information on this.",
+              "generated": true,
+              "questions": [
+                {
+                  "no": 1,
+                  "stem": "Energy sector innovation is where most progress is achievable 4, however since renewable energies currently account for only 17% of global energy consumption 5, significant production increases must occur to phase out fossil fuel employ 6.",
+                  "answer": "TRUE",
+                  "keyPara": "A",
+                  "keySentence": "Energy sector innovation is where most progress is achievable 4, but since renewable energies currently account for only 17% of global energy consumption 5, significant production increases must occur to phase out fossil fuel use 6.",
+                  "explain": "本题为机器生成：题干是原文定位句的同义复现（use ↔ employ；but ↔ however）。做题时先抓题干关键词回原文，再核对限定词与比较方向。",
+                  "generated": true
+                },
+                {
+                  "no": 2,
+                  "stem": "However, the production of renewable energies is also material-intensive—much less so than fossil fuels 7 —meaning that future production will also escalate demand for many metals 8 – 11.",
+                  "answer": "FALSE",
+                  "keyPara": "A",
+                  "keySentence": "However, the production of renewable energies is also material-intensive—much more so than fossil fuels 7 —meaning that future production will also escalate demand for many metals 8 – 11.",
+                  "explain": "本题为机器生成：原文为「However, the production of renewable energies is also material-intensive—much more so than fossil fuels 7 —meaning that future production will also escalate demand for many metals 8 – 11.」，题干通过改写使陈述与原文矛盾。做题时盯紧比较方向、肯定/否定和程度词。",
+                  "generated": true,
+                  "trap": "比较级反向（more → less），原文方向被对调"
+                },
+                {
+                  "no": 3,
+                  "stem": "While some protected areas (PAs) prevent mineral extraction and prospecting activities, more than 14% of PAs contain metal mines within or nearby their boundaries 19 and consequences for biodiversity may extend numerous kilometers from mining sites 20.",
+                  "answer": "TRUE",
+                  "keyPara": "B",
+                  "keySentence": "While some protected areas (PAs) prevent mineral extraction and prospecting activities, more than 14% of PAs contain metal mines within or nearby their boundaries 19 and consequences for biodiversity may extend many kilometers from mining sites 20.",
+                  "explain": "本题为机器生成：题干是原文定位句的同义复现（many ↔ numerous）。做题时先抓题干关键词回原文，再核对限定词与比较方向。",
+                  "generated": true
+                },
+                {
+                  "no": 4,
+                  "stem": "However, despite their larger spatial extent, critical mining areas are more dense than other mining areas (2.",
+                  "answer": "FALSE",
+                  "keyPara": "D",
+                  "keySentence": "However, despite their larger spatial extent, critical mining areas are less dense than other mining areas (2.",
+                  "explain": "本题为机器生成：原文为「However, despite their larger spatial extent, critical mining areas are less dense than other mining areas (2.」，题干通过改写使陈述与原文矛盾。做题时盯紧比较方向、肯定/否定和程度词。",
+                  "generated": true,
+                  "trap": "比较级反向（less → more），原文方向被对调"
+                },
+                {
+                  "no": 5,
+                  "stem": "This assertion is supported by production data per mine 31, showing that the average material transported from a coal mine is more than 10 times the amount of concentrate shipped from a copper mine.",
+                  "answer": "TRUE",
+                  "keyPara": "E",
+                  "keySentence": "This assertion is supported by production data per mine 31, showing that the average material transported from a coal mine is more than 10 times the amount of concentrate shipped from a copper mine.",
+                  "explain": "本题为机器生成：题干是原文定位句的同义复现，内容一致。做题时先抓题干关键词回原文，再核对限定词与比较方向。",
+                  "generated": true
+                },
+                {
+                  "no": 6,
+                  "stem": "Critical mining areas contain five times less mines and target three times more commodities than other mining areas do (Supplementary Table 1 ).",
+                  "answer": "FALSE",
+                  "keyPara": "D",
+                  "keySentence": "Critical mining areas contain five times more mines and target three times more commodities than other mining areas do (Supplementary Table 1 ).",
+                  "explain": "本题为机器生成：原文为「Critical mining areas contain five times more mines and target three times more commodities than other mining areas do (Supplementary Table 1 ).」，题干通过改写使陈述与原文矛盾。做题时盯紧比较方向、肯定/否定和程度词。",
+                  "generated": true,
+                  "trap": "比较级反向（more → less），原文方向被对调"
+                }
+              ]
+            },
+            {
+              "id": "g-gapfill",
+              "type": "gapfill",
+              "generated": true,
+              "instruction": "Complete the sentences below. Choose NO MORE THAN TWO WORDS from the passage for each answer.",
+              "questions": [
+                {
+                  "no": 7,
+                  "stem": "Energy sector ____________ is where most progress is achievable 4, but since renewable energies currently account for only 17% of global energy consumption 5, significant production increases must occur to phase out fossil fuel use 6.",
+                  "answer": "innovation",
+                  "keyPara": "A",
+                  "keySentence": "Energy sector innovation is where most progress is achievable 4, but since renewable energies currently account for only 17% of global energy consumption 5, significant production increases must occur to phase out fossil fuel use 6.",
+                  "explain": "本题为机器生成：从原文定位句中挖掉关键词「innovation」。答案必须是原文原词，注意词性与单复数。",
+                  "generated": true,
+                  "answers": [
+                    "innovation"
+                  ]
+                },
+                {
+                  "no": 8,
+                  "stem": "However, the production of renewable energies is also ____________—much more so than fossil fuels 7 —meaning that future production will also escalate demand for many metals 8 – 11.",
+                  "answer": "material-intensive",
+                  "keyPara": "A",
+                  "keySentence": "However, the production of renewable energies is also material-intensive—much more so than fossil fuels 7 —meaning that future production will also escalate demand for many metals 8 – 11.",
+                  "explain": "本题为机器生成：从原文定位句中挖掉关键词「material-intensive」。答案必须是原文原词，注意词性与单复数。",
+                  "generated": true,
+                  "answers": [
+                    "material-intensive"
+                  ]
+                },
+                {
+                  "no": 9,
+                  "stem": "____________ some protected areas (PAs) prevent mineral extraction and prospecting activities, more than 14% of PAs contain metal mines within or nearby their boundaries 19 and consequences for biodiversity may extend many kilometers from mining sites 20.",
+                  "answer": "while",
+                  "keyPara": "B",
+                  "keySentence": "While some protected areas (PAs) prevent mineral extraction and prospecting activities, more than 14% of PAs contain metal mines within or nearby their boundaries 19 and consequences for biodiversity may extend many kilometers from mining sites 20.",
+                  "explain": "本题为机器生成：从原文定位句中挖掉关键词「while」。答案必须是原文原词，注意词性与单复数。",
+                  "generated": true,
+                  "answers": [
+                    "while"
+                  ]
+                }
+              ]
+            },
+            {
+              "id": "g-headings",
+              "type": "headings",
+              "generated": true,
+              "pool": [
+                "i",
+                "ii",
+                "iii",
+                "iv",
+                "v",
+                "vi",
+                "vii"
+              ],
+              "headings": [
+                "i  The role of biodiversity",
+                "ii  conservation in the modern world",
+                "iii  How areas works",
+                "iv  A growing problem: mining",
+                "v  The importance of material",
+                "vi  An unexpected solution",
+                "vii  The limits of measurement"
+              ],
+              "note": "本题组的标题由机器从段落关键词生成，其中若干为干扰项。",
+              "instruction": "The passage has 5 paragraphs. Choose the correct heading for each paragraph from the list below.",
+              "questions": [
+                {
+                  "no": 10,
+                  "stem": "Paragraph A",
+                  "answer": "i",
+                  "keyPara": "A",
+                  "keySentence": "Climate change poses serious threats to biodiversity 1, 2.",
+                  "explain": "本题为机器生成：段落核心词为「biodiversity」。做标题题务必看段落首句+尾句，警惕「只在段中一笔带过」的干扰项。",
+                  "generated": true,
+                  "note": "标题由机器按段落关键词生成，答案为该段最匹配的标题；做题时先扫每段主题句。"
+                },
+                {
+                  "no": 11,
+                  "stem": "Paragraph B",
+                  "answer": "ii",
+                  "keyPara": "B",
+                  "keySentence": "Global conservation efforts are often naive to the threats posed by significant growth in renewable energies.",
+                  "explain": "本题为机器生成：段落核心词为「conservation」。做标题题务必看段落首句+尾句，警惕「只在段中一笔带过」的干扰项。",
+                  "generated": true,
+                  "note": "标题由机器按段落关键词生成，答案为该段最匹配的标题；做题时先扫每段主题句。"
+                },
+                {
+                  "no": 12,
+                  "stem": "Paragraph C",
+                  "answer": "iii",
+                  "keyPara": "C",
+                  "keySentence": "Here, we map the global extent of areas potentially influenced by mining, according to 62,381 pre-operational, operational, and closed mining properties that target 40 commodities (Supplementary Table 1 ).",
+                  "explain": "本题为机器生成：段落核心词为「areas works」。做标题题务必看段落首句+尾句，警惕「只在段中一笔带过」的干扰项。",
+                  "generated": true,
+                  "note": "标题由机器按段落关键词生成，答案为该段最匹配的标题；做题时先扫每段主题句。"
+                },
+                {
+                  "no": 13,
+                  "stem": "Paragraph D",
+                  "answer": "iv",
+                  "keyPara": "D",
+                  "keySentence": "Mining potentially influences 49.",
+                  "explain": "本题为机器生成：段落核心词为「mining」。做标题题务必看段落首句+尾句，警惕「只在段中一笔带过」的干扰项。",
+                  "generated": true,
+                  "note": "标题由机器按段落关键词生成，答案为该段最匹配的标题；做题时先扫每段主题句。"
+                },
+                {
+                  "no": 14,
+                  "stem": "Paragraph E",
+                  "answer": "v",
+                  "keyPara": "E",
+                  "keySentence": "Most copper is produced in the form of concentrate, so the tonnage of material transported in a similar way to coal would be in the order of 80 Mt.",
+                  "explain": "本题为机器生成：段落核心词为「material」。做标题题务必看段落首句+尾句，警惕「只在段中一笔带过」的干扰项。",
+                  "generated": true,
+                  "note": "标题由机器按段落关键词生成，答案为该段最匹配的标题；做题时先扫每段主题句。"
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "vocabulary": [
+        {
+          "word": "mining",
+          "pos": "n.",
+          "meaning": "采矿",
+          "sentence": "When required commodities exist in biodiverse countries that lack strong resource governance, such as the world’s second largest untouched lithium reserve in Bolivia’s Salar de Uyuni salt pan 5 —a biodiverse area currently untouched by mining 14 —mining poses serious threats to species and ecosystems 15."
+        },
+        {
+          "word": "production",
+          "pos": "n.",
+          "meaning": "生产",
+          "sentence": "Energy sector innovation is where most progress is achievable 4, but since renewable energies currently account for only 17% of global energy consumption 5, significant production increases must occur to phase out fossil fuel use 6."
+        },
+        {
+          "word": "renewable",
+          "pos": "adj.",
+          "meaning": "可再生的",
+          "sentence": "Energy sector innovation is where most progress is achievable 4, but since renewable energies currently account for only 17% of global energy consumption 5, significant production increases must occur to phase out fossil fuel use 6."
+        },
+        {
+          "word": "energy",
+          "pos": "n.",
+          "meaning": "能量",
+          "sentence": "Energy sector innovation is where most progress is achievable 4, but since renewable energies currently account for only 17% of global energy consumption 5, significant production increases must occur to phase out fossil fuel use 6."
+        },
+        {
+          "word": "conservation",
+          "pos": "n.",
+          "meaning": "保护",
+          "sentence": "Global conservation efforts are often naive to the threats posed by significant growth in renewable energies."
+        },
+        {
+          "word": "fossil",
+          "pos": "n.",
+          "meaning": "化石",
+          "sentence": "Energy sector innovation is where most progress is achievable 4, but since renewable energies currently account for only 17% of global energy consumption 5, significant production increases must occur to phase out fossil fuel use 6."
+        },
+        {
+          "word": "infrastructure",
+          "pos": "n.",
+          "meaning": "基础设施",
+          "sentence": "Production infrastructure (e."
+        },
+        {
+          "word": "significant",
+          "pos": "adj.",
+          "meaning": "重要的，显著的",
+          "sentence": "Energy sector innovation is where most progress is achievable 4, but since renewable energies currently account for only 17% of global energy consumption 5, significant production increases must occur to phase out fossil fuel use 6."
+        },
+        {
+          "word": "material",
+          "pos": "n.",
+          "meaning": "材料",
+          "sentence": "However, the production of renewable energies is also material-intensive—much more so than fossil fuels 7 —meaning that future production will also escalate demand for many metals 8 – 11."
+        },
+        {
+          "word": "climate",
+          "pos": "n.",
+          "meaning": "气候",
+          "sentence": "Climate change poses serious threats to biodiversity 1, 2."
+        },
+        {
+          "word": "contain",
+          "pos": "v.",
+          "meaning": "包含，容纳",
+          "sentence": "While some protected areas (PAs) prevent mineral extraction and prospecting activities, more than 14% of PAs contain metal mines within or nearby their boundaries 19 and consequences for biodiversity may extend many kilometers from mining sites 20."
+        },
+        {
+          "word": "future",
+          "pos": "n.",
+          "meaning": "未来",
+          "sentence": "However, the production of renewable energies is also material-intensive—much more so than fossil fuels 7 —meaning that future production will also escalate demand for many metals 8 – 11."
+        }
+      ],
+      "contribution": {
+        "contributor": "l458022",
+        "license": "CC BY 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
+        "sourceUrl": "https://europepmc.org/article/PMC/PMC7463236",
+        "attribution": "Sonter LJ, Dade MC, Watson JEM, Valenta RK, Valenta RK. — Europe PMC，CC BY 4.0",
+        "declaredAt": "2026-10-13T13:15:49.334Z",
+        "declaration": "copyright-ok;questions-original-or-tool-generated;no-privacy"
+      }
+    }
+  ]
+}

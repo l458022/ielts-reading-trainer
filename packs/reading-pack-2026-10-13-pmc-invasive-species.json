@@ -1,0 +1,314 @@
+{
+  "format": "ielts-reading-pack",
+  "version": 1,
+  "generator": "IELTS Reading Trainer",
+  "createdAt": "2026-10-13T13:14:56.807Z",
+  "exams": [
+    {
+      "id": "community-pmc-invasive-species",
+      "title": "Scientists' warning on invasive alien species",
+      "titleCn": "入侵物种的生态警告",
+      "book": "公共题库",
+      "test": 1,
+      "passage": 1,
+      "difficulty": "难",
+      "series": "公共题库 · 自动出题",
+      "source": "贡献者 l458022 · CC BY 4.0 · Pyšek P, Hulme PE, Simberloff D, Bacher S, Blackburn TM, Carlton JT, Dawson W, Essl F, Foxcroft LC, Genovesi P, Jeschke JM, Kühn I, Liebhold AM, Mandrak NE, Meyerson LA, Pauchard A, Pergl J, Roy HE, Seebens H, van Kleunen M, Vilà M, Wingfield MJ, Richardson DM. — Europe PMC，CC BY 4.0",
+      "level": "自定义",
+      "minutes": 20,
+      "tags": [
+        "生态",
+        "环境"
+      ],
+      "intro": "开放获取文章（CC BY 4.0）：Pyšek P, Hulme PE, Simberloff D, Bacher S, Blackburn TM, Carlton JT, Dawson W, Essl F, Foxcroft LC, Genovesi P, Jeschke JM, Kühn I, Liebhold AM, Mandrak NE, Meyerson LA, Pauchard A, Pergl J, Roy HE, Seebens H, van Kleunen M, Vilà M, Wingfield MJ, Richardson DM. — Europe PMC，CC BY 4.0　原文：https://europepmc.org/article/PMC/PMC7687187",
+      "sections": [
+        {
+          "id": "s1",
+          "title": "READING PASSAGE 1",
+          "paragraphs": [
+            {
+              "id": "A",
+              "text": "Nearly three decades ago, a community of eminent scientists warned that humans were on a collision course with the natural world. They cited concerns regarding ozone depletion, freshwater availability, marine life depletion, ocean dead zones, forest loss, biodiversity destruction, climate change, and continued human population growth (Union of Concerned Scientists, 1992 ). Twenty‐five years later, Ripple et al. evaluated the human response based on their analysis of time‐series data and concluded that humanity had failed to make sufficient progress over that period in dealing with the environmental challenges. Indeed, they concluded that most of these problems had worsened. The original 1992 call was supported by more than 1,700 scientists, while 25 years later over 15,000 scientists added their signatures to the recent declaration (Ripple et al., 2017 ). Comparing the two documents reveals an important difference in focus as regards biodiversity loss and species extinctions.  With respect to biodiversity, the 1992 warning explicitly highlighted deforestation, species loss, and climate change but did not mention invasive alien species (IAS).  However, in the second call, besides stressing the need to respond to indirect drivers of biodiversity loss (e. g.  to limit population growth, reassess the role of an economy rooted in growth, or reduce greenhouse gas emissions), Ripple et al.  addressed options available to alter biodiversity decline, such as protecting and restoring ecosystems, halting defaunation, and constraining the spread of IAS.  Since 1992, the importance of taking action against IAS globally has been widely recognized (Millennium Ecosystem Assessment, 2005 ).  IAS are, for example, listed among the major indicators of global biodiversity decline (Butchart et al. , 2010 )."
+            },
+            {
+              "id": "B",
+              "text": "The recent global assessment report on biodiversity and ecosystem services by the Intergovernmental Science‐Policy Platform on Biodiversity and Ecosystem Services (IPBES) ranked IAS fifth among direct drivers of change in nature with the largest relative global impacts, after changes in land and sea use, direct exploitation of organisms, climate change, and pollution (Brondizio et al. , 2019 ).  As the next step, the IPBES has initiated a global assessment on IAS that will also address management and policy needs and is expected to deliver results by 2023. Alien species (as opposed to native species) are those whose presence in a region is attributable to human actions, deliberate or inadvertent, that enabled them to overcome biogeographical barriers (Richardson et al., 2000; Pyšek et al., 2004; Richardson, Pyšek, & Carlton, 2011; Essl et al., 2018 ). Some alien species become established (i.e. they reproduce regularly to form self‐replacing populations); a subset of these spread rapidly over substantial distances from introduction sites, a process that forms the basis for the definition of invasive species (Richardson et al., 2000; Occhipinti‐Ambrogi & Galil, 2004; Pyšek et al., 2004; Blackburn et al., 2011 ). Another definition, supported by the International Union for Conservation of Nature (IUCN), the Convention on Biological Diversity, and the World Trade Organization, classifies as ‘invasive’ only those alien species that have a harmful effect on the economy, environment, or health (IUCN, 2000 )."
+            },
+            {
+              "id": "C",
+              "text": "To support global initiatives addressing the loss of biodiversity and ecosystem services, this paper presents a comprehensive global overview of a major environmental change – invasion by alien species.  We ( i ) appraise the current state of biological invasions in marine, freshwater, and terrestrial ecosystems; ( ii ) show that current societal responses are insufficient to address impacts of IAS on ecosystems, biodiversity, and human well‐being and to mitigate future risks; and ( iii ) argue that a warning to humanity regarding the threats posed by IAS is both timely and relevant to complement other focused papers pointing to current threats to nature and the importance of nature for humans (e. g.  Finlayson et al. , 2019; Mammola et al. , 2019; Cardoso et al. , 2020 ).  Given the recent rise and intensity of research on IAS at a global scale (e. g.  Early et al. , 2016; Paini et al. , 2016; Dawson et al. , 2017; Seebens et al."
+            },
+            {
+              "id": "D",
+              "text": ", 2017 ), we provide a detailed update on the extent of invasions and their impacts worldwide, identify drivers that promote invasions, and explore how invasions interact with other biodiversity stressors and global changes.  We emphasize that as our knowledge increases the problems associated with invasions are becoming clearer and require urgent increased attention, and that policy makers and the public should prioritize actions to stem invasions and their impacts.  We address four questions that must be answered as the basis for mitigating problems associated with biological invasions.  ( i ) Where do we stand?  ( ii ) Why should we care?  ( iii ) What tools are available to deal with these problems?  ( iv ) What comes next?  We treat these questions separately and then provide recommendations for policy, management, and research."
+            }
+          ],
+          "questionGroups": [
+            {
+              "id": "g-tfng",
+              "type": "tfng",
+              "options": [
+                "TRUE",
+                "FALSE",
+                "NOT GIVEN"
+              ],
+              "instruction": "Do the following statements agree with the information in the passage? Write TRUE if the statement agrees with the information, FALSE if the statement contradicts the information, NOT GIVEN if there is no information on this.",
+              "generated": true,
+              "questions": [
+                {
+                  "no": 1,
+                  "stem": "The original 1992 call was supported by more than 1,700 scientists, while 25 years later over 15,000 scientists added their signatures to the recent declaration (Ripple et al.",
+                  "answer": "TRUE",
+                  "keyPara": "A",
+                  "keySentence": "The original 1992 call was supported by more than 1,700 scientists, while 25 years later over 15,000 scientists added their signatures to the recent declaration (Ripple et al.",
+                  "explain": "本题为机器生成：题干是原文定位句的同义复现，内容一致。做题时先抓题干关键词回原文，再核对限定词与比较方向。",
+                  "generated": true
+                },
+                {
+                  "no": 2,
+                  "stem": "Since 1992, the importance of taking action against IAS globally has been widely recognized (Millennium Ecosystem Assessment, 2005 ).",
+                  "answer": "TRUE",
+                  "keyPara": "A",
+                  "keySentence": "Since 1992, the importance of taking action against IAS globally has been widely recognized (Millennium Ecosystem Assessment, 2005 ).",
+                  "explain": "本题为机器生成：题干是原文定位句的同义复现，内容一致。做题时先抓题干关键词回原文，再核对限定词与比较方向。",
+                  "generated": true
+                },
+                {
+                  "no": 3,
+                  "stem": "As the next step, the IPBES has initiated a global assessment on IAS that will not also address management and policy needs and is expected to deliver results by 2023.",
+                  "answer": "FALSE",
+                  "keyPara": "B",
+                  "keySentence": "As the next step, the IPBES has initiated a global assessment on IAS that will also address management and policy needs and is expected to deliver results by 2023.",
+                  "explain": "本题为机器生成：原文为「As the next step, the IPBES has initiated a global assessment on IAS that will also address management and policy needs and is expected to deliver results by 2023.」，题干通过改写使陈述与原文矛盾。做题时盯紧比较方向、肯定/否定和程度词。",
+                  "generated": true,
+                  "trap": "情态动词被否定（will → not），与原文矛盾"
+                },
+                {
+                  "no": 4,
+                  "stem": "Another definition, supported by the International Union for Conservation of Nature (IUCN), the Convention on Biological Diversity, and the World Trade Organization, classifies as ‘invasive’ only those alien species that have a harmful effect on the economy, environment, or health (IUCN, 2000 ).",
+                  "answer": "TRUE",
+                  "keyPara": "B",
+                  "keySentence": "Another definition, supported by the International Union for Conservation of Nature (IUCN), the Convention on Biological Diversity, and the World Trade Organization, classifies as ‘invasive’ only those alien species that have a harmful effect on the economy, environment, or health (IUCN, 2000 ).",
+                  "explain": "本题为机器生成：题干是原文定位句的同义复现，内容一致。做题时先抓题干关键词回原文，再核对限定词与比较方向。",
+                  "generated": true
+                },
+                {
+                  "no": 5,
+                  "stem": ", 2017 ), we provide a detailed update on the extent of invasions and their impacts worldwide, identify drivers that promote invasions, and explore how invasions interact with other biodiversity stressors and global changes.",
+                  "answer": "TRUE",
+                  "keyPara": "D",
+                  "keySentence": ", 2017 ), we provide a detailed update on the extent of invasions and their impacts worldwide, identify drivers that promote invasions, and explore how invasions interact with other biodiversity stressors and global changes.",
+                  "explain": "本题为机器生成：题干是原文定位句的同义复现，内容一致。做题时先抓题干关键词回原文，再核对限定词与比较方向。",
+                  "generated": true
+                },
+                {
+                  "no": 6,
+                  "stem": "Given the recent rise and intensity of research on IAS at a global scale (e.",
+                  "answer": "TRUE",
+                  "keyPara": "C",
+                  "keySentence": "Given the recent rise and intensity of research on IAS at a global scale (e.",
+                  "explain": "本题为机器生成：题干是原文定位句的同义复现，内容一致。做题时先抓题干关键词回原文，再核对限定词与比较方向。",
+                  "generated": true
+                }
+              ]
+            },
+            {
+              "id": "g-gapfill",
+              "type": "gapfill",
+              "generated": true,
+              "instruction": "Complete the sentences below. Choose NO MORE THAN TWO WORDS from the passage for each answer.",
+              "questions": [
+                {
+                  "no": 7,
+                  "stem": "The ____________ 1992 call was supported by more than 1,700 scientists, while 25 years later over 15,000 scientists added their signatures to the recent declaration (Ripple et al.",
+                  "answer": "original",
+                  "keyPara": "A",
+                  "keySentence": "The original 1992 call was supported by more than 1,700 scientists, while 25 years later over 15,000 scientists added their signatures to the recent declaration (Ripple et al.",
+                  "explain": "本题为机器生成：从原文定位句中挖掉关键词「original」。答案必须是原文原词，注意词性与单复数。",
+                  "generated": true,
+                  "answers": [
+                    "original"
+                  ]
+                },
+                {
+                  "no": 8,
+                  "stem": "____________ 1992, the importance of taking action against IAS globally has been widely recognized (Millennium Ecosystem Assessment, 2005 ).",
+                  "answer": "since",
+                  "keyPara": "A",
+                  "keySentence": "Since 1992, the importance of taking action against IAS globally has been widely recognized (Millennium Ecosystem Assessment, 2005 ).",
+                  "explain": "本题为机器生成：从原文定位句中挖掉关键词「since」。答案必须是原文原词，注意词性与单复数。",
+                  "generated": true,
+                  "answers": [
+                    "since"
+                  ]
+                },
+                {
+                  "no": 9,
+                  "stem": "As the next ____________, the IPBES has initiated a global assessment on IAS that will also address management and policy needs and is expected to deliver results by 2023.",
+                  "answer": "step",
+                  "keyPara": "B",
+                  "keySentence": "As the next step, the IPBES has initiated a global assessment on IAS that will also address management and policy needs and is expected to deliver results by 2023.",
+                  "explain": "本题为机器生成：从原文定位句中挖掉关键词「step」。答案必须是原文原词，注意词性与单复数。",
+                  "generated": true,
+                  "answers": [
+                    "step"
+                  ]
+                }
+              ]
+            },
+            {
+              "id": "g-headings",
+              "type": "headings",
+              "generated": true,
+              "pool": [
+                "i",
+                "ii",
+                "iii",
+                "iv",
+                "v",
+                "vi",
+                "vii"
+              ],
+              "headings": [
+                "i  The role of scientists",
+                "ii  global in the modern world",
+                "iii  How global works",
+                "iv  A growing problem: invasions",
+                "v  An unexpected solution",
+                "vi  The limits of measurement",
+                "vii  Lessons from history"
+              ],
+              "note": "本题组的标题由机器从段落关键词生成，其中若干为干扰项。",
+              "instruction": "The passage has 4 paragraphs. Choose the correct heading for each paragraph from the list below.",
+              "questions": [
+                {
+                  "no": 10,
+                  "stem": "Paragraph A",
+                  "answer": "i",
+                  "keyPara": "A",
+                  "keySentence": "Nearly three decades ago, a community of eminent scientists warned that humans were on a collision course with the natural world.",
+                  "explain": "本题为机器生成：段落核心词为「scientists」。做标题题务必看段落首句+尾句，警惕「只在段中一笔带过」的干扰项。",
+                  "generated": true,
+                  "note": "标题由机器按段落关键词生成，答案为该段最匹配的标题；做题时先扫每段主题句。"
+                },
+                {
+                  "no": 11,
+                  "stem": "Paragraph B",
+                  "answer": "ii",
+                  "keyPara": "B",
+                  "keySentence": "The recent global assessment report on biodiversity and ecosystem services by the Intergovernmental Science‐Policy Platform on Biodiversity and Ecosystem Services (IPBES) ranked IAS fifth among direct drivers of change in nature with the largest relative global impacts, after changes in land and sea use, direct exploitation of organisms, climate change, and pollution (Brondizio et al.",
+                  "explain": "本题为机器生成：段落核心词为「global」。做标题题务必看段落首句+尾句，警惕「只在段中一笔带过」的干扰项。",
+                  "generated": true,
+                  "note": "标题由机器按段落关键词生成，答案为该段最匹配的标题；做题时先扫每段主题句。"
+                },
+                {
+                  "no": 12,
+                  "stem": "Paragraph C",
+                  "answer": "iii",
+                  "keyPara": "C",
+                  "keySentence": "To support global initiatives addressing the loss of biodiversity and ecosystem services, this paper presents a comprehensive global overview of a major environmental change – invasion by alien species.",
+                  "explain": "本题为机器生成：段落核心词为「global works」。做标题题务必看段落首句+尾句，警惕「只在段中一笔带过」的干扰项。",
+                  "generated": true,
+                  "note": "标题由机器按段落关键词生成，答案为该段最匹配的标题；做题时先扫每段主题句。"
+                },
+                {
+                  "no": 13,
+                  "stem": "Paragraph D",
+                  "answer": "iv",
+                  "keyPara": "D",
+                  "keySentence": ", 2017 ), we provide a detailed update on the extent of invasions and their impacts worldwide, identify drivers that promote invasions, and explore how invasions interact with other biodiversity stressors and global changes.",
+                  "explain": "本题为机器生成：段落核心词为「invasions」。做标题题务必看段落首句+尾句，警惕「只在段中一笔带过」的干扰项。",
+                  "generated": true,
+                  "note": "标题由机器按段落关键词生成，答案为该段最匹配的标题；做题时先扫每段主题句。"
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "vocabulary": [
+        {
+          "word": "species",
+          "pos": "n.",
+          "meaning": "物种",
+          "sentence": "Comparing the two documents reveals an important difference in focus as regards biodiversity loss and species extinctions."
+        },
+        {
+          "word": "change",
+          "pos": "n.",
+          "meaning": "改变",
+          "sentence": "They cited concerns regarding ozone depletion, freshwater availability, marine life depletion, ocean dead zones, forest loss, biodiversity destruction, climate change, and continued human population growth (Union of Concerned Scientists, 1992 )."
+        },
+        {
+          "word": "policy",
+          "pos": "n.",
+          "meaning": "政策",
+          "sentence": "The recent global assessment report on biodiversity and ecosystem services by the Intergovernmental Science‐Policy Platform on Biodiversity and Ecosystem Services (IPBES) ranked IAS fifth among direct drivers of change in nature with the largest relative global impacts, after changes in land and sea use, direct exploitation of organisms, climate change, and pollution (Brondizio et al."
+        },
+        {
+          "word": "nature",
+          "pos": "n.",
+          "meaning": "自然",
+          "sentence": "The recent global assessment report on biodiversity and ecosystem services by the Intergovernmental Science‐Policy Platform on Biodiversity and Ecosystem Services (IPBES) ranked IAS fifth among direct drivers of change in nature with the largest relative global impacts, after changes in land and sea use, direct exploitation of organisms, climate change, and pollution (Brondizio et al."
+        },
+        {
+          "word": "human",
+          "pos": "n.",
+          "meaning": "人类",
+          "sentence": "Nearly three decades ago, a community of eminent scientists warned that humans were on a collision course with the natural world."
+        },
+        {
+          "word": "assessment",
+          "pos": "n.",
+          "meaning": "评估",
+          "sentence": "Since 1992, the importance of taking action against IAS globally has been widely recognized (Millennium Ecosystem Assessment, 2005 )."
+        },
+        {
+          "word": "climate",
+          "pos": "n.",
+          "meaning": "气候",
+          "sentence": "They cited concerns regarding ozone depletion, freshwater availability, marine life depletion, ocean dead zones, forest loss, biodiversity destruction, climate change, and continued human population growth (Union of Concerned Scientists, 1992 )."
+        },
+        {
+          "word": "address",
+          "pos": "v.",
+          "meaning": "解决，致辞",
+          "sentence": "addressed options available to alter biodiversity decline, such as protecting and restoring ecosystems, halting defaunation, and constraining the spread of IAS."
+        },
+        {
+          "word": "growth",
+          "pos": "n.",
+          "meaning": "增长",
+          "sentence": "They cited concerns regarding ozone depletion, freshwater availability, marine life depletion, ocean dead zones, forest loss, biodiversity destruction, climate change, and continued human population growth (Union of Concerned Scientists, 1992 )."
+        },
+        {
+          "word": "recent",
+          "pos": "adj.",
+          "meaning": "最近的",
+          "sentence": "The original 1992 call was supported by more than 1,700 scientists, while 25 years later over 15,000 scientists added their signatures to the recent declaration (Ripple et al."
+        },
+        {
+          "word": "environmental",
+          "pos": "adj.",
+          "meaning": "环境的",
+          "sentence": "evaluated the human response based on their analysis of time‐series data and concluded that humanity had failed to make sufficient progress over that period in dealing with the environmental challenges."
+        },
+        {
+          "word": "population",
+          "pos": "n.",
+          "meaning": "种群，人口",
+          "sentence": "They cited concerns regarding ozone depletion, freshwater availability, marine life depletion, ocean dead zones, forest loss, biodiversity destruction, climate change, and continued human population growth (Union of Concerned Scientists, 1992 )."
+        }
+      ],
+      "contribution": {
+        "contributor": "l458022",
+        "license": "CC BY 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
+        "sourceUrl": "https://europepmc.org/article/PMC/PMC7687187",
+        "attribution": "Pyšek P, Hulme PE, Simberloff D, Bacher S, Blackburn TM, Carlton JT, Dawson W, Essl F, Foxcroft LC, Genovesi P, Jeschke JM, Kühn I, Liebhold AM, Mandrak NE, Meyerson LA, Pauchard A, Pergl J, Roy HE, Seebens H, van Kleunen M, Vilà M, Wingfield MJ, Richardson DM. — Europe PMC，CC BY 4.0",
+        "declaredAt": "2026-10-13T13:14:56.805Z",
+        "declaration": "copyright-ok;questions-original-or-tool-generated;no-privacy"
+      }
+    }
+  ]
+}

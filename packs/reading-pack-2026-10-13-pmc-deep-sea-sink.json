@@ -1,0 +1,330 @@
+{
+  "format": "ielts-reading-pack",
+  "version": 1,
+  "generator": "IELTS Reading Trainer",
+  "createdAt": "2026-10-13T13:15:07.135Z",
+  "exams": [
+    {
+      "id": "community-pmc-deep-sea-sink",
+      "title": "The deep sea is a major sink for microplastic debris",
+      "titleCn": "深海：微塑料的归宿",
+      "book": "公共题库",
+      "test": 1,
+      "passage": 1,
+      "difficulty": "难",
+      "series": "公共题库 · 自动出题",
+      "source": "贡献者 l458022 · CC BY 4.0 · Woodall LC, Sanchez-Vidal A, Canals M, Paterson GL, Coppock R, Sleight V, Calafat A, Rogers AD, Narayanaswamy BE, Thompson RC. — Europe PMC，CC BY 4.0",
+      "level": "自定义",
+      "minutes": 20,
+      "tags": [
+        "海洋",
+        "环境"
+      ],
+      "intro": "开放获取文章（CC BY 4.0）：Woodall LC, Sanchez-Vidal A, Canals M, Paterson GL, Coppock R, Sleight V, Calafat A, Rogers AD, Narayanaswamy BE, Thompson RC. — Europe PMC，CC BY 4.0　原文：https://europepmc.org/article/PMC/PMC4448771",
+      "sections": [
+        {
+          "id": "s1",
+          "title": "READING PASSAGE 1",
+          "paragraphs": [
+            {
+              "id": "A",
+              "text": "Plastics are extremely durable synthetic polymers, yet more than 30% are made into disposable items such as packaging, which are typically discarded within a year of manufacture [ 1 ]. The associated throw-away culture has led to an escalating plastic waste management problem, and widespread accumulation of plastic debris in the natural environment. Debris is now present on shorelines and at the sea surface from pole to pole [ 1, 2 ]. It has major environmental impacts and is recognized as one of the key challenges of our century [ 1 – 3 ]. However, despite extensive environmental monitoring, there is little evidence of the expected increasing abundance of plastic debris in natural habitats. Only two studies [ 4, 5 ] report an increase over time. Both these papers focused on microplastics, which have not typically been included in routine monitoring, and are likely to represent a largely undocumented accumulation of plastic debris. Yet, even for microplastic pollution, temporal trends are unresolved in the majority of datasets [ 6 ]. In addition, a recent study [ 7 ] suggested that surface water plastic accumulation was tens of thousands of tonnes less than expected, and acknowledged that resolving the fate of the missing plastic is a fundamental issue [ 8 ]."
+            },
+            {
+              "id": "B",
+              "text": "Plastics can be denser (e.g. acrylic) or lighter (e.g. polypropylene) than seawater. Those that are buoyant float when first entering the sea, so historically attention has focused on the accumulation on shorelines and at the sea surface [ 9 ]. However, because of fouling by organisms and adherence of particles, positively buoyant plastics can, over a timescale of weeks to months, become negatively buoyant and sink [ 10 ]. Some studies have shown the accumulation of large plastic items in the deep sea [ 11, 12 ], and one has reported the presence of microplastic fragments at low densities [ 13 ]. Here, we present results from a global analysis of deep-sea sediment collected by two independent research teams during seven research cruises between September 2001 and August 2012, in the Mediterranean Sea, SW Indian Ocean and NE Atlantic Ocean (spanning subtropical to subpolar waters). The purpose of this study was to quantify the abundance and extent of microplastic contamination at a range of depths and locations in the deep sea."
+            },
+            {
+              "id": "C",
+              "text": "Deep-sea sediment cores from environments such as submarine canyons, continental slopes, basins and seamounts were collected independently by the University of Barcelona and the Natural History Museum, London. In addition, coral specimens were sampled on seamounts ( figure 1 and table 1 ). Sampling depth ranged down to 3500 m, but most sites were at around 1000 m and were at least 9 km horizontal and 200 m vertical distance from each other. In total, 12 quantitative sediment cores and four qualitative coral samples were collected. Figure 1. Locations of sampling sites of bottom sediment and deep-water coral where content of microplastics was investigated. Sample depth ranged down to 3500 m, for details see table 1. Sediment was collected by the University of Barcelona (circles) and the Natural History Museum (filled squares), and deep-water corals were collected by the Natural History Museum (open squares). Bathymetry corresponds to ETOPO1 Global Relief Model."
+            },
+            {
+              "id": "D",
+              "text": "Details of sampling location and quantity of microplastics found in the North Atlantic Ocean, Mediterranean Sea and SW Indian Ocean. UB, University of Barcelona; NHM, Natural History Museum, London; P, microplastic fibres present. Sediment cores 1, 2 and 4–9 were collected by the University of Barcelona on board the research vessels Jan Mayen (Norway), Garcia del Cid (Spain), Sarmiento de Gamboa (Spain) Hespérides (Spain) and Aegaeo (Greece). Ten centimetre diameter cores were obtained from megacorers or boxcores that were subsequently subsampled. The top 1 cm of the sediment cores was sliced on board the ship and then frozen at −20 ° C. Upon arrival in the laboratory, the sediment was freeze-dried and stored at room temperature in sealed containers for a maximum of 12 years before sending to Plymouth University for extraction of microplastics. Sediment cores 3 and 10–12 and corals 13–16 were sampled by the Natural History Museum, London. Sampling was performed during research cruises JC66 and JC76T aboard the R.R.S. James Cook (UK). Samples were collected by remotely operated vehicle (ROV) Kiel6000 (Germany) or ISIS (UK), using push-cores or a megacorer for sediment samples or ROV manipulator arms for the corals. Cores were of 5.7, 7.4 or 10 cm internal diameter, respectively. Once recovered on board the ship, cores were immediately sliced at 2 cm and 5 cm using a metal plate. Sediment horizons were preserved in either DESS [ 14 ] or 4% formalin in sealed containers for a maximum of a year. All preservation and processing fluids were filtered through a 32 μm sieve prior to adding them to the sediment. Filtered (5 μm) fresh water and seawater were used to wash equipment, and water from both fresh and salt water supplies was sampled for 1 h daily through a 32 μm sieve and screened for the presence of microplastic fibres, but none was seen."
+            },
+            {
+              "id": "E",
+              "text": "All sample processing (extraction and picking) was conducted in a clean laboratory, where extreme care was taken to avoid any contamination. Checks for contamination during processing were made by exposing damp filter paper to the air in the laboratory, whenever samples were open to the laboratory environment. As an additional precaution, those handling the samples wore only natural fibre clothing, and were protected with 100% cotton laboratory coats and headwear, and latex gloves, for all laboratory processing and during the JC76T research cruise. Microplastics were extracted from the sediment using two methodologies. For samples 1, 2 and 4–9, extraction was done by Plymouth University (PU) using a concentrated NaCl solution and filtering with three sequential extractions [ 5 ]. The PU method employs supernatant filtering through a Whatman GF/A filter. For samples 3 and 10–12, particle extraction was conducted at the Natural History Museum (NHM) using an adapted Ludox-TM 40 extraction method [ 15 ] employing eight centrifuge cycles and a 32 μm sieve to separate the microplastics from the sand grains. The substances chosen to isolate the fibres (NaCl or Ludox-TM 40) had similar specific gravities, namely 1.2 and 1.16, for PU and NHM, respectively. We are therefore confident that the same fractions and types of microplastics were isolated."
+            }
+          ],
+          "questionGroups": [
+            {
+              "id": "g-tfng",
+              "type": "tfng",
+              "options": [
+                "TRUE",
+                "FALSE",
+                "NOT GIVEN"
+              ],
+              "instruction": "Do the following statements agree with the information in the passage? Write TRUE if the statement agrees with the information, FALSE if the statement contradicts the information, NOT GIVEN if there is no information on this.",
+              "generated": true,
+              "questions": [
+                {
+                  "no": 1,
+                  "stem": "Plastics are extremely durable synthetic polymers, yet more than 30% are made into disposable items such as packaging, which are typically discarded within a year of manufacture [ 1 ].",
+                  "answer": "TRUE",
+                  "keyPara": "A",
+                  "keySentence": "Plastics are extremely durable synthetic polymers, yet more than 30% are made into disposable items such as packaging, which are typically discarded within a year of manufacture [ 1 ].",
+                  "explain": "本题为机器生成：题干是原文定位句的同义复现，内容一致。做题时先抓题干关键词回原文，再核对限定词与比较方向。",
+                  "generated": true
+                },
+                {
+                  "no": 2,
+                  "stem": "However, since of fouling by organisms and adherence of particles, positively buoyant plastics can, over a timescale of weeks to months, become negatively buoyant and sink [ 10 ].",
+                  "answer": "TRUE",
+                  "keyPara": "B",
+                  "keySentence": "However, because of fouling by organisms and adherence of particles, positively buoyant plastics can, over a timescale of weeks to months, become negatively buoyant and sink [ 10 ].",
+                  "explain": "本题为机器生成：题干是原文定位句的同义复现（because ↔ since）。做题时先抓题干关键词回原文，再核对限定词与比较方向。",
+                  "generated": true
+                },
+                {
+                  "no": 3,
+                  "stem": "Debris is not now present on shorelines and at the sea surface from pole to pole [ 1, 2 ].",
+                  "answer": "FALSE",
+                  "keyPara": "A",
+                  "keySentence": "Debris is now present on shorelines and at the sea surface from pole to pole [ 1, 2 ].",
+                  "explain": "本题为机器生成：原文为「Debris is now present on shorelines and at the sea surface from pole to pole [ 1, 2 ].」，题干通过改写使陈述与原文矛盾。做题时盯紧比较方向、肯定/否定和程度词。",
+                  "generated": true,
+                  "trap": "系动词被否定（is not），与原文矛盾"
+                },
+                {
+                  "no": 4,
+                  "stem": "Those that are not buoyant float when first entering the sea, so historically attention has focused on the accumulation on shorelines and at the sea surface [ 9 ].",
+                  "answer": "FALSE",
+                  "keyPara": "B",
+                  "keySentence": "Those that are buoyant float when first entering the sea, so historically attention has focused on the accumulation on shorelines and at the sea surface [ 9 ].",
+                  "explain": "本题为机器生成：原文为「Those that are buoyant float when first entering the sea, so historically attention has focused on the accumulation on shorelines and at the sea surface [ 9 ].」，题干通过改写使陈述与原文矛盾。做题时盯紧比较方向、肯定/否定和程度词。",
+                  "generated": true,
+                  "trap": "系动词被否定（are not），与原文矛盾"
+                },
+                {
+                  "no": 5,
+                  "stem": "Sampling depth ranged down to 3500 m, however most sites were at around 1000 m and were at least 9 km horizontal and 200 m vertical distance from each other.",
+                  "answer": "TRUE",
+                  "keyPara": "C",
+                  "keySentence": "Sampling depth ranged down to 3500 m, but most sites were at around 1000 m and were at least 9 km horizontal and 200 m vertical distance from each other.",
+                  "explain": "本题为机器生成：题干是原文定位句的同义复现（but ↔ however）。做题时先抓题干关键词回原文，再核对限定词与比较方向。",
+                  "generated": true
+                },
+                {
+                  "no": 6,
+                  "stem": "Sediment cores 1, 2 and 4–9 were not collected by the University of Barcelona on board the research vessels Jan Mayen (Norway), Garcia del Cid (Spain), Sarmiento de Gamboa (Spain) Hespérides (Spain) and Aegaeo (Greece).",
+                  "answer": "FALSE",
+                  "keyPara": "D",
+                  "keySentence": "Sediment cores 1, 2 and 4–9 were collected by the University of Barcelona on board the research vessels Jan Mayen (Norway), Garcia del Cid (Spain), Sarmiento de Gamboa (Spain) Hespérides (Spain) and Aegaeo (Greece).",
+                  "explain": "本题为机器生成：原文为「Sediment cores 1, 2 and 4–9 were collected by the University of Barcelona on board the research vessels Jan Mayen (Norway), Garcia del Cid (Spain), Sarmiento de Gamboa (Spain) Hespérides (Spain) and Aegaeo (Greece).」，题干通过改写使陈述与原文矛盾。做题时盯紧比较方向、肯定/否定和程度词。",
+                  "generated": true,
+                  "trap": "系动词被否定（were not），与原文矛盾"
+                }
+              ]
+            },
+            {
+              "id": "g-gapfill",
+              "type": "gapfill",
+              "generated": true,
+              "instruction": "Complete the sentences below. Choose NO MORE THAN TWO WORDS from the passage for each answer.",
+              "questions": [
+                {
+                  "no": 7,
+                  "stem": "Plastics are ____________ durable synthetic polymers, yet more than 30% are made into disposable items such as packaging, which are typically discarded within a year of manufacture [ 1 ].",
+                  "answer": "extremely",
+                  "keyPara": "A",
+                  "keySentence": "Plastics are extremely durable synthetic polymers, yet more than 30% are made into disposable items such as packaging, which are typically discarded within a year of manufacture [ 1 ].",
+                  "explain": "本题为机器生成：从原文定位句中挖掉关键词「extremely」。答案必须是原文原词，注意词性与单复数。",
+                  "generated": true,
+                  "answers": [
+                    "extremely"
+                  ]
+                },
+                {
+                  "no": 8,
+                  "stem": "However, because of ____________ by organisms and adherence of particles, positively buoyant plastics can, over a timescale of weeks to months, become negatively buoyant and sink [ 10 ].",
+                  "answer": "fouling",
+                  "keyPara": "B",
+                  "keySentence": "However, because of fouling by organisms and adherence of particles, positively buoyant plastics can, over a timescale of weeks to months, become negatively buoyant and sink [ 10 ].",
+                  "explain": "本题为机器生成：从原文定位句中挖掉关键词「fouling」。答案必须是原文原词，注意词性与单复数。",
+                  "generated": true,
+                  "answers": [
+                    "fouling"
+                  ]
+                },
+                {
+                  "no": 9,
+                  "stem": "Debris is now present on ____________ and at the sea surface from pole to pole [ 1, 2 ].",
+                  "answer": "shorelines",
+                  "keyPara": "A",
+                  "keySentence": "Debris is now present on shorelines and at the sea surface from pole to pole [ 1, 2 ].",
+                  "explain": "本题为机器生成：从原文定位句中挖掉关键词「shorelines」。答案必须是原文原词，注意词性与单复数。",
+                  "generated": true,
+                  "answers": [
+                    "shorelines"
+                  ]
+                }
+              ]
+            },
+            {
+              "id": "g-headings",
+              "type": "headings",
+              "generated": true,
+              "pool": [
+                "i",
+                "ii",
+                "iii",
+                "iv",
+                "v",
+                "vi",
+                "vii"
+              ],
+              "headings": [
+                "i  The role of plastic",
+                "ii  plastics in the modern world",
+                "iii  How collected works",
+                "iv  A growing problem: sediment",
+                "v  The importance of laboratory",
+                "vi  An unexpected solution",
+                "vii  The limits of measurement"
+              ],
+              "note": "本题组的标题由机器从段落关键词生成，其中若干为干扰项。",
+              "instruction": "The passage has 5 paragraphs. Choose the correct heading for each paragraph from the list below.",
+              "questions": [
+                {
+                  "no": 10,
+                  "stem": "Paragraph A",
+                  "answer": "i",
+                  "keyPara": "A",
+                  "keySentence": "Plastics are extremely durable synthetic polymers, yet more than 30% are made into disposable items such as packaging, which are typically discarded within a year of manufacture [ 1 ].",
+                  "explain": "本题为机器生成：段落核心词为「plastic」。做标题题务必看段落首句+尾句，警惕「只在段中一笔带过」的干扰项。",
+                  "generated": true,
+                  "note": "标题由机器按段落关键词生成，答案为该段最匹配的标题；做题时先扫每段主题句。"
+                },
+                {
+                  "no": 11,
+                  "stem": "Paragraph B",
+                  "answer": "ii",
+                  "keyPara": "B",
+                  "keySentence": "Plastics can be denser (e.",
+                  "explain": "本题为机器生成：段落核心词为「plastics」。做标题题务必看段落首句+尾句，警惕「只在段中一笔带过」的干扰项。",
+                  "generated": true,
+                  "note": "标题由机器按段落关键词生成，答案为该段最匹配的标题；做题时先扫每段主题句。"
+                },
+                {
+                  "no": 12,
+                  "stem": "Paragraph C",
+                  "answer": "iii",
+                  "keyPara": "C",
+                  "keySentence": "Deep-sea sediment cores from environments such as submarine canyons, continental slopes, basins and seamounts were collected independently by the University of Barcelona and the Natural History Museum, London.",
+                  "explain": "本题为机器生成：段落核心词为「collected works」。做标题题务必看段落首句+尾句，警惕「只在段中一笔带过」的干扰项。",
+                  "generated": true,
+                  "note": "标题由机器按段落关键词生成，答案为该段最匹配的标题；做题时先扫每段主题句。"
+                },
+                {
+                  "no": 13,
+                  "stem": "Paragraph D",
+                  "answer": "iv",
+                  "keyPara": "D",
+                  "keySentence": "Details of sampling location and quantity of microplastics found in the North Atlantic Ocean, Mediterranean Sea and SW Indian Ocean.",
+                  "explain": "本题为机器生成：段落核心词为「sediment」。做标题题务必看段落首句+尾句，警惕「只在段中一笔带过」的干扰项。",
+                  "generated": true,
+                  "note": "标题由机器按段落关键词生成，答案为该段最匹配的标题；做题时先扫每段主题句。"
+                },
+                {
+                  "no": 14,
+                  "stem": "Paragraph E",
+                  "answer": "v",
+                  "keyPara": "E",
+                  "keySentence": "All sample processing (extraction and picking) was conducted in a clean laboratory, where extreme care was taken to avoid any contamination.",
+                  "explain": "本题为机器生成：段落核心词为「laboratory」。做标题题务必看段落首句+尾句，警惕「只在段中一笔带过」的干扰项。",
+                  "generated": true,
+                  "note": "标题由机器按段落关键词生成，答案为该段最匹配的标题；做题时先扫每段主题句。"
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "vocabulary": [
+        {
+          "word": "natural",
+          "pos": "adj.",
+          "meaning": "自然的",
+          "sentence": "The associated throw-away culture has led to an escalating plastic waste management problem, and widespread accumulation of plastic debris in the natural environment."
+        },
+        {
+          "word": "plastic",
+          "pos": "n.",
+          "meaning": "塑料",
+          "sentence": "Plastics are extremely durable synthetic polymers, yet more than 30% are made into disposable items such as packaging, which are typically discarded within a year of manufacture [ 1 ]."
+        },
+        {
+          "word": "university",
+          "pos": "n.",
+          "meaning": "大学",
+          "sentence": "Deep-sea sediment cores from environments such as submarine canyons, continental slopes, basins and seamounts were collected independently by the University of Barcelona and the Natural History Museum, London."
+        },
+        {
+          "word": "laboratory",
+          "pos": "n.",
+          "meaning": "实验室",
+          "sentence": "Upon arrival in the laboratory, the sediment was freeze-dried and stored at room temperature in sealed containers for a maximum of 12 years before sending to Plymouth University for extraction of microplastics."
+        },
+        {
+          "word": "history",
+          "pos": "n.",
+          "meaning": "历史",
+          "sentence": "Deep-sea sediment cores from environments such as submarine canyons, continental slopes, basins and seamounts were collected independently by the University of Barcelona and the Natural History Museum, London."
+        },
+        {
+          "word": "museum",
+          "pos": "n.",
+          "meaning": "博物馆",
+          "sentence": "Deep-sea sediment cores from environments such as submarine canyons, continental slopes, basins and seamounts were collected independently by the University of Barcelona and the Natural History Museum, London."
+        },
+        {
+          "word": "accumulation",
+          "pos": "n.",
+          "meaning": "积累",
+          "sentence": "The associated throw-away culture has led to an escalating plastic waste management problem, and widespread accumulation of plastic debris in the natural environment."
+        },
+        {
+          "word": "water",
+          "pos": "n.",
+          "meaning": "水",
+          "sentence": "In addition, a recent study [ 7 ] suggested that surface water plastic accumulation was tens of thousands of tonnes less than expected, and acknowledged that resolving the fate of the missing plastic is a fundamental issue [ 8 ]."
+        },
+        {
+          "word": "ocean",
+          "pos": "n.",
+          "meaning": "海洋",
+          "sentence": "Here, we present results from a global analysis of deep-sea sediment collected by two independent research teams during seven research cruises between September 2001 and August 2012, in the Mediterranean Sea, SW Indian Ocean and NE Atlantic Ocean (spanning subtropical to subpolar waters)."
+        },
+        {
+          "word": "present",
+          "pos": "n.",
+          "meaning": "现在",
+          "sentence": "Debris is now present on shorelines and at the sea surface from pole to pole [ 1, 2 ]."
+        },
+        {
+          "word": "environmental",
+          "pos": "adj.",
+          "meaning": "环境的",
+          "sentence": "It has major environmental impacts and is recognized as one of the key challenges of our century [ 1 – 3 ]."
+        },
+        {
+          "word": "environment",
+          "pos": "n.",
+          "meaning": "环境",
+          "sentence": "The associated throw-away culture has led to an escalating plastic waste management problem, and widespread accumulation of plastic debris in the natural environment."
+        }
+      ],
+      "contribution": {
+        "contributor": "l458022",
+        "license": "CC BY 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
+        "sourceUrl": "https://europepmc.org/article/PMC/PMC4448771",
+        "attribution": "Woodall LC, Sanchez-Vidal A, Canals M, Paterson GL, Coppock R, Sleight V, Calafat A, Rogers AD, Narayanaswamy BE, Thompson RC. — Europe PMC，CC BY 4.0",
+        "declaredAt": "2026-10-13T13:15:07.134Z",
+        "declaration": "copyright-ok;questions-original-or-tool-generated;no-privacy"
+      }
+    }
+  ]
+}

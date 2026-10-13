@@ -1,0 +1,316 @@
+{
+  "format": "ielts-reading-pack",
+  "version": 1,
+  "generator": "IELTS Reading Trainer",
+  "createdAt": "2026-10-13T13:14:50.329Z",
+  "exams": [
+    {
+      "id": "community-pmc-deep-sea-plastic",
+      "title": "Plastic microfibre ingestion by deep-sea organisms",
+      "titleCn": "深海塑料污染",
+      "book": "公共题库",
+      "test": 1,
+      "passage": 1,
+      "difficulty": "难",
+      "series": "公共题库 · 自动出题",
+      "source": "贡献者 l458022 · CC BY 4.0 · Taylor ML, Gwinnett C, Robinson LF, Woodall LC. — Europe PMC，CC BY 4.0",
+      "level": "自定义",
+      "minutes": 20,
+      "tags": [
+        "海洋",
+        "生态"
+      ],
+      "intro": "开放获取文章（CC BY 4.0）：Taylor ML, Gwinnett C, Robinson LF, Woodall LC. — Europe PMC，CC BY 4.0　原文：https://europepmc.org/article/PMC/PMC5043174",
+      "sections": [
+        {
+          "id": "s1",
+          "title": "READING PASSAGE 1",
+          "paragraphs": [
+            {
+              "id": "A",
+              "text": "There appears to be no environment on Earth that has escaped plastic pollution. Indeed, despite the distance from land, plastics are ubiquitous in remote marine environments, including polar regions 1 2. These plastics are known to cause impacts to terrestrial and marine ecosystems both at the macro- and micro-scale. For example, ingestion of plastic debris or entanglement has been recorded in 44–50% of all seabirds 3, sea snakes, sea turtles (all species), penguins, seals, sea lions, manatees, sea otters, fish, crustaceans and half of all marine mammals 3 4 5. Ingestion can block the digestive tract, damage stomach lining and lessen feeding, all leading to starvation (reviewed in ref. 4 ). Of growing concern are microplastics (typically defined as <5 mm 6 ). The large surface area-to-volume ratio of microplastics, compared to macroplastics, means they concentrate persistent organic pollutants which can be up to six orders of magnitude more contaminated than ambient seawater 7 and absorb metals 8 9. The subsequent transfer of such pollutants and additives from microplastics to marine organisms has been confirmed under experimental conditions 6 10 11. However, the ecological effects on marine organisms in the wild is understudied and not yet conclusive 12."
+            },
+            {
+              "id": "B",
+              "text": "It has already been shown that microplastics are ingested by large pelagic marine organisms such as filter-feeding salps 13, tuna 14, and whales 15 16.  However, only a few observations have demonstrated that microplastics are being ingested in natural settings by benthic organisms, mostly in shallow coastal waters.  These observations include organisms with different feeding strategies.  Organisms such as the detritivorous and predatory lobster 17 18 and shrimp 19 presumably consume microplastic passively with prey (or in the prey itself) and/or sediment.  Deposit-feeding lugworms 20 likely consume microplastic that are within sediment, and suspension/ filter-feeding mussels likely take in plastics that are suspended in sea water 20.  In a natural setting microplastics have been found in the stomach 21 22, oral 23 and ventilation areas 22 24 of shallow-water organisms; and on the outer surface of deep water octocoral 25. Laboratory studies suggest that benthic and invertebrate taxa, including corals 23, copepods 21, zooplankton 26, crabs 24 27, molluscs 6, sea cucumbers 28, scallops 29, barnacles 30, oyster 31, lugworms and polychaetes 10 32 will ingest microplastics if they are introduced under experimental conditions.  The effects across this range of organisms included reductions in fecundity 21, lower feeding rates 26, enhanced susceptibility to oxidative stress, reduced ability to remove pathogenic bacteria 10, reduced feeding activities 27 33, reduced energy reserves and balance 27 32, and decreased lysome stability 22.  The results of these studies are not yet conclusive, but the sum of existing laboratory experiments, most of which use microbeads and not microfibres, highlight the detrimental effects of microplastics in a broad range of benthic taxa and the importance of considering organism biology e. g.  low metabolism 27, feeding method 33 and behaviour."
+            },
+            {
+              "id": "C",
+              "text": "The ultimate fate of microplastics that reach the deep-sea realm is also not as well studied as in shallow waters. Recently, microplastics have been identified in the deep and abyssal oceans 25 34 35, the largest marine habitat on the planet. These studies suggested that deep-sea microplastics are already being found in similar concentrations as intertidal and shallow sub-tidal sediments 25. The rate of accumulation of microplastics in the deep sea has not been researched, neither has impacts on deep-sea organisms. However, given the ever-increasing plastic load reaching our oceans 36, and that a large portion of plastics will likely eventually end up on or buried in the seafloor, the potential is there for an unseen pervasive impact on deep-marine ecosystems. As yet, there have been no studies to establish whether organisms of the deep sea will ingest microplastics or what the impacts may be. Indeed, impact studies will be even more challenging in the deep sea than for shallow marine organisms given the logistical constraints of studying life hundreds to thousands of metres beneath the waves. Here we use specimens collected from two deep submergence research cruises to two different ocean basins to show for the first time that deep-sea organisms from at least three different phyla are ingesting and /or internalising plastic microfibres."
+            },
+            {
+              "id": "D",
+              "text": "All microplastics found in this study were microfibres (e.g. Fig. 1c,d ), not microbeads. All fibres were of different classes and were constructed from 1 of 5 different materials (modified acrylic, polypropylene, viscose, polyester, and acrylic). This variability between samples provides evidence that there was limited or no contamination as there was no consistency in microfibres across expedition or organism. In a wider study of microfibres from the deep-sea 37 just 2 of the 52 classes of plastics found in samples were found in contamination monitoring efforts; this minimal overlap makes it unlikely, given the same protocols were followed, that the microfibres from within organisms presented here are the results of contamination. In addition, following Woodall et al. 37 clean room protocols, monitoring of potential laboratory contamination using dampened filter papers indicated that there were no synthetic fibres contaminating the laboratory used for dissection. Plastic microfibres were found on and inside six of the nine organisms examined ( Table 1 ), including examples of taxa from the phyla Cnidaria, Echinodermata and Arthropoda. Specifically microfibres were found inside either oral areas (seapen tentacles and upper mesentry, JC094-3717, Figs 1a and 2a–c ), feeding apparatus (hermit crab maxilliped, see Fig. 2f,g; JC066-702), symbiotic zoanthid tentacles (zoanthid on hermit crab, JC066-702, Figs 1b and 2g ), gill (squat lobster, JC094-771) or stomach areas (sea cucumber, JC094-212, Fig. 2h ). Similar to 24, one of the Crustacea studied (squat lobster, JC094-771) had microfibres in the gut and in the ventilation/gill areas. Microfibres were not found inside zoanthids that were covering a bamboo coral skeleton ( Fig. 2d,e; JC094-767) but were found externally. No microfibres were found in or associated with the anemone, armoured sea cucumber or other octocoral investigated."
+            }
+          ],
+          "questionGroups": [
+            {
+              "id": "g-tfng",
+              "type": "tfng",
+              "options": [
+                "TRUE",
+                "FALSE",
+                "NOT GIVEN"
+              ],
+              "instruction": "Do the following statements agree with the information in the passage? Write TRUE if the statement agrees with the information, FALSE if the statement contradicts the information, NOT GIVEN if there is no information on this.",
+              "generated": true,
+              "questions": [
+                {
+                  "no": 1,
+                  "stem": "Indeed, despite the distance from land, plastics are ubiquitous in remote marine environments, including polar regions 1 2.",
+                  "answer": "TRUE",
+                  "keyPara": "A",
+                  "keySentence": "Indeed, despite the distance from land, plastics are ubiquitous in remote marine environments, including polar regions 1 2.",
+                  "explain": "本题为机器生成：题干是原文定位句的同义复现，内容一致。做题时先抓题干关键词回原文，再核对限定词与比较方向。",
+                  "generated": true
+                },
+                {
+                  "no": 2,
+                  "stem": "The large surface area-to-volume ratio of microplastics, compared to macroplastics, means they concentrate persistent organic pollutants which can be up to six orders of magnitude less contaminated than ambient seawater 7 and absorb metals 8 9.",
+                  "answer": "FALSE",
+                  "keyPara": "A",
+                  "keySentence": "The large surface area-to-volume ratio of microplastics, compared to macroplastics, means they concentrate persistent organic pollutants which can be up to six orders of magnitude more contaminated than ambient seawater 7 and absorb metals 8 9.",
+                  "explain": "本题为机器生成：原文为「The large surface area-to-volume ratio of microplastics, compared to macroplastics, means they concentrate persistent organic pollutants which can be up to six orders of magnitude more contaminated than ambient seawater 7 and absorb metals 8 9.」，题干通过改写使陈述与原文矛盾。做题时盯紧比较方向、肯定/否定和程度词。",
+                  "generated": true,
+                  "trap": "比较级反向（more → less），原文方向被对调"
+                },
+                {
+                  "no": 3,
+                  "stem": "Deposit-feeding lugworms 20 likely consume microplastic that are within sediment, and suspension/ filter-feeding mussels likely take in plastics that are suspended in sea air 20.",
+                  "answer": "NOT GIVEN",
+                  "keyPara": "B",
+                  "keySentence": "Deposit-feeding lugworms 20 likely consume microplastic that are within sediment, and suspension/ filter-feeding mussels likely take in plastics that are suspended in sea water 20.",
+                  "explain": "本题为机器生成：原文说的是「Deposit-feeding lugworms 20 likely consume microplastic that are within sediment, and suspension/ filter-feeding mussels likely take in plastics that are suspended in sea water 20.」，题干把实体偷换成了别的东西，原文从未提及该组合——这是 NG 题的典型构造。",
+                  "generated": true,
+                  "trap": "实体偷换（water → air）：原文说的是「water」，题干偷换成「air」，属文中未提及"
+                },
+                {
+                  "no": 4,
+                  "stem": "Recently, microplastics have been identified in the deep and abyssal oceans 25 34 35, the largest marine habitat on the planet.",
+                  "answer": "TRUE",
+                  "keyPara": "C",
+                  "keySentence": "Recently, microplastics have been identified in the deep and abyssal oceans 25 34 35, the largest marine habitat on the planet.",
+                  "explain": "本题为机器生成：题干是原文定位句的同义复现，内容一致。做题时先抓题干关键词回原文，再核对限定词与比较方向。",
+                  "generated": true
+                },
+                {
+                  "no": 5,
+                  "stem": "These studies suggested that deep-sea microplastics are not already being found in similar concentrations as intertidal and shallow sub-tidal sediments 25.",
+                  "answer": "FALSE",
+                  "keyPara": "C",
+                  "keySentence": "These studies suggested that deep-sea microplastics are already being found in similar concentrations as intertidal and shallow sub-tidal sediments 25.",
+                  "explain": "本题为机器生成：原文为「These studies suggested that deep-sea microplastics are already being found in similar concentrations as intertidal and shallow sub-tidal sediments 25.」，题干通过改写使陈述与原文矛盾。做题时盯紧比较方向、肯定/否定和程度词。",
+                  "generated": true,
+                  "trap": "系动词被否定（are not），与原文矛盾"
+                },
+                {
+                  "no": 6,
+                  "stem": "Plastic microfibres were found on and inside six of the nine organisms examined ( Table 1 ), including examples of taxa from the phyla Cnidaria, Echinodermata and Arthropoda.",
+                  "answer": "TRUE",
+                  "keyPara": "D",
+                  "keySentence": "Plastic microfibres were found on and inside six of the nine organisms examined ( Table 1 ), including examples of taxa from the phyla Cnidaria, Echinodermata and Arthropoda.",
+                  "explain": "本题为机器生成：题干是原文定位句的同义复现，内容一致。做题时先抓题干关键词回原文，再核对限定词与比较方向。",
+                  "generated": true
+                }
+              ]
+            },
+            {
+              "id": "g-gapfill",
+              "type": "gapfill",
+              "generated": true,
+              "instruction": "Complete the sentences below. Choose NO MORE THAN TWO WORDS from the passage for each answer.",
+              "questions": [
+                {
+                  "no": 7,
+                  "stem": "Indeed, ____________ the distance from land, plastics are ubiquitous in remote marine environments, including polar regions 1 2.",
+                  "answer": "despite",
+                  "keyPara": "A",
+                  "keySentence": "Indeed, despite the distance from land, plastics are ubiquitous in remote marine environments, including polar regions 1 2.",
+                  "explain": "本题为机器生成：从原文定位句中挖掉关键词「despite」。答案必须是原文原词，注意词性与单复数。",
+                  "generated": true,
+                  "answers": [
+                    "despite"
+                  ]
+                },
+                {
+                  "no": 8,
+                  "stem": "The large surface ____________ ratio of microplastics, compared to macroplastics, means they concentrate persistent organic pollutants which can be up to six orders of magnitude more contaminated than ambient seawater 7 and absorb metals 8 9.",
+                  "answer": "area-to-volume",
+                  "keyPara": "A",
+                  "keySentence": "The large surface area-to-volume ratio of microplastics, compared to macroplastics, means they concentrate persistent organic pollutants which can be up to six orders of magnitude more contaminated than ambient seawater 7 and absorb metals 8 9.",
+                  "explain": "本题为机器生成：从原文定位句中挖掉关键词「area-to-volume」。答案必须是原文原词，注意词性与单复数。",
+                  "generated": true,
+                  "answers": [
+                    "area-to-volume"
+                  ]
+                },
+                {
+                  "no": 9,
+                  "stem": "____________ lugworms 20 likely consume microplastic that are within sediment, and suspension/ filter-feeding mussels likely take in plastics that are suspended in sea water 20.",
+                  "answer": "deposit-feeding",
+                  "keyPara": "B",
+                  "keySentence": "Deposit-feeding lugworms 20 likely consume microplastic that are within sediment, and suspension/ filter-feeding mussels likely take in plastics that are suspended in sea water 20.",
+                  "explain": "本题为机器生成：从原文定位句中挖掉关键词「deposit-feeding」。答案必须是原文原词，注意词性与单复数。",
+                  "generated": true,
+                  "answers": [
+                    "deposit-feeding"
+                  ]
+                }
+              ]
+            },
+            {
+              "id": "g-headings",
+              "type": "headings",
+              "generated": true,
+              "pool": [
+                "i",
+                "ii",
+                "iii",
+                "iv",
+                "v",
+                "vi",
+                "vii"
+              ],
+              "headings": [
+                "i  The role of plastic",
+                "ii  organisms in the modern world",
+                "iii  How microplastics works",
+                "iv  A growing problem: microfibres",
+                "v  An unexpected solution",
+                "vi  The limits of measurement",
+                "vii  Lessons from history"
+              ],
+              "note": "本题组的标题由机器从段落关键词生成，其中若干为干扰项。",
+              "instruction": "The passage has 4 paragraphs. Choose the correct heading for each paragraph from the list below.",
+              "questions": [
+                {
+                  "no": 10,
+                  "stem": "Paragraph A",
+                  "answer": "i",
+                  "keyPara": "A",
+                  "keySentence": "There appears to be no environment on Earth that has escaped plastic pollution.",
+                  "explain": "本题为机器生成：段落核心词为「plastic」。做标题题务必看段落首句+尾句，警惕「只在段中一笔带过」的干扰项。",
+                  "generated": true,
+                  "note": "标题由机器按段落关键词生成，答案为该段最匹配的标题；做题时先扫每段主题句。"
+                },
+                {
+                  "no": 11,
+                  "stem": "Paragraph B",
+                  "answer": "ii",
+                  "keyPara": "B",
+                  "keySentence": "It has already been shown that microplastics are ingested by large pelagic marine organisms such as filter-feeding salps 13, tuna 14, and whales 15 16.",
+                  "explain": "本题为机器生成：段落核心词为「organisms」。做标题题务必看段落首句+尾句，警惕「只在段中一笔带过」的干扰项。",
+                  "generated": true,
+                  "note": "标题由机器按段落关键词生成，答案为该段最匹配的标题；做题时先扫每段主题句。"
+                },
+                {
+                  "no": 12,
+                  "stem": "Paragraph C",
+                  "answer": "iii",
+                  "keyPara": "C",
+                  "keySentence": "The ultimate fate of microplastics that reach the deep-sea realm is also not as well studied as in shallow waters.",
+                  "explain": "本题为机器生成：段落核心词为「microplastics works」。做标题题务必看段落首句+尾句，警惕「只在段中一笔带过」的干扰项。",
+                  "generated": true,
+                  "note": "标题由机器按段落关键词生成，答案为该段最匹配的标题；做题时先扫每段主题句。"
+                },
+                {
+                  "no": 13,
+                  "stem": "Paragraph D",
+                  "answer": "iv",
+                  "keyPara": "D",
+                  "keySentence": "All microplastics found in this study were microfibres (e.",
+                  "explain": "本题为机器生成：段落核心词为「microfibres」。做标题题务必看段落首句+尾句，警惕「只在段中一笔带过」的干扰项。",
+                  "generated": true,
+                  "note": "标题由机器按段落关键词生成，答案为该段最匹配的标题；做题时先扫每段主题句。"
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "vocabulary": [
+        {
+          "word": "found",
+          "pos": "v.",
+          "meaning": "发现（find 的过去式）；创立",
+          "sentence": "In a natural setting microplastics have been found in the stomach 21 22, oral 23 and ventilation areas 22 24 of shallow-water organisms; and on the outer surface of deep water octocoral 25."
+        },
+        {
+          "word": "different",
+          "pos": "adj.",
+          "meaning": "不同的",
+          "sentence": "These observations include organisms with different feeding strategies."
+        },
+        {
+          "word": "plastic",
+          "pos": "n.",
+          "meaning": "塑料",
+          "sentence": "There appears to be no environment on Earth that has escaped plastic pollution."
+        },
+        {
+          "word": "laboratory",
+          "pos": "n.",
+          "meaning": "实验室",
+          "sentence": "Laboratory studies suggest that benthic and invertebrate taxa, including corals 23, copepods 21, zooplankton 26, crabs 24 27, molluscs 6, sea cucumbers 28, scallops 29, barnacles 30, oyster 31, lugworms and polychaetes 10 32 will ingest microplastics if they are introduced under experimental conditions."
+        },
+        {
+          "word": "shallow",
+          "pos": "adj.",
+          "meaning": "浅的",
+          "sentence": "However, only a few observations have demonstrated that microplastics are being ingested in natural settings by benthic organisms, mostly in shallow coastal waters."
+        },
+        {
+          "word": "likely",
+          "pos": "adj.",
+          "meaning": "可能的",
+          "sentence": "Deposit-feeding lugworms 20 likely consume microplastic that are within sediment, and suspension/ filter-feeding mussels likely take in plastics that are suspended in sea water 20."
+        },
+        {
+          "word": "natural",
+          "pos": "adj.",
+          "meaning": "自然的",
+          "sentence": "However, only a few observations have demonstrated that microplastics are being ingested in natural settings by benthic organisms, mostly in shallow coastal waters."
+        },
+        {
+          "word": "consume",
+          "pos": "v.",
+          "meaning": "消耗，消费",
+          "sentence": "Organisms such as the detritivorous and predatory lobster 17 18 and shrimp 19 presumably consume microplastic passively with prey (or in the prey itself) and/or sediment."
+        },
+        {
+          "word": "similar",
+          "pos": "adj.",
+          "meaning": "相似的",
+          "sentence": "These studies suggested that deep-sea microplastics are already being found in similar concentrations as intertidal and shallow sub-tidal sediments 25."
+        },
+        {
+          "word": "water",
+          "pos": "n.",
+          "meaning": "水",
+          "sentence": "However, only a few observations have demonstrated that microplastics are being ingested in natural settings by benthic organisms, mostly in shallow coastal waters."
+        },
+        {
+          "word": "range",
+          "pos": "n.",
+          "meaning": "范围",
+          "sentence": "The effects across this range of organisms included reductions in fecundity 21, lower feeding rates 26, enhanced susceptibility to oxidative stress, reduced ability to remove pathogenic bacteria 10, reduced feeding activities 27 33, reduced energy reserves and balance 27 32, and decreased lysome stability 22."
+        },
+        {
+          "word": "accumulation",
+          "pos": "n.",
+          "meaning": "积累",
+          "sentence": "The rate of accumulation of microplastics in the deep sea has not been researched, neither has impacts on deep-sea organisms."
+        }
+      ],
+      "contribution": {
+        "contributor": "l458022",
+        "license": "CC BY 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
+        "sourceUrl": "https://europepmc.org/article/PMC/PMC5043174",
+        "attribution": "Taylor ML, Gwinnett C, Robinson LF, Woodall LC. — Europe PMC，CC BY 4.0",
+        "declaredAt": "2026-10-13T13:14:50.327Z",
+        "declaration": "copyright-ok;questions-original-or-tool-generated;no-privacy"
+      }
+    }
+  ]
+}

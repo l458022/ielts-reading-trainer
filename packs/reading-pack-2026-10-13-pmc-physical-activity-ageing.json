@@ -1,0 +1,316 @@
+{
+  "format": "ielts-reading-pack",
+  "version": 1,
+  "generator": "IELTS Reading Trainer",
+  "createdAt": "2026-10-13T13:15:18.198Z",
+  "exams": [
+    {
+      "id": "community-pmc-physical-activity-ageing",
+      "title": "Physical activity in older age: perspectives for healthy ageing and frailty",
+      "titleCn": "老年身体活动",
+      "book": "公共题库",
+      "test": 1,
+      "passage": 1,
+      "difficulty": "中",
+      "series": "公共题库 · 自动出题",
+      "source": "贡献者 l458022 · CC BY 4.0 · McPhee JS, French DP, Jackson D, Nazroo J, Pendleton N, Degens H. — Europe PMC，CC BY 4.0",
+      "level": "自定义",
+      "minutes": 20,
+      "tags": [
+        "健康",
+        "老龄化"
+      ],
+      "intro": "开放获取文章（CC BY 4.0）：McPhee JS, French DP, Jackson D, Nazroo J, Pendleton N, Degens H. — Europe PMC，CC BY 4.0　原文：https://europepmc.org/article/PMC/PMC4889622",
+      "sections": [
+        {
+          "id": "s1",
+          "title": "READING PASSAGE 1",
+          "paragraphs": [
+            {
+              "id": "A",
+              "text": "Schematic representation of ageing trajectories and individual exercise needs. Good physiological function is maintained until middle age and thereafter progressively deteriorates. The upper horizontal dashed line represents a theoretical point at which deterioration manifests as moderate functional deficits and above this line the general aim of physical activity is to maintain good health. The lower horizontal dashed line indicates a theoretical threshold beyond which a person suffers disability and frailty, so the aim of physical activity is to recover the deficits and improve mobility. The curved lines represent a accelerated ageing, b normal ageing and c healthy ageing. Exercise interventions should match the physical capability, rather than chronological age per se to be effective The lifestyle and medical advances that contribute to longevity are achievements to celebrate, but they also bring unintended and considerable social, economic and health challenges as life expectancy increases faster than the period of life spent in good health, termed ‘healthy life years’ (discussed in (Rechel et al.  2013 )).  For instance, in the UK the mean life expectancy for women at birth in 2008 was 81. 8 and in men it was 77. 7 years and by 2013 this had increased to 82. 9 for women and 79. 2 years for men.  Over this same time period, the mean healthy life expectancy had changed little, or even decreased: for women in 2008 it was 66. 3 and in men it was 65 years, but by 2013 it had fallen to 64. 8 in women and 64. 4 years in men (Eurostat 2015 ).  Musculoskeletal disorders are the most common chronic, disabling conditions, affecting 14 % of people aged over 65 years."
+            },
+            {
+              "id": "B",
+              "text": "These are followed by heart and circulatory conditions affecting 10 %; respiratory conditions affecting 6 %; endocrine or metabolic conditions affecting 6 % and mental disorders affecting 4 % of people aged over 65 years.  Incidence of these chronic diseases more than doubles in the 10 years that follow retirement.  Of people aged over 75 years, 30 % report chronic musculoskeletal conditions; 32 % report heart and circulatory conditions and 13 % report endocrine or metabolic conditions (ONS 2013 ).  Another of the concerns is that the ‘old age dependency ratio’ will change from four working-age persons for every one older retired person, to just two working-age persons for every one older retired person in Europe (Eurostat 2014 ).  This change in the ratio of workforce to the overall population may strain economic, social and healthcare support systems, so it is important to implement strategies to improve the health of older people."
+            },
+            {
+              "id": "C",
+              "text": "Healthy ageing has been defined as an ability to lead a healthy, socially inclusive lifestyle relatively free from illness or disability (age UK 2010 ), and this is more likely in those actively engaging in activities to improve their health and wellbeing (age UK 2015 ).  Such people were recruited into the MYOAGE study (McPhee et al.  2013 ) and it was clear that despite no obvious difficulties with usual activities of daily living, the vast majority of older people aged in their 70 s had lower physiological function than young adults.  For example, older adults had higher body mass index due to increased fatness, smaller and weaker muscles particularly in the legs, lower bone mineral density, reduced cardiorespiratory and metabolic function and performed worse in cognitive tests than young (Bijlsma et al.  2013a, b; Sillanpaa et al.  2014 ). Other studies have shown 30–50 % fewer motor neurons innervating leg muscles of healthy old compared with young, suggesting that motor unit remodelling is a part of the normal ageing process (Campbell et al.  1973; Piasecki et al.  2015a, b ).  The motor neuron and muscle fibre (Lexell et al.  1988 ) losses occurring during ageing can never be replaced, but the structure and function of cardiorespiratory, metabolic and musculoskeletal systems are amenable to improvement through exercise training, so it is informative to profile very athletic older people (master athletes).  Master Athletes regularly compete in sports and demonstrate exceptional physical capability for their age (Rittweger et al.  2009 ).  They usually retain greater bone, muscle, cardiorespiratory, metabolic and neuronal health compared with non-athletic people of similar age, but it is nevertheless evident that physiological systems decline in older age even in those who remain exceptionally active (Degens et al.  2013a, b; Ireland et al.  2014; Michaelis et al.  2008; Pearson et al.  2002; Power et al."
+            },
+            {
+              "id": "D",
+              "text": "2010; Trappe et al.  2013; Wilks et al.  2009 ). The progressive declines in physiological function that usually occur over decades are associated with slower walking speed and difficulties rising from a seated position and balancing. Standardised assessments have been developed to indicate physical capability in older age, including the 6-min walk (Rikli and Jones 1998 ) and the 30 s chair-rise test (Jones et al. 1999 ). The Short Physical Performance Battery assesses normal walking speed over 4 m, balancing in different foot positions and time to complete 5 chair-rises, and the maximum score of 12 is easily achieved by healthy older people, while a score less than 8 indicates sarcopenia and frailty (Pahor et al. 2006 ). Thus, a score of between 8 and 11 indicates the moderate physical impairments associated with sarcopenia (low muscle mass) and ‘pre-frailty’ (Bauer 2015 ). The Timed Up and Go (TUG) test involves standing from a seated position, walking around a cone placed 3 metres away and returning to a seated position on the original chair. Healthy men and women complete the task within 7 s (Bijlsma et al. 2013a ) and frail people take >10 s (British Geriatric Society 2014 ), suggesting that a score between 7–10 s is indicative of pre-frailty."
+            }
+          ],
+          "questionGroups": [
+            {
+              "id": "g-tfng",
+              "type": "tfng",
+              "options": [
+                "TRUE",
+                "FALSE",
+                "NOT GIVEN"
+              ],
+              "instruction": "Do the following statements agree with the information in the passage? Write TRUE if the statement agrees with the information, FALSE if the statement contradicts the information, NOT GIVEN if there is no information on this.",
+              "generated": true,
+              "questions": [
+                {
+                  "no": 1,
+                  "stem": "Incidence of these chronic diseases more than doubles in the 10 years that follow retirement.",
+                  "answer": "TRUE",
+                  "keyPara": "B",
+                  "keySentence": "Incidence of these chronic diseases more than doubles in the 10 years that follow retirement.",
+                  "explain": "本题为机器生成：题干是原文定位句的同义复现，内容一致。做题时先抓题干关键词回原文，再核对限定词与比较方向。",
+                  "generated": true
+                },
+                {
+                  "no": 2,
+                  "stem": "Over this same time period, the mean healthy life expectancy had changed little, or even decreased: for women in 2008 it was 66.",
+                  "answer": "TRUE",
+                  "keyPara": "A",
+                  "keySentence": "Over this same time period, the mean healthy life expectancy had changed little, or even decreased: for women in 2008 it was 66.",
+                  "explain": "本题为机器生成：题干是原文定位句的同义复现，内容一致。做题时先抓题干关键词回原文，再核对限定词与比较方向。",
+                  "generated": true
+                },
+                {
+                  "no": 3,
+                  "stem": "Musculoskeletal disorders are not the most common chronic, disabling conditions, affecting 14 % of people aged over 65 years.",
+                  "answer": "FALSE",
+                  "keyPara": "A",
+                  "keySentence": "Musculoskeletal disorders are the most common chronic, disabling conditions, affecting 14 % of people aged over 65 years.",
+                  "explain": "本题为机器生成：原文为「Musculoskeletal disorders are the most common chronic, disabling conditions, affecting 14 % of people aged over 65 years.」，题干通过改写使陈述与原文矛盾。做题时盯紧比较方向、肯定/否定和程度词。",
+                  "generated": true,
+                  "trap": "系动词被否定（are not），与原文矛盾"
+                },
+                {
+                  "no": 4,
+                  "stem": "These are not followed by heart and circulatory conditions affecting 10 %; respiratory conditions affecting 6 %; endocrine or metabolic conditions affecting 6 % and mental disorders affecting 4 % of people aged over 65 years.",
+                  "answer": "FALSE",
+                  "keyPara": "B",
+                  "keySentence": "These are followed by heart and circulatory conditions affecting 10 %; respiratory conditions affecting 6 %; endocrine or metabolic conditions affecting 6 % and mental disorders affecting 4 % of people aged over 65 years.",
+                  "explain": "本题为机器生成：原文为「These are followed by heart and circulatory conditions affecting 10 %; respiratory conditions affecting 6 %; endocrine or metabolic conditions affecting 6 % and mental disorders affecting 4 % of people aged over 65 years.」，题干通过改写使陈述与原文矛盾。做题时盯紧比较方向、肯定/否定和程度词。",
+                  "generated": true,
+                  "trap": "系动词被否定（are not），与原文矛盾"
+                },
+                {
+                  "no": 5,
+                  "stem": "Healthy ageing has been defined as an ability to lead a healthy, socially inclusive lifestyle relatively free from illness or disability (age UK 2010 ), and this is more likely in those actively engaging in activities to enhance their health and wellbeing (age UK 2015 ).",
+                  "answer": "TRUE",
+                  "keyPara": "C",
+                  "keySentence": "Healthy ageing has been defined as an ability to lead a healthy, socially inclusive lifestyle relatively free from illness or disability (age UK 2010 ), and this is more likely in those actively engaging in activities to improve their health and wellbeing (age UK 2015 ).",
+                  "explain": "本题为机器生成：题干是原文定位句的同义复现（improve ↔ enhance）。做题时先抓题干关键词回原文，再核对限定词与比较方向。",
+                  "generated": true
+                },
+                {
+                  "no": 6,
+                  "stem": "2013 ) and it was clear that despite no obvious difficulties with usual activities of daily living, the vast majority of older people aged in their 70 s had higher physiological function than young adults.",
+                  "answer": "FALSE",
+                  "keyPara": "C",
+                  "keySentence": "2013 ) and it was clear that despite no obvious difficulties with usual activities of daily living, the vast majority of older people aged in their 70 s had lower physiological function than young adults.",
+                  "explain": "本题为机器生成：原文为「2013 ) and it was clear that despite no obvious difficulties with usual activities of daily living, the vast majority of older people aged in their 70 s had lower physiological function than young adults.」，题干通过改写使陈述与原文矛盾。做题时盯紧比较方向、肯定/否定和程度词。",
+                  "generated": true,
+                  "trap": "比较级反向（lower → higher），原文方向被对调"
+                }
+              ]
+            },
+            {
+              "id": "g-gapfill",
+              "type": "gapfill",
+              "generated": true,
+              "instruction": "Complete the sentences below. Choose NO MORE THAN TWO WORDS from the passage for each answer.",
+              "questions": [
+                {
+                  "no": 7,
+                  "stem": "____________ of these chronic diseases more than doubles in the 10 years that follow retirement.",
+                  "answer": "incidence",
+                  "keyPara": "B",
+                  "keySentence": "Incidence of these chronic diseases more than doubles in the 10 years that follow retirement.",
+                  "explain": "本题为机器生成：从原文定位句中挖掉关键词「incidence」。答案必须是原文原词，注意词性与单复数。",
+                  "generated": true,
+                  "answers": [
+                    "incidence"
+                  ]
+                },
+                {
+                  "no": 8,
+                  "stem": "Over this ____________ time period, the mean healthy life expectancy had changed little, or even decreased: for women in 2008 it was 66.",
+                  "answer": "same",
+                  "keyPara": "A",
+                  "keySentence": "Over this same time period, the mean healthy life expectancy had changed little, or even decreased: for women in 2008 it was 66.",
+                  "explain": "本题为机器生成：从原文定位句中挖掉关键词「same」。答案必须是原文原词，注意词性与单复数。",
+                  "generated": true,
+                  "answers": [
+                    "same"
+                  ]
+                },
+                {
+                  "no": 9,
+                  "stem": "Musculoskeletal disorders are the most ____________ chronic, disabling conditions, affecting 14 % of people aged over 65 years.",
+                  "answer": "common",
+                  "keyPara": "A",
+                  "keySentence": "Musculoskeletal disorders are the most common chronic, disabling conditions, affecting 14 % of people aged over 65 years.",
+                  "explain": "本题为机器生成：从原文定位句中挖掉关键词「common」。答案必须是原文原词，注意词性与单复数。",
+                  "generated": true,
+                  "answers": [
+                    "common"
+                  ]
+                }
+              ]
+            },
+            {
+              "id": "g-headings",
+              "type": "headings",
+              "generated": true,
+              "pool": [
+                "i",
+                "ii",
+                "iii",
+                "iv",
+                "v",
+                "vi",
+                "vii"
+              ],
+              "headings": [
+                "i  The role of ageing",
+                "ii  conditions in the modern world",
+                "iii  How healthy works",
+                "iv  A growing problem: score",
+                "v  An unexpected solution",
+                "vi  The limits of measurement",
+                "vii  Lessons from history"
+              ],
+              "note": "本题组的标题由机器从段落关键词生成，其中若干为干扰项。",
+              "instruction": "The passage has 4 paragraphs. Choose the correct heading for each paragraph from the list below.",
+              "questions": [
+                {
+                  "no": 10,
+                  "stem": "Paragraph A",
+                  "answer": "i",
+                  "keyPara": "A",
+                  "keySentence": "Schematic representation of ageing trajectories and individual exercise needs.",
+                  "explain": "本题为机器生成：段落核心词为「ageing」。做标题题务必看段落首句+尾句，警惕「只在段中一笔带过」的干扰项。",
+                  "generated": true,
+                  "note": "标题由机器按段落关键词生成，答案为该段最匹配的标题；做题时先扫每段主题句。"
+                },
+                {
+                  "no": 11,
+                  "stem": "Paragraph B",
+                  "answer": "ii",
+                  "keyPara": "B",
+                  "keySentence": "These are followed by heart and circulatory conditions affecting 10 %; respiratory conditions affecting 6 %; endocrine or metabolic conditions affecting 6 % and mental disorders affecting 4 % of people aged over 65 years.",
+                  "explain": "本题为机器生成：段落核心词为「conditions」。做标题题务必看段落首句+尾句，警惕「只在段中一笔带过」的干扰项。",
+                  "generated": true,
+                  "note": "标题由机器按段落关键词生成，答案为该段最匹配的标题；做题时先扫每段主题句。"
+                },
+                {
+                  "no": 12,
+                  "stem": "Paragraph C",
+                  "answer": "iii",
+                  "keyPara": "C",
+                  "keySentence": "Healthy ageing has been defined as an ability to lead a healthy, socially inclusive lifestyle relatively free from illness or disability (age UK 2010 ), and this is more likely in those actively engaging in activities to improve their health and wellbeing (age UK 2015 ).",
+                  "explain": "本题为机器生成：段落核心词为「healthy works」。做标题题务必看段落首句+尾句，警惕「只在段中一笔带过」的干扰项。",
+                  "generated": true,
+                  "note": "标题由机器按段落关键词生成，答案为该段最匹配的标题；做题时先扫每段主题句。"
+                },
+                {
+                  "no": 13,
+                  "stem": "Paragraph D",
+                  "answer": "iv",
+                  "keyPara": "D",
+                  "keySentence": "2010; Trappe et al.",
+                  "explain": "本题为机器生成：段落核心词为「score」。做标题题务必看段落首句+尾句，警惕「只在段中一笔带过」的干扰项。",
+                  "generated": true,
+                  "note": "标题由机器按段落关键词生成，答案为该段最匹配的标题；做题时先扫每段主题句。"
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "vocabulary": [
+        {
+          "word": "healthy",
+          "pos": "adj.",
+          "meaning": "健康的",
+          "sentence": "The curved lines represent a accelerated ageing, b normal ageing and c healthy ageing."
+        },
+        {
+          "word": "physical",
+          "pos": "adj.",
+          "meaning": "身体的，物理的",
+          "sentence": "The upper horizontal dashed line represents a theoretical point at which deterioration manifests as moderate functional deficits and above this line the general aim of physical activity is to maintain good health."
+        },
+        {
+          "word": "health",
+          "pos": "n.",
+          "meaning": "健康",
+          "sentence": "The upper horizontal dashed line represents a theoretical point at which deterioration manifests as moderate functional deficits and above this line the general aim of physical activity is to maintain good health."
+        },
+        {
+          "word": "function",
+          "pos": "n.",
+          "meaning": "功能",
+          "sentence": "Good physiological function is maintained until middle age and thereafter progressively deteriorates."
+        },
+        {
+          "word": "improve",
+          "pos": "v.",
+          "meaning": "改善，提高",
+          "sentence": "The lower horizontal dashed line indicates a theoretical threshold beyond which a person suffers disability and frailty, so the aim of physical activity is to recover the deficits and improve mobility."
+        },
+        {
+          "word": "person",
+          "pos": "n.",
+          "meaning": "人",
+          "sentence": "The lower horizontal dashed line indicates a theoretical threshold beyond which a person suffers disability and frailty, so the aim of physical activity is to recover the deficits and improve mobility."
+        },
+        {
+          "word": "normal",
+          "pos": "adj.",
+          "meaning": "正常的",
+          "sentence": "The curved lines represent a accelerated ageing, b normal ageing and c healthy ageing."
+        },
+        {
+          "word": "muscle",
+          "pos": "n.",
+          "meaning": "肌肉",
+          "sentence": "For example, older adults had higher body mass index due to increased fatness, smaller and weaker muscles particularly in the legs, lower bone mineral density, reduced cardiorespiratory and metabolic function and performed worse in cognitive tests than young (Bijlsma et al."
+        },
+        {
+          "word": "young",
+          "pos": "adj.",
+          "meaning": "年轻的",
+          "sentence": "2013 ) and it was clear that despite no obvious difficulties with usual activities of daily living, the vast majority of older people aged in their 70 s had lower physiological function than young adults."
+        },
+        {
+          "word": "motor",
+          "pos": "adj.",
+          "meaning": "运动的",
+          "sentence": "Other studies have shown 30–50 % fewer motor neurons innervating leg muscles of healthy old compared with young, suggesting that motor unit remodelling is a part of the normal ageing process (Campbell et al."
+        },
+        {
+          "word": "theoretical",
+          "pos": "adj.",
+          "meaning": "理论的",
+          "sentence": "The upper horizontal dashed line represents a theoretical point at which deterioration manifests as moderate functional deficits and above this line the general aim of physical activity is to maintain good health."
+        },
+        {
+          "word": "horizontal",
+          "pos": "adj.",
+          "meaning": "水平的",
+          "sentence": "The upper horizontal dashed line represents a theoretical point at which deterioration manifests as moderate functional deficits and above this line the general aim of physical activity is to maintain good health."
+        }
+      ],
+      "contribution": {
+        "contributor": "l458022",
+        "license": "CC BY 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
+        "sourceUrl": "https://europepmc.org/article/PMC/PMC4889622",
+        "attribution": "McPhee JS, French DP, Jackson D, Nazroo J, Pendleton N, Degens H. — Europe PMC，CC BY 4.0",
+        "declaredAt": "2026-10-13T13:15:18.197Z",
+        "declaration": "copyright-ok;questions-original-or-tool-generated;no-privacy"
+      }
+    }
+  ]
+}

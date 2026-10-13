@@ -1,0 +1,344 @@
+{
+  "format": "ielts-reading-pack",
+  "version": 1,
+  "generator": "IELTS Reading Trainer",
+  "createdAt": "2026-10-13T13:15:54.623Z",
+  "exams": [
+    {
+      "id": "community-pmc-microplastics-water",
+      "title": "Microplastics in freshwaters and drinking water: Critical review and assessment of data quality",
+      "titleCn": "微塑料与饮用水",
+      "book": "公共题库",
+      "test": 1,
+      "passage": 1,
+      "difficulty": "难",
+      "series": "公共题库 · 自动出题",
+      "source": "贡献者 l458022 · CC BY 4.0 · Koelmans AA, Mohamed Nor NH, Hermsen E, Kooi M, Mintenig SM, De France J. — Europe PMC，CC BY 4.0",
+      "level": "自定义",
+      "minutes": 20,
+      "tags": [
+        "环境",
+        "健康"
+      ],
+      "intro": "开放获取文章（CC BY 4.0）：Koelmans AA, Mohamed Nor NH, Hermsen E, Kooi M, Mintenig SM, De France J. — Europe PMC，CC BY 4.0　原文：https://europepmc.org/article/PMC/PMC6449537",
+      "sections": [
+        {
+          "id": "s1",
+          "title": "READING PASSAGE 1",
+          "paragraphs": [
+            {
+              "id": "A",
+              "text": "Microplastics are generally characterised as water-insoluble, solid polymer particles that are ≤5 mm in size ( Bergmann et al., 2015 ). A formal definition for the lower size boundary does not exist, but particles below 1 μm are usually referred to as nanoplastics rather than microplastic ( Koelmans et al., 2015 ). Although microplastics are often detected in the environment, the risks they pose are debated and largely unknown. One key challenge in assessing the risks of microplastics to humans and the environment relates to the variability of the physical and chemical properties, composition and concentration of the particles. Further, microplastics in the environment are difficult to identify and standardized methods do not exist ( Mintenig et al., 2018 ). The dominant source of microplastics often is the fragmentation of larger plastics or product wear, however the rate of fragmentation under natural conditions is unknown ( Eerkes-Medrano and Thompson, 2018 ). These challenges and unknowns hamper the prospective assessment of exposure and risk ( Koelmans et al., 2017 ). In this uncertain field, regulatory efforts to examine microplastic safety have been raised ( SAM, 2018a, b )."
+            },
+            {
+              "id": "B",
+              "text": "The presence of microplastics has been reported for air samples, food and drinking water ( EFSA, 2016; Gasperi et al., 2018; Lusher et al., 2017; Van Cauwenberghe and Janssen, 2014; Wright and Kelly, 2017; Yang et al., 2015 ) and recently, the implications of microplastics for human health have been reviewed ( Wright and Kelly, 2017 ). Although microplastic exposure via ingestion or inhalation could occur, the human health effects are still unknown. If inhaled or ingested, limited data from animal studies suggest that microplastics may accumulate and cause particle toxicity by inducing an immune response ( Deng et al., 2017; Gasperi et al., 2018 ). Chemical toxicity could occur due to leaching of plastic-associated chemicals (additives as well as adsorbed toxins) ( Diepens and Koelmans, 2018; SAPEA, 2019 ). Such effects are likely to be dose-dependent, however knowledge of exposure levels is currently lacking. Furthermore, biofilms growing on microplastics may be a source of microbial pathogens ( GESAMP, 2016 ). Hence, although there are potential chemical, particle and microbial hazards associated with microplastics, current exposure levels, including through drinking water need to be assessed first."
+            },
+            {
+              "id": "C",
+              "text": "The ubiquity of microplastics of all sizes in surface water, groundwater and wastewater ( SAPEA, 2019 ), has raised the question if pollution of drinking water occurs. To date, there is only a limited number of studies that address this issue and they indeed reported the presence of microplastics in tap water and bottled water ( Kosuth et al., 2018; Mason et al., 2018; Mintenig et al., 2019a, Mintenig et al., 2019b; Schymanski et al., 2018 ). Some of these studies triggered a great deal of attention in the scientific community as well as the media, putting the issue of human exposure to microplastics via drinking water high on the agenda of public health agencies worldwide. More broadly, ensuring safe drinking water is high on the political agenda, with a dedicated target on safe and affordable drinking water under the Sustainable Development Goals (SDG 6) ( WHO and UNICEF, 2017 )."
+            },
+            {
+              "id": "D",
+              "text": "To date, about 50 studies exist that provide concentration data for microplastics in drinking water or its freshwater sources, i.e., surface water and groundwater, as well as (indirectly) wastewater. These studies provide data for specific types of water, but methods of sampling, isolating, purifying and identifying microplastics vary enormously among studies. A systematic review of methodologies used and study characteristics is currently lacking. There are several scoping reviews that emphasise the relevance of microplastics in freshwaters ( Eerkes-Medrano and Thompson, 2018; Li et al., 2018; Wagner et al., 2014 ) or that specifically discuss processes or models in freshwaters ( Kooi et al., 2018 ). We are aware of only a limited number of reviews that touch upon methodologies and concentration data ( Eerkes-Medrano and Thompson, 2018; Li et al., 2018 ). Besides variation in methodologies used and concentrations reported, existing studies are likely to vary with respect to the level of quality assurance deployed. The quality of microplastic research has been debated recently ( Burton, 2017; Connors et al., 2017; Koelmans et al., 2016 ) and has been quantitatively assessed for studies on microplastic ingestion by biota ( Hermsen et al., 2018 ). However, a critical review of studies reporting concentration data in freshwater and drinking water, which also evaluates the quality of applied sampling methods, microplastic extraction and identification steps, is currently lacking."
+            },
+            {
+              "id": "E",
+              "text": "For chemical risk assessments in a regulatory context, quality criteria have been set in order to be able to evaluate the reliability of data from toxicological studies ( Kase et al., 2016; Klimisch et al., 1997; Schneider et al., 2009 ). Such criteria contribute to the harmonization of the hazard and risk assessments of chemicals across different regulatory frameworks. Recently, Hermsen et al. proposed a weight-of-evidence scoring method for studies of microplastic ingestion by marine biota ( Hermsen et al., 2018 ). This method defined minimum quality criteria for various aspects of the analytical procedure, such as sampling, sample treatment, use of controls and polymer identification. It assigns a score for each aspect and provides a total reliability score for data reported in a study. Such a method can also be developed for the analysis of microplastics in freshwater samples, and can be applied to quantify the relative reliability of reported concentration data."
+            },
+            {
+              "id": "F",
+              "text": "The aim of the present paper is to critically review the available literature on microplastics in drinking water and its freshwater sources, from a quality assurance perspective and by using a quantitative approach. Wastewater studies were also assessed as these are discharged into the environment. Further aims are to review data on concentration, polymer type, shape and size distribution data across studies. Guidance is provided to improve the quality of future occurrence studies."
+            }
+          ],
+          "questionGroups": [
+            {
+              "id": "g-tfng",
+              "type": "tfng",
+              "options": [
+                "TRUE",
+                "FALSE",
+                "NOT GIVEN"
+              ],
+              "instruction": "Do the following statements agree with the information in the passage? Write TRUE if the statement agrees with the information, FALSE if the statement contradicts the information, NOT GIVEN if there is no information on this.",
+              "generated": true,
+              "questions": [
+                {
+                  "no": 1,
+                  "stem": "Chemical toxicity could occur due to leaching of plastic-associated chemicals (additives as well as adsorbed toxins) ( Diepens and Koelmans, 2018; SAPEA, 2019 ).",
+                  "answer": "TRUE",
+                  "keyPara": "B",
+                  "keySentence": "Chemical toxicity could occur due to leaching of plastic-associated chemicals (additives as well as adsorbed toxins) ( Diepens and Koelmans, 2018; SAPEA, 2019 ).",
+                  "explain": "本题为机器生成：题干是原文定位句的同义复现，内容一致。做题时先抓题干关键词回原文，再核对限定词与比较方向。",
+                  "generated": true
+                },
+                {
+                  "no": 2,
+                  "stem": "A formal definition for the lower size boundary does not exist, however particles below 1 μm are usually referred to as nanoplastics rather than microplastic ( Koelmans et al.",
+                  "answer": "TRUE",
+                  "keyPara": "A",
+                  "keySentence": "A formal definition for the lower size boundary does not exist, but particles below 1 μm are usually referred to as nanoplastics rather than microplastic ( Koelmans et al.",
+                  "explain": "本题为机器生成：题干是原文定位句的同义复现（but ↔ however）。做题时先抓题干关键词回原文，再核对限定词与比较方向。",
+                  "generated": true
+                },
+                {
+                  "no": 3,
+                  "stem": "less broadly, ensuring safe drinking water is high on the political agenda, with a dedicated target on safe and affordable drinking water under the Sustainable Development Goals (SDG 6) ( WHO and UNICEF, 2017 ).",
+                  "answer": "FALSE",
+                  "keyPara": "C",
+                  "keySentence": "More broadly, ensuring safe drinking water is high on the political agenda, with a dedicated target on safe and affordable drinking water under the Sustainable Development Goals (SDG 6) ( WHO and UNICEF, 2017 ).",
+                  "explain": "本题为机器生成：原文为「More broadly, ensuring safe drinking water is high on the political agenda, with a dedicated target on safe and affordable drinking water under the Sustainable Development Goals (SDG 6) ( WHO and UNICEF, 2017 ).」，题干通过改写使陈述与原文矛盾。做题时盯紧比较方向、肯定/否定和程度词。",
+                  "generated": true,
+                  "trap": "比较级反向（more → less），原文方向被对调"
+                },
+                {
+                  "no": 4,
+                  "stem": "Microplastics are not generally characterised as water-insoluble, solid polymer particles that are ≤5 mm in size ( Bergmann et al.",
+                  "answer": "FALSE",
+                  "keyPara": "A",
+                  "keySentence": "Microplastics are generally characterised as water-insoluble, solid polymer particles that are ≤5 mm in size ( Bergmann et al.",
+                  "explain": "本题为机器生成：原文为「Microplastics are generally characterised as water-insoluble, solid polymer particles that are ≤5 mm in size ( Bergmann et al.」，题干通过改写使陈述与原文矛盾。做题时盯紧比较方向、肯定/否定和程度词。",
+                  "generated": true,
+                  "trap": "系动词被否定（are not），与原文矛盾"
+                },
+                {
+                  "no": 5,
+                  "stem": "The presence of microplastics has been reported for air samples, medicine and drinking water ( EFSA, 2016; Gasperi et al.",
+                  "answer": "NOT GIVEN",
+                  "keyPara": "B",
+                  "keySentence": "The presence of microplastics has been reported for air samples, food and drinking water ( EFSA, 2016; Gasperi et al.",
+                  "explain": "本题为机器生成：原文说的是「The presence of microplastics has been reported for air samples, food and drinking water ( EFSA, 2016; Gasperi et al.」，题干把实体偷换成了别的东西，原文从未提及该组合——这是 NG 题的典型构造。",
+                  "generated": true,
+                  "trap": "实体偷换（food → medicine）：原文说的是「food」，题干偷换成「medicine」，属文中未提及"
+                },
+                {
+                  "no": 6,
+                  "stem": "There are several scoping reviews that emphasise the relevance of microplastics in freshwaters ( Eerkes-Medrano and Thompson, 2018; Li et al.",
+                  "answer": "TRUE",
+                  "keyPara": "D",
+                  "keySentence": "There are several scoping reviews that emphasise the relevance of microplastics in freshwaters ( Eerkes-Medrano and Thompson, 2018; Li et al.",
+                  "explain": "本题为机器生成：题干是原文定位句的同义复现，内容一致。做题时先抓题干关键词回原文，再核对限定词与比较方向。",
+                  "generated": true
+                }
+              ]
+            },
+            {
+              "id": "g-gapfill",
+              "type": "gapfill",
+              "generated": true,
+              "instruction": "Complete the sentences below. Choose NO MORE THAN TWO WORDS from the passage for each answer.",
+              "questions": [
+                {
+                  "no": 7,
+                  "stem": "Chemical toxicity could occur due to ____________ of plastic-associated chemicals (additives as well as adsorbed toxins) ( Diepens and Koelmans, 2018; SAPEA, 2019 ).",
+                  "answer": "leaching",
+                  "keyPara": "B",
+                  "keySentence": "Chemical toxicity could occur due to leaching of plastic-associated chemicals (additives as well as adsorbed toxins) ( Diepens and Koelmans, 2018; SAPEA, 2019 ).",
+                  "explain": "本题为机器生成：从原文定位句中挖掉关键词「leaching」。答案必须是原文原词，注意词性与单复数。",
+                  "generated": true,
+                  "answers": [
+                    "leaching"
+                  ]
+                },
+                {
+                  "no": 8,
+                  "stem": "A ____________ definition for the lower size boundary does not exist, but particles below 1 μm are usually referred to as nanoplastics rather than microplastic ( Koelmans et al.",
+                  "answer": "formal",
+                  "keyPara": "A",
+                  "keySentence": "A formal definition for the lower size boundary does not exist, but particles below 1 μm are usually referred to as nanoplastics rather than microplastic ( Koelmans et al.",
+                  "explain": "本题为机器生成：从原文定位句中挖掉关键词「formal」。答案必须是原文原词，注意词性与单复数。",
+                  "generated": true,
+                  "answers": [
+                    "formal"
+                  ]
+                },
+                {
+                  "no": 9,
+                  "stem": "More ____________, ensuring safe drinking water is high on the political agenda, with a dedicated target on safe and affordable drinking water under the Sustainable Development Goals (SDG 6) ( WHO and UNICEF, 2017 ).",
+                  "answer": "broadly",
+                  "keyPara": "C",
+                  "keySentence": "More broadly, ensuring safe drinking water is high on the political agenda, with a dedicated target on safe and affordable drinking water under the Sustainable Development Goals (SDG 6) ( WHO and UNICEF, 2017 ).",
+                  "explain": "本题为机器生成：从原文定位句中挖掉关键词「broadly」。答案必须是原文原词，注意词性与单复数。",
+                  "generated": true,
+                  "answers": [
+                    "broadly"
+                  ]
+                }
+              ]
+            },
+            {
+              "id": "g-headings",
+              "type": "headings",
+              "generated": true,
+              "pool": [
+                "i",
+                "ii",
+                "iii",
+                "iv",
+                "v",
+                "vi",
+                "vii"
+              ],
+              "headings": [
+                "i  The role of microplastics",
+                "ii  microplastics in the modern world",
+                "iii  How water works",
+                "iv  A growing problem: studies",
+                "v  The importance of reliability",
+                "vi  quality and its effects",
+                "vii  An unexpected solution"
+              ],
+              "note": "本题组的标题由机器从段落关键词生成，其中若干为干扰项。",
+              "instruction": "The passage has 6 paragraphs. Choose the correct heading for each paragraph from the list below.",
+              "questions": [
+                {
+                  "no": 10,
+                  "stem": "Paragraph A",
+                  "answer": "i",
+                  "keyPara": "A",
+                  "keySentence": "Microplastics are generally characterised as water-insoluble, solid polymer particles that are ≤5 mm in size ( Bergmann et al.",
+                  "explain": "本题为机器生成：段落核心词为「microplastics」。做标题题务必看段落首句+尾句，警惕「只在段中一笔带过」的干扰项。",
+                  "generated": true,
+                  "note": "标题由机器按段落关键词生成，答案为该段最匹配的标题；做题时先扫每段主题句。"
+                },
+                {
+                  "no": 11,
+                  "stem": "Paragraph B",
+                  "answer": "ii",
+                  "keyPara": "B",
+                  "keySentence": "The presence of microplastics has been reported for air samples, food and drinking water ( EFSA, 2016; Gasperi et al.",
+                  "explain": "本题为机器生成：段落核心词为「microplastics」。做标题题务必看段落首句+尾句，警惕「只在段中一笔带过」的干扰项。",
+                  "generated": true,
+                  "note": "标题由机器按段落关键词生成，答案为该段最匹配的标题；做题时先扫每段主题句。"
+                },
+                {
+                  "no": 12,
+                  "stem": "Paragraph C",
+                  "answer": "iii",
+                  "keyPara": "C",
+                  "keySentence": "The ubiquity of microplastics of all sizes in surface water, groundwater and wastewater ( SAPEA, 2019 ), has raised the question if pollution of drinking water occurs.",
+                  "explain": "本题为机器生成：段落核心词为「water works」。做标题题务必看段落首句+尾句，警惕「只在段中一笔带过」的干扰项。",
+                  "generated": true,
+                  "note": "标题由机器按段落关键词生成，答案为该段最匹配的标题；做题时先扫每段主题句。"
+                },
+                {
+                  "no": 13,
+                  "stem": "Paragraph D",
+                  "answer": "iv",
+                  "keyPara": "D",
+                  "keySentence": "To date, about 50 studies exist that provide concentration data for microplastics in drinking water or its freshwater sources, i.",
+                  "explain": "本题为机器生成：段落核心词为「studies」。做标题题务必看段落首句+尾句，警惕「只在段中一笔带过」的干扰项。",
+                  "generated": true,
+                  "note": "标题由机器按段落关键词生成，答案为该段最匹配的标题；做题时先扫每段主题句。"
+                },
+                {
+                  "no": 14,
+                  "stem": "Paragraph E",
+                  "answer": "v",
+                  "keyPara": "E",
+                  "keySentence": "For chemical risk assessments in a regulatory context, quality criteria have been set in order to be able to evaluate the reliability of data from toxicological studies ( Kase et al.",
+                  "explain": "本题为机器生成：段落核心词为「reliability」。做标题题务必看段落首句+尾句，警惕「只在段中一笔带过」的干扰项。",
+                  "generated": true,
+                  "note": "标题由机器按段落关键词生成，答案为该段最匹配的标题；做题时先扫每段主题句。"
+                },
+                {
+                  "no": 15,
+                  "stem": "Paragraph F",
+                  "answer": "vi",
+                  "keyPara": "F",
+                  "keySentence": "The aim of the present paper is to critically review the available literature on microplastics in drinking water and its freshwater sources, from a quality assurance perspective and by using a quantitative approach.",
+                  "explain": "本题为机器生成：段落核心词为「quality」。做标题题务必看段落首句+尾句，警惕「只在段中一笔带过」的干扰项。",
+                  "generated": true,
+                  "note": "标题由机器按段落关键词生成，答案为该段最匹配的标题；做题时先扫每段主题句。"
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "vocabulary": [
+        {
+          "word": "water",
+          "pos": "n.",
+          "meaning": "水",
+          "sentence": "Microplastics are generally characterised as water-insoluble, solid polymer particles that are ≤5 mm in size ( Bergmann et al."
+        },
+        {
+          "word": "quality",
+          "pos": "n.",
+          "meaning": "质量",
+          "sentence": "Besides variation in methodologies used and concentrations reported, existing studies are likely to vary with respect to the level of quality assurance deployed."
+        },
+        {
+          "word": "exposure",
+          "pos": "n.",
+          "meaning": "暴露，接触",
+          "sentence": "These challenges and unknowns hamper the prospective assessment of exposure and risk ( Koelmans et al."
+        },
+        {
+          "word": "environment",
+          "pos": "n.",
+          "meaning": "环境",
+          "sentence": "Although microplastics are often detected in the environment, the risks they pose are debated and largely unknown."
+        },
+        {
+          "word": "chemical",
+          "pos": "adj.",
+          "meaning": "化学的",
+          "sentence": "One key challenge in assessing the risks of microplastics to humans and the environment relates to the variability of the physical and chemical properties, composition and concentration of the particles."
+        },
+        {
+          "word": "unknown",
+          "pos": "adj.",
+          "meaning": "未知的",
+          "sentence": "Although microplastics are often detected in the environment, the risks they pose are debated and largely unknown."
+        },
+        {
+          "word": "health",
+          "pos": "n.",
+          "meaning": "健康",
+          "sentence": ", 2015 ) and recently, the implications of microplastics for human health have been reviewed ( Wright and Kelly, 2017 )."
+        },
+        {
+          "word": "method",
+          "pos": "n.",
+          "meaning": "方法",
+          "sentence": "Further, microplastics in the environment are difficult to identify and standardized methods do not exist ( Mintenig et al."
+        },
+        {
+          "word": "exist",
+          "pos": "v.",
+          "meaning": "存在",
+          "sentence": "A formal definition for the lower size boundary does not exist, but particles below 1 μm are usually referred to as nanoplastics rather than microplastic ( Koelmans et al."
+        },
+        {
+          "word": "human",
+          "pos": "n.",
+          "meaning": "人类",
+          "sentence": "One key challenge in assessing the risks of microplastics to humans and the environment relates to the variability of the physical and chemical properties, composition and concentration of the particles."
+        },
+        {
+          "word": "provide",
+          "pos": "v.",
+          "meaning": "提供",
+          "sentence": "To date, about 50 studies exist that provide concentration data for microplastics in drinking water or its freshwater sources, i."
+        },
+        {
+          "word": "likely",
+          "pos": "adj.",
+          "meaning": "可能的",
+          "sentence": "Such effects are likely to be dose-dependent, however knowledge of exposure levels is currently lacking."
+        }
+      ],
+      "contribution": {
+        "contributor": "l458022",
+        "license": "CC BY 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
+        "sourceUrl": "https://europepmc.org/article/PMC/PMC6449537",
+        "attribution": "Koelmans AA, Mohamed Nor NH, Hermsen E, Kooi M, Mintenig SM, De France J. — Europe PMC，CC BY 4.0",
+        "declaredAt": "2026-10-13T13:15:54.621Z",
+        "declaration": "copyright-ok;questions-original-or-tool-generated;no-privacy"
+      }
+    }
+  ]
+}

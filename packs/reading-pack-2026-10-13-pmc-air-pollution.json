@@ -1,0 +1,330 @@
+{
+  "format": "ielts-reading-pack",
+  "version": 1,
+  "generator": "IELTS Reading Trainer",
+  "createdAt": "2026-10-13T13:15:01.790Z",
+  "exams": [
+    {
+      "id": "community-pmc-air-pollution",
+      "title": "Environmental and Health Impacts of Air Pollution: A Review",
+      "titleCn": "空气污染的健康代价",
+      "book": "公共题库",
+      "test": 1,
+      "passage": 1,
+      "difficulty": "中",
+      "series": "公共题库 · 自动出题",
+      "source": "贡献者 l458022 · CC BY 4.0 · Manisalidis I, Stavropoulou E, Stavropoulos A, Bezirtzoglou E. — Europe PMC，CC BY 4.0",
+      "level": "自定义",
+      "minutes": 20,
+      "tags": [
+        "环境",
+        "健康"
+      ],
+      "intro": "开放获取文章（CC BY 4.0）：Manisalidis I, Stavropoulou E, Stavropoulos A, Bezirtzoglou E. — Europe PMC，CC BY 4.0　原文：https://europepmc.org/article/PMC/PMC7044178",
+      "sections": [
+        {
+          "id": "s1",
+          "title": "READING PASSAGE 1",
+          "paragraphs": [
+            {
+              "id": "A",
+              "text": "The interactions between humans and their physical surroundings have been extensively studied, as multiple human activities influence the environment. The environment is a coupling of the biotic (living organisms and microorganisms) and the abiotic (hydrosphere, lithosphere, and atmosphere). Pollution is defined as the introduction into the environment of substances harmful to humans and other living organisms. Pollutants are harmful solids, liquids, or gases produced in higher than usual concentrations that reduce the quality of our environment. Human activities have an adverse effect on the environment by polluting the water we drink, the air we breathe, and the soil in which plants grow. Although the industrial revolution was a great success in terms of technology, society, and the provision of multiple services, it also introduced the production of huge quantities of pollutants emitted into the air that are harmful to human health. Without any doubt, the global environmental pollution is considered an international public health issue with multiple facets. Social, economic, and legislative concerns and lifestyle habits are related to this major problem. Clearly, urbanization and industrialization are reaching unprecedented and upsetting proportions worldwide in our era. Anthropogenic air pollution is one of the biggest public health hazards worldwide, given that it accounts for about 9 million deaths per year."
+            },
+            {
+              "id": "B",
+              "text": "Without a doubt, all of the aforementioned are closely associated with climate change, and in the event of danger, the consequences can be severe for mankind. Climate changes and the effects of global planetary warming seriously affect multiple ecosystems, causing problems such as food safety issues, ice and iceberg melting, animal extinction, and damage to plants ( 3, 4 ). Air pollution has various health effects. The health of susceptible and sensitive individuals can be impacted even on low air pollution days. Short-term exposure to air pollutants is closely related to COPD (Chronic Obstructive Pulmonary Disease), cough, shortness of breath, wheezing, asthma, respiratory disease, and high rates of hospitalization (a measurement of morbidity). The long-term effects associated with air pollution are chronic asthma, pulmonary insufficiency, cardiovascular diseases, and cardiovascular mortality. According to a Swedish cohort study, diabetes seems to be induced after long-term air pollution exposure. Moreover, air pollution seems to have various malign health effects in early human life, such as respiratory, cardiovascular, mental, and perinatal disorders, leading to infant mortality or chronic disease in adult age."
+            },
+            {
+              "id": "C",
+              "text": "National reports have mentioned the increased risk of morbidity and mortality. These studies were conducted in many places around the world and show a correlation between daily ranges of particulate matter (PM) concentration and daily mortality. Climate shifts and global planetary warming could aggravate the situation. Besides, increased hospitalization (an index of morbidity) has been registered among the elderly and susceptible individuals for specific reasons. Fine and ultrafine particulate matter seems to be associated with more serious illnesses, as it can invade the deepest parts of the airways and more easily reach the bloodstream. Air pollution mainly affects those living in large urban areas, where road emissions contribute the most to the degradation of air quality. There is also a danger of industrial accidents, where the spread of a toxic fog can be fatal to the populations of the surrounding areas. The dispersion of pollutants is determined by many parameters, most notably atmospheric stability and wind."
+            },
+            {
+              "id": "D",
+              "text": "In developing countries, the problem is more serious due to overpopulation and uncontrolled urbanization along with the development of industrialization.  This leads to poor air quality, especially in countries with social disparities and a lack of information on sustainable management of the environment.  The use of fuels such as wood fuel or solid fuel for domestic needs due to low incomes exposes people to bad-quality, polluted air at home.  It is of note that three billion people around the world are using the above sources of energy for their daily heating and cooking needs.  In developing countries, the women of the household seem to carry the highest risk for disease development due to their longer duration exposure to the indoor air pollution ( 8, 9 ).  Due to its fast industrial development and overpopulation, China is one of the Asian countries confronting serious air pollution problems ( 10, 11 ).  The lung cancer mortality observed in China is associated with fine particles."
+            },
+            {
+              "id": "E",
+              "text": "As stated already, long-term exposure is associated with deleterious effects on the cardiovascular system ( 3, 5 ).  However, it is interesting to note that cardiovascular diseases have mostly been observed in developed and high-income countries rather than in the developing low-income countries exposed highly to air pollution.  Extreme air pollution is recorded in India, where the air quality reaches hazardous levels.  New Delhi is one of the more polluted cities in India.  Flights in and out of New Delhi International Airport are often canceled due to the reduced visibility associated with air pollution.  Pollution is occurring both in urban and rural areas in India due to the fast industrialization, urbanization, and rise in use of motorcycle transportation.  Nevertheless, biomass combustion associated with heating and cooking needs and practices is a major source of household air pollution in India and in Nepal ( 14, 15 ). There is spatial heterogeneity in India, as areas with diverse climatological conditions and population and education levels generate different indoor air qualities, with higher PM 2. 5 observed in North Indian states (557–601 μg/m 3 ) compared to the Southern States (183–214 μg/m 3 ) ( 16, 17 ).  The cold climate of the North Indian areas may be the main reason for this, as longer periods at home and more heating are necessary compared to in the tropical climate of Southern India.  Household air pollution in India is associated with major health effects, especially in women and young children, who stay indoors for longer periods.  Chronic obstructive respiratory disease (CORD) and lung cancer are mostly observed in women, while acute lower respiratory disease is seen in young children under 5 years of age."
+            }
+          ],
+          "questionGroups": [
+            {
+              "id": "g-tfng",
+              "type": "tfng",
+              "options": [
+                "TRUE",
+                "FALSE",
+                "NOT GIVEN"
+              ],
+              "instruction": "Do the following statements agree with the information in the passage? Write TRUE if the statement agrees with the information, FALSE if the statement contradicts the information, NOT GIVEN if there is no information on this.",
+              "generated": true,
+              "questions": [
+                {
+                  "no": 1,
+                  "stem": "Due to its rapid industrial development and overpopulation, China is one of the Asian countries confronting serious air pollution problems ( 10, 11 ).",
+                  "answer": "TRUE",
+                  "keyPara": "D",
+                  "keySentence": "Due to its fast industrial development and overpopulation, China is one of the Asian countries confronting serious air pollution problems ( 10, 11 ).",
+                  "explain": "本题为机器生成：题干是原文定位句的同义复现（fast ↔ rapid）。做题时先抓题干关键词回原文，再核对限定词与比较方向。",
+                  "generated": true
+                },
+                {
+                  "no": 2,
+                  "stem": "Anthropogenic air pollution is not one of the biggest public health hazards worldwide, given that it accounts for about 9 million deaths per year.",
+                  "answer": "FALSE",
+                  "keyPara": "A",
+                  "keySentence": "Anthropogenic air pollution is one of the biggest public health hazards worldwide, given that it accounts for about 9 million deaths per year.",
+                  "explain": "本题为机器生成：原文为「Anthropogenic air pollution is one of the biggest public health hazards worldwide, given that it accounts for about 9 million deaths per year.」，题干通过改写使陈述与原文矛盾。做题时盯紧比较方向、肯定/否定和程度词。",
+                  "generated": true,
+                  "trap": "系动词被否定（is not），与原文矛盾"
+                },
+                {
+                  "no": 3,
+                  "stem": "Nevertheless, biomass combustion associated with heating and cooking needs and practices is a major source of household air pollution in India and in Nepal ( 14, 15 ).",
+                  "answer": "TRUE",
+                  "keyPara": "E",
+                  "keySentence": "Nevertheless, biomass combustion associated with heating and cooking needs and practices is a major source of household air pollution in India and in Nepal ( 14, 15 ).",
+                  "explain": "本题为机器生成：题干是原文定位句的同义复现，内容一致。做题时先抓题干关键词回原文，再核对限定词与比较方向。",
+                  "generated": true
+                },
+                {
+                  "no": 4,
+                  "stem": "There is spatial heterogeneity in India, as areas with diverse climatological conditions and population and education levels generate different indoor air qualities, with lower PM 2.",
+                  "answer": "FALSE",
+                  "keyPara": "E",
+                  "keySentence": "There is spatial heterogeneity in India, as areas with diverse climatological conditions and population and education levels generate different indoor air qualities, with higher PM 2.",
+                  "explain": "本题为机器生成：原文为「There is spatial heterogeneity in India, as areas with diverse climatological conditions and population and education levels generate different indoor air qualities, with higher PM 2.」，题干通过改写使陈述与原文矛盾。做题时盯紧比较方向、肯定/否定和程度词。",
+                  "generated": true,
+                  "trap": "比较级反向（higher → lower），原文方向被对调"
+                },
+                {
+                  "no": 5,
+                  "stem": "Pollutants are harmful solids, liquids, or gases produced in higher than usual concentrations that reduce the quality of our environment.",
+                  "answer": "TRUE",
+                  "keyPara": "A",
+                  "keySentence": "Pollutants are harmful solids, liquids, or gases produced in higher than usual concentrations that reduce the quality of our environment.",
+                  "explain": "本题为机器生成：题干是原文定位句的同义复现，内容一致。做题时先抓题干关键词回原文，再核对限定词与比较方向。",
+                  "generated": true
+                },
+                {
+                  "no": 6,
+                  "stem": "Climate changes and the effects of global planetary warming seriously affect multiple ecosystems, causing problems such as food speed issues, ice and iceberg melting, animal extinction, and damage to plants ( 3, 4 ).",
+                  "answer": "NOT GIVEN",
+                  "keyPara": "B",
+                  "keySentence": "Climate changes and the effects of global planetary warming seriously affect multiple ecosystems, causing problems such as food safety issues, ice and iceberg melting, animal extinction, and damage to plants ( 3, 4 ).",
+                  "explain": "本题为机器生成：原文说的是「Climate changes and the effects of global planetary warming seriously affect multiple ecosystems, causing problems such as food safety issues, ice and iceberg melting, animal extinction, and damage to plants ( 3, 4 ).」，题干把实体偷换成了别的东西，原文从未提及该组合——这是 NG 题的典型构造。",
+                  "generated": true,
+                  "trap": "实体偷换（safety → speed）：原文说的是「safety」，题干偷换成「speed」，属文中未提及"
+                }
+              ]
+            },
+            {
+              "id": "g-gapfill",
+              "type": "gapfill",
+              "generated": true,
+              "instruction": "Complete the sentences below. Choose NO MORE THAN TWO WORDS from the passage for each answer.",
+              "questions": [
+                {
+                  "no": 7,
+                  "stem": "Due to its fast industrial development and overpopulation, China is one of the ____________ countries confronting serious air pollution problems ( 10, 11 ).",
+                  "answer": "asian",
+                  "keyPara": "D",
+                  "keySentence": "Due to its fast industrial development and overpopulation, China is one of the Asian countries confronting serious air pollution problems ( 10, 11 ).",
+                  "explain": "本题为机器生成：从原文定位句中挖掉关键词「asian」。答案必须是原文原词，注意词性与单复数。",
+                  "generated": true,
+                  "answers": [
+                    "asian"
+                  ]
+                },
+                {
+                  "no": 8,
+                  "stem": "____________ air pollution is one of the biggest public health hazards worldwide, given that it accounts for about 9 million deaths per year.",
+                  "answer": "anthropogenic",
+                  "keyPara": "A",
+                  "keySentence": "Anthropogenic air pollution is one of the biggest public health hazards worldwide, given that it accounts for about 9 million deaths per year.",
+                  "explain": "本题为机器生成：从原文定位句中挖掉关键词「anthropogenic」。答案必须是原文原词，注意词性与单复数。",
+                  "generated": true,
+                  "answers": [
+                    "anthropogenic"
+                  ]
+                },
+                {
+                  "no": 9,
+                  "stem": "____________, biomass combustion associated with heating and cooking needs and practices is a major source of household air pollution in India and in Nepal ( 14, 15 ).",
+                  "answer": "nevertheless",
+                  "keyPara": "E",
+                  "keySentence": "Nevertheless, biomass combustion associated with heating and cooking needs and practices is a major source of household air pollution in India and in Nepal ( 14, 15 ).",
+                  "explain": "本题为机器生成：从原文定位句中挖掉关键词「nevertheless」。答案必须是原文原词，注意词性与单复数。",
+                  "generated": true,
+                  "answers": [
+                    "nevertheless"
+                  ]
+                }
+              ]
+            },
+            {
+              "id": "g-headings",
+              "type": "headings",
+              "generated": true,
+              "pool": [
+                "i",
+                "ii",
+                "iii",
+                "iv",
+                "v",
+                "vi",
+                "vii"
+              ],
+              "headings": [
+                "i  The role of environment",
+                "ii  associated in the modern world",
+                "iii  How increased works",
+                "iv  A growing problem: development",
+                "v  The importance of associated",
+                "vi  An unexpected solution",
+                "vii  The limits of measurement"
+              ],
+              "note": "本题组的标题由机器从段落关键词生成，其中若干为干扰项。",
+              "instruction": "The passage has 5 paragraphs. Choose the correct heading for each paragraph from the list below.",
+              "questions": [
+                {
+                  "no": 10,
+                  "stem": "Paragraph A",
+                  "answer": "i",
+                  "keyPara": "A",
+                  "keySentence": "The interactions between humans and their physical surroundings have been extensively studied, as multiple human activities influence the environment.",
+                  "explain": "本题为机器生成：段落核心词为「environment」。做标题题务必看段落首句+尾句，警惕「只在段中一笔带过」的干扰项。",
+                  "generated": true,
+                  "note": "标题由机器按段落关键词生成，答案为该段最匹配的标题；做题时先扫每段主题句。"
+                },
+                {
+                  "no": 11,
+                  "stem": "Paragraph B",
+                  "answer": "ii",
+                  "keyPara": "B",
+                  "keySentence": "Without a doubt, all of the aforementioned are closely associated with climate change, and in the event of danger, the consequences can be severe for mankind.",
+                  "explain": "本题为机器生成：段落核心词为「associated」。做标题题务必看段落首句+尾句，警惕「只在段中一笔带过」的干扰项。",
+                  "generated": true,
+                  "note": "标题由机器按段落关键词生成，答案为该段最匹配的标题；做题时先扫每段主题句。"
+                },
+                {
+                  "no": 12,
+                  "stem": "Paragraph C",
+                  "answer": "iii",
+                  "keyPara": "C",
+                  "keySentence": "National reports have mentioned the increased risk of morbidity and mortality.",
+                  "explain": "本题为机器生成：段落核心词为「increased works」。做标题题务必看段落首句+尾句，警惕「只在段中一笔带过」的干扰项。",
+                  "generated": true,
+                  "note": "标题由机器按段落关键词生成，答案为该段最匹配的标题；做题时先扫每段主题句。"
+                },
+                {
+                  "no": 13,
+                  "stem": "Paragraph D",
+                  "answer": "iv",
+                  "keyPara": "D",
+                  "keySentence": "In developing countries, the problem is more serious due to overpopulation and uncontrolled urbanization along with the development of industrialization.",
+                  "explain": "本题为机器生成：段落核心词为「development」。做标题题务必看段落首句+尾句，警惕「只在段中一笔带过」的干扰项。",
+                  "generated": true,
+                  "note": "标题由机器按段落关键词生成，答案为该段最匹配的标题；做题时先扫每段主题句。"
+                },
+                {
+                  "no": 14,
+                  "stem": "Paragraph E",
+                  "answer": "v",
+                  "keyPara": "E",
+                  "keySentence": "As stated already, long-term exposure is associated with deleterious effects on the cardiovascular system ( 3, 5 ).",
+                  "explain": "本题为机器生成：段落核心词为「associated」。做标题题务必看段落首句+尾句，警惕「只在段中一笔带过」的干扰项。",
+                  "generated": true,
+                  "note": "标题由机器按段落关键词生成，答案为该段最匹配的标题；做题时先扫每段主题句。"
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "vocabulary": [
+        {
+          "word": "pollution",
+          "pos": "n.",
+          "meaning": "污染",
+          "sentence": "Pollution is defined as the introduction into the environment of substances harmful to humans and other living organisms."
+        },
+        {
+          "word": "health",
+          "pos": "n.",
+          "meaning": "健康",
+          "sentence": "Although the industrial revolution was a great success in terms of technology, society, and the provision of multiple services, it also introduced the production of huge quantities of pollutants emitted into the air that are harmful to human health."
+        },
+        {
+          "word": "environment",
+          "pos": "n.",
+          "meaning": "环境",
+          "sentence": "The interactions between humans and their physical surroundings have been extensively studied, as multiple human activities influence the environment."
+        },
+        {
+          "word": "disease",
+          "pos": "n.",
+          "meaning": "疾病",
+          "sentence": "Short-term exposure to air pollutants is closely related to COPD (Chronic Obstructive Pulmonary Disease), cough, shortness of breath, wheezing, asthma, respiratory disease, and high rates of hospitalization (a measurement of morbidity)."
+        },
+        {
+          "word": "climate",
+          "pos": "n.",
+          "meaning": "气候",
+          "sentence": "Without a doubt, all of the aforementioned are closely associated with climate change, and in the event of danger, the consequences can be severe for mankind."
+        },
+        {
+          "word": "exposure",
+          "pos": "n.",
+          "meaning": "暴露，接触",
+          "sentence": "Short-term exposure to air pollutants is closely related to COPD (Chronic Obstructive Pulmonary Disease), cough, shortness of breath, wheezing, asthma, respiratory disease, and high rates of hospitalization (a measurement of morbidity)."
+        },
+        {
+          "word": "quality",
+          "pos": "n.",
+          "meaning": "质量",
+          "sentence": "Pollutants are harmful solids, liquids, or gases produced in higher than usual concentrations that reduce the quality of our environment."
+        },
+        {
+          "word": "human",
+          "pos": "n.",
+          "meaning": "人类",
+          "sentence": "The interactions between humans and their physical surroundings have been extensively studied, as multiple human activities influence the environment."
+        },
+        {
+          "word": "development",
+          "pos": "n.",
+          "meaning": "发展",
+          "sentence": "In developing countries, the problem is more serious due to overpopulation and uncontrolled urbanization along with the development of industrialization."
+        },
+        {
+          "word": "industrial",
+          "pos": "adj.",
+          "meaning": "工业的",
+          "sentence": "Although the industrial revolution was a great success in terms of technology, society, and the provision of multiple services, it also introduced the production of huge quantities of pollutants emitted into the air that are harmful to human health."
+        },
+        {
+          "word": "harmful",
+          "pos": "adj.",
+          "meaning": "有害的",
+          "sentence": "Pollution is defined as the introduction into the environment of substances harmful to humans and other living organisms."
+        },
+        {
+          "word": "serious",
+          "pos": "adj.",
+          "meaning": "严重的",
+          "sentence": "Climate changes and the effects of global planetary warming seriously affect multiple ecosystems, causing problems such as food safety issues, ice and iceberg melting, animal extinction, and damage to plants ( 3, 4 )."
+        }
+      ],
+      "contribution": {
+        "contributor": "l458022",
+        "license": "CC BY 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
+        "sourceUrl": "https://europepmc.org/article/PMC/PMC7044178",
+        "attribution": "Manisalidis I, Stavropoulou E, Stavropoulos A, Bezirtzoglou E. — Europe PMC，CC BY 4.0",
+        "declaredAt": "2026-10-13T13:15:01.789Z",
+        "declaration": "copyright-ok;questions-original-or-tool-generated;no-privacy"
+      }
+    }
+  ]
+}

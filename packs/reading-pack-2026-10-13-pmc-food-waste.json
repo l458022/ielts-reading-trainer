@@ -1,0 +1,330 @@
+{
+  "format": "ielts-reading-pack",
+  "version": 1,
+  "generator": "IELTS Reading Trainer",
+  "createdAt": "2026-10-13T13:15:35.983Z",
+  "exams": [
+    {
+      "id": "community-pmc-food-waste",
+      "title": "Food waste within food supply chains: quantification and potential for change to 2050",
+      "titleCn": "食物供应链的浪费",
+      "book": "公共题库",
+      "test": 1,
+      "passage": 1,
+      "difficulty": "中",
+      "series": "公共题库 · 自动出题",
+      "source": "贡献者 l458022 · CC BY 4.0 · Parfitt J, Barthel M, Macnaughton S. — Europe PMC，CC BY 4.0",
+      "level": "自定义",
+      "minutes": 20,
+      "tags": [
+        "农业",
+        "环境"
+      ],
+      "intro": "开放获取文章（CC BY 4.0）：Parfitt J, Barthel M, Macnaughton S. — Europe PMC，CC BY 4.0　原文：https://europepmc.org/article/PMC/PMC2935112",
+      "sections": [
+        {
+          "id": "s1",
+          "title": "READING PASSAGE 1",
+          "paragraphs": [
+            {
+              "id": "A",
+              "text": "Attempts have been made to quantify global food waste over several decades, motivated partly by the need to highlight the scale of ‘waste’ in relation to global malnutrition. Such assessments are reliant on limited datasets collected across the food supply chain (FSC) at different times and extrapolated to the larger picture. The most often quoted estimate is that ‘as much as half of all food grown is lost or wasted before and after it reaches the consumer’ ( Lundqvist et al. 2008 ). Such estimates are difficult to scrutinize but highlight the need for greater resource efficiencies in the global FSC. This paper presents results from a driver review of food waste issues, combining information on food waste from the international literature and interviews with supply chain experts. Although waste is formally defined in different legal jurisdictions, definitions relate to particular points of arising and are often framed in relation to specific environmental controls. Food waste occurs at different points in the FSC, although it is most readily defined at the retail and consumer stages, where outputs of the agricultural system are self-evidently ‘food’ for human consumption. Unlike most other commodity flows, food is biological material subject to degradation, and different food stuffs have different nutritional values. There are also moral and economic dimensions: the extent to which available food crops are used to meet global human needs directly, or diverted into feeding livestock, other ‘by-products’ and biofuels or biomaterials production. Below are three definitions referred to herein:"
+            },
+            {
+              "id": "B",
+              "text": "Wholesome edible material intended for human consumption, arising at any point in the FSC that is instead discarded, lost, degraded or consumed by pests ( FAO 1981 ). As, but including edible material that is intentionally fed to animals or is a by-product of food processing diverted away from the human food ( Stuart 2009 ). As definitions and but including over-nutrition—the gap between the energy value of consumed food per capita and the energy value of food needed per capita ( Smil 2004 a ). The first two definitions are considered to be most relevant, although the second can only be supported if data are available that include nutritional assessment of animal feed and food processing by-products. Table 1 summarizes generalized stages in FSCs and illustrates different forms that ‘food waste’ may take. Within the literature, food waste post-harvest is likely to be referred to as ‘food losses’ and ‘spoilage’. Food loss refers to the decrease in food quantity or quality, which makes it unfit for human consumption ( Grolleaud 2002 ). At later stages of the FSC, the term food waste is applied and generally relates to behavioural issues. Food losses/spoilage, conversely, relate to systems that require investment in infrastructure. In this report, we refer to both food losses and food waste as food waste."
+            },
+            {
+              "id": "C",
+              "text": "Similarly, both ‘FSC’ and ‘post-harvest systems’ are used to mean the same thing in the literature, with ‘post-harvest loss’ also often used when describing agricultural systems and the onward supply of produce to markets. FSC is more associated with industrialized countries where post-harvest processing and large retail sectors are important features. ‘Post-consumer losses’ include food wasted from activities and operations at the point at which food is consumed. The method of measuring the quantity of food post-harvest is usually by weight, although other units of measure include calorific value, quantification of greenhouse gas impacts and lost inputs (e.g. nutrients and water). Where loss data are available for each step of a crop and are applied to production estimates, a cumulative weight loss can be calculated. When the Food and Agriculture Organization of the United Nations (FAO) was established in 1945, it had reduction of food losses within its mandate. By 1974, the first World Food Conference identified reduction of post-harvest losses as part of the solution in addressing world hunger. At this time, an overall estimate for post-harvest losses of 15 per cent had been suggested, and it was resolved to bring about a 50 per cent reduction by 1985. Consequently, the FAO established the Special Action Programme for the Prevention of Food Losses."
+            },
+            {
+              "id": "D",
+              "text": "The main focus was initially on reducing losses of durable grain; by the early 1990s, the scope of work had been broadened to cover roots and tubers, and fresh fruits and vegetables (FFVs). Poor adoption rates for interventions led to the recognition that a purely technical focus was inadequate for solving problems within the sector and a more holistic approach was developed ( Grolleaud 2002 ). There is no account of progress towards the 1985 post-harvest loss reduction target, and recently Lundqvist et al. called for action to reduce food waste advocating a 50 per cent reduction in post-harvest losses to be achieved by 2025. Post-harvest losses are partly a function of the technology available in a country, as well as the extent to which markets have developed for agricultural produce. Three inter-related global drivers provide an overall structure for characterizing supply chains and future trends in developing and transitional countries."
+            },
+            {
+              "id": "E",
+              "text": "— Urbanization and the contraction of the agricultural sector. The proportion of the world's population employed in agriculture has declined in recent decades and 50 per cent of the world's population now lives in urban environments. This proportion is expected to rise to 70 per cent by 2050 ( United Nations 2008 ). Rapid urbanization has created the need for extended FSCs to feed urban populations. For these to be efficient, countries need improvements in roads, transportation and marketing infrastructure to keep food affordable for lower income groups. How these extended supply chains develop has implications for food waste globally, now and in the future. — Dietary transition. Growth of household incomes, particularly in BRIC countries, is associated with a decline in consumption of starchy food staples and diversification of diet into FFVs, dairy, meat and fish. This transition conforms to Bennett's Law ( Bennett 1941 ), where the food share of starchy staples declines as income increases. The shift towards vulnerable, shorter shelf-life items is associated with greater food waste and a greater draw on land and other resources ( Lundqvist et al. 2008 ). The transition varies by country and culture, e.g. in India, there is less pressure on resources compared with China, where the demand for meat is increasing rapidly."
+            }
+          ],
+          "questionGroups": [
+            {
+              "id": "g-tfng",
+              "type": "tfng",
+              "options": [
+                "TRUE",
+                "FALSE",
+                "NOT GIVEN"
+              ],
+              "instruction": "Do the following statements agree with the information in the passage? Write TRUE if the statement agrees with the information, FALSE if the statement contradicts the information, NOT GIVEN if there is no information on this.",
+              "generated": true,
+              "questions": [
+                {
+                  "no": 1,
+                  "stem": "Poor adoption rates for interventions led to the recognition that a purely technical focus was inadequate for solving problems within the sector and a more holistic approach was developed ( Grolleaud 2002 ).",
+                  "answer": "TRUE",
+                  "keyPara": "D",
+                  "keySentence": "Poor adoption rates for interventions led to the recognition that a purely technical focus was inadequate for solving problems within the sector and a more holistic approach was developed ( Grolleaud 2002 ).",
+                  "explain": "本题为机器生成：题干是原文定位句的同义复现，内容一致。做题时先抓题干关键词回原文，再核对限定词与比较方向。",
+                  "generated": true
+                },
+                {
+                  "no": 2,
+                  "stem": "Wholesome edible material intended for human consumption, arising at any point in the FSC that is not instead discarded, lost, degraded or consumed by pests ( FAO 1981 ).",
+                  "answer": "FALSE",
+                  "keyPara": "B",
+                  "keySentence": "Wholesome edible material intended for human consumption, arising at any point in the FSC that is instead discarded, lost, degraded or consumed by pests ( FAO 1981 ).",
+                  "explain": "本题为机器生成：原文为「Wholesome edible material intended for human consumption, arising at any point in the FSC that is instead discarded, lost, degraded or consumed by pests ( FAO 1981 ).」，题干通过改写使陈述与原文矛盾。做题时盯紧比较方向、肯定/否定和程度词。",
+                  "generated": true,
+                  "trap": "系动词被否定（is not），与原文矛盾"
+                },
+                {
+                  "no": 3,
+                  "stem": "As, but including edible material that is intentionally fed to plants or is a by-product of food processing diverted away from the human food ( Stuart 2009 ).",
+                  "answer": "NOT GIVEN",
+                  "keyPara": "B",
+                  "keySentence": "As, but including edible material that is intentionally fed to animals or is a by-product of food processing diverted away from the human food ( Stuart 2009 ).",
+                  "explain": "本题为机器生成：原文说的是「As, but including edible material that is intentionally fed to animals or is a by-product of food processing diverted away from the human food ( Stuart 2009 ).」，题干把实体偷换成了别的东西，原文从未提及该组合——这是 NG 题的典型构造。",
+                  "generated": true,
+                  "trap": "实体偷换（animals → plants）：原文说的是「animals」，题干偷换成「plants」，属文中未提及"
+                },
+                {
+                  "no": 4,
+                  "stem": "When the Food and Agriculture Organization of the United Nations (FAO) was established in 1945, it had reduction of food losses within its mandate.",
+                  "answer": "TRUE",
+                  "keyPara": "C",
+                  "keySentence": "When the Food and Agriculture Organization of the United Nations (FAO) was established in 1945, it had reduction of food losses within its mandate.",
+                  "explain": "本题为机器生成：题干是原文定位句的同义复现，内容一致。做题时先抓题干关键词回原文，再核对限定词与比较方向。",
+                  "generated": true
+                },
+                {
+                  "no": 5,
+                  "stem": "There is not no account of progress towards the 1985 post-harvest loss reduction target, and recently Lundqvist et al.",
+                  "answer": "FALSE",
+                  "keyPara": "D",
+                  "keySentence": "There is no account of progress towards the 1985 post-harvest loss reduction target, and recently Lundqvist et al.",
+                  "explain": "本题为机器生成：原文为「There is no account of progress towards the 1985 post-harvest loss reduction target, and recently Lundqvist et al.」，题干通过改写使陈述与原文矛盾。做题时盯紧比较方向、肯定/否定和程度词。",
+                  "generated": true,
+                  "trap": "系动词被否定（is not），与原文矛盾"
+                },
+                {
+                  "no": 6,
+                  "stem": "This proportion is expected to rise to 70 per cent by 2050 ( United Nations 2008 ).",
+                  "answer": "TRUE",
+                  "keyPara": "E",
+                  "keySentence": "This proportion is expected to rise to 70 per cent by 2050 ( United Nations 2008 ).",
+                  "explain": "本题为机器生成：题干是原文定位句的同义复现，内容一致。做题时先抓题干关键词回原文，再核对限定词与比较方向。",
+                  "generated": true
+                }
+              ]
+            },
+            {
+              "id": "g-gapfill",
+              "type": "gapfill",
+              "generated": true,
+              "instruction": "Complete the sentences below. Choose NO MORE THAN TWO WORDS from the passage for each answer.",
+              "questions": [
+                {
+                  "no": 7,
+                  "stem": "____________ adoption rates for interventions led to the recognition that a purely technical focus was inadequate for solving problems within the sector and a more holistic approach was developed ( Grolleaud 2002 ).",
+                  "answer": "poor",
+                  "keyPara": "D",
+                  "keySentence": "Poor adoption rates for interventions led to the recognition that a purely technical focus was inadequate for solving problems within the sector and a more holistic approach was developed ( Grolleaud 2002 ).",
+                  "explain": "本题为机器生成：从原文定位句中挖掉关键词「poor」。答案必须是原文原词，注意词性与单复数。",
+                  "generated": true,
+                  "answers": [
+                    "poor"
+                  ]
+                },
+                {
+                  "no": 8,
+                  "stem": "____________ edible material intended for human consumption, arising at any point in the FSC that is instead discarded, lost, degraded or consumed by pests ( FAO 1981 ).",
+                  "answer": "wholesome",
+                  "keyPara": "B",
+                  "keySentence": "Wholesome edible material intended for human consumption, arising at any point in the FSC that is instead discarded, lost, degraded or consumed by pests ( FAO 1981 ).",
+                  "explain": "本题为机器生成：从原文定位句中挖掉关键词「wholesome」。答案必须是原文原词，注意词性与单复数。",
+                  "generated": true,
+                  "answers": [
+                    "wholesome"
+                  ]
+                },
+                {
+                  "no": 9,
+                  "stem": "As, but including edible material that is ____________ fed to animals or is a by-product of food processing diverted away from the human food ( Stuart 2009 ).",
+                  "answer": "intentionally",
+                  "keyPara": "B",
+                  "keySentence": "As, but including edible material that is intentionally fed to animals or is a by-product of food processing diverted away from the human food ( Stuart 2009 ).",
+                  "explain": "本题为机器生成：从原文定位句中挖掉关键词「intentionally」。答案必须是原文原词，注意词性与单复数。",
+                  "generated": true,
+                  "answers": [
+                    "intentionally"
+                  ]
+                }
+              ]
+            },
+            {
+              "id": "g-headings",
+              "type": "headings",
+              "generated": true,
+              "pool": [
+                "i",
+                "ii",
+                "iii",
+                "iv",
+                "v",
+                "vi",
+                "vii"
+              ],
+              "headings": [
+                "i  The role of waste",
+                "ii  human in the modern world",
+                "iii  How post-harvest works",
+                "iv  A growing problem: losses",
+                "v  The importance of urbanization",
+                "vi  An unexpected solution",
+                "vii  The limits of measurement"
+              ],
+              "note": "本题组的标题由机器从段落关键词生成，其中若干为干扰项。",
+              "instruction": "The passage has 5 paragraphs. Choose the correct heading for each paragraph from the list below.",
+              "questions": [
+                {
+                  "no": 10,
+                  "stem": "Paragraph A",
+                  "answer": "i",
+                  "keyPara": "A",
+                  "keySentence": "Attempts have been made to quantify global food waste over several decades, motivated partly by the need to highlight the scale of ‘waste’ in relation to global malnutrition.",
+                  "explain": "本题为机器生成：段落核心词为「waste」。做标题题务必看段落首句+尾句，警惕「只在段中一笔带过」的干扰项。",
+                  "generated": true,
+                  "note": "标题由机器按段落关键词生成，答案为该段最匹配的标题；做题时先扫每段主题句。"
+                },
+                {
+                  "no": 11,
+                  "stem": "Paragraph B",
+                  "answer": "ii",
+                  "keyPara": "B",
+                  "keySentence": "Wholesome edible material intended for human consumption, arising at any point in the FSC that is instead discarded, lost, degraded or consumed by pests ( FAO 1981 ).",
+                  "explain": "本题为机器生成：段落核心词为「human」。做标题题务必看段落首句+尾句，警惕「只在段中一笔带过」的干扰项。",
+                  "generated": true,
+                  "note": "标题由机器按段落关键词生成，答案为该段最匹配的标题；做题时先扫每段主题句。"
+                },
+                {
+                  "no": 12,
+                  "stem": "Paragraph C",
+                  "answer": "iii",
+                  "keyPara": "C",
+                  "keySentence": "Similarly, both ‘FSC’ and ‘post-harvest systems’ are used to mean the same thing in the literature, with ‘post-harvest loss’ also often used when describing agricultural systems and the onward supply of produce to markets.",
+                  "explain": "本题为机器生成：段落核心词为「post-harvest works」。做标题题务必看段落首句+尾句，警惕「只在段中一笔带过」的干扰项。",
+                  "generated": true,
+                  "note": "标题由机器按段落关键词生成，答案为该段最匹配的标题；做题时先扫每段主题句。"
+                },
+                {
+                  "no": 13,
+                  "stem": "Paragraph D",
+                  "answer": "iv",
+                  "keyPara": "D",
+                  "keySentence": "The main focus was initially on reducing losses of durable grain; by the early 1990s, the scope of work had been broadened to cover roots and tubers, and fresh fruits and vegetables (FFVs).",
+                  "explain": "本题为机器生成：段落核心词为「losses」。做标题题务必看段落首句+尾句，警惕「只在段中一笔带过」的干扰项。",
+                  "generated": true,
+                  "note": "标题由机器按段落关键词生成，答案为该段最匹配的标题；做题时先扫每段主题句。"
+                },
+                {
+                  "no": 14,
+                  "stem": "Paragraph E",
+                  "answer": "v",
+                  "keyPara": "E",
+                  "keySentence": "— Urbanization and the contraction of the agricultural sector.",
+                  "explain": "本题为机器生成：段落核心词为「urbanization」。做标题题务必看段落首句+尾句，警惕「只在段中一笔带过」的干扰项。",
+                  "generated": true,
+                  "note": "标题由机器按段落关键词生成，答案为该段最匹配的标题；做题时先扫每段主题句。"
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "vocabulary": [
+        {
+          "word": "waste",
+          "pos": "n.",
+          "meaning": "废物",
+          "sentence": "Attempts have been made to quantify global food waste over several decades, motivated partly by the need to highlight the scale of ‘waste’ in relation to global malnutrition."
+        },
+        {
+          "word": "different",
+          "pos": "adj.",
+          "meaning": "不同的",
+          "sentence": "Such assessments are reliant on limited datasets collected across the food supply chain (FSC) at different times and extrapolated to the larger picture."
+        },
+        {
+          "word": "reduction",
+          "pos": "n.",
+          "meaning": "减少",
+          "sentence": "When the Food and Agriculture Organization of the United Nations (FAO) was established in 1945, it had reduction of food losses within its mandate."
+        },
+        {
+          "word": "supply",
+          "pos": "n.",
+          "meaning": "供应链",
+          "sentence": "Such assessments are reliant on limited datasets collected across the food supply chain (FSC) at different times and extrapolated to the larger picture."
+        },
+        {
+          "word": "human",
+          "pos": "n.",
+          "meaning": "人类",
+          "sentence": "Food waste occurs at different points in the FSC, although it is most readily defined at the retail and consumer stages, where outputs of the agricultural system are self-evidently ‘food’ for human consumption."
+        },
+        {
+          "word": "available",
+          "pos": "adj.",
+          "meaning": "可获得的",
+          "sentence": "There are also moral and economic dimensions: the extent to which available food crops are used to meet global human needs directly, or diverted into feeding livestock, other ‘by-products’ and biofuels or biomaterials production."
+        },
+        {
+          "word": "material",
+          "pos": "n.",
+          "meaning": "材料",
+          "sentence": "Unlike most other commodity flows, food is biological material subject to degradation, and different food stuffs have different nutritional values."
+        },
+        {
+          "word": "include",
+          "pos": "v.",
+          "meaning": "包括",
+          "sentence": "The first two definitions are considered to be most relevant, although the second can only be supported if data are available that include nutritional assessment of animal feed and food processing by-products."
+        },
+        {
+          "word": "value",
+          "pos": "n.",
+          "meaning": "价值",
+          "sentence": "Unlike most other commodity flows, food is biological material subject to degradation, and different food stuffs have different nutritional values."
+        },
+        {
+          "word": "infrastructure",
+          "pos": "n.",
+          "meaning": "基础设施",
+          "sentence": "Food losses/spoilage, conversely, relate to systems that require investment in infrastructure."
+        },
+        {
+          "word": "production",
+          "pos": "n.",
+          "meaning": "生产",
+          "sentence": "There are also moral and economic dimensions: the extent to which available food crops are used to meet global human needs directly, or diverted into feeding livestock, other ‘by-products’ and biofuels or biomaterials production."
+        },
+        {
+          "word": "population",
+          "pos": "n.",
+          "meaning": "种群，人口",
+          "sentence": "The proportion of the world's population employed in agriculture has declined in recent decades and 50 per cent of the world's population now lives in urban environments."
+        }
+      ],
+      "contribution": {
+        "contributor": "l458022",
+        "license": "CC BY 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
+        "sourceUrl": "https://europepmc.org/article/PMC/PMC2935112",
+        "attribution": "Parfitt J, Barthel M, Macnaughton S. — Europe PMC，CC BY 4.0",
+        "declaredAt": "2026-10-13T13:15:35.981Z",
+        "declaration": "copyright-ok;questions-original-or-tool-generated;no-privacy"
+      }
+    }
+  ]
+}

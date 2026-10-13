@@ -189,6 +189,7 @@
       <button class="btn ghost" id="cmtyRefresh">🔄 刷新列表</button>
       <button class="btn ghost" id="cmtyAdminToggle">⚙ 管理模式</button>
       <button class="btn ghost" id="cmtyUploadToggle">⬆ 上架新题库包</button>
+      <button class="btn ghost" id="cmtyIssueToggle">📥 从 Issue 导入投稿</button>
       <span class="cmty-status" id="cmtyStatus"></span>
     </div>
     <div class="admin-box" id="cmtyAdminBox" style="display:none">
@@ -210,6 +211,13 @@
       </div>
     </div>
     <div id="cmtyList"></div>
+    <div class="admin-box" id="cmtyIssueBox" style="display:none">
+      <div class="form-row"><label>待处理的投稿 Issue</label><div id="cmtyIssueList"></div></div>
+      <div class="admin-actions">
+        <button class="btn ghost" id="cmtyIssueRefresh">🔄 重新扫描</button>
+        <span class="cmty-status" id="cmtyIssueMsg"></span>
+      </div>
+    </div>
     <div class="cmty-foot">
       <div>想贡献自己的文章？导入文章 → 用途选「贡献到公共题库」→ 导出处题库包，按贡献指南提 PR。</div>
       <div style="display:flex;gap:10px"><button class="btn ghost" id="cmtyClose">关闭</button></div>
@@ -551,6 +559,65 @@ window.addEventListener("load", function () {
     log("admin-local-upload-puts", window.__reqs.length === 2 && window.__reqs[1].method === "PUT" && decodeURIComponent(window.__reqs[1].url).indexOf("-local-article.json") !== -1);
     log("admin-local-upload-keeps-contribution", RLApp.b64ToUtf8(JSON.parse(window.__reqs[1].body).content).indexOf('"contributor": "bob"') !== -1);
     localStorage.removeItem("rl_custom_exams");
+    // ===== 从 Issue 导入投稿 =====
+    var issueBody = [
+      "### 文章标题", "", "Urban Beekeeping", "",
+      "### 话题 / 场景标签", "", "环境", "",
+      "### 题目来源", "", "工具自动生成（导入时选「自动」）", "",
+      "### 三项声明（必须全部勾选）", "",
+      "- [x] 我对文章拥有相应权利（原创 / 公有领域 / 已获授权），不是从商业站点或出版物搬运",
+      "- [x] 题目是我自己出的，或由本工具自动生成，不是从商业备考站复制",
+      "- [x] 文章不含个人隐私、保密资料或不当内容", "",
+      "### 授权方式", "", "CC BY 4.0", "",
+      "### 贡献者署名", "", "alice", "",
+      "### 题库包 JSON", "",
+      "```json",
+      JSON.stringify({ format: "ielts-reading-pack", version: 1, exams: [{ id: "iss-1", title: "Urban Beekeeping", titleCn: "城市养蜂", sections: [{ id: "s1", paragraphs: [{ id: "A", text: "Bees make honey in summer." }], questionGroups: [{ id: "g1", type: "tfng", instruction: "i", questions: [{ no: 1, stem: "s", answer: "TRUE", keySentence: "Bees make honey in summer." }] }] }] }] }),
+      "```", "",
+      "### 自检", "", "- [x] 已在应用内导入并完整做过一遍"
+    ].join("\n");
+    var parsed = RLApp.parseIssuePack(issueBody);
+    log("issue-parse-fenced-json", parsed && parsed.format === "ielts-reading-pack" && parsed.exams[0].id === "iss-1");
+    log("issue-parse-raw-json", (function () {
+      var p = RLApp.parseIssuePack("随便写点说明 { \"format\": \"ielts-reading-pack\", \"exams\": [] } 后面还有话");
+      return p && p.format === "ielts-reading-pack";
+    })());
+    log("issue-parse-no-json", RLApp.parseIssuePack("这里没有 JSON，只有文字说明") === null);
+    log("issue-parse-null-body", RLApp.parseIssuePack("") === null && RLApp.parseIssuePack(null) === null);
+    log("issue-field-license", RLApp.issueField(issueBody, "授权方式") === "CC BY 4.0");
+    log("issue-field-contributor", RLApp.issueField(issueBody, "贡献者署名") === "alice");
+    log("issue-field-missing", RLApp.issueField(issueBody, "不存在的字段") === "");
+    // 无令牌不允许打开投稿面板
+    RLApp.setGhToken("");
+    RLApp.toggleIssueBox();
+    log("issue-blocked-without-token", document.getElementById("cmtyIssueBox").style.display === "none");
+    RLApp.setGhToken("github_pat_TESTTOKEN123");
+    // 渲染三种状态：可上架 / 结构不合法 / 无 JSON
+    var ibox = document.getElementById("cmtyIssueList");
+    RLApp.renderIssueSubmissions([
+      { no: 11, title: "[题库包] Urban Beekeeping", url: "https://x/11", user: "alice", body: issueBody, pack: parsed },
+      { no: 12, title: "[题库包] 坏包", url: "https://x/12", user: "bob", body: "", pack: { format: "wrong", exams: [] } },
+      { no: 13, title: "[题库包] 无 JSON", url: "https://x/13", user: "carol", body: "只有文字", pack: null }
+    ], ibox);
+    log("issue-rows-rendered", ibox.querySelectorAll(".cmty-row").length === 3);
+    log("issue-status-ok", ibox.querySelectorAll(".iss-ok").length === 1);
+    log("issue-status-bad", ibox.querySelectorAll(".iss-bad").length === 2);
+    log("issue-only-valid-has-button", ibox.querySelectorAll("[data-iss]").length === 1);
+    log("issue-shows-contributor", ibox.innerHTML.indexOf("alice") !== -1 && ibox.innerHTML.indexOf("carol") !== -1);
+    log("issue-shows-license", ibox.innerHTML.indexOf("CC BY 4.0") !== -1);
+    log("issue-links-to-github", ibox.querySelectorAll('a[href^="https://x/"]').length === 3);
+    // 上架：GET 查重 → PUT 包 → POST 回复 → PATCH 关闭（之后还会刷新 Issue 列表，故只看前 4 步）
+    window.__reqs = [];
+    fakeXhrInstalled(function (xhr) {
+      if (xhr._m === "GET") { xhr.status = 404; xhr.responseText = JSON.stringify({ message: "Not Found" }); if (xhr.onload) xhr.onload(); }
+      else { xhr.status = 200; xhr.responseText = "{}"; if (xhr.onload) xhr.onload(); }
+    });
+    RLApp.publishIssuePack({ no: 11, pack: parsed }, null);
+    var methods = window.__reqs.slice(0, 4).map(function (r) { return r.method; }).join(",");
+    log("issue-publish-4-steps", methods === "GET,PUT,POST,PATCH");
+    log("issue-publish-puts-pack", window.__reqs[1].url.indexOf("contents/packs/reading-pack-") !== -1);
+    log("issue-publish-comments", window.__reqs[2].url.indexOf("/issues/11/comments") !== -1 && JSON.parse(window.__reqs[2].body).body.indexOf("已上架") !== -1);
+    log("issue-publish-closes", window.__reqs[3].url.indexOf("/issues/11") !== -1 && JSON.parse(window.__reqs[3].body).state === "closed");
     // 清除令牌 → 管理按钮消失
     RLApp.clearAdminToken();
     RLApp.renderCommunityList(demoManifest, box2);

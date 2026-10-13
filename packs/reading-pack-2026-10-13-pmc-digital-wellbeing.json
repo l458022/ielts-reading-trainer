@@ -1,0 +1,328 @@
+{
+  "format": "ielts-reading-pack",
+  "version": 1,
+  "generator": "IELTS Reading Trainer",
+  "createdAt": "2026-10-13T13:15:42.346Z",
+  "exams": [
+    {
+      "id": "community-pmc-digital-wellbeing",
+      "title": "Designing for Motivation, Engagement and Wellbeing in Digital Experience",
+      "titleCn": "数字产品的动机与福祉设计",
+      "book": "公共题库",
+      "test": 1,
+      "passage": 1,
+      "difficulty": "难",
+      "series": "公共题库 · 自动出题",
+      "source": "贡献者 l458022 · CC BY 4.0 · Peters D, Calvo RA, Ryan RM. — Europe PMC，CC BY 4.0",
+      "level": "自定义",
+      "minutes": 20,
+      "tags": [
+        "科技",
+        "心理"
+      ],
+      "intro": "开放获取文章（CC BY 4.0）：Peters D, Calvo RA, Ryan RM. — Europe PMC，CC BY 4.0　原文：https://europepmc.org/article/PMC/PMC5985470",
+      "sections": [
+        {
+          "id": "s1",
+          "title": "READING PASSAGE 1",
+          "paragraphs": [
+            {
+              "id": "A",
+              "text": "Every technology can deliberately or inadvertently impact psychological wellbeing. As a simple example, consider the nuanced impacts emerging from the instant connectivity made possible by smartphones. Kushlev and Dunn demonstrated that the number of times a day people could check email increased stress levels, while other studies show that the mere presence of a mobile phone diminishes the quality of face-to-face interaction (Przybylski and Weinstein, 2013; Misra et al., 2016 ). Beyond these unintended effects, technologies can also be consciously designed to enhance or regulate people's emotions (Norman, 2005 ) and over the last 15 years interaction designers have shifted their focus from mere usability to also making products enjoyable and engaging, generally with the goal of increasing usage. However, factors such as engagement and enjoyment do not necessarily contribute to sustainable wellbeing. Indeed, as studies in video games (Rigby and Ryan, 2011 ) and media consumption (Hefner and Vorderer, 2017 ) confirm, too much engagement can crowd-out healthy activities to the detriment of overall wellbeing. Thus a larger question remains: How can technology be designed to support wellbeing that encompasses more than just immediate hedonic experience, but also its longer-term eudaimonia, or true flourishing? (Ryan and Deci, 2001, 2017; Sirgy, 2012 )."
+            },
+            {
+              "id": "B",
+              "text": "A desire to design for deeper meaning, happiness, and human flourishing has gained momentum in HCI over the past 5 years, and both researchers and practitioners have struggled to bridge this new impetus to clear actionable practice. Among the contributions to this area is work on Positive Technologies (Riva et al. , 2012 ), Experience Design (Hassenzahl, 2010 ), Positive Design (Desmet and Pohlmeyer, 2013 ), and Positive Computing (Calvo and Peters, 2014 ).  At the broadest level, Positive Technologies takes from positive psychology and argues for the benefits of using technology to influence the affective quality, engagement/actualization, and connectedness of experience.  Examples of positive technologies have generally been virtual reality environments and other forms of software design as interventions for mental health and wellbeing.  Positive Design on the other hand has focused on how the design of any artifact, built environment or service might foster flourishing.  Desmet and Pohlmeyer's framework for wellbeing requires that a product be designed for virtue, pleasure and/or meaning, where none of these components interferes with the others (Desmet and Pohlmeyer, 2013 )."
+            },
+            {
+              "id": "C",
+              "text": "Hassenzhal has proposed an experience-focused approach centered on “fulfilling psychological needs” (including autonomy, popularity, stimulation and others) as a method for inscribing meaning and happiness into products (Hassenzahl, 2010 ).  He proposes doing so by uncovering “experience patterns” in human activities that distil the essence of certain need-fulfilling practices.  Finally, as part of Positive Computing, Calvo and Peters have focused on wellbeing-supportive design for all technology by targeting wellbeing determinants (i. e. , self-awareness, compassion, gratitude, motivation, etc.)  and by leveraging the research and measures for these constructs for design and evaluation. The four approaches described above (Riva et al., Desmet and Pohlmeyer, Hassenzhal, and Calvo and Peters) provide pathways to inspiring design based on psychological factors shown to contribute to wellbeing. In addition, other combined editorial works such as (Calvo et al., 2016; Villani et al., 2016 ) help bring together frameworks and empirical evidence helpful to advancing the field."
+            },
+            {
+              "id": "D",
+              "text": "However, there remains a substantial gap between existing frameworks and immediately actionable design practices. For example, a library of validated “experience patterns” as Hassenzhal's work points to, has yet to be developed. Clear design features relating to wellbeing determinants, pleasures, virtues or meaning (as Positive Computing and Positive Design recommend) have yet to be identified. Most importantly, perhaps, in light of urgent concerns with technology addiction, none of the frameworks provides help or guidance on how design can disentangle engaging experiences that are healthy from engaging experiences that are addictive. In other words, the design community has made important headway in shaping what we believe to be the next era in human-centered technologies, but more bridge-building is necessary before the practice of wellbeing-supportive design can be robustly deployed across the industry. The field requires a model based on methodologically sound approaches that can support hypotheses which can be tested experimentally. This model, and the studies it would support, would allow for experience patterns to be developed, design strategies to be identified and unhealthy positive experiences to be differentiated from healthy ones. In this paper we propose a candidate for such a model of wellbeing-supportive design along with practical methods for working with that model."
+            },
+            {
+              "id": "E",
+              "text": "The core elements in our solution to designing for wellbeing leverage Self-Determination Theory (SDT; Ryan and Deci, 2000b, 2017 ) which provides a mature and empirically-validated approach to examining factors that promote sustained motivation and wellbeing. Although a nuanced theory, in its broadest strokes, SDT identifies a small set of basic psychological needs deemed essential to people's self-motivation and psychological wellbeing (Ryan et al., 2013 ), and whose neglect or frustration is associated with ill-being and distress. These basic needs are: These three factors are a sort of minimum common denominator, which come with the widest research evidence available (see Ryan and Deci, 2017 for a review) to explain causal relationships between independent variables (design features) and dependent variables (wellbeing, motivation and engagement measures). This differs from the approach taken by other authors. For example, Hassenzhal and colleagues incorporate “popularity” as a psychological need (Hassenzahl et al., 2010 ) however, we argue that popularity is sometimes a desired outcome mediated by the basic psychological needs for relatedness and competence and not a universal core need in and of itself. Likewise, the wellbeing determinant, “compassion” which we've elaborated on in previous work (Peters and Calvo, 2014 ), is also a wellbeing-supportive outcome which is itself mediated by the three basic needs (largely relatedness, but also autonomy and competence which differentiate compassion from empathic distress (Peters and Calvo, 2014 )."
+            }
+          ],
+          "questionGroups": [
+            {
+              "id": "g-tfng",
+              "type": "tfng",
+              "options": [
+                "TRUE",
+                "FALSE",
+                "NOT GIVEN"
+              ],
+              "instruction": "Do the following statements agree with the information in the passage? Write TRUE if the statement agrees with the information, FALSE if the statement contradicts the information, NOT GIVEN if there is no information on this.",
+              "generated": true,
+              "questions": [
+                {
+                  "no": 1,
+                  "stem": "Indeed, as studies in video games (Rigby and Ryan, 2011 ) and media consumption (Hefner and Vorderer, 2017 ) confirm, too much engagement can crowd-out healthy activities to the detriment of overall wellbeing.",
+                  "answer": "TRUE",
+                  "keyPara": "A",
+                  "keySentence": "Indeed, as studies in video games (Rigby and Ryan, 2011 ) and media consumption (Hefner and Vorderer, 2017 ) confirm, too much engagement can crowd-out healthy activities to the detriment of overall wellbeing.",
+                  "explain": "本题为机器生成：题干是原文定位句的同义复现，内容一致。做题时先抓题干关键词回原文，再核对限定词与比较方向。",
+                  "generated": true
+                },
+                {
+                  "no": 2,
+                  "stem": "Hassenzhal has proposed an experience-focused approach centered on “fulfilling psychological needs” (including autonomy, popularity, stimulation and others) as a method for inscribing meaning and happiness into products (Hassenzahl, 2010 ).",
+                  "answer": "TRUE",
+                  "keyPara": "C",
+                  "keySentence": "Hassenzhal has proposed an experience-focused approach centered on “fulfilling psychological needs” (including autonomy, popularity, stimulation and others) as a method for inscribing meaning and happiness into products (Hassenzahl, 2010 ).",
+                  "explain": "本题为机器生成：题干是原文定位句的同义复现，内容一致。做题时先抓题干关键词回原文，再核对限定词与比较方向。",
+                  "generated": true
+                },
+                {
+                  "no": 3,
+                  "stem": "Thus a larger question remains: How can technology be designed to support wellbeing that encompasses less than just immediate hedonic experience, but also its longer-term eudaimonia, or true flourishing?",
+                  "answer": "FALSE",
+                  "keyPara": "A",
+                  "keySentence": "Thus a larger question remains: How can technology be designed to support wellbeing that encompasses more than just immediate hedonic experience, but also its longer-term eudaimonia, or true flourishing?",
+                  "explain": "本题为机器生成：原文为「Thus a larger question remains: How can technology be designed to support wellbeing that encompasses more than just immediate hedonic experience, but also its longer-term eudaimonia, or true flourishing?」，题干通过改写使陈述与原文矛盾。做题时盯紧比较方向、肯定/否定和程度词。",
+                  "generated": true,
+                  "trap": "比较级反向（more → less），原文方向被对调"
+                },
+                {
+                  "no": 4,
+                  "stem": ", 2012 ), Experience Design (Hassenzahl, 2010 ), Positive Design (Desmet and Pohlmeyer, 2013 ), and Positive Computing (Calvo and Peters, 2014 ).",
+                  "answer": "TRUE",
+                  "keyPara": "B",
+                  "keySentence": ", 2012 ), Experience Design (Hassenzahl, 2010 ), Positive Design (Desmet and Pohlmeyer, 2013 ), and Positive Computing (Calvo and Peters, 2014 ).",
+                  "explain": "本题为机器生成：题干是原文定位句的同义复现，内容一致。做题时先抓题干关键词回原文，再核对限定词与比较方向。",
+                  "generated": true
+                },
+                {
+                  "no": 5,
+                  "stem": "Desmet and Pohlmeyer's framework for wellbeing requires that a product be designed for virtue, pleasure and/or meaning, where none of these components interferes with the others (Desmet and Pohlmeyer, 2013 ).",
+                  "answer": "TRUE",
+                  "keyPara": "B",
+                  "keySentence": "Desmet and Pohlmeyer's framework for wellbeing requires that a product be designed for virtue, pleasure and/or meaning, where none of these components interferes with the others (Desmet and Pohlmeyer, 2013 ).",
+                  "explain": "本题为机器生成：题干是原文定位句的同义复现，内容一致。做题时先抓题干关键词回原文，再核对限定词与比较方向。",
+                  "generated": true
+                },
+                {
+                  "no": 6,
+                  "stem": "The core elements in our solution to designing for wellbeing leverage Self-Determination Theory (SDT; Ryan and Deci, 2000b, 2017 ) which provides a mature and empirically-validated approach to examining factors that promote sustained motivation and wellbeing.",
+                  "answer": "TRUE",
+                  "keyPara": "E",
+                  "keySentence": "The core elements in our solution to designing for wellbeing leverage Self-Determination Theory (SDT; Ryan and Deci, 2000b, 2017 ) which provides a mature and empirically-validated approach to examining factors that promote sustained motivation and wellbeing.",
+                  "explain": "本题为机器生成：题干是原文定位句的同义复现，内容一致。做题时先抓题干关键词回原文，再核对限定词与比较方向。",
+                  "generated": true
+                }
+              ]
+            },
+            {
+              "id": "g-gapfill",
+              "type": "gapfill",
+              "generated": true,
+              "instruction": "Complete the sentences below. Choose NO MORE THAN TWO WORDS from the passage for each answer.",
+              "questions": [
+                {
+                  "no": 7,
+                  "stem": "____________, as studies in video games (Rigby and Ryan, 2011 ) and media consumption (Hefner and Vorderer, 2017 ) confirm, too much engagement can crowd-out healthy activities to the detriment of overall wellbeing.",
+                  "answer": "indeed",
+                  "keyPara": "A",
+                  "keySentence": "Indeed, as studies in video games (Rigby and Ryan, 2011 ) and media consumption (Hefner and Vorderer, 2017 ) confirm, too much engagement can crowd-out healthy activities to the detriment of overall wellbeing.",
+                  "explain": "本题为机器生成：从原文定位句中挖掉关键词「indeed」。答案必须是原文原词，注意词性与单复数。",
+                  "generated": true,
+                  "answers": [
+                    "indeed"
+                  ]
+                },
+                {
+                  "no": 8,
+                  "stem": "Hassenzhal has ____________ an experience-focused approach centered on “fulfilling psychological needs” (including autonomy, popularity, stimulation and others) as a method for inscribing meaning and happiness into products (Hassenzahl, 2010 ).",
+                  "answer": "proposed",
+                  "keyPara": "C",
+                  "keySentence": "Hassenzhal has proposed an experience-focused approach centered on “fulfilling psychological needs” (including autonomy, popularity, stimulation and others) as a method for inscribing meaning and happiness into products (Hassenzahl, 2010 ).",
+                  "explain": "本题为机器生成：从原文定位句中挖掉关键词「proposed」。答案必须是原文原词，注意词性与单复数。",
+                  "generated": true,
+                  "answers": [
+                    "proposed"
+                  ]
+                },
+                {
+                  "no": 9,
+                  "stem": "____________ a larger question remains: How can technology be designed to support wellbeing that encompasses more than just immediate hedonic experience, but also its longer-term eudaimonia, or true flourishing?",
+                  "answer": "thus",
+                  "keyPara": "A",
+                  "keySentence": "Thus a larger question remains: How can technology be designed to support wellbeing that encompasses more than just immediate hedonic experience, but also its longer-term eudaimonia, or true flourishing?",
+                  "explain": "本题为机器生成：从原文定位句中挖掉关键词「thus」。答案必须是原文原词，注意词性与单复数。",
+                  "generated": true,
+                  "answers": [
+                    "thus"
+                  ]
+                }
+              ]
+            },
+            {
+              "id": "g-headings",
+              "type": "headings",
+              "generated": true,
+              "pool": [
+                "i",
+                "ii",
+                "iii",
+                "iv",
+                "v",
+                "vi",
+                "vii"
+              ],
+              "headings": [
+                "i  The role of wellbeing",
+                "ii  design in the modern world",
+                "iii  How psychological works",
+                "iv  A growing problem: design",
+                "v  The importance of wellbeing",
+                "vi  An unexpected solution",
+                "vii  The limits of measurement"
+              ],
+              "note": "本题组的标题由机器从段落关键词生成，其中若干为干扰项。",
+              "instruction": "The passage has 5 paragraphs. Choose the correct heading for each paragraph from the list below.",
+              "questions": [
+                {
+                  "no": 10,
+                  "stem": "Paragraph A",
+                  "answer": "i",
+                  "keyPara": "A",
+                  "keySentence": "Every technology can deliberately or inadvertently impact psychological wellbeing.",
+                  "explain": "本题为机器生成：段落核心词为「wellbeing」。做标题题务必看段落首句+尾句，警惕「只在段中一笔带过」的干扰项。",
+                  "generated": true,
+                  "note": "标题由机器按段落关键词生成，答案为该段最匹配的标题；做题时先扫每段主题句。"
+                },
+                {
+                  "no": 11,
+                  "stem": "Paragraph B",
+                  "answer": "ii",
+                  "keyPara": "B",
+                  "keySentence": "A desire to design for deeper meaning, happiness, and human flourishing has gained momentum in HCI over the past 5 years, and both researchers and practitioners have struggled to bridge this new impetus to clear actionable practice.",
+                  "explain": "本题为机器生成：段落核心词为「design」。做标题题务必看段落首句+尾句，警惕「只在段中一笔带过」的干扰项。",
+                  "generated": true,
+                  "note": "标题由机器按段落关键词生成，答案为该段最匹配的标题；做题时先扫每段主题句。"
+                },
+                {
+                  "no": 12,
+                  "stem": "Paragraph C",
+                  "answer": "iii",
+                  "keyPara": "C",
+                  "keySentence": "Hassenzhal has proposed an experience-focused approach centered on “fulfilling psychological needs” (including autonomy, popularity, stimulation and others) as a method for inscribing meaning and happiness into products (Hassenzahl, 2010 ).",
+                  "explain": "本题为机器生成：段落核心词为「psychological works」。做标题题务必看段落首句+尾句，警惕「只在段中一笔带过」的干扰项。",
+                  "generated": true,
+                  "note": "标题由机器按段落关键词生成，答案为该段最匹配的标题；做题时先扫每段主题句。"
+                },
+                {
+                  "no": 13,
+                  "stem": "Paragraph D",
+                  "answer": "iv",
+                  "keyPara": "D",
+                  "keySentence": "However, there remains a substantial gap between existing frameworks and immediately actionable design practices.",
+                  "explain": "本题为机器生成：段落核心词为「design」。做标题题务必看段落首句+尾句，警惕「只在段中一笔带过」的干扰项。",
+                  "generated": true,
+                  "note": "标题由机器按段落关键词生成，答案为该段最匹配的标题；做题时先扫每段主题句。"
+                },
+                {
+                  "no": 14,
+                  "stem": "Paragraph E",
+                  "answer": "v",
+                  "keyPara": "E",
+                  "keySentence": "The core elements in our solution to designing for wellbeing leverage Self-Determination Theory (SDT; Ryan and Deci, 2000b, 2017 ) which provides a mature and empirically-validated approach to examining factors that promote sustained motivation and wellbeing.",
+                  "explain": "本题为机器生成：段落核心词为「wellbeing」。做标题题务必看段落首句+尾句，警惕「只在段中一笔带过」的干扰项。",
+                  "generated": true,
+                  "note": "标题由机器按段落关键词生成，答案为该段最匹配的标题；做题时先扫每段主题句。"
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "vocabulary": [
+        {
+          "word": "design",
+          "pos": "n.",
+          "meaning": "设计",
+          "sentence": "Beyond these unintended effects, technologies can also be consciously designed to enhance or regulate people's emotions (Norman, 2005 ) and over the last 15 years interaction designers have shifted their focus from mere usability to also making products enjoyable and engaging, generally with the goal of increasing usage."
+        },
+        {
+          "word": "positive",
+          "pos": "adj.",
+          "meaning": "积极的，正的",
+          "sentence": "Among the contributions to this area is work on Positive Technologies (Riva et al."
+        },
+        {
+          "word": "experience",
+          "pos": "v./n.",
+          "meaning": "经历，经验",
+          "sentence": "Thus a larger question remains: How can technology be designed to support wellbeing that encompasses more than just immediate hedonic experience, but also its longer-term eudaimonia, or true flourishing?"
+        },
+        {
+          "word": "technology",
+          "pos": "n.",
+          "meaning": "技术",
+          "sentence": "Every technology can deliberately or inadvertently impact psychological wellbeing."
+        },
+        {
+          "word": "meaning",
+          "pos": "n.",
+          "meaning": "含义",
+          "sentence": "A desire to design for deeper meaning, happiness, and human flourishing has gained momentum in HCI over the past 5 years, and both researchers and practitioners have struggled to bridge this new impetus to clear actionable practice."
+        },
+        {
+          "word": "model",
+          "pos": "n.",
+          "meaning": "模型",
+          "sentence": "The field requires a model based on methodologically sound approaches that can support hypotheses which can be tested experimentally."
+        },
+        {
+          "word": "approach",
+          "pos": "n.",
+          "meaning": "方法",
+          "sentence": "Hassenzhal has proposed an experience-focused approach centered on “fulfilling psychological needs” (including autonomy, popularity, stimulation and others) as a method for inscribing meaning and happiness into products (Hassenzahl, 2010 )."
+        },
+        {
+          "word": "example",
+          "pos": "n.",
+          "meaning": "例子",
+          "sentence": "As a simple example, consider the nuanced impacts emerging from the instant connectivity made possible by smartphones."
+        },
+        {
+          "word": "healthy",
+          "pos": "adj.",
+          "meaning": "健康的",
+          "sentence": "Indeed, as studies in video games (Rigby and Ryan, 2011 ) and media consumption (Hefner and Vorderer, 2017 ) confirm, too much engagement can crowd-out healthy activities to the detriment of overall wellbeing."
+        },
+        {
+          "word": "support",
+          "pos": "v.",
+          "meaning": "支持",
+          "sentence": "Thus a larger question remains: How can technology be designed to support wellbeing that encompasses more than just immediate hedonic experience, but also its longer-term eudaimonia, or true flourishing?"
+        },
+        {
+          "word": "contribute",
+          "pos": "v.",
+          "meaning": "贡献，促成",
+          "sentence": "However, factors such as engagement and enjoyment do not necessarily contribute to sustainable wellbeing."
+        },
+        {
+          "word": "evidence",
+          "pos": "n.",
+          "meaning": "证据",
+          "sentence": ", 2016 ) help bring together frameworks and empirical evidence helpful to advancing the field."
+        }
+      ],
+      "contribution": {
+        "contributor": "l458022",
+        "license": "CC BY 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
+        "sourceUrl": "https://europepmc.org/article/PMC/PMC5985470",
+        "attribution": "Peters D, Calvo RA, Ryan RM. — Europe PMC，CC BY 4.0",
+        "declaredAt": "2026-10-13T13:15:42.345Z",
+        "declaration": "copyright-ok;questions-original-or-tool-generated;no-privacy"
+      }
+    }
+  ]
+}
