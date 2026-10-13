@@ -1005,19 +1005,81 @@
     manifestPath: "packs/manifest.json"
   };
 
+  /* 多个镜像源。国内 raw.githubusercontent.com 常被墙，jsDelivr 的 Fastly 节点
+   * 有时能通而 cdn 节点不通，所以都列上。
+   * 关键：记住「哪个源成功过」并优先用它，且**连续失败 2 次的源本次会话内跳过**——
+   * 否则每个包都要先把挂掉的源等满 15 秒超时，23 个包会卡到十几分钟，看起来像没反应。 */
+  var COMMUNITY_SOURCES = [
+    { name: "raw", base: "https://raw.githubusercontent.com/" + COMMUNITY.repo + "/" + COMMUNITY.branch + "/" },
+    { name: "jsDelivr", base: "https://cdn.jsdelivr.net/gh/" + COMMUNITY.repo + "@" + COMMUNITY.branch + "/" },
+    { name: "jsDelivr-Fastly", base: "https://fastly.jsdelivr.net/gh/" + COMMUNITY.repo + "@" + COMMUNITY.branch + "/" }
+  ];
+  var preferredSource = -1;          // 上次成功的源下标，优先重试
+  var sourceFailStreak = {};         // 源名 → 连续失败次数
+  var skipSource = {};               // 源名 → 本次会话内跳过
+
+  /** 软重置：清掉失败计数与跳过标记，但**保留学到的首选源**（那是有效的性能记忆）。
+   *  硬重置（hard=true）连首选源一起忘掉，回到默认顺序。 */
+  function resetSourceHealth(hard) {
+    sourceFailStreak = {};
+    skipSource = {};
+    if (hard) preferredSource = -1;
+  }
+
+  // 供测试与诊断查看源健康度
+  function sourceHealth() {
+    return { preferred: preferredSource, failStreak: sourceFailStreak, skip: skipSource };
+  }
+
+  function orderedSources() {
+    var all = COMMUNITY_SOURCES.slice();
+    if (preferredSource > 0) {
+      var p = all.splice(preferredSource, 1)[0];
+      all.unshift(p);
+    }
+    var usable = all.filter(function (s) { return !skipSource[s.name]; });
+    return usable.length ? usable : all;   // 全被跳过时仍试一遍，避免永久卡死
+  }
+
   function communityManifestUrls() {
-    var raw = "https://raw.githubusercontent.com/" + COMMUNITY.repo + "/" + COMMUNITY.branch + "/";
-    var cdn = "https://cdn.jsdelivr.net/gh/" + COMMUNITY.repo + "@" + COMMUNITY.branch + "/";
-    // 加时间戳破缓存：raw 的 CDN 会缓存 5 分钟、jsDelivr 对分支可缓存到 12 小时，
-    // 不破缓存的话「刚上架的包」可能长时间看不到。索引文件很小，多这一次请求值得。
+    // 加时间戳破缓存：raw 的 CDN 会缓存 5 分钟、jsDelivr 对分支可缓存到 12 小时
     var bust = "?t=" + Date.now();
-    return [raw + COMMUNITY.manifestPath + bust, cdn + COMMUNITY.manifestPath + bust];
+    return orderedSources().map(function (s) { return s.base + COMMUNITY.manifestPath + bust; });
   }
   function communityPackUrls(file) {
-    var raw = "https://raw.githubusercontent.com/" + COMMUNITY.repo + "/" + COMMUNITY.branch + "/packs/";
-    var cdn = "https://cdn.jsdelivr.net/gh/" + COMMUNITY.repo + "@" + COMMUNITY.branch + "/packs/";
     var f = encodeURIComponent(file);
-    return [raw + f, cdn + f];
+    return orderedSources().map(function (s) { return s.base + "packs/" + f; });
+  }
+
+  /** 按「优选源 → 其余源」依次尝试，自动记录源健康度 */
+  function fetchCommunity(path, cb, errCb) {
+    var list = orderedSources();
+    var i = 0;
+    (function attempt() {
+      if (i >= list.length) { errCb("所有镜像源均不可用（可稍后重试或检查网络）"); return; }
+      var src = list[i++];
+      fetchJson(src.base + path, function (data) {
+        sourceFailStreak[src.name] = 0;
+        preferredSource = COMMUNITY_SOURCES.indexOf(src);
+        cb(data);
+      }, function (err) {
+        console.warn("[community] 源失败：" + src.name + " → " + err);
+        sourceFailStreak[src.name] = (sourceFailStreak[src.name] || 0) + 1;
+        if (sourceFailStreak[src.name] >= 2) skipSource[src.name] = true;   // 别再让它拖时间
+        attempt();
+      });
+    })();
+  }
+
+  function fetchManifest(cb, errCb) {
+    if (isAdmin()) {
+      ghApi("GET", PACKS_API + "manifest.json", null, function (info) {
+        try { cb(JSON.parse(b64ToUtf8(info.content || ""))); }
+        catch (e) { fetchCommunity(COMMUNITY.manifestPath + "?t=" + Date.now(), cb, errCb); }
+      }, function () { fetchCommunity(COMMUNITY.manifestPath + "?t=" + Date.now(), cb, errCb); });
+      return;
+    }
+    fetchCommunity(COMMUNITY.manifestPath + "?t=" + Date.now(), cb, errCb);
   }
 
   function fetchJson(url, cb, errCb) {
@@ -1034,18 +1096,7 @@
     xhr.ontimeout = function () { errCb("请求超时"); };
     xhr.send();
   }
-  // 多源依次重试：raw 优先，CDN 兜底（国内访问 CDN 更快）
-  function fetchJsonWithFallback(urls, cb, errCb) {
-    var i = 0;
-    (function attempt() {
-      if (i >= urls.length) { errCb("所有源均不可用（可稍后重试或检查网络）"); return; }
-      var url = urls[i++];
-      fetchJson(url, cb, function (err) {
-        console.warn("[community] 源失败：" + url + " → " + err);
-        attempt();
-      });
-    })();
-  }
+  // 多源重试逻辑见 fetchCommunity（带源健康度记录，避免反复等超时）
 
   function openCommunity() {
     el("importMask").className = "modal-mask";
@@ -1056,6 +1107,7 @@
   function loadCommunityPacks() {
     var box = el("cmtyList"), status = el("cmtyStatus");
     if (!box || !status) return;
+    resetSourceHealth();   // 用户主动刷新时重置源健康度，给之前失败的源一次机会
     status.textContent = "正在获取题库索引…";
     box.innerHTML = '<div class="cmty-loading">⏳ 正在连接社区题库索引…</div>';
     fetchManifest(function (manifest) {
@@ -1070,17 +1122,8 @@
       status.textContent = "共 " + packs.length + " 个题库包 · 最近更新 " + when;
     }, function (err) {
       box.innerHTML = "";
-      status.textContent = "获取失败：" + err;
+      status.textContent = "获取失败：" + err + "　（点「🔄 刷新列表」重试）";
     });
-  }
-
-  /* 管理模式下改用 GitHub API 直读，绕过 raw 的 CDN 缓存（改动立即可见） */
-  function fetchManifest(cb, errCb) {
-    if (!isAdmin()) { fetchJsonWithFallback(communityManifestUrls(), cb, errCb); return; }
-    ghApi("GET", PACKS_API + "manifest.json", null, function (info) {
-      try { cb(JSON.parse(b64ToUtf8(info.content || ""))); }
-      catch (e) { errCb("索引解析失败"); }
-    }, function () { fetchJsonWithFallback(communityManifestUrls(), cb, errCb); });
   }
 
   function renderCommunityList(manifest, box) {
@@ -1132,21 +1175,32 @@
     if (!item || !item.file) return;
     var label = "下载并导入";
     if (btn) { btn.disabled = true; btn.textContent = "下载中…"; }
-    fetchJsonWithFallback(communityPackUrls(item.file), function (pack) {
+    setBulkMsg("⏳ 正在下载「" + (item.titleCn || item.title || item.file) + "」…");
+    fetchCommunity("packs/" + encodeURIComponent(item.file), function (pack) {
       var added;
       try { added = importPackObject(pack); }
       catch (e) {
         toast("题库包无效：" + e.message);
+        setBulkMsg("❌ 题库包无效：" + e.message);
         if (btn) { btn.disabled = false; btn.textContent = label; }
         return;
       }
       el("communityMask").className = "modal-mask";
+      show("home");
       renderHome();
+      setBulkMsg("");
       toast("已导入「" + (item.titleCn || item.title || "") + "」：" + added + " 套试卷");
     }, function (err) {
       toast("下载失败：" + err);
+      setBulkMsg("❌ 下载失败：" + err);
       if (btn) { btn.disabled = false; btn.textContent = label; }
     });
+  }
+
+  // 社区题库面板里的进度/结果提示行
+  function setBulkMsg(text) {
+    var m = el("cmtyBulkMsg");
+    if (m) m.textContent = text || "";
   }
 
   /* ---------- 社区题库 · 管理员（令牌只存本机浏览器，绝不写进代码） ----------
@@ -1559,24 +1613,29 @@
   /* 一键导入全部：逐篇拉取（保持离线优先，不预打包、不在启动时联网） */
   function bulkImportCommunity() {
     var packs = (state.communityManifest && state.communityManifest.packs) || [];
-    if (!packs.length) { toast("请先点「🔄 刷新列表」获取题库"); return; }
+    if (!packs.length) { toast("请先点「🔄 刷新列表」获取题库"); setBulkMsg("请先点「🔄 刷新列表」获取题库"); return; }
     var kb = Math.round(packs.reduce(function (s, p) { return s + (p.bytes || 0); }, 0) / 1024);
-    if (!confirm("把全部 " + packs.length + " 篇导入本机题库？\n\n约 " + kb + " KB，只保存在你自己的浏览器，不会上传任何数据。")) return;
+    if (!confirm("把全部 " + packs.length + " 篇导入本机题库？\n\n约 " + kb + " KB，只保存在你自己的浏览器，不会上传任何数据。\n（若网络较慢可能需要一两分钟）")) return;
     var btn = el("cmtyBulk");
     var label = btn ? btn.textContent : "";
     var done = 0, failed = 0, i = 0;
     if (btn) btn.disabled = true;
+    resetSourceHealth();
+    show("home");                     // 先把视图切回题库页，导入完成后用户立刻能看到结果
+    setBulkMsg("⏳ 开始导入 " + packs.length + " 篇…");
     (function next() {
       if (i >= packs.length) {
         if (btn) { btn.disabled = false; btn.textContent = label; }
-        el("communityMask").className = "modal-mask";
         renderHome();
-        toast("已导入 " + done + " 篇" + (failed ? "，" + failed + " 篇失败" : ""));
+        var msg = "✅ 已导入 " + done + " 篇" + (failed ? "，" + failed + " 篇失败（可稍后重试）" : "");
+        setBulkMsg(msg + "　共 " + allExams().length + " 套试卷，关闭本窗口即可看到");
+        toast("导入完成：" + done + " 篇" + (failed ? "，失败 " + failed + " 篇" : ""));
         return;
       }
       var p = packs[i++];
       if (btn) btn.textContent = "导入中 " + i + "/" + packs.length + "…";
-      fetchJsonWithFallback(communityPackUrls(p.file), function (pack) {
+      setBulkMsg("⏳ 导入中 " + i + "/" + packs.length + "：" + (p.titleCn || p.title || p.file));
+      fetchCommunity("packs/" + encodeURIComponent(p.file), function (pack) {
         try { importPackObject(pack); done++; } catch (e) { failed++; }
         next();
       }, function () { failed++; next(); });
@@ -1789,6 +1848,9 @@
     renderIssueSubmissions: renderIssueSubmissions, publishIssuePack: publishIssuePack,
     parseIssuePack: parseIssuePack, issueField: issueField,
     bulkImportCommunity: bulkImportCommunity, refreshCommunityBanner: refreshCommunityBanner,
+    fetchCommunity: fetchCommunity, resetSourceHealth: resetSourceHealth,
+    orderedSources: orderedSources, sourceHealth: sourceHealth, setBulkMsg: setBulkMsg,
+    COMMUNITY_SOURCES: COMMUNITY_SOURCES,
     slugify: slugify,
     utf8ToB64: utf8ToB64, b64ToUtf8: b64ToUtf8, PACKS_API: PACKS_API
   };

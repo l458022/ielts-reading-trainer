@@ -216,6 +216,7 @@
         <span class="cmty-status" id="cmtyUploadMsg"></span>
       </div>
     </div>
+    <div class="cmty-bulk-msg" id="cmtyBulkMsg"></div>
     <div id="cmtyList"></div>
     <div class="admin-box" id="cmtyIssueBox" style="display:none">
       <div class="form-row"><label>待处理的投稿 Issue</label><div id="cmtyIssueList"></div></div>
@@ -383,9 +384,10 @@ window.addEventListener("load", function () {
     /* ===== 社区题库（GitHub 即数据库）：离线桩测试，不依赖真实网络 ===== */
     log("community-entry-exists", !!document.getElementById("btnCommunity") && !!document.getElementById("impCommunity"));
     var urls = RLApp.communityManifestUrls();
-    log("community-urls-2-sources", urls.length === 2 && urls[0].indexOf("raw.githubusercontent.com") !== -1 && urls[1].indexOf("cdn.jsdelivr.net") !== -1);
+    log("community-urls-3-sources", urls.length === 3 && urls[0].indexOf("raw.githubusercontent.com") !== -1 && urls[1].indexOf("cdn.jsdelivr.net") !== -1 && urls[2].indexOf("fastly.jsdelivr.net") !== -1);
     log("community-url-path", urls[0].indexOf("l458022/ielts-reading-trainer/main/packs/manifest.json") !== -1);
     log("community-pack-url", RLApp.communityPackUrls("reading-pack-x.json")[0].indexOf("/packs/reading-pack-x.json") !== -1);
+
     // 桩掉 XHR，验证「联网失败」有兜底提示且不抛错
     var RealXHR = window.XMLHttpRequest;
     window.XMLHttpRequest = function () {
@@ -626,6 +628,66 @@ window.addEventListener("load", function () {
     log("issue-publish-puts-pack", window.__reqs[1].url.indexOf("contents/packs/reading-pack-") !== -1);
     log("issue-publish-comments", window.__reqs[2].url.indexOf("/issues/11/comments") !== -1 && JSON.parse(window.__reqs[2].body).body.indexOf("已上架") !== -1);
     log("issue-publish-closes", window.__reqs[3].url.indexOf("/issues/11") !== -1 && JSON.parse(window.__reqs[3].body).state === "closed");
+    /* ===== 镜像源健康度：挂掉的源不能反复拖时间 ===== */
+    RLApp.resetSourceHealth();
+    log("source-order-default", RLApp.orderedSources().map(function (s) { return s.name; }).join(",") === "raw,jsDelivr,jsDelivr-Fastly");
+    // raw 挂、jsDelivr 通：应自动降级成功，并把 jsDelivr 记为首选（后续不再先等 raw 超时）
+    fakeXhrInstalled(function (xhr) {
+      if (xhr._u.indexOf("raw.githubusercontent.com") !== -1) { if (xhr.onerror) xhr.onerror(); }
+      else { xhr.status = 200; xhr.responseText = '{"packs":[]}'; if (xhr.onload) xhr.onload(); }
+    });
+    RLApp.fetchCommunity("packs/manifest.json", function () { log("source-fallback-ok", true); }, function () { log("source-fallback-ok", false); });
+    var h1 = RLApp.sourceHealth();
+    log("source-raw-streak-1", h1.failStreak["raw"] === 1 && !h1.skip["raw"]);
+    log("source-preferred-is-jsdelivr", h1.preferred === 1);
+    log("source-order-jsdelivr-first", RLApp.orderedSources()[0].name === "jsDelivr");
+    // 某源连续失败 2 次 → 本次会话跳过，不再让它白等超时
+    RLApp.resetSourceHealth();
+    window.__reqs = [];
+    fakeXhrInstalled(function (xhr) { if (xhr.onerror) xhr.onerror(); });
+    RLApp.fetchCommunity("packs/manifest.json", function () {}, function () {});
+    RLApp.fetchCommunity("packs/manifest.json", function () {}, function () {});
+    var h2 = RLApp.sourceHealth();
+    log("source-skip-after-2-fails", h2.skip["raw"] === true && h2.failStreak["raw"] === 2 && h2.skip["jsDelivr"] === true);
+    // 全部源失败：必须有明确错误且请求数正确，不能静默卡住
+    window.__reqs = [];
+    var allFailErr = "";
+    RLApp.resetSourceHealth();
+    RLApp.fetchCommunity("packs/manifest.json", function () {}, function (err) { allFailErr = err; });
+    log("source-all-fail-reports", allFailErr.indexOf("镜像源") !== -1 && window.__reqs.length === 3);
+    RLApp.resetSourceHealth();
+    var h3 = RLApp.sourceHealth();
+    log("source-soft-reset-clears-failures", !h3.skip["raw"] && !h3.failStreak["raw"]);
+    log("source-soft-reset-keeps-preference", h3.preferred === 1 && RLApp.orderedSources()[0].name === "jsDelivr");
+    RLApp.resetSourceHealth(true);
+    log("source-hard-reset-restores-order", RLApp.orderedSources().map(function (s) { return s.name; }).join(",") === "raw,jsDelivr,jsDelivr-Fastly");
+    log("bulk-msg-element", !!document.getElementById("cmtyBulkMsg"));
+
+    /* ===== 关键回归：raw 挂掉时，导入 23 篇不该把 raw 试 23 次（每次都白等 15s 超时） ===== */
+    RLApp.resetSourceHealth(true);
+    var rawTries = 0, cdnTries = 0;
+    fakeXhrInstalled(function (xhr) {
+      if (xhr._u.indexOf("raw.githubusercontent.com") !== -1) { rawTries++; if (xhr.onerror) xhr.onerror(); }
+      else {
+        cdnTries++;
+        xhr.status = 200;
+        xhr.responseText = JSON.stringify({ format: "ielts-reading-pack", version: 1, exams: [{ id: "b", title: "B", contribution: { contributor: "x" }, sections: [{ id: "s1", paragraphs: [], questionGroups: [] }] }] });
+        if (xhr.onload) xhr.onload();
+      }
+    });
+    var bigPacks = [];
+    for (var k = 0; k < 23; k++) bigPacks.push({ file: "reading-pack-" + k + ".json", titleCn: "包" + k, bytes: 100 });
+    RLApp.state.communityManifest = { packs: bigPacks };
+    localStorage.removeItem("rl_custom_exams");
+    RLApp.bulkImportCommunity();
+    log("bulk23-all-imported", JSON.parse(localStorage.getItem("rl_custom_exams") || "[]").length === 23);
+    log("bulk23-raw-tried-at-most-2", rawTries <= 2);
+    log("bulk23-cdn-tried-23", cdnTries === 23);
+    log("bulk23-result-msg", document.getElementById("cmtyBulkMsg").textContent.indexOf("已导入 23 篇") !== -1);
+    RLApp.resetSourceHealth(true);
+    localStorage.removeItem("rl_custom_exams");
+    RLApp.state.communityManifest = null;
+
     // ===== 首页提示条 + 一键导入全部 =====
     localStorage.removeItem("rl_custom_exams");
     RLApp.refreshCommunityBanner();
@@ -659,8 +721,9 @@ window.addEventListener("load", function () {
     localStorage.removeItem("rl_custom_exams");
     RLApp.bulkImportCommunity();
     log("bulk-imports-all-3", JSON.parse(localStorage.getItem("rl_custom_exams") || "[]").length === 3);
+    log("bulk-switches-to-home", RLApp.state.view === "home");
     log("bulk-requests-3", window.__reqs.length === 3 && window.__reqs[0].url.indexOf("reading-pack-a.json") !== -1);
-    log("bulk-closes-modal", document.getElementById("communityMask").className.indexOf("show") === -1);
+    log("bulk-keeps-modal-with-result", document.getElementById("communityMask").className.indexOf("show") !== -1 && document.getElementById("cmtyBulkMsg").textContent.indexOf("已导入 3 篇") !== -1);
     log("bulk-banner-hidden-after", document.getElementById("cmtyBanner").style.display === "none");
     // 部分失败也要能走完（失败计数不影响已成功的）
     window.__reqs = [];
