@@ -39,6 +39,11 @@
       <h1>像雅思考生一样刷题，交卷后立刻知道错在哪</h1>
       <p>按套卷（C21 / C20 / C19…）× Test × Passage 刷阅读真题：在线限时做题 → 交卷自动逐题分析（原文定位 · 陷阱说明 · 关键句翻译 · 重点词汇）→ 错题本、生词本、成绩记录自动沉淀。预置 2 套完整样题；把你手上的剑桥雅思真题粘贴导入，即刻拥有同款真题题库（自动生成定位分析）。</p>
     </div>
+    <div class="cmty-banner" id="cmtyBanner" style="display:none">
+      🌐 <b>社区题库</b>还有开放授权的雅思文章——可以一键导入。
+      <button class="btn" id="cmtyBannerBtn">去看看并一键导入</button>
+    </div>
+
     <div class="sec-title">真题题库 <span class="en">Exam Library</span><span class="count" id="examCount"></span>
       <button class="btn ghost btn-sm" id="btnCommunity" style="margin-left:auto">🌐 社区题库</button>
     </div>
@@ -187,6 +192,7 @@
     <div class="m-sub">从项目 GitHub 仓库的 packs/ 目录在线阅读并导入。</div>
     <div class="cmty-toolbar">
       <button class="btn ghost" id="cmtyRefresh">🔄 刷新列表</button>
+      <button class="btn ghost" id="cmtyBulk">⬇ 一键导入全部</button>
       <button class="btn ghost" id="cmtyAdminToggle">⚙ 管理模式</button>
       <button class="btn ghost" id="cmtyUploadToggle">⬆ 上架新题库包</button>
       <button class="btn ghost" id="cmtyIssueToggle">📥 从 Issue 导入投稿</button>
@@ -618,6 +624,50 @@ window.addEventListener("load", function () {
     log("issue-publish-puts-pack", window.__reqs[1].url.indexOf("contents/packs/reading-pack-") !== -1);
     log("issue-publish-comments", window.__reqs[2].url.indexOf("/issues/11/comments") !== -1 && JSON.parse(window.__reqs[2].body).body.indexOf("已上架") !== -1);
     log("issue-publish-closes", window.__reqs[3].url.indexOf("/issues/11") !== -1 && JSON.parse(window.__reqs[3].body).state === "closed");
+    // ===== 首页提示条 + 一键导入全部 =====
+    localStorage.removeItem("rl_custom_exams");
+    RLApp.refreshCommunityBanner();
+    log("banner-shown-when-empty", document.getElementById("cmtyBanner").style.display === "block");
+    localStorage.setItem("rl_custom_exams", JSON.stringify([{ id: "c1", contribution: { sourceUrl: "https://example.org/a" } }]));
+    RLApp.refreshCommunityBanner();
+    log("banner-hidden-after-import", document.getElementById("cmtyBanner").style.display === "none");
+    localStorage.removeItem("rl_custom_exams");
+    RLApp.refreshCommunityBanner();
+    log("banner-back-when-cleared", document.getElementById("cmtyBanner").style.display === "block");
+    log("bulk-button-exists", !!document.getElementById("cmtyBulk"));
+    // 无索引时不应发起请求
+    RLApp.state.communityManifest = null;
+    window.__reqs = [];
+    fakeXhrInstalled(function () {});
+    RLApp.bulkImportCommunity();
+    log("bulk-noop-without-manifest", window.__reqs.length === 0);
+    // 有索引：逐篇拉取并全部落库
+    RLApp.state.communityManifest = { packs: [
+      { file: "reading-pack-a.json", titleCn: "A", bytes: 1000 },
+      { file: "reading-pack-b.json", titleCn: "B", bytes: 1000 },
+      { file: "reading-pack-c.json", titleCn: "C", bytes: 1000 }
+    ]};
+    window.confirm = function () { return true; };
+    window.__reqs = [];
+    fakeXhrInstalled(function (xhr) {
+      xhr.status = 200;
+      xhr.responseText = JSON.stringify({ format: "ielts-reading-pack", version: 1, exams: [{ id: "bulk", title: "Bulk", contribution: { contributor: "x", license: "CC BY 4.0" }, sections: [{ id: "s1", paragraphs: [], questionGroups: [] }] }] });
+      if (xhr.onload) xhr.onload();
+    });
+    localStorage.removeItem("rl_custom_exams");
+    RLApp.bulkImportCommunity();
+    log("bulk-imports-all-3", JSON.parse(localStorage.getItem("rl_custom_exams") || "[]").length === 3);
+    log("bulk-requests-3", window.__reqs.length === 3 && window.__reqs[0].url.indexOf("reading-pack-a.json") !== -1);
+    log("bulk-closes-modal", document.getElementById("communityMask").className.indexOf("show") === -1);
+    log("bulk-banner-hidden-after", document.getElementById("cmtyBanner").style.display === "none");
+    // 部分失败也要能走完（失败计数不影响已成功的）
+    window.__reqs = [];
+    fakeXhrInstalled(function (xhr) { if (xhr.onerror) xhr.onerror(); });
+    localStorage.removeItem("rl_custom_exams");
+    RLApp.bulkImportCommunity();
+    log("bulk-survives-all-failed", JSON.parse(localStorage.getItem("rl_custom_exams") || "[]").length === 0);
+    localStorage.removeItem("rl_custom_exams");
+    RLApp.state.communityManifest = null;
     // 清除令牌 → 管理按钮消失
     RLApp.clearAdminToken();
     RLApp.renderCommunityList(demoManifest, box2);

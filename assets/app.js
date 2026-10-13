@@ -201,6 +201,7 @@
     }
     el("examGrid").innerHTML = html;
     el("examCount").textContent = "共 " + exams.length + " 套 · " + bookList.length + " 个书卷";
+    refreshCommunityBanner();
 
     Array.prototype.forEach.call(el("examGrid").querySelectorAll("[data-book]"), function (btn) {
       btn.addEventListener("click", function () {
@@ -1545,6 +1546,45 @@
     });
   }
 
+  /* 一键导入全部：逐篇拉取（保持离线优先，不预打包、不在启动时联网） */
+  function bulkImportCommunity() {
+    var packs = (state.communityManifest && state.communityManifest.packs) || [];
+    if (!packs.length) { toast("请先点「🔄 刷新列表」获取题库"); return; }
+    var kb = Math.round(packs.reduce(function (s, p) { return s + (p.bytes || 0); }, 0) / 1024);
+    if (!confirm("把全部 " + packs.length + " 篇导入本机题库？\n\n约 " + kb + " KB，只保存在你自己的浏览器，不会上传任何数据。")) return;
+    var btn = el("cmtyBulk");
+    var label = btn ? btn.textContent : "";
+    var done = 0, failed = 0, i = 0;
+    if (btn) btn.disabled = true;
+    (function next() {
+      if (i >= packs.length) {
+        if (btn) { btn.disabled = false; btn.textContent = label; }
+        el("communityMask").className = "modal-mask";
+        renderHome();
+        toast("已导入 " + done + " 篇" + (failed ? "，" + failed + " 篇失败" : ""));
+        return;
+      }
+      var p = packs[i++];
+      if (btn) btn.textContent = "导入中 " + i + "/" + packs.length + "…";
+      fetchJsonWithFallback(communityPackUrls(p.file), function (pack) {
+        try { importPackObject(pack); done++; } catch (e) { failed++; }
+        next();
+      }, function () { failed++; next(); });
+    })();
+  }
+
+  // 首页提示条：只在「本机还没有任何社区题库文章」时出现；纯静态文案，不在启动时联网
+  function refreshCommunityBanner() {
+    var banner = el("cmtyBanner");
+    if (!banner) return;
+    // 判断依据是「有没有来自题库包的试卷」——只看 contribution 是否存在，
+    // 不能只看 sourceUrl：用户投稿的包没有 sourceUrl（那是 CC BY 信源才有的字段）
+    var imported = readLS(LS.custom, []).filter(function (e) {
+      return e && e.contribution;
+    }).length;
+    banner.style.display = imported ? "none" : "block";
+  }
+
   function importPackObject(pack) {
     if (!pack || pack.format !== "ielts-reading-pack" || !Array.isArray(pack.exams)) {
       throw new Error("不是有效的题库包");
@@ -1693,8 +1733,10 @@
     });
     // 社区题库
     el("btnCommunity").addEventListener("click", openCommunity);
+    el("cmtyBannerBtn").addEventListener("click", openCommunity);
     el("impCommunity").addEventListener("click", openCommunity);
     el("cmtyRefresh").addEventListener("click", loadCommunityPacks);
+    el("cmtyBulk").addEventListener("click", bulkImportCommunity);
     el("cmtyClose").addEventListener("click", function () { el("communityMask").className = "modal-mask"; });
     el("communityMask").addEventListener("click", function (e) {
       if (e.target === this) this.className = "modal-mask";
@@ -1736,6 +1778,7 @@
     toggleIssueBox: toggleIssueBox, loadIssueSubmissions: loadIssueSubmissions,
     renderIssueSubmissions: renderIssueSubmissions, publishIssuePack: publishIssuePack,
     parseIssuePack: parseIssuePack, issueField: issueField,
+    bulkImportCommunity: bulkImportCommunity, refreshCommunityBanner: refreshCommunityBanner,
     slugify: slugify,
     utf8ToB64: utf8ToB64, b64ToUtf8: b64ToUtf8, PACKS_API: PACKS_API
   };

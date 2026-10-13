@@ -24,7 +24,7 @@ requests** and no server.
 | Import any article | Paste an English article (blank-line separated) → **auto-generated questions** (rule engine, self-verified: every answer must be derivable from the text) / manual entry / mixed |
 | Contribution declaration | Declare "personal use only" or "contribute to the shared bank"; contributing requires three declarations (rights / originality / privacy) plus contributor name and license |
 | Question packs | One-click export/import of `ielts-reading-pack` JSON packs for sharing |
-| Community bank | 「🌐 Community bank」 on the home page lists packs straight from this repo's `packs/` directory and imports them in one click (**no server needed**: raw source with a jsDelivr CDN fallback). The app stays offline unless you open it. **11 passages are included** (nature, environment, health, technology, education, energy, cities — all core IELTS topics), every one from a CC BY 4.0 source with attribution; see [packs/SOURCES.md](packs/SOURCES.md) |
+| Community bank | 「🌐 Community bank」 on the home page lists packs straight from this repo's `packs/` directory and imports them in one click (**no server needed**: raw source with a jsDelivr CDN fallback). The app stays offline unless you open it. **23 passages are included** (nature, environment, health, technology, education, energy, cities — all core IELTS topics), every one from a CC BY 4.0 source with attribution; see [packs/SOURCES.md](packs/SOURCES.md). **Import-all** takes the local library from 2 to 25 exams in one click |
 | Bank management | Repository maintainers paste their own **fine-grained GitHub token** into the app to edit or delete shared articles and questions directly — every action leaves an auditable, revertible commit. There is **no "admin password"**: the frontend is public, so a hard-coded secret is no secret at all; authority can only come from GitHub itself. See [ADMIN.md](ADMIN.md) |
 | Deep analysis | "Copy report" copies score + wrong answers + located sentences, ready to paste into any AI for further analysis |
 
@@ -41,9 +41,9 @@ requests** and no server.
 |---|---|
 | ![Report](test/shot-report.png) | ![Look-up](test/shot-dict.png) |
 
-| Community bank (GitHub repo as database, no server) | Live demo (GitHub Pages) |
+| Community bank (GitHub repo as database, no server) | Home banner (import all 23 openly licensed passages) |
 |---|---|
-| ![Community bank](test/shot-community.png) | ![Live demo](test/shot-live.png) |
+| ![Community bank](test/shot-community.png) | ![Home banner](test/shot-home-banner.png) |
 
 ## Usage
 
