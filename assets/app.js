@@ -19,7 +19,12 @@
     } catch (e) { return def; }
   }
   function writeLS(key, val) {
-    try { localStorage.setItem(key, JSON.stringify(val)); } catch (e) {}
+    try { localStorage.setItem(key, JSON.stringify(val)); return true; }
+    catch (e) {
+      // 不能静默吞掉：存储写满时用户会看到「导入成功」却什么都没发生
+      console.warn("[storage] 写入失败 " + key + "：" + e.message);
+      return false;
+    }
   }
 
   function el(id) { return document.getElementById(id); }
@@ -930,7 +935,9 @@
     var title = el("impTitle").value.trim() || (book + "-Test " + tNo + "-Passage " + pNo);
     var generated = srcMode !== "manual";
     var exam = {
-      id: "custom-" + Date.now(),
+      // 必须带随机后缀：只靠 Date.now() 的话，同一毫秒内连续导入两次会撞 id，
+      // 导致 getExam() 取到前一份试卷（表现为「导入后打开的却是上一篇」）
+      id: "custom-" + Date.now() + "-" + Math.floor(Math.random() * 100000),
       title: title,
       titleCn: el("impTitleCn").value.trim() || (generated ? "自动出题" : "手动录入"),
       book: book, test: tNo, passage: pNo,
@@ -955,7 +962,10 @@
 
     var list = readLS(LS.custom, []);
     list.push(exam);
-    writeLS(LS.custom, list);
+    if (!writeLS(LS.custom, list)) {
+      toast("保存失败：浏览器存储空间不足，请先到「练习记录」清理旧数据后重试");
+      return;
+    }
     el("importMask").className = "modal-mask";
     renderHome();
     toast(contribution ? "已保存并标记为贡献作品（可导出题库包提交）" : "导入成功，开始练习");

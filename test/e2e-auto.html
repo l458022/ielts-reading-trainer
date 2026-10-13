@@ -258,7 +258,7 @@
 <script>
 window.addEventListener("load", function () {
   var out = [];
-  function log(name, ok) { out.push((ok ? "[OK] " : "[FAIL] ") + name); }
+  function log(name, ok, extra) { out.push((ok ? "[OK] " : "[FAIL] ") + name + (!ok && extra ? " | " + extra : "")); }
   function setRadio(group, value) {
     var r = document.querySelector('input[name="' + group + '"][value="' + value + '"]');
     r.checked = true;
@@ -371,11 +371,13 @@ window.addEventListener("load", function () {
     setRadio("srcMode", "manual");
     RLApp.state.importRows = [{ no: 1, type: "tfng", stem: "Bees make honey.", options: "", answer: "TRUE" }];
     RLApp.doImport();
+    log("entity-import-replaced-exam", !!RLApp.state.exam && RLApp.state.exam.title === "Entity Test");
     RLApp.state.answers = { 1: "TRUE" };
     RLApp.submitExam();
     var rpHtml = document.getElementById("reportPassage").innerHTML;
     log("entity-not-split", rpHtml.indexOf('data-w="amp"') === -1 && rpHtml.indexOf('data-w="lt"') === -1 && rpHtml.indexOf('data-w="gt"') === -1 && rpHtml.indexOf('data-w="quot"') === -1);
-    log("entity-rendered-ok", rpHtml.indexOf("&amp;") !== -1 && rpHtml.indexOf("&lt;") !== -1 && rpHtml.indexOf("&gt;") !== -1);
+    log("entity-rendered-ok", rpHtml.indexOf("&amp;") !== -1 && rpHtml.indexOf("&lt;") !== -1 && rpHtml.indexOf("&gt;") !== -1,
+      "exam=" + (RLApp.state.exam ? RLApp.state.exam.title : "NULL") + " htmlLen=" + rpHtml.length + " rows=" + (RLApp.state.importRows || []).length);
     log("entity-words-clickable", document.querySelectorAll("#reportPassage .w").length > 20);
 
     /* ===== 社区题库（GitHub 即数据库）：离线桩测试，不依赖真实网络 ===== */
